@@ -106,30 +106,33 @@ footer {
 }
 
 footer p {
-	width: 8em;
-	margin: 1em 0;
+	width: 100px;
+	margin: 2em 0.5em 2em 0;
 	font-size: 0.8em;
+	float: left;
 }
 
-footer img {
-	width: 32px;
-	margin: 0 0.1em;
+.rights {
+	width: 55%;
+	float: left;
 }
 
 .rights img {
-	margin-left: 0.3em;
+	width: 25px;
+	margin-top: 1.5em;
 }
 
 .links {
-	width: 50%;
+	width: 45%;
 	text-align: right;
 	position: absolute;
 	top: 1.2em;
 	right: 0.8em;
 }
 
-.social-media {
-	width: 36px;
+.links img {
+	width: 32px;
+	margin-bottom: 0.3em;
 }
 
 .ru {
@@ -150,3 +153,15 @@ footer img {
 	.portfolio a {
 		width: 80%;
 	}
+}
+
+@media screen and (max-width: 480px) {
+	.links img {
+		width: 27px;
+		margin: 0.2em 0 0 0;
+	}
+
+	.ru {
+		margin-left: 1em;
+	}
+}
