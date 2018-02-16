@@ -55,6 +55,18 @@ h3 {
 	font-weight: 400;
 }
 
+.arrow-down {
+	width: 64px;
+	position: absolute;
+	bottom: -13px;
+	left: 50%;
+	transition: bottom 1s ease;
+}
+
+.arrow-down:hover {
+	bottom: -16px;
+}
+
 .about {
 	margin: 4em 3em;
 	display: -webkit-flex;
