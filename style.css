@@ -6,24 +6,46 @@ html, body {
 	font-family: 'Catamaran', sans-serif;
 }
 
-body {
-	background-color: white;
-	overflow: auto;
+body, header, .about, .portfolio {
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	-webkit-flex-flow: column nowrap;
-	-moz-flex-flow: column nowrap;
-	-ms-flex-flow: column nowrap;
-	-o-flex-flow: column nowrap;
-	flex-flow: column nowrap;
+}
+
+body, header, .about {
 	-webkit-justify-content: space-between;
 	-moz-justify-content: space-between;
 	-ms-justify-content: space-between;
 	-o-justify-content: space-between;
 	justify-content: space-between;
+}
+
+.portfolio {
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	-ms-justify-content: center;
+	-o-justify-content: center;
+	justify-content: center;
+}
+
+header, .about {
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	-ms-align-items: center;
+	-o-align-items: center;
+	align-items: center;
+}
+
+body {
+	background-color: white;
+	overflow: auto;
+	-webkit-flex-flow: column nowrap;
+	-moz-flex-flow: column nowrap;
+	-ms-flex-flow: column nowrap;
+	-o-flex-flow: column nowrap;
+	flex-flow: column nowrap;
 }
 
 a {
@@ -35,11 +57,16 @@ header {
 	min-height: 100%;
 	background: url('https://images.unsplash.com/photo-1511649475669-e288648b2339?ixlib=rb-0.3.5&s=2b9ea739131279c74ac7da63a7ed5c16&auto=format&fit=crop&w=1789&q=80') center/cover no-repeat;
 	position: relative;
+	-webkit-flex-flow: column wrap;
+	-moz-flex-flow: column wrap;
+	-ms-flex-flow: column wrap;
+	-o-flex-flow: column wrap;
+	flex-flow: column wrap;
 }
 
 .name {
 	width: 60%;
-	margin: 12em auto 0 auto;
+	margin-top: 10em;
 	text-align: center;
 }
 
@@ -57,9 +84,7 @@ h3 {
 
 .arrow-down {
 	width: 64px;
-	position: absolute;
-	bottom: -13px;
-	left: 50%;
+	/*align-self: flex-end;*/
 	transition: bottom 1s ease;
 }
 
@@ -69,26 +94,11 @@ h3 {
 
 .about {
 	margin: 4em 3em;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
 	-webkit-flex-flow: row nowrap;
 	-moz-flex-flow: row nowrap;
 	-ms-flex-flow: row nowrap;
 	-o-flex-flow: row nowrap;
 	flex-flow: row nowrap;
-	-webkit-justify-content: space-between;
-	-moz-justify-content: space-between;
-	-ms-justify-content: space-between;
-	-o-justify-content: space-between;
-	justify-content: space-between;
-	-webkit-align-items: center;
-	-moz-align-items: center;
-	-ms-align-items: center;
-	-o-align-items: center;
-	align-items: center;
 }
 
 .photo {
@@ -99,6 +109,10 @@ h3 {
 	width: 70%;
 }
 
+.text p {
+	/*padding-right: 3em;*/
+}
+
 .photo img {
 	width: 100%;
 	border: 3px solid black;
@@ -107,21 +121,11 @@ h3 {
 
 .portfolio {
 	margin-bottom: 4em;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
 	-webkit-flex-flow: row wrap;
 	-moz-flex-flow: row wrap;
 	-ms-flex-flow: row wrap;
 	-o-flex-flow: row wrap;
 	flex-flow: row wrap;
-	-webkit-justify-content: center;
-	-moz-justify-content: center;
-	-ms-justify-content: center;
-	-o-justify-content: center;
-	justify-content: center;
 }
 
 .portfolio a {
@@ -239,8 +243,16 @@ footer p {
 }
 
 @media screen and (max-width: 480px) {
+	.name {
+		margin-top: 6em;
+	}
+
 	.photo {
 		width: 70%;
+	}
+
+	.text {
+		width: 100%;
 	}
 
 	.portfolio a {
