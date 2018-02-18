@@ -84,16 +84,16 @@ h3 {
 
 .arrow-down {
 	width: 64px;
-	/*align-self: flex-end;*/
-	transition: bottom 1s ease;
+	margin-bottom: 0;
+	transition: margin-bottom 1s ease;
 }
 
 .arrow-down:hover {
-	bottom: -16px;
+	margin-bottom: 3px;
 }
 
 .about {
-	margin: 4em 3em;
+	margin: 4em 4em 4em 3em;
 	-webkit-flex-flow: row nowrap;
 	-moz-flex-flow: row nowrap;
 	-ms-flex-flow: row nowrap;
@@ -107,10 +107,6 @@ h3 {
 
 .text {
 	width: 70%;
-}
-
-.text p {
-	/*padding-right: 3em;*/
 }
 
 .photo img {
@@ -212,7 +208,8 @@ footer p {
 
 @media screen and (max-width: 767px) {
 	.name {
-		width: 80%;
+		width: 100%;
+		margin-top: 4em;
 	}
 
 	.about {
@@ -244,7 +241,7 @@ footer p {
 
 @media screen and (max-width: 480px) {
 	.name {
-		margin-top: 6em;
+		/*margin-top: 4em;*/
 	}
 
 	.photo {
