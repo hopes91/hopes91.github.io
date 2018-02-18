@@ -126,11 +126,11 @@ h3 {
 
 .portfolio a {
 	width: 25%;
-	height: 200px;
+	height: auto;
 }
 
 .a {
-	background-color: black;
+	
 }
 
 .b {
@@ -138,27 +138,11 @@ h3 {
 }
 
 .c {
-	background-color: yellow;
+	background-color: blue;
 }
 
 .d {
 	background-color: green;
-}
-
-.e {
-	background-color: red;
-}
-
-.f {
-	background-color: blue;
-}
-
-.g {
-	background-color: orange;
-}
-
-.h {
-	background-color: gray;
 }
 
 .portfolio img {
