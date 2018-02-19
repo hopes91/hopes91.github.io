@@ -49,8 +49,15 @@ body {
 }
 
 a {
+	width: 100%;
+	/*height: 100%;*/
+	/*display: inline-block;*/
 	text-decoration: none;
 	color: black;
+}
+
+img {
+	vertical-align: middle;
 }
 
 header {
@@ -83,13 +90,18 @@ h3 {
 }
 
 .arrow-down {
-	width: 64px;
+	width: 48px;
+	height: 48px;
 	margin-bottom: 0;
+	-webkit-transition: margin-bottom 1s ease;
+	-moz-transition: margin-bottom 1s ease;
+	-o-transition: margin-bottom 1s ease;
+	-ms-transition: margin-bottom 1s ease;
 	transition: margin-bottom 1s ease;
 }
 
 .arrow-down:hover {
-	margin-bottom: 3px;
+	margin-bottom: -2px;
 }
 
 .about {
@@ -124,13 +136,39 @@ h3 {
 	flex-flow: row wrap;
 }
 
-.portfolio a {
+.holder {
 	width: 25%;
 	height: auto;
+	position: relative;
 }
 
-.a {
-	
+.holder img {
+	width: 100%;
+}
+
+.project {
+	width: 100%;
+	height: 0;
+	display: inline;
+	background-color: rgba(0, 0, 0, 0.7);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	-webkit-transition: height 1s ease;
+	-moz-transition: height 1s ease;
+	-o-transition: height 1s ease;
+	-ms-transition: height 1s ease;
+	transition: height 1s ease;
+}
+
+.project h4, .project p {
+	margin: 0.5em 0;
+	padding-left: 0.5em;
+	color: #fff;
+}
+
+.holder:hover .project {
+	height: 50%;
 }
 
 .b {
@@ -143,10 +181,6 @@ h3 {
 
 .d {
 	background-color: green;
-}
-
-.portfolio img {
-	width: 100%;
 }
 
 footer {
@@ -165,32 +199,35 @@ footer p {
 
 .rights {
 	width: 55%;
+	height: 100%;
 	float: left;
 }
 
 .rights img {
 	width: 25px;
-	margin-top: 1.5em;
+	height: 25px;
+	margin-top: 1.4em;
 }
 
 .links {
 	width: 45%;
+	height: 100%;
 	text-align: right;
 	position: absolute;
-	top: 1.2em;
 	right: 0.8em;
 }
 
 .links img {
 	width: 32px;
-	margin-bottom: 0.3em;
+	height: 32px;
+	margin-top: 1.2em;
 }
 
 .ru {
 	margin-left: 2em;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 800px) {
 	.name {
 		width: 100%;
 		margin-top: 4em;
@@ -218,16 +255,12 @@ footer p {
 		margin-bottom: 3em;
 	}
 
-	.portfolio a {
+	.holder {
 		width: 50%;
 	}
 }
 
 @media screen and (max-width: 480px) {
-	.name {
-		/*margin-top: 4em;*/
-	}
-
 	.photo {
 		width: 70%;
 	}
@@ -236,13 +269,14 @@ footer p {
 		width: 100%;
 	}
 
-	.portfolio a {
+	.holder {
 		width: 100%;
 	}
 
 	.links img {
 		width: 27px;
-		margin: 0.2em 0 0 0;
+		height: 27px;
+		margin-top: 1.3em;
 	}
 
 	.ru {
