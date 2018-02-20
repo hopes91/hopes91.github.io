@@ -14,20 +14,12 @@ body, header, .about, .portfolio {
 	display: flex;
 }
 
-body, header, .about {
+body, header, .about, .portfolio {
 	-webkit-justify-content: space-between;
 	-moz-justify-content: space-between;
 	-ms-justify-content: space-between;
 	-o-justify-content: space-between;
 	justify-content: space-between;
-}
-
-.portfolio {
-	-webkit-justify-content: center;
-	-moz-justify-content: center;
-	-ms-justify-content: center;
-	-o-justify-content: center;
-	justify-content: center;
 }
 
 header, .about {
@@ -104,11 +96,6 @@ h3 {
 
 .about {
 	margin: 4em 4em 4em 3em;
-	-webkit-flex-flow: row nowrap;
-	-moz-flex-flow: row nowrap;
-	-ms-flex-flow: row nowrap;
-	-o-flex-flow: row nowrap;
-	flex-flow: row nowrap;
 }
 
 .photo {
@@ -126,7 +113,7 @@ h3 {
 }
 
 .portfolio {
-	margin-bottom: 4em;
+	margin: 0 3em 4em 3em;
 	-webkit-flex-flow: row wrap;
 	-moz-flex-flow: row wrap;
 	-ms-flex-flow: row wrap;
@@ -135,8 +122,8 @@ h3 {
 }
 
 .holder {
-	width: 25%;
-	height: auto;
+	width: 30%;
+	margin-bottom: 2em;
 	position: relative;
 }
 
@@ -159,22 +146,22 @@ h3 {
 	transition: height 1s ease;
 }
 
-.project h4, .project p {
+.project h5, .project p {
 	margin: 0.5em 0;
-	padding-left: 0.5em;
+	padding: 0 0.5em;
 	color: #fff;
 }
 
 .holder:hover .project {
-	height: 50%;
+	height: 40%;
 }
 
-.a {
-	background-color: purple;
+.gbg {
+	
 }
 
-.b {
-	background-color: blue;
+.rqm {
+	
 }
 
 .c {
@@ -229,6 +216,12 @@ footer p {
 	margin-left: 2em;
 }
 
+@media screen and (max-width: 1024px) {
+	.holder {
+		width: 32%;
+	}
+}
+
 @media screen and (max-width: 800px) {
 	.name {
 		width: 100%;
@@ -258,7 +251,7 @@ footer p {
 	}
 
 	.holder {
-		width: 50%;
+		width: 45%;
 	}
 }
 
@@ -272,7 +265,7 @@ footer p {
 	}
 
 	.holder {
-		width: 100%;
+		width: 90%;
 	}
 
 	.links img {
