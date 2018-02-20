@@ -50,8 +50,6 @@ body {
 
 a {
 	width: 100%;
-	/*height: 100%;*/
-	/*display: inline-block;*/
 	text-decoration: none;
 	color: black;
 }
@@ -171,12 +169,16 @@ h3 {
 	height: 50%;
 }
 
-.b {
+.a {
 	background-color: purple;
 }
 
-.c {
+.b {
 	background-color: blue;
+}
+
+.c {
+	background-color: violet;
 }
 
 .d {
