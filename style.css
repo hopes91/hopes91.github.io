@@ -156,22 +156,6 @@ h3 {
 	height: 40%;
 }
 
-.gbg {
-	
-}
-
-.rqm {
-	
-}
-
-.c {
-	background-color: violet;
-}
-
-.d {
-	background-color: green;
-}
-
 footer {
 	padding: 0 0.8em;
 	border-top: 1px solid black;
@@ -255,7 +239,7 @@ footer p {
 	}
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 640px) {
 	.photo {
 		width: 70%;
 	}
@@ -265,7 +249,7 @@ footer p {
 	}
 
 	.holder {
-		width: 90%;
+		width: 100%;
 	}
 
 	.links img {
