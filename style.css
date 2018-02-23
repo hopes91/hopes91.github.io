@@ -131,7 +131,7 @@ h3 {
 	width: 100%;
 }
 
-.project {
+/*.project {
 	width: 100%;
 	height: 0;
 	display: inline;
@@ -154,7 +154,7 @@ h3 {
 
 .holder:hover .project {
 	height: 40%;
-}
+}*/
 
 footer {
 	padding: 0 0.8em;
