@@ -130,7 +130,7 @@ h3 {
 .holder {
 	width: 23%;
 	margin-bottom: 2em;
-	box-shadow: 0 4px 6px 0;
+	box-shadow: 0 4px 5px 0;
 	position: relative;
 }
 
@@ -147,7 +147,11 @@ h3 {
 }
 
 .empty {
-	background-color: green;
+	background-color: #F4EE4B;
+}
+
+.empty h4 {
+	border: none;
 }
 
 .project {
