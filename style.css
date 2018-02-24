@@ -146,10 +146,6 @@ h3 {
 	width: 100%;
 }
 
-.empty {
-	background-color: #F4EE4B;
-}
-
 .empty h4 {
 	border: none;
 }
@@ -186,9 +182,27 @@ h4 {
 	display: block;
 }
 
+.project__about {
+	
+}
+
+.project__about img {
+	width: 70%;
+}
+
+.project__text {
+	width: 500px;
+	border: 1px solid #000;
+	background-color: #F4EE4B;
+}
+
+.project__text h5, p {
+	margin: 0.7em 0;
+}
+
 footer {
 	padding: 0 0.8em;
-	border-top: 1px solid black;
+	border-top: 1px solid #000;
 	background-color: #F4EE4B;
 	position: relative;
 }
