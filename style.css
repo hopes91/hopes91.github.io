@@ -138,13 +138,13 @@ header {
 }
 
 .bgimg-2 {
-	padding: 15em 0;
+	padding: 12em 0;
 	background: url(pics/georgie-cobbs-467923-1.jpg) center/cover no-repeat;
 	background-attachment: fixed;
 }
 
 .portfolio {
-	margin: 4em 1em;
+	margin: 4em 1em 2em 1em;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -160,16 +160,20 @@ header {
 	-ms-justify-content: space-around;
 	-o-justify-content: space-around;
 	justify-content: space-around;
+	-webkit-align-items: stretch;
+	-moz-align-items: stretch;
+	-ms-align-items: stretch;
+	-o-align-items: stretch;
+	align-items: stretch;
 }
 
-.holder {
-	width: 23%;
+.project {
+	width: 28%;
 	margin-bottom: 2em;
 	box-shadow: 0 4px 5px 0;
-	position: relative;
 }
 
-.holder:hover {
+.project:hover {
 	-webkit-transform: scale(1.01);
 	-moz-transform: scale(1.01);
 	-o-transform: scale(1.01);
@@ -177,44 +181,13 @@ header {
 	transform: scale(1.01);
 }
 
-.holder img {
+.project img {
 	width: 100%;
 }
 
-.empty h4 {
-	border: none;
-}
-
-.project {
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	background-color: rgba(0, 0, 0, 0.5);
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	display: none;
-}
-
-.project:before {
-	height: 100%;
-	display: inline-block;
-	vertical-align: middle;
-	content: "";	
-}
-
-.project h4 {
-	width: 120px;
-	padding: 5px;
-	color: #eee;
-	text-align: center;
-	border: 3px solid #eee;
-	display: inline-block;
-	vertical-align: middle;
-}
-
-.holder:hover .project {
-	display: block;
+.project p {
+	margin-bottom: 3em;
+	padding: 0.5em 1em;
 }
 
 .project__about {
@@ -236,7 +209,7 @@ header {
 }
 
 .bgimg-3 {
-	padding: 15em 0;
+	padding: 12em 0;
 	background: url(pics/georgie-cobbs-467923-2.jpg) center/cover no-repeat;
 	background-attachment: fixed;
 }
@@ -286,8 +259,8 @@ footer p {
 }
 
 @media screen and (max-width: 1024px) {
-	.holder {
-		width: 35%;
+	.project {
+		width: 30%;
 	}
 }
 
@@ -319,7 +292,7 @@ footer p {
 		margin-bottom: 3em;
 	}
 
-	.holder {
+	.project {
 		width: 45%;
 	}
 }
@@ -333,7 +306,7 @@ footer p {
 		width: 100%;
 	}
 
-	.holder {
+	.project {
 		width: 90%;
 	}
 
