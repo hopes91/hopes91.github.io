@@ -1,4 +1,4 @@
-const arrow = document.getElementById('arrow-down');
+const down = document.getElementById('arrow-down');
 const content = document.getElementById('content');
 
 const scrollDown = (event) => {
@@ -26,4 +26,4 @@ const scrollDown = (event) => {
 	}
 }
 
-arrow.addEventListener('click', scrollDown);
+down.addEventListener('click', scrollDown);
