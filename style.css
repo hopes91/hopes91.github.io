@@ -48,7 +48,7 @@ img {
 
 header {
 	min-height: 100%;
-	background: url('https://images.unsplash.com/photo-1511649475669-e288648b2339?ixlib=rb-0.3.5&s=2b9ea739131279c74ac7da63a7ed5c16&auto=format&fit=crop&w=1789&q=80') center/cover no-repeat;
+	background: url(pics/georgie-cobbs-459520.jpg) center/cover no-repeat;
 	background-attachment: fixed;
 	position: relative;
 	display: -webkit-flex;
@@ -104,6 +104,11 @@ h3 {
 
 .arrow-down:hover {
 	margin-bottom: -2px;
+}
+
+main {
+	background: url(pics/georgie-cobbs-467923.jpg) center/cover no-repeat;
+	background-attachment: fixed;
 }
 
 .about {
