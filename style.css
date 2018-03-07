@@ -91,7 +91,7 @@ h3 {
 	font-weight: 400;
 }
 
-.arrow-down {
+#arrow-down {
 	width: 48px;
 	height: 48px;
 	margin-bottom: 0;
@@ -102,13 +102,8 @@ h3 {
 	transition: margin-bottom 1s ease;
 }
 
-.arrow-down:hover {
+#arrow-down:hover {
 	margin-bottom: -2px;
-}
-
-main {
-	background: url(pics/georgie-cobbs-467923.jpg) center/cover no-repeat;
-	background-attachment: fixed;
 }
 
 .about {
@@ -134,18 +129,24 @@ main {
 	width: 25%;
 }
 
-.text {
-	width: 70%;
-}
-
 .photo img {
 	width: 100%;
 	border: 3px solid #000;
 	border-radius: 50%;
 }
 
+.text {
+	width: 70%;
+}
+
+.bgimg-2 {
+	padding: 15em 0;
+	background: url(pics/georgie-cobbs-467923-1.jpg) center/cover no-repeat;
+	background-attachment: fixed;
+}
+
 .portfolio {
-	margin: 0 1em 4em 1em;
+	margin: 4em 1em;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -234,6 +235,12 @@ h4 {
 
 .project__text h5, p {
 	margin: 0.7em 0;
+}
+
+.bgimg-3 {
+	padding: 15em 0;
+	background: url(pics/georgie-cobbs-467923-2.jpg) center/cover no-repeat;
+	background-attachment: fixed;
 }
 
 footer {
