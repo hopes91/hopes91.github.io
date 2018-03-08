@@ -36,7 +36,7 @@ body {
 }
 
 a {
-	/*width: 100%;*/
+	width: 100%;
 	text-decoration: none;
 	color: black;
 	border: none;
@@ -189,34 +189,23 @@ header {
 	padding: 0 0.7em;
 }
 
-.project__about {
-	
-}
-
-.project__about img {
-	width: 70%;
-}
-
-.project__text {
-	width: 500px;
-	border: 1px solid #000;
-	background-color: #F4EE4B;
-}
-
-.project__text h5, p {
-	margin: 0.7em 0;
-}
-
 .bgimg-3 {
 	padding: 12em 0;
 	background: url(pics/georgie-cobbs-467923-2.jpg) center/cover no-repeat;
 	background-attachment: fixed;
 }
 
-footer {
+.index {
 	padding: 0 0.8em;
 	border-top: 1px solid #000;
 	background-color: #FCD645;
+	position: relative;
+}
+
+.not-index {
+	padding: 0 0.8em;
+	border-top: 1px solid #000;
+	background-color: #F7F7F7;
 	position: relative;
 }
 
@@ -255,6 +244,56 @@ footer p {
 
 .ru {
 	margin-left: 2em;
+}
+
+.project__content {
+	height: 100%;
+	background: url('pics/georgie-cobbs-385074.jpg') center/cover no-repeat;
+}
+
+.project__about {
+	height: 100%;
+	position: relative;
+}
+
+.project__about img {
+	width: 70%;
+	margin: 3em 0 0 3em;
+	border: 1px solid #000;
+}
+
+.project__text {
+	width: 30em;
+	padding-left: 1em;
+	border: 1px solid #000;
+	background-color: #F7F7F7;
+	position: absolute;
+	bottom: 3em;
+	right: 3em;
+}
+
+.project__text h4, p {
+	margin: 0.7em 0;
+}
+
+.arrow-left a {
+	display: block;
+}
+
+.arrow-left img {
+	width: 64px;
+	height: 64px;
+	margin: 0;
+	border: none;
+	position: absolute;
+	bottom: 1.5em;
+	left: 1em;
+}
+
+@media screen and (max-width: 1279px) {
+	.project__about img {
+		width: 70%;
+	}
 }
 
 @media screen and (max-width: 1024px) {
