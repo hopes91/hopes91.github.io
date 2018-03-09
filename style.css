@@ -105,7 +105,8 @@ header {
 }
 
 .about {
-	margin: 4em 4em 4em 3em;
+	/*margin: 4em 4em 4em 3em;*/
+	/*padding: 0 0 3em 0;*/
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -124,13 +125,14 @@ header {
 }
 
 .photo {
-	width: 25%;
+	width: 30%;
 }
 
 .photo img {
 	width: 100%;
-	border: 3px solid #000;
-	border-radius: 50%;
+	/*border: 3px solid #000;
+	border-radius: 50%;*/
+	/*box-shadow: 2em 2em 0.2em #D3D3D3;*/
 }
 
 .text {
@@ -170,7 +172,7 @@ header {
 .project {
 	width: 28%;
 	margin-bottom: 2em;
-	box-shadow: 0 4px 5px 0;
+	box-shadow: 0 2px 3px 0;
 }
 
 .project:hover {
