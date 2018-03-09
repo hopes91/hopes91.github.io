@@ -256,7 +256,7 @@ footer p {
 	position: relative;
 }
 
-.project__about img {
+.project__img {
 	width: 70%;
 	margin: 3em 0 0 3em;
 	border: 1px solid #000;
@@ -286,13 +286,13 @@ footer p {
 	margin: 0;
 	border: none;
 	position: absolute;
-	bottom: 1.5em;
+	bottom: 1em;
 	left: 1em;
 }
 
 @media screen and (max-width: 1279px) {
-	.project__about img {
-		width: 70%;
+	.project__img {
+		/*width: 70%;*/
 	}
 }
 
