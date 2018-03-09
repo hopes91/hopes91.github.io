@@ -264,7 +264,6 @@ footer p {
 
 .project__text {
 	width: 30em;
-	padding-left: 1em;
 	border: 1px solid #000;
 	background-color: #F7F7F7;
 	position: absolute;
@@ -274,6 +273,7 @@ footer p {
 
 .project__text h4, p {
 	margin: 0.7em 0;
+	padding: 0 1em;
 }
 
 .arrow-left a {
