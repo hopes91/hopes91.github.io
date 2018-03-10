@@ -15,7 +15,7 @@ html, body {
 }*/
 
 body {
-	font-family: 'Catamaran', sans-serif;
+	font-family: 'Alegreya Sans', sans-serif;
 	background-color: #fff;
 	overflow: auto;
 	display: -webkit-flex;
@@ -137,6 +137,7 @@ header {
 
 .text {
 	width: 70%;
+	font-size: 1.2em;
 }
 
 .bgimg-2 {
@@ -189,6 +190,7 @@ header {
 
 .project p {
 	padding: 0 0.7em;
+	font-size: 1.1em;
 }
 
 .bgimg-3 {
@@ -214,7 +216,7 @@ header {
 footer p {
 	width: 100px;
 	margin: 2em 0.5em 2em 0;
-	font-size: 0.8em;
+	font-size: 0.9em;
 	float: left;
 }
 
@@ -231,7 +233,7 @@ footer p {
 }
 
 .subscribe {
-	
+
 }
 
 .links {
