@@ -106,7 +106,7 @@ header {
 
 .about {
 	/*margin: 4em 4em 4em 3em;*/
-	padding: 4em 0;
+	/*padding: 4em 0;*/
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -131,9 +131,9 @@ header {
 .photo img {
 	width: 90%;
 	position: relative;
-	top: -3em;
+	top: -2em;
 	box-shadow: 2em 2em #F4EE4B;
-	display: none;
+	/*display: none;*/
 }
 
 .text {
