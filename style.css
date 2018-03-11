@@ -128,17 +128,19 @@ header {
 	width: 30%;
 }
 
-.photo img {
+#photo {
 	width: 90%;
+	box-shadow: 2em 2em #F4EE4B;
 	position: relative;
 	top: -2em;
-	box-shadow: 2em 2em #F4EE4B;
-	/*display: none;*/
+	display: none;
 }
 
 .text {
 	width: 70%;
+	padding-right: 1em;
 	font-size: 1.2em;
+	display: none;
 }
 
 .portfolio {
@@ -204,7 +206,8 @@ header {
 
 footer p {
 	width: 100px;
-	margin: 2em 0.5em 2em 0;
+	margin: 2em 0;
+	padding: 0 0.5em 0 0;
 	font-size: 0.9em;
 	float: left;
 }
@@ -311,11 +314,16 @@ footer p {
 	}
 
 	.photo {
-		width: 40%;
+		width: 50%;
+	}
+
+	#photo {
+		top: 0em;
 	}
 
 	.text {
 		width: 80%;
+		padding-top: 2em;
 		text-align: center;
 	}
 
