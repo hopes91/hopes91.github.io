@@ -140,12 +140,6 @@ header {
 	font-size: 1.2em;
 }
 
-.bgimg-2 {
-	padding: 12em 0;
-	background: url(pics/georgie-cobbs-467923-1.jpg) center/cover no-repeat;
-	background-attachment: fixed;
-}
-
 .portfolio {
 	margin: 4em 1em 2em 1em;
 	display: -webkit-flex;
@@ -193,16 +187,10 @@ header {
 	font-size: 1.1em;
 }
 
-.bgimg-3 {
-	padding: 12em 0;
-	background: url(pics/georgie-cobbs-467923-2.jpg) center/cover no-repeat;
-	background-attachment: fixed;
-}
-
 .index {
 	padding: 0 0.8em;
 	border-top: 1px solid #000;
-	background-color: #FCD645;
+	background-color: #F4EE4B;
 	position: relative;
 }
 
