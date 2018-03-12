@@ -173,7 +173,7 @@ header {
 	box-shadow: 0 2px 3px 0;
 }
 
-.project:hover {
+.project:hover, .project__img:hover {
 	-webkit-transform: scale(1.01);
 	-moz-transform: scale(1.01);
 	-o-transform: scale(1.01);
@@ -190,17 +190,10 @@ header {
 	font-size: 1.1em;
 }
 
-.index {
+footer {
 	padding: 0 0.8em;
 	border-top: 1px solid #000;
 	background-color: #F4EE4B;
-	position: relative;
-}
-
-.not-index {
-	padding: 0 0.8em;
-	border-top: 1px solid #000;
-	background-color: #FED749;
 	position: relative;
 }
 
@@ -244,7 +237,7 @@ footer p {
 
 .project__content {
 	height: 100%;
-	background: url('pics/georgie-cobbs-467923-2.jpg') center/cover no-repeat;
+	background: url('pics/georgie-cobbs-385074.jpg') center/cover no-repeat;
 }
 
 .project__about {
@@ -254,17 +247,47 @@ footer p {
 
 .project__img {
 	width: 70%;
-	margin: 3em 0 0 3em;
+	margin: 2.5em 0 0 2.5em;
 	border: 1px solid #000;
+}
+
+.project__img-one {
+	position: relative;
+}
+
+.project__img-two {
+	position: absolute;
+	top: 2em;
+	left: 2em;
+	z-index: 1;
+}
+
+.project__img-three {
+	position: absolute;
+	top: 4em;
+	left: 4em;
+	z-index: 2;
+}
+
+.project__img-four {
+	position: absolute;
+	top: 6em;
+	left: 6em;
+	z-index: 3;
+}
+
+.on-top {
+	z-index: 5;
 }
 
 .project__text {
 	width: 30em;
 	border: 1px solid #000;
-	background-color: #F7F7F7;
+	background-color: #F4EE4B;
 	position: absolute;
-	bottom: 3em;
+	bottom: 2em;
 	right: 3em;
+	z-index: 10;
 }
 
 .project__text h4, p {
@@ -277,8 +300,8 @@ footer p {
 }
 
 .arrow-left img {
-	width: 64px;
-	height: 64px;
+	width: 60px;
+	height: 60px;
 	margin: 0;
 	border: none;
 	position: absolute;
