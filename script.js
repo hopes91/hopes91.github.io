@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	// Scroll to the anchor elements slower
 	const scrollToAnchor = (aid) => {
 		const anchTag = $('#' + aid);
 		$('html, body').animate({scrollTop: anchTag.offset().top}, 1100);
@@ -8,7 +9,7 @@ $(document).ready(function() {
 		scrollToAnchor('content');
 	});
 
-
+	// Animation of the about me section
 	$(window).scroll(function() {
 		if($(this).scrollTop() > 50) {
 			$('#photo').fadeIn(1500).addClass('fadeInUp');
@@ -23,6 +24,7 @@ $(document).ready(function() {
 		}
 	});
 
+	// Animation of the portfolio section
 	$(window).scroll(function() {
 		if($(this).scrollTop() > 350) {
 			setTimeout(function() {
@@ -40,15 +42,7 @@ $(document).ready(function() {
 		}
 	});
 
-
-	$('.project__img').hover(function() {
-		$(this).addClass('on-top');
-	},
-	function() {
-		$(this).removeClass('on-top');
-	});
-
-
+	// Animation of the projects' pages
 	setTimeout(function() {
 		$('.project__img-one').fadeIn(1000).addClass('fadeInLeft');
 		}, 1000);

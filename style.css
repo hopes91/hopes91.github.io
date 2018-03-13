@@ -5,29 +5,15 @@ html, body {
 	padding: 0;
 }
 
-/*body, header, .about, .portfolio {
-}*/
-
-/*body, header, .about {
-}*/
-
-/*header, .about {
-}*/
-
-body {
-	font-family: 'Alegreya Sans', sans-serif;
-	background-color: #fff;
-	overflow-x: hidden;
+body, header, .about, .portfolio {
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	-webkit-flex-flow: column nowrap;
-	-moz-flex-flow: column nowrap;
-	-ms-flex-flow: column nowrap;
-	-o-flex-flow: column nowrap;
-	flex-flow: column nowrap;
+}
+
+body, header, .about {
 	-webkit-justify-content: space-between;
 	-moz-justify-content: space-between;
 	-ms-justify-content: space-between;
@@ -35,10 +21,29 @@ body {
 	justify-content: space-between;
 }
 
+header, .about {
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	-ms-align-items: center;
+	-o-align-items: center;
+	align-items: center;
+}
+
+body {
+	font-family: 'Alegreya Sans', sans-serif;
+	background-color: #fff;
+	overflow-x: hidden;
+	-webkit-flex-flow: column nowrap;
+	-moz-flex-flow: column nowrap;
+	-ms-flex-flow: column nowrap;
+	-o-flex-flow: column nowrap;
+	flex-flow: column nowrap;
+}
+
 a {
 	width: 100%;
-	text-decoration: none;
 	color: black;
+	text-decoration: none;
 	border: none;
 }
 
@@ -46,31 +51,17 @@ img {
 	vertical-align: middle;
 }
 
+/* Index page */
 header {
 	min-height: 100%;
 	background: url(pics/georgie-cobbs-459520.jpg) center/cover no-repeat;
 	background-attachment: fixed;
 	position: relative;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
 	-webkit-flex-flow: column wrap;
 	-moz-flex-flow: column wrap;
 	-ms-flex-flow: column wrap;
 	-o-flex-flow: column wrap;
 	flex-flow: column wrap;
-	-webkit-justify-content: space-between;
-	-moz-justify-content: space-between;
-	-ms-justify-content: space-between;
-	-o-justify-content: space-between;
-	justify-content: space-between;
-	-webkit-align-items: center;
-	-moz-align-items: center;
-	-ms-align-items: center;
-	-o-align-items: center;
-	align-items: center;
 }
 
 .name {
@@ -104,24 +95,7 @@ header {
 	margin-bottom: -2px;
 }
 
-.about {
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	-webkit-justify-content: space-between;
-	-moz-justify-content: space-between;
-	-ms-justify-content: space-between;
-	-o-justify-content: space-between;
-	justify-content: space-between;
-	-webkit-align-items: center;
-	-moz-align-items: center;
-	-ms-align-items: center;
-	-o-align-items: center;
-	align-items: center;
-}
-
+/* About me */
 .photo {
 	width: 30%;
 }
@@ -140,13 +114,9 @@ header {
 	font-size: 1.2em;
 }
 
+/* Portfolio */
 .portfolio {
 	margin: 3em auto 2em auto;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
 	-webkit-flex-flow: row wrap;
 	-moz-flex-flow: row wrap;
 	-ms-flex-flow: row wrap;
@@ -191,8 +161,8 @@ header {
 
 footer {
 	padding: 0 0.8em;
-	border-top: 1px solid #000;
 	background-color: #F4EE4B;
+	border-top: 1px solid #000;
 	position: relative;
 }
 
@@ -234,6 +204,7 @@ footer p {
 	margin-left: 2em;
 }
 
+/* Pages of the projects */
 .project__content {
 	height: 100%;
 	background: url('pics/georgie-cobbs-385074.jpg') center/cover no-repeat;
@@ -252,6 +223,7 @@ footer p {
 }
 
 .project__img:hover {
+	z-index: 5;
 	-webkit-transform: scale(1.01);
 	-moz-transform: scale(1.01);
 	-o-transform: scale(1.01);
@@ -284,14 +256,10 @@ footer p {
 	z-index: 3;
 }
 
-.on-top {
-	z-index: 5;
-}
-
 .project__text {
 	width: 30em;
-	border: 1px solid #000;
 	background-color: #F4EE4B;
+	border: 1px solid #000;
 	position: absolute;
 	bottom: 2em;
 	right: 3em;
@@ -331,8 +299,8 @@ footer p {
 	}
 
 	.project__text {
-		right: 2em;
 		bottom: 2.5em;
+		right: 2em;
 	}
 }
 
@@ -356,7 +324,7 @@ footer p {
 	}
 
 	#photo {
-		top: 0em;
+		top: 0;
 	}
 
 	.text {
