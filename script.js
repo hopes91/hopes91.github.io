@@ -1,13 +1,8 @@
 $(document).ready(function() {
-	// Scroll to the anchor elements slower
-	const scrollToAnchor = (aid) => {
-		const anchTag = $('#' + aid);
-		$('html, body').animate({scrollTop: anchTag.offset().top}, 1100);
-	}
-
-	$('#arrow-down').click(function() {
-		scrollToAnchor('content');
-	});
+	// Animate my name
+	setTimeout(function() {
+		$('.name').fadeIn(1500).addClass('fadeInDown');
+	}, 1000);
 
 	// Animation of the about me section
 	$(window).scroll(function() {
@@ -59,4 +54,14 @@ $(document).ready(function() {
 			$('.arrow-left img').fadeIn(1000).addClass('fadeInLeft');
 			$('.project__text').fadeIn(1000).addClass('fadeInRight');
 		}, 3000);
+
+	// Scroll to the anchor elements slower
+	const scrollToAnchor = (aid) => {
+		const anchTag = $('#' + aid);
+		$('html, body').animate({scrollTop: anchTag.offset().top}, 1100);
+	}
+
+	$('#arrow-down').click(function() {
+		scrollToAnchor('content');
+	});
 });

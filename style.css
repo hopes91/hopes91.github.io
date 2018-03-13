@@ -87,6 +87,7 @@ header {
 	width: 60%;
 	margin-top: -7em;
 	text-align: center;
+	display: none;
 }
 
 .name h1 {
