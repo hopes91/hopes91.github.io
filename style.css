@@ -64,9 +64,28 @@ header {
 	flex-flow: column wrap;
 }
 
+.languages {
+	margin: 0.3em;
+	font-size: 1.2em;
+	-webkit-align-self: flex-end;
+	-moz-align-self: flex-end;
+	-ms-align-self: flex-end;
+	-o-align-self: flex-end;
+	align-self: flex-end;
+}
+
+.languages:hover {
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.languages p {
+	margin: 0.3em 0.1em;
+	padding: 0 0.5em;
+}
+
 .name {
 	width: 60%;
-	margin-top: 10em;
+	margin-top: -7em;
 	text-align: center;
 }
 
@@ -175,7 +194,7 @@ footer p {
 }
 
 .rights {
-	width: 55%;
+	width: 70%;
 	height: 100%;
 	float: left;
 }
@@ -187,7 +206,7 @@ footer p {
 }
 
 .links {
-	width: 45%;
+	width: 30%;
 	height: 100%;
 	text-align: right;
 	position: absolute;
@@ -198,10 +217,6 @@ footer p {
 	width: 32px;
 	height: 32px;
 	margin-top: 1.2em;
-}
-
-.ru {
-	margin-left: 2em;
 }
 
 /* Pages of the projects */
@@ -307,7 +322,7 @@ footer p {
 @media screen and (max-width: 800px) {
 	.name {
 		width: 100%;
-		margin-top: 6em;
+		margin-top: -6em;
 	}
 
 	.about {
@@ -376,10 +391,6 @@ footer p {
 }
 
 @media screen and (max-width: 640px) {
-	.name {
-		margin-top: 4em;
-	}
-
 	.about {
 		margin: 2em 0 0 0;
 	}
@@ -398,16 +409,6 @@ footer p {
 
 	.project {
 		width: 100%;
-	}
-
-	.links img {
-		width: 27px;
-		height: 27px;
-		margin-top: 1.3em;
-	}
-
-	.ru {
-		margin-left: 1em;
 	}
 
 	.project__text {
