@@ -132,6 +132,7 @@ header {
 	width: 70%;
 	padding: 0 1em;
 	font-size: 1.2em;
+	display: none;
 }
 
 /* Portfolio */
