@@ -10,10 +10,10 @@ $(document).ready(function() {
 			$('#photo').fadeIn(1500).addClass('fadeInUp');
 			setTimeout(function() {
 				$('.text p:first-child').fadeIn(1500).addClass('fadeInUp');
-			}, 1500);
+			}, 1000);
 			setTimeout(function() {
 				$('.text p:last-child').fadeIn(1500).addClass('fadeInUp');
-			}, 2000);
+			}, 1500);
 		} else {
 			$('#photo, .text p:first-child, .text p:last-child').fadeOut(1500).removeClass('fadeInUp');
 		}
