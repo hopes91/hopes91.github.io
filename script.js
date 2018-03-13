@@ -47,4 +47,22 @@ $(document).ready(function() {
 	function() {
 		$(this).removeClass('on-top');
 	});
+
+
+	setTimeout(function() {
+		$('.project__img-one').fadeIn(1000).addClass('fadeInLeft');
+		}, 1000);
+		setTimeout(function() {
+			$('.project__img-two').fadeIn(1000).addClass('fadeInLeft');
+			}, 1500);
+		setTimeout(function() {
+			$('.project__img-three').fadeIn(1000).addClass('fadeInLeft');
+		}, 2000);
+		setTimeout(function() {
+			$('.project__img-four').fadeIn(1000).addClass('fadeInLeft');
+		}, 2500);
+		setTimeout(function() {
+			$('.arrow-left img').fadeIn(1000).addClass('fadeInLeft');
+			$('.project__text').fadeIn(1000).addClass('fadeInRight');
+		}, 3000);
 });
