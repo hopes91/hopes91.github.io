@@ -331,10 +331,6 @@ footer p {
 		padding: 0 1em;
 	}
 
-	.project {
-		width: 30%;
-	}
-
 	.project__img {
 		width: 85%;
 	}
@@ -352,7 +348,7 @@ footer p {
 	}
 
 	.about {
-		margin: 3em 2em;
+		margin: 2em 2em 0 2em;
 		-webkit-flex-flow: column nowrap;
 		-moz-flex-flow: column nowrap;
 		-ms-flex-flow: column nowrap;
@@ -374,12 +370,16 @@ footer p {
 		text-align: center;
 	}
 
+	.project p {
+		font-size: 1.2em;
+	}
+
 	.portfolio {
-		margin-bottom: 3em;
+		margin: 3em 0;
 	}
 
 	.project {
-		width: 45%;
+		width: 50%;
 	}
 
 	.project__content * {
@@ -417,6 +417,10 @@ footer p {
 		margin-top: 4em;
 	}
 
+	.about {
+		margin: 2em 0 0 0;
+	}
+
 	.photo {
 		width: 70%;
 	}
@@ -425,8 +429,12 @@ footer p {
 		width: 100%;
 	}
 
+	.portfolio {
+		margin: 2em 0;
+	}
+
 	.project {
-		width: 90%;
+		width: 100%;
 	}
 
 	.links img {
