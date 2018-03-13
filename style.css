@@ -136,16 +136,12 @@ header {
 
 .text {
 	width: 70%;
-	padding-right: 1em;
+	padding: 0 1em;
 	font-size: 1.2em;
 }
 
-.text p {
-	display: none;
-}
-
 .portfolio {
-	margin: 4em auto 2em auto;
+	margin: 3em auto 2em auto;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -174,7 +170,7 @@ header {
 }
 
 .project p {
-	padding: 0 0.7em;
+	padding: 0.1em 0.7em;
 	color: #fff;
 	font-size: 1.1em;
 }
@@ -327,10 +323,6 @@ footer p {
 }
 
 @media screen and (max-width: 1024px) {
-	.text {
-		padding: 0 1em;
-	}
-
 	.project__img {
 		width: 85%;
 	}
