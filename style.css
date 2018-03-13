@@ -131,13 +131,17 @@ header {
 	box-shadow: 2em 2em #F4EE4B;
 	position: relative;
 	top: -2em;
-	/*display: none;*/
+	display: none;
 }
 
 .text {
 	width: 70%;
 	padding-right: 1em;
 	font-size: 1.2em;
+}
+
+.text p {
+	display: none;
 }
 
 .portfolio {
@@ -323,6 +327,10 @@ footer p {
 }
 
 @media screen and (max-width: 1024px) {
+	.text {
+		padding: 0 1em;
+	}
+
 	.project {
 		width: 30%;
 	}

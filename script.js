@@ -10,9 +10,19 @@ $(document).ready(function() {
 
 
 	$(window).scroll(function() {
-		$('#photo')['fade' + ($(this).scrollTop() > 50 ? 'In' : 'Out')](1500);
-		$('.text')['fade' + ($(this).scrollTop() > 100 ? 'In' : 'Out')](1500);
+		if($(this).scrollTop() > 50) {
+			$('#photo').fadeIn(1500).addClass('fadeInUp');
+			setTimeout(function() {
+				$('.text p:first').fadeIn(1500).addClass('fadeInUp');
+			}, 1500);
+			setTimeout(function() {
+				$('.text p:last').fadeIn(1500).addClass('fadeInUp');
+			}, 1800);
+		} else {
+			$('#photo, .text p:first, .text p:last').fadeOut(1500).removeClass('fadeInUp');
+		}
 	});
+
 
 	$('.project__img').hover(function() {
 		$(this).addClass('on-top');
