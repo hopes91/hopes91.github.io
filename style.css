@@ -199,7 +199,7 @@ footer p {
 }
 
 .rights {
-	width: 70%;
+	width: 60%;
 	height: 100%;
 	float: left;
 }
@@ -211,17 +211,23 @@ footer p {
 }
 
 .links {
-	width: 30%;
+	width: 40%;
 	height: 100%;
 	text-align: right;
 	position: absolute;
 	right: 0.8em;
 }
 
-.links img {
+.social-media {
 	width: 32px;
 	height: 32px;
 	margin-top: 1.2em;
+}
+
+.email {
+	width: 29px;
+	height: 29px;
+	margin: 1.4em 0.15em 0 0;
 }
 
 /* Pages of the projects */
