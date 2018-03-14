@@ -89,7 +89,7 @@ header {
 
 .lang-index h3 {
 	margin: 0.5em;
-	padding: 0.7em 1.5em;
+	padding: 0.7em 1.2em;
 	transition: all 1s ease-out;
 	background: linear-gradient(to right, rgb(219, 220, 215), rgb(255, 255, 0));
 	background-size: 200% 200%;

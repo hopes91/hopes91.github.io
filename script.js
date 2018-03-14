@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	// Animate language buttons
 	setTimeout(function() {
-		$('.ru, .en').fadeIn(1000).addClass('bounceInRight');
+		$('.ru, .en').fadeIn(1000).addClass('fadeInRight');
 	}, 1500);
 
 	// Animate my name
