@@ -1,4 +1,9 @@
 $(document).ready(function() {
+	// Animate language buttons
+	setTimeout(function() {
+		$('.ru, .en').fadeIn(1000).addClass('bounceInRight');
+	}, 1500);
+
 	// Animate my name
 	setTimeout(function() {
 		$('.name').fadeIn(1500).addClass('fadeInDown');
