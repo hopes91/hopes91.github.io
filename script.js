@@ -56,7 +56,13 @@ $(document).ready(function() {
 			$('.project__img-four').fadeIn(1000).addClass('fadeInLeft');
 		}, 2500);
 		setTimeout(function() {
-			$('.arrow-left img').fadeIn(1000).addClass('fadeInLeft');
+			$('.arrow-left img').fadeIn(1000).addClass('fadeInRight');
+		}, 2700);
+		setTimeout(function() {
+			$('.arrow-right img').fadeIn(1000).addClass('fadeInRight');
+		}, 2900);
+		setTimeout(function() {
+			$('.arrow-back img').fadeIn(1000).addClass('fadeInLeft');
 			$('.project__text').fadeIn(1000).addClass('fadeInRight');
 		}, 3000);
 

@@ -521,19 +521,32 @@ footer p {
 	padding: 0 1em;
 }
 
-.arrow-left a {
+.arrow-back a, .arrow-left a, .arrow-right a {
 	display: block;
 }
 
-.arrow-left img {
+.arrow-back img, .arrow-left img, .arrow-right img {
 	width: 60px;
 	height: 60px;
 	margin: 0;
 	border: none;
 	position: absolute;
+	display: none;
+}
+
+.arrow-back img {
 	bottom: 1em;
 	left: 1em;
-	display: none;
+}
+
+.arrow-left img {
+	top: 1em;
+	right: 4em;
+}
+
+.arrow-right img {
+	top: 1em;
+	right: 1em;
 }
 
 @media screen and (max-width: 1024px) {
@@ -599,6 +612,7 @@ footer p {
 	.project__about {
 		width: 90%;
 		margin: 0 auto;
+		padding-top: 5em;
 	}
 
 	.project__img {
@@ -608,13 +622,17 @@ footer p {
 
 	.project__text {
 		width: 90%;
-		margin: 0 auto 1em auto;
+		margin: 0 auto 2em auto;
 	}
 
-	.arrow-left img {
+	.arrow-back img {
 		position: relative;
 		bottom: 1em;
 		left: -2em;
+	}
+
+	.arrow-left img {
+		left: 1em;
 	}
 }
 
@@ -643,8 +661,8 @@ footer p {
 		width: 100%;
 	}
 
-	.arrow-left img {
+	.arrow-back img {
 		bottom: 0.5em;
-		left: -1em;
+		left: -1.2em;
 	}
 }
