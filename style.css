@@ -315,6 +315,11 @@ footer p {
 	padding: 0 1em;
 }
 
+.project__text span {
+	font-weight: bold;
+	float: right;
+}
+
 .arrow-back a, .arrow-left a, .arrow-right a {
 	display: block;
 }
