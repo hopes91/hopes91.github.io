@@ -465,3 +465,13 @@ footer p {
 		left: -1em;
 	}
 }
+
+@media screen and (max-width: 380px) {
+	.project__text p:last-child {
+		padding-bottom: 2em;
+	}
+
+	.project__text span {
+		line-height: 2.5;
+	}
+}
