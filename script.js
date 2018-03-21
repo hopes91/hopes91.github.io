@@ -62,7 +62,7 @@ $(document).ready(function() {
 			$('.arrow-right img').fadeIn(1000).addClass('fadeInRight');
 		}, 2900);
 		setTimeout(function() {
-			$('.arrow-back img').fadeIn(1000).addClass('fadeInLeft');
+			$('.arrow-home img').fadeIn(1000).addClass('fadeInLeft');
 			$('.project__text').fadeIn(1000).addClass('fadeInRight');
 		}, 3000);
 

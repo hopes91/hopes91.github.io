@@ -320,11 +320,11 @@ footer p {
 	float: right;
 }
 
-.arrow-back a, .arrow-left a, .arrow-right a {
+.arrow-home a, .arrow-left a, .arrow-right a {
 	display: block;
 }
 
-.arrow-back img, .arrow-left img, .arrow-right img {
+.arrow-home img, .arrow-left img, .arrow-right img {
 	width: 60px;
 	height: 60px;
 	margin: 0;
@@ -333,7 +333,7 @@ footer p {
 	display: none;
 }
 
-.arrow-back img {
+.arrow-home img {
 	bottom: 1em;
 	left: 1em;
 }
@@ -424,7 +424,7 @@ footer p {
 		margin: 0 auto 2em auto;
 	}
 
-	.arrow-back img {
+	.arrow-home img {
 		position: relative;
 		bottom: 1em;
 		left: -2em;
@@ -460,8 +460,8 @@ footer p {
 		width: 100%;
 	}
 
-	.arrow-back img {
+	.arrow-home img {
 		bottom: 0.5em;
-		left: -1.2em;
+		left: -1em;
 	}
 }
