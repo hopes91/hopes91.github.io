@@ -432,6 +432,10 @@ footer p {
 		width: 70%;
 	}
 
+	#photo {
+		box-shadow: 1.2em 1.2em #F4EE4B;
+	}
+
 	.text {
 		width: 100%;
 	}
