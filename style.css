@@ -198,7 +198,7 @@ footer {
 footer p {
 	width: 100px;
 	margin: 2em 0;
-	padding: 0 1em 0 0;
+	padding: 0 0.9em 0 0;
 	font-size: 0.9em;
 	float: left;
 }
