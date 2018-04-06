@@ -304,6 +304,7 @@ footer p {
 }
 
 .project__text span {
+	padding: 0.7em 1em;
 	font-weight: bold;
 	float: right;
 }
@@ -410,6 +411,11 @@ footer p {
 	.project__text {
 		width: 90%;
 		margin: 0 auto 2em auto;
+		padding-bottom: 2.5em;
+	}
+
+	.project__text span {
+		padding: 0.7em 1em;
 	}
 
 	.arrow-home img {
@@ -455,15 +461,5 @@ footer p {
 	.arrow-home img {
 		bottom: 0.5em;
 		left: -1em;
-	}
-}
-
-@media screen and (max-width: 380px) {
-	.project__text p:last-child {
-		padding-bottom: 2em;
-	}
-
-	.project__text span {
-		line-height: 2.5;
 	}
 }
