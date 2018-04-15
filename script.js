@@ -37,8 +37,11 @@ $(document).ready(function() {
 				$('.project:nth-child(3) img').fadeIn(1500).addClass('fadeInUp');
 			}, 800);
 			setTimeout(function() {
-				$('.project:last-child img').fadeIn(1500).addClass('fadeInUp');
+				$('.project:nth-child(4) img').fadeIn(1500).addClass('fadeInUp');
 			}, 1000);
+			setTimeout(function() {
+				$('.project:nth-child(5) img').fadeIn(1500).addClass('fadeInUp');
+			}, 1200);
 		}
 	});
 
