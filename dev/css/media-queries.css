@@ -17,7 +17,6 @@
 
 	.about {
 		margin: 2em 2em 0 2em;
-		flex-flow: column nowrap;
 	}
 
 	.photo {
