@@ -5,15 +5,15 @@ html, body {
 	padding: 0;
 }
 
-body, header, .about, .portfolio {
+body, .about, .portfolio {
 	display: flex;
 }
 
-body, header, .about {
+body, .about {
 	justify-content: space-between;
 }
 
-header, .about {
+.about {
 	align-items: center;
 }
 
@@ -26,18 +26,7 @@ a {
 	color: black;
 	text-decoration: none;
 	border: none;
-}
-
-img {
-	vertical-align: middle;
-}
-
-/* index page */
-header {
-	min-height: 100%;
-	background-attachment: fixed;
-	position: relative;
-	flex-flow: column wrap;
+	display: inline-block;
 }
 
 /* animation */
@@ -110,52 +99,47 @@ header {
 	animation-name: fadeInLeft;
 }
 
-.languages {
-	margin: 0.3em;
-	font-size: 1.2em;
-	font-weight: bold;
-	align-self: flex-end;
-}
-
-.languages p {
-	margin: 0.3em 0.1em;
-	padding: 0.5em 0.7em;
-	transition: all 1s ease-out;
-	background: linear-gradient(to right, rgb(219, 220, 215), rgb(255, 255, 0));
-	background-size: 200% 200%;
-	display: none;
-}
-
-.languages p:hover {
-	background-position: 99% 50%;
-}
-
+/* index page */
 .name {
-	width: 60%;
-	margin-top: -7em;
-	text-align: center;
-	display: none;
+	border: 1px solid black;
+	position: absolute;
+	top: 1em;
+	left: 0;
+	/*display: none;*/
 }
 
 .name h1 {
-	margin-bottom: 0;
-	font-size: 3em;
+	margin: 1em 2em 1em 1em;
+	/*font-size: 3em;*/
 }
 
-.name h3 {
-	margin-top: 0.3em;
-	font-size: 1.2em;
-	font-weight: 400;
+.name h2 {
+	margin: 1em 2em 1em 1em;
+	/*font-size: 1.2em;*/
+	/*font-weight: 400;*/
 }
 
-#arrow-down {
-	margin-bottom: 0;
-	transition: margin-bottom 1s ease;
+.languages {
+	padding: 1.5em 1.7em;
+	/*font-size: 1.2em;*/
+	/*font-weight: bold;*/
+	border: 1px solid black;
+	/*align-self: flex-end;*/
+	position: absolute;
+	top: 0;
+	right: 0;
+	/*display: none;*/
 }
 
-#arrow-down:hover {
-	margin-bottom: -2px;
+.languages a {
+	/*transition: all 1s ease-out;
+	background: linear-gradient(to right, rgb(219, 220, 215), rgb(255, 255, 0));
+	background-size: 200% 200%;*/
 }
+
+/*.languages a:hover {
+	background-position: 99% 50%;
+}*/
 
 /* about me */
 .photo {
