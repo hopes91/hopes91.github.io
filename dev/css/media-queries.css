@@ -10,7 +10,7 @@
 }
 
 @media screen and (max-width: 800px) {
-	.name {
+	#name {
 		width: 100%;
 		margin-top: -6em;
 	}

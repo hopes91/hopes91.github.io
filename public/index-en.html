@@ -13,26 +13,38 @@
 	</head>
 	<body>
 		<main>
-			<div class="name animated">
+			<div id="name" class="animated">
 				<a href="https://nadyafa.com/index-en">
 					<h1>Nadezhda Falaleeva</h1>
 					<h2>Web designer/developer</h2>
 				</a>
 			</div>
-			<div class="languages animated">
-				<a href="index-en">ru</a>
+			<div id="languages" class="animated">
+				<a href="index-en"><p>ru</p></a>
+			</div>
+			<nav id="nav">
+				<a class="about">About me</a>
+				<a class="portfolio">Portfolio</a>
+			</nav>
+			<div id="contacts" class="animated">
+				<a href="mailto:iam@nadyafa.com" target="_blank" title="Contact me"><img src="images/email-48.png" alt="Email"></a>
+				<a href="https://instagram.com/hopefully.dev/" target="_blank" title="Instagram"><img src="images/instagram-48.png" alt="Instagram"></a>
+				<a href="https://github.com/hopes91" target="_blank" title="Github"><img src="images/github-48.png" alt="Github"></a>
+			</div>
+			<div id="back">
+				<button type="reset" id="close" title="Close">&times;</button>
+				<div id="about" class="animated">
+					<div class="photo">
+						<img src="images/nadezhdafalaleeva.jpg" alt="Photo of me">
+					</div>
+					<div class="text">
+						<p>Two years ago, I thought my future would be related to writing texts, but suddenly, I dove into such a difficult yet exciting world of web-development. And now I just cannot imagine my life without coding. My goal is to create modern, fast and beautiful websites.</p>
+						<p>I live in Kirov Region (Russia), love football, constantly study, learn three foreign languages, read, and drink tea.</p>
+					</div>
+				</div>
 			</div>
 		</main>
 		<!-- <main id="content">
-			<div class="about">
-				<div class="photo">
-					<img id="photo" class="animated" src="images/nadezhdafalaleeva.jpg" alt="Photo of me">
-				</div>
-				<div class="text animated">
-					<p>Two years ago, I thought my future would be related to writing texts, but suddenly, I dove into such a difficult yet exciting world of web-development. And now I just cannot imagine my life without coding. My goal is to create modern, fast and beautiful websites.</p>
-					<p>I live in Kirov (Russia), love football, constantly study, learn three foreign languages, read, and drink tea.</p>
-				</div>
-			</div>
 			<div class="portfolio">
 				<div class="project">
 					<img class="animated" src="images/gbg-small.png" alt="Gradient Background Generator">

@@ -1,4 +1,4 @@
-html, body {
+html, body, main {
 	width: 100%;
 	height: 100%;
 	margin: 0;
@@ -7,14 +7,16 @@ html, body {
 
 a {
 	width: 100%;
+	height: 100%;
 	text-decoration: none;
 	color: black;
 	border: none;
+	outline: none;
 	display: inline-block;
 }
 
 /* animation */
-.animated {
+/*.animated {
 	animation-duration: 1s;
 	animation-fill-mode: both;
 }
@@ -81,10 +83,14 @@ a {
 
 .fadeInLeft {
 	animation-name: fadeInLeft;
-}
+}*/
 
 /* index page */
-.name {
+main {
+	position: relative;
+}
+
+#name {
 	border: 1px solid black;
 	position: absolute;
 	top: 1em;
@@ -92,59 +98,131 @@ a {
 	/*display: none;*/
 }
 
-.name h1 {
+#name h1 {
 	margin: 1em 2em 1em 1em;
 	/*font-size: 3em;*/
 }
 
-.name h2 {
+#name h2 {
 	margin: 1em 2em 1em 1em;
 	/*font-size: 1.2em;*/
 	/*font-weight: 400;*/
 }
 
-.languages {
-	padding: 1.5em 1.7em;
+#languages {
+	border: 1px solid black;
 	/*font-size: 1.2em;*/
 	/*font-weight: bold;*/
-	border: 1px solid black;
 	position: absolute;
 	top: 0;
 	right: 0;
 	/*display: none;*/
-}
-
-.languages a {
 	/*transition: all 1s ease-out;
 	background: linear-gradient(to right, rgb(219, 220, 215), rgb(255, 255, 0));
 	background-size: 200% 200%;*/
 }
 
-/*.languages a:hover {
+/*#languages:hover {
 	background-position: 99% 50%;
 }*/
 
-/* about me */
-.photo {
-	width: 30%;
+#languages p {
+	margin: 0;
+	padding: 1.5em 1.7em;
 }
 
-#photo {
-	width: 90%;
-	box-shadow: 2em 2em #F4EE4B;
-	position: relative;
-	top: -2em;
+#nav {
+	width: 10em;
+	position: absolute;
+	bottom: 7em;
+	left: 0;
+}
+
+#nav a {
+	border: 1px solid black;
+	margin: 0.5em 0;
+	padding: 1em;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+
+#contacts {
+	border: 1px solid black;
+	padding: 1em;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	/*display: none;*/
+}
+
+#contacts a {
+	width: auto;
+	height: auto;
+	margin: 0 0.1em;
+	vertical-align: middle;
+}
+
+#contacts img {
+	width: 35px;
+}
+
+#back {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 1);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
 	display: none;
+}
+
+#close {
+	width: 1em;
+	height: 1em;
+	color: #000;
+	font-size: 2em;
+	background-color: rgba(0, 0, 0, 0);
+	border: 0;
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	outline: none;
+	z-index: 20;
+}
+
+#close:hover {
+	font-size: 2.05em;
+}
+
+#about {
+	border: 1px solid black;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+.photo {
+	width: 30%;
+	margin: 2em auto;
+}
+
+.photo img {
+	width: 100%;
+	/*box-shadow: 2em 2em #F4EE4B;
+	position: relative;
+	top: -2em;*/
 }
 
 .text {
 	width: 70%;
-	padding: 0 1em;
+	margin: 0 auto;
+	padding: 0.5em 1em 1em 1em;
 	font-size: 1.2em;
-}
-
-.text p {
-	display: none;
 }
 
 /* portfolio */
