@@ -218,7 +218,7 @@ header {
 }
 
 footer {
-	padding: 0 0.8em;
+	padding: 0 1em;
 	background-color: #F4EE4B;
 	border-top: 1px solid #000;
 	position: relative;
@@ -226,6 +226,7 @@ footer {
 
 footer p {
 	margin: 2em 0;
+	padding: 0;
 	font-size: 0.9em;
 	float: left;
 }
