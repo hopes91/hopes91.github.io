@@ -225,9 +225,7 @@ footer {
 }
 
 footer p {
-	width: 100px;
 	margin: 2em 0;
-	padding: 0 0.7em 0 0;
 	font-size: 0.9em;
 	float: left;
 }
@@ -236,12 +234,6 @@ footer p {
 	width: 60%;
 	height: 100%;
 	float: left;
-}
-
-.rights img {
-	width: 25px;
-	height: 25px;
-	margin-top: 1.4em;
 }
 
 .links {
