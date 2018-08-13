@@ -18,7 +18,6 @@ header, .about {
 }
 
 body {
-	font-family: 'Alegreya Sans', sans-serif;
 	flex-flow: column nowrap;
 }
 
@@ -140,7 +139,6 @@ header {
 
 .name h1 {
 	margin-bottom: 0;
-	font-family: 'Marck Script', cursive;
 	font-size: 3em;
 }
 
