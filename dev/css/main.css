@@ -33,7 +33,7 @@ img {
 	vertical-align: middle;
 }
 
-/* Index page */
+/* index page */
 header {
 	min-height: 100%;
 	background: url(pics/georgie-cobbs-459520.jpg) center/cover no-repeat;
@@ -160,7 +160,7 @@ header {
 	margin-bottom: -2px;
 }
 
-/* About me */
+/* about me */
 .photo {
 	width: 30%;
 }
@@ -183,7 +183,7 @@ header {
 	display: none;
 }
 
-/* Portfolio */
+/* portfolio */
 .portfolio {
 	margin: 3em auto 2em auto;
 	flex-flow: row wrap;
@@ -267,7 +267,7 @@ footer p {
 	margin: 1.4em 0.15em 0 0;
 }
 
-/* Pages of the projects */
+/* projects' pages */
 .project__content {
 	height: 100%;
 	background-color: #F7F7F7;
