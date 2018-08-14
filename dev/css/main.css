@@ -87,6 +87,7 @@ a {
 
 /* index page */
 main {
+	background: url(images/georgie-cobbs-459520-unsplash.jpg) bottom left/cover no-repeat;
 	position: relative;
 }
 
@@ -273,6 +274,17 @@ main {
 	text-align: left;
 	position: absolute;
 	bottom: 0;
+}
+
+.photo-copyright {
+	width: 12em;
+	height: 1em;
+	padding: 1em;
+	font-size: 0.9em;
+	text-align: right;
+	position: absolute;
+	bottom: 0;
+	right: 0;
 }
 
 /* projects' pages */
