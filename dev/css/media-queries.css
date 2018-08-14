@@ -15,7 +15,7 @@
 		margin-top: -6em;
 	}
 
-	.about {
+	#about {
 		margin: 2em 2em 0 2em;
 	}
 
@@ -23,7 +23,7 @@
 		width: 50%;
 	}
 
-	#photo {
+	.photo img {
 		top: 0;
 	}
 
@@ -33,11 +33,11 @@
 		text-align: center;
 	}
 
-	.project p {
+	.project__title p {
 		font-size: 1.2em;
 	}
 
-	.portfolio {
+	#portfolio {
 		margin: 3em 0;
 	}
 
@@ -86,7 +86,7 @@
 }
 
 @media screen and (max-width: 640px) {
-	.about {
+	#about {
 		margin: 2em 0 0 0;
 	}
 
@@ -94,7 +94,7 @@
 		width: 70%;
 	}
 
-	#photo {
+	.photo img {
 		box-shadow: 1.2em 1.2em #F4EE4B;
 	}
 
@@ -102,7 +102,7 @@
 		width: 100%;
 	}
 
-	.portfolio {
+	#portfolio {
 		margin: 2em 0;
 	}
 
