@@ -8,13 +8,12 @@ function showInfo(event) {
 	back.style.display = 'block';
 
 	if (event.target.className === 'about') aboutSection.style.display = 'block';
-	else portfolioSection.style.display = 'block';
+	else portfolioSection.style.display = 'flex';
 }
 
 function hideInfo() {
-	if (aboutSection.style.display = 'block') aboutSection.style.display = 'none';
-	else portfolioSection.style.display = 'none';
-	
+	aboutSection.style.display = 'none';
+	portfolioSection.style.display = 'none';
 	back.style.display = 'none';
 }
 
