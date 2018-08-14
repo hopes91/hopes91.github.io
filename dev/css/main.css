@@ -181,8 +181,8 @@ main {
 #close {
 	width: 1em;
 	height: 1em;
-	color: #F4EE4B;
-	font-size: 2em;
+	color: #000;
+	font-size: 2.7em;
 	background-color: rgba(0, 0, 0, 0);
 	border: 0;
 	position: absolute;
@@ -193,7 +193,7 @@ main {
 }
 
 #close:hover {
-	font-size: 2.05em;
+	font-size: 2.75em;
 }
 
 #about, #portfolio {
@@ -228,7 +228,6 @@ main {
 
 /* portfolio */
 #portfolio {
-	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-between;
 	align-items: flex-start;
@@ -277,14 +276,19 @@ main {
 }
 
 .photo-copyright {
-	width: 12em;
+	width: auto;
 	height: 1em;
 	padding: 1em;
+	color: #38373B;
 	font-size: 0.9em;
 	text-align: right;
 	position: absolute;
 	bottom: 0;
 	right: 0;
+}
+
+.photo-copyright:hover {
+	color: #000;
 }
 
 /* projects' pages */
