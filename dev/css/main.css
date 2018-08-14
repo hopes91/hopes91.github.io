@@ -275,46 +275,6 @@ main {
 	bottom: 0;
 }
 
-footer {
-	padding: 0 1em;
-	background-color: #F4EE4B;
-	border-top: 1px solid #000;
-	position: relative;
-}
-
-footer p {
-	margin: 2em 0;
-	padding: 0;
-	font-size: 0.9em;
-	float: left;
-}
-
-.rights {
-	width: 60%;
-	height: 100%;
-	float: left;
-}
-
-.links {
-	width: 40%;
-	height: 100%;
-	text-align: right;
-	position: absolute;
-	right: 0.8em;
-}
-
-.social-media {
-	width: 32px;
-	height: 32px;
-	margin-top: 1.2em;
-}
-
-.email {
-	width: 29px;
-	height: 29px;
-	margin: 1.4em 0.15em 0 0;
-}
-
 /* projects' pages */
 .project__content {
 	height: 100%;
