@@ -1,8 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic,cyrillic-ext');
+
 html, body, main {
 	width: 100%;
 	height: 100%;
 	margin: 0;
 	padding: 0;
+}
+
+body {
+	font-family: 'PT Sans', sans-serif;
 }
 
 a {
@@ -100,20 +106,20 @@ main {
 }
 
 #name h1 {
-	margin: 1em 2em 1em 1em;
-	/*font-size: 3em;*/
+	margin: 0.7em 2em 0.2em 1em;
+	font-size: 2.5em;
 }
 
 #name h2 {
-	margin: 1em 2em 1em 1em;
-	/*font-size: 1.2em;*/
-	/*font-weight: 400;*/
+	margin: 0 2em 1.3em 2em;
+	font-size: 1.3em;
+	font-weight: 200;
 }
 
 #languages {
 	border: 1px solid black;
-	/*font-size: 1.2em;*/
-	/*font-weight: bold;*/
+	font-size: 1.2em;
+	font-weight: bold;
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -129,13 +135,13 @@ main {
 
 #languages p {
 	margin: 0;
-	padding: 1.5em 1.7em;
+	padding: 1.2em 1.5em;
 }
 
 #nav {
 	width: 10em;
 	position: absolute;
-	bottom: 7em;
+	bottom: 5.5em;
 	left: 0;
 }
 
@@ -143,6 +149,7 @@ main {
 	border: 1px solid black;
 	margin: 0.5em 0;
 	padding: 1em;
+	font-size: 1.1em;
 	box-sizing: border-box;
 	cursor: pointer;
 }
