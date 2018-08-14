@@ -124,8 +124,8 @@ main {
 	top: 0;
 	right: 0;
 	/*display: none;*/
-	/*transition: all 1s ease-out;
-	background: linear-gradient(to right, rgb(219, 220, 215), rgb(255, 255, 0));
+	/*transition: all 1s;
+	background: linear-gradient(to right, rgb(219, 220, 215), rgb(246, 240, 81));
 	background-size: 200% 200%;*/
 }
 
@@ -164,14 +164,15 @@ main {
 }
 
 #contacts a {
-	width: auto;
-	height: auto;
+	width: 30px;
+	height: 30px;
 	margin: 0 0.1em;
 	vertical-align: middle;
 }
 
 #contacts img {
-	width: 35px;
+	width: 100%;
+	height: 100%;
 }
 
 #back {
