@@ -1,11 +1,11 @@
 const navbar = document.querySelectorAll('#nav');
-const back = document.getElementById('back');
+const front = document.getElementById('front');
 const aboutSection = document.getElementById('about');
 const portfolioSection = document.getElementById('portfolio');
 const closeIcon = document.getElementById('close');
 
 function showInfo(event) {
-	back.style.display = 'block';
+	front.style.display = 'block';
 
 	if (event.target.className === 'about') {
 		portfolioSection.style.display = 'none';
@@ -19,7 +19,7 @@ function showInfo(event) {
 function hideInfo() {
 	aboutSection.style.display = 'none';
 	portfolioSection.style.display = 'none';
-	back.style.display = 'none';
+	front.style.display = 'none';
 }
 
 navbar.forEach(link => link.addEventListener('click', showInfo));

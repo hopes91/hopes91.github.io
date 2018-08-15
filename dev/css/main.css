@@ -97,15 +97,30 @@ a {
 
 /* index page */
 #index {
-	background: url(images/georgie-cobbs-459520-unsplash.jpg) bottom left/cover no-repeat;
+	/*background: linear-gradient(to bottom, #e9e5e2 0%, rgb(222, 216, 212) 90%);*/
+	/*background: linear-gradient(to bottom, #fff 0%, #000 90%);*/
 }
 
+#name, #languages, #nav a, #contacts {
+	background-color: #000;
+	/*background: linear-gradient(to right, rgb(55, 55, 55), rgb(0, 0, 0));
+	background-size: 120% 120%;
+	transition: all 1s;*/
+}
+
+/*#name:hover, #languages:hover, #nav a:hover, #contacts:hover {
+	background-position: 100% 50%;
+}*/
+
 #name {
-	border: 1px solid black;
 	position: absolute;
 	top: 1em;
 	left: 0;
 	/*display: none;*/
+}
+
+#name h1, #name h2, #languages p, #nav a {
+	color: #fff;
 }
 
 #name h1 {
@@ -120,12 +135,12 @@ a {
 }
 
 #languages {
-	border: 1px solid black;
 	font-size: 1.2em;
 	font-weight: bold;
 	position: absolute;
 	top: 0;
 	right: 0;
+	z-index: 1;
 	/*display: none;*/
 	/*transition: all 1s;
 	background: linear-gradient(to right, rgb(219, 220, 215), rgb(246, 240, 81));
@@ -150,7 +165,6 @@ a {
 }
 
 #nav a {
-	border: 1px solid black;
 	margin: 0.5em 0;
 	padding: 1em;
 	font-size: 1.1em;
@@ -159,8 +173,7 @@ a {
 }
 
 #contacts {
-	border: 1px solid black;
-	padding: 1em;
+	padding: 1em 1.6em;
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -179,12 +192,32 @@ a {
 	height: 100%;
 }
 
+.styling-element {
+	width: 10%;
+	height: 0.4em;
+	background-color: #000;
+	position: absolute;
+	bottom: 2.7em;
+	right: 55%;
+	z-index: 1;
+}
+
 #back {
 	width: 60%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.9) url(images/georgie-cobbs-459520-unsplash.jpg) bottom left/cover no-repeat;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 0;
+}
+
+#front {
+	width: 100%;
 	min-height: 100%;
 	overflow-y: scroll;
-	background-color: rgba(255, 255, 255, 0.95);
-	position: fixed;
+	background-color: rgba(0, 0, 0, 0.9);
+	position: absolute;
 	top: 0;
 	right: 0;
 	z-index: 10;
@@ -192,16 +225,16 @@ a {
 }
 
 #close {
-	width: 50px;
-	height: 50px;
+	width: 52px;
+	height: 52px;
 	padding: 0;
 	color: #000;
 	font-size: 3em;
-	background-color: rgba(244, 238, 75, 0.7);
+	background-color: rgba(244, 238, 75, 1);
 	border: none;
 	position: absolute;
-	top: 5px;
-	right: 10px;
+	top: 0.3em;
+	right: 0.3em;
 	outline: none;
 	z-index: 20;
 }
@@ -218,6 +251,7 @@ a {
 	top: 0;
 	left: 0;
 	display: none;
+	z-index: 15;
 }
 
 .photo {
