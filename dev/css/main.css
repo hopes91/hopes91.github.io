@@ -240,7 +240,6 @@ a {
 /* portfolio */
 #portfolio {
 	flex-flow: row wrap;
-	justify-content: space-between;
 	align-items: flex-start;
 	align-content: flex-start;
 }
@@ -257,7 +256,7 @@ a {
 }
 
 .project a {
-	height: 98.5%;
+	height: 97.3%;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -270,11 +269,23 @@ a {
 	position: absolute;
 	top: 0;
 	left: 0;
-	display: none;
+	opacity: 0;
 }
 
-.project:hover .project__title {
-	display: block;
+.project__title-active {
+	animation-name: projectTitle;
+	animation-duration: 0.8s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes projectTitle {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
 }
 
 .project__title p {
