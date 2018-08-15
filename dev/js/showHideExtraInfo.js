@@ -7,8 +7,13 @@ const closeIcon = document.getElementById('close');
 function showInfo(event) {
 	back.style.display = 'block';
 
-	if (event.target.className === 'about') aboutSection.style.display = 'block';
-	else portfolioSection.style.display = 'flex';
+	if (event.target.className === 'about') {
+		portfolioSection.style.display = 'none';
+		aboutSection.style.display = 'block';
+	} else {
+		aboutSection.style.display = 'none';
+		portfolioSection.style.display = 'flex';
+	}
 }
 
 function hideInfo() {
