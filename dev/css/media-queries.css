@@ -50,11 +50,8 @@
 	}
 
 	.project__content {
-		height: auto;
-	}
-
-	.project__about {
 		width: 90%;
+		height: auto;
 		margin: 0 auto;
 		padding-top: 5em;
 	}
@@ -74,13 +71,13 @@
 		padding: 0.7em 1em;
 	}
 
-	.arrow-home img {
+	.arrow-home {
 		position: relative;
 		bottom: 1em;
 		left: -2em;
 	}
 
-	.arrow-left img {
+	.arrow-left {
 		left: 1em;
 	}
 }
@@ -114,7 +111,7 @@
 		width: 100%;
 	}
 
-	.arrow-home img {
+	.arrow-home {
 		bottom: 0.5em;
 		left: -1em;
 	}
