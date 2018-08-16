@@ -1,4 +1,4 @@
-const project = document.querySelectorAll('.project');
+const projects = document.querySelectorAll('.project');
 
 function showProjectTitle(event) {
 	let projectTitle = event.target.children[1].children[0]; // div with a class "project__title"
@@ -10,6 +10,6 @@ function hideProjectTitle(event) {
 	projectTitle.classList.remove('project__title-active');
 }
 
-project.forEach(project => project.addEventListener('mouseenter', showProjectTitle));
-project.forEach(project => project.addEventListener('mouseleave', hideProjectTitle));
+projects.forEach(project => project.addEventListener('mouseenter', showProjectTitle));
+projects.forEach(project => project.addEventListener('mouseleave', hideProjectTitle));
 
