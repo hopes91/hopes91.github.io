@@ -96,27 +96,22 @@ a {
 }*/
 
 /* index page */
-#index {
-	/*background: linear-gradient(to bottom, #e9e5e2 0%, rgb(222, 216, 212) 90%);*/
-	/*background: linear-gradient(to bottom, #fff 0%, #000 90%);*/
-}
-
-#name, #languages, #nav a, #contacts {
-	background-color: #000;
-	/*background: linear-gradient(to right, rgb(55, 55, 55), rgb(0, 0, 0));
-	background-size: 120% 120%;
-	transition: all 1s;*/
-}
-
-/*#name:hover, #languages:hover, #nav a:hover, #contacts:hover {
-	background-position: 100% 50%;
-}*/
-
 #name {
 	position: absolute;
 	top: 1em;
 	left: 0;
 	/*display: none;*/
+}
+
+#name, #languages, #nav a, #contacts {
+	background-color: #000;
+	/*background: linear-gradient(to right, rgb(55, 55, 55), rgb(0, 0, 0));
+	background-size: 200% 200%;
+	transition: all 1s;*/
+}
+
+#name:hover, #languages:hover, #nav a:hover, #contacts:hover {
+	/*background-position: 99% 50%;*/
 }
 
 #name h1, #name h2, #languages p, #nav a {
@@ -142,14 +137,7 @@ a {
 	right: 0;
 	z-index: 1;
 	/*display: none;*/
-	/*transition: all 1s;
-	background: linear-gradient(to right, rgb(219, 220, 215), rgb(246, 240, 81));
-	background-size: 200% 200%;*/
 }
-
-/*#languages:hover {
-	background-position: 99% 50%;
-}*/
 
 #languages p {
 	margin: 0;
@@ -292,13 +280,6 @@ a {
 	width: 100%;
 }
 
-.project a {
-	height: 98%;
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-
 .project__title {
 	width: 100%;
 	height: 100%;
@@ -363,11 +344,6 @@ a {
 	right: 1em;
 }
 
-.arrow-left img, .arrow-right img {
-	width: 100%;
-	height: 100%;
-}
-
 .project__img {
 	max-width: 85%;
 	margin: 0 auto;
@@ -401,12 +377,9 @@ a {
 .go-back {
 	width: 7em;
 	height: auto;
-	left: 1em;
-}
-
-.go-back p {
 	padding: 0;
 	font-weight: bold;
+	left: 1em;
 }
 
 .photo-copyright {

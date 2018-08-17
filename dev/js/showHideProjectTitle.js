@@ -1,12 +1,13 @@
 const projects = document.querySelectorAll('.project');
 
 function showProjectTitle(event) {
-	let projectTitle = event.target.children[1].children[0]; // div with a class "project__title"
+	let projectTitle = event.target.children[1]; // div with a class "project__title"
 	projectTitle.classList.add('project__title-active');
+	console.log(projectTitle);
 }
 
 function hideProjectTitle(event) {
-	let projectTitle = event.target.children[1].children[0];
+	let projectTitle = event.target.children[1];
 	projectTitle.classList.remove('project__title-active');
 }
 
