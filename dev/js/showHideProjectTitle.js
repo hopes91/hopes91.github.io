@@ -3,7 +3,6 @@ const projects = document.querySelectorAll('.project');
 function showProjectTitle(event) {
 	let projectTitle = event.target.children[1]; // div with a class "project__title"
 	projectTitle.classList.add('project__title-active');
-	console.log(projectTitle);
 }
 
 function hideProjectTitle(event) {
