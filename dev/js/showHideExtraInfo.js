@@ -6,6 +6,10 @@ const portfolioSection = document.getElementById('portfolio');
 const projects = document.querySelectorAll('.project');
 const projectsInfo = document.getElementById('projects-info');
 const projectContent = document.querySelectorAll('.project__content');
+const projectImages = document.querySelectorAll('.project__img img');
+const prevSlide = document.querySelector('.arrow-left');
+const nextSlide = document.querySelector('.arrow-right');
+const dots = document.querySelectorAll('.dot');
 const goBack = document.querySelectorAll('.go-back');
 const closeIcon = document.getElementById('close');
 
