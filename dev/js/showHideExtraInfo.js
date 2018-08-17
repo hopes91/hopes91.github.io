@@ -6,10 +6,6 @@ const portfolioSection = document.getElementById('portfolio');
 const projects = document.querySelectorAll('.project');
 const projectsInfo = document.getElementById('projects-info');
 const projectContent = document.querySelectorAll('.project__content');
-const projectImages = document.querySelectorAll('.project__img img');
-const prevSlide = document.querySelector('.arrow-left');
-const nextSlide = document.querySelector('.arrow-right');
-const dots = document.querySelectorAll('.dot');
 const goBack = document.querySelectorAll('.go-back');
 const closeIcon = document.getElementById('close');
 
@@ -43,6 +39,41 @@ function showProject() {
 			project.style.display = 'block';
 		}
 	});
+}
+
+let index = 1;
+
+function showSlides(n) {
+	let images;
+	let dots;
+
+	projectContent.forEach(project => {
+		if (project.style.display === 'block') {
+			images = project.children[2].children;
+			dots = project.children[3].children;
+		}
+	});
+
+	if (n > images.length) index = 1;
+	if (n < 1) index = images.length;
+
+	for (let i = 0; i < images.length; i++) {
+		images[i].style.display = 'none';
+		images[index - 1].style.display = 'block';
+	}
+
+	for (let i = 0; i < dots.length; i++) {
+		dots[i].style.backgroundColor = '#fff';
+		dots[index - 1].style.backgroundColor = '#000';
+	}
+}
+
+function moveSlides(n) {
+	showSlides(index += n);
+}
+
+function currentSlide(n) {
+	showSlides(index = n);
 }
 
 function goToPortfolio() {

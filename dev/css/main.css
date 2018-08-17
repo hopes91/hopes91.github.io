@@ -330,6 +330,7 @@ a {
 	height: 50px;
 	position: absolute;
 	top: 30%;
+	display: block;
 	cursor: pointer;
 }
 
@@ -372,17 +373,18 @@ a {
 }
 
 .dot {
-	width: 0.5em;
-	height: 0.5em;
+	width: 0.6em;
+	height: 0.55em;
 	margin: 0 0.1em;
-	background-color: #000;
+	background-color: #fff;
+	border: 1px solid #000;
 	border-radius: 50%;
 	display: inline-block;
 	vertical-align: middle;
 }
 
 .dots .dot:first-child {
-	background-color: #ccc;
+	background-color: #000;
 }
 
 .project__text {
