@@ -105,13 +105,7 @@ a {
 
 #name, #languages, #nav a, #contacts {
 	background-color: #000;
-	/*background: linear-gradient(to right, rgb(55, 55, 55), rgb(0, 0, 0));
-	background-size: 200% 200%;
-	transition: all 1s;*/
-}
-
-#name:hover, #languages:hover, #nav a:hover, #contacts:hover {
-	/*background-position: 99% 50%;*/
+	/*transition: 0.7s;*/
 }
 
 #name h1, #name h2, #languages p, #nav a {
@@ -253,8 +247,10 @@ a {
 	font-size: 1em;
 }
 
-.skills {
-	margin-top: 1.5em;
+.text hr {
+	height: 0.1em;
+	margin: 1.5em 0;
+	background-color: #000;
 }
 
 /* portfolio */
