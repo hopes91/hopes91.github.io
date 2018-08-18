@@ -13,6 +13,7 @@ body {
 
 main {
 	position: relative;
+	overflow: hidden;
 }
 
 a {
@@ -26,15 +27,18 @@ a {
 }
 
 /* index page */
+#name, #languages, #nav a, #contacts {
+	background-color: #000;
+	transition: 1s;
+}
+
+#name, #nav, #contacts {
+	left: -1000px;
+}
+
 #name {
 	position: absolute;
 	top: 1em;
-	left: 0;
-}
-
-#name, #languages, #nav a, #contacts {
-	background-color: #000;
-	transition: all 0.7s;
 }
 
 #name h1, #name h2, #languages p, #nav a {
@@ -57,7 +61,7 @@ a {
 	font-weight: bold;
 	position: absolute;
 	top: 0;
-	right: 0;
+	right: -1000px;
 	z-index: 1;
 }
 
@@ -70,7 +74,6 @@ a {
 	width: 10em;
 	position: absolute;
 	bottom: 5.5em;
-	left: 0;
 }
 
 #nav a {
@@ -85,7 +88,6 @@ a {
 	padding: 1em 1.6em;
 	position: absolute;
 	bottom: 0;
-	left: 0;
 }
 
 #contacts a {
@@ -98,16 +100,6 @@ a {
 #contacts img {
 	width: 100%;
 	height: 100%;
-}
-
-.styling-element {
-	width: 7%;
-	height: 1em;
-	background-color: #000;
-	position: absolute;
-	bottom: 2.7em;
-	right: 56.5%;
-	z-index: 20;
 }
 
 #back {
@@ -334,6 +326,17 @@ a {
 	bottom: 0;
 	left: 1em;
 	cursor: pointer;
+}
+
+.styling-element {
+	width: 7%;
+	height: 1em;
+	background-color: #000;
+	position: absolute;
+	bottom: 2.7em;
+	right: 56.5%;
+	z-index: 20;
+	opacity: 0;
 }
 
 .photo-copyright {
