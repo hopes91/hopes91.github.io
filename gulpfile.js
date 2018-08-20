@@ -12,6 +12,7 @@ const remember = require('gulp-remember');
 const path = require('path');
 const cached = require('gulp-cached');
 const browserSync = require('browser-sync').create();
+const sass = require('gulp-sass');
 
 gulp.task('css', function() {
 	const plugins = [

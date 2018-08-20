@@ -1,0 +1,62 @@
+Arguments: 
+  /usr/bin/node /usr/share/yarn/bin/yarn.js add node-sass
+
+PATH: 
+  /home/hopes91/bin:/home/hopes91/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Yarn version: 
+  1.9.4
+
+Node version: 
+  8.11.4
+
+Platform: 
+  linux ia32
+
+Trace: 
+  Error: EACCES: permission denied, mkdir '/home/hopes91/Документы/Проекты/hopes91.github.io/node_modules/anymatch/node_modules'
+
+npm manifest: 
+  {
+    "name": "hopes91.github.io",
+    "version": "1.0.0",
+    "description": "",
+    "main": "script.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/hopes91/hopes91.github.io.git"
+    },
+    "author": "Nadya F-a",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/hopes91/hopes91.github.io/issues"
+    },
+    "homepage": "https://github.com/hopes91/hopes91.github.io#readme",
+    "devDependencies": {
+      "autoprefixer": "^9.1.1",
+      "babel-core": "^6.26.3",
+      "babel-preset-env": "^1.7.0",
+      "browser-sync": "^2.24.6",
+      "del": "^3.0.0",
+      "gulp": "^4.0.0",
+      "gulp-babel": "^7.0.1",
+      "gulp-cached": "^1.1.1",
+      "gulp-concat": "^2.6.1",
+      "gulp-concat-css": "^3.1.0",
+      "gulp-debug": "^4.0.0",
+      "gulp-postcss": "^8.0.0",
+      "gulp-remember": "^1.0.1",
+      "gulp-uglify": "^3.0.1",
+      "gulp-uglifycss": "^1.1.0",
+      "path": "^0.12.7"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
