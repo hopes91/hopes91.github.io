@@ -1,8 +1,9 @@
+'use strict';
+
 const gulp = require('gulp');
-const debug = require('gulp-debug');
+// const debug = require('gulp-debug');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
-const concatCss = require('gulp-concat-css');
 const uglifycss = require('gulp-uglifycss');
 const concat = require('gulp-concat');
 const babel = require('gulp-babel');
@@ -19,11 +20,11 @@ gulp.task('css', function() {
 		autoprefixer({browsers: ['last 3 version']})
 	];
 
-	return gulp.src('./dev/css/*.css')
+	return gulp.src('./dev/sass/**/*.scss')
 		.pipe(cached('css'))
-		.pipe(postcss(plugins))
+		.pipe(sass().on('error', sass.logError))
 		.pipe(remember('css'))
-		.pipe(concatCss('style.css'))
+		.pipe(postcss(plugins))
 		.pipe(uglifycss({"uglyComments": true}))
 		.pipe(gulp.dest('./public'));
 });
@@ -53,7 +54,7 @@ gulp.task('build', gulp.series(
 );
 
 gulp.task('watch', function() {
-	gulp.watch('./dev/css/*.css', gulp.series('css')).on('unlink', function(filepath) {
+	gulp.watch('./dev/sass/**/*.scss', gulp.series('css')).on('unlink', function(filepath) {
 		remember.forget('css', path.resolve(filepath));
 		delete cached.caches.css[path.resolve(filepath)];
 	});
