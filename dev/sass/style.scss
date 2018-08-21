@@ -93,7 +93,7 @@ main {
 			width: 100%;
 			min-height: 100%;
 			overflow-y: scroll;
-			background-color: fade-out($white, $amount * 2);
+			background-color: fade-out(#fff, $amount * 2);
 			border-left: 5px solid $black;
 			position: absolute;
 			top: 0;
@@ -151,7 +151,7 @@ main {
 						}
 						.project__title {
 							@include dimensions(100%, 100%);
-							background-color: fade-out($black, $amount);
+							background-color: fade-out(#000, $amount);
 							position: absolute;
 							top: 0;
 							left: 0;
