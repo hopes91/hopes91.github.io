@@ -12,13 +12,14 @@ html, body, main {
 
 body {
 	font-family: 'PT Sans', sans-serif;
+	background-color: $white;
 }
 
 a {
 	width: 100%;
 	height: 100%;
 	text-decoration: none;
-	color: black;
+	color: $black;
 	border: none;
 	outline: none;
 	display: inline-block;
@@ -28,14 +29,19 @@ main {
 	position: relative;
 	overflow: hidden;
 	#name {
+		background-color: $black;
 		position: absolute;
 		top: 1em;
+		// left: -1000px;
+		transition: 1s;
 		h1 {
 			margin: 0.7em 2em 0.2em 1em;
+			color: $white;
 			font-size: 2.5em;
 		}
 		h2 {
 			margin: 0 2em 1.3em 2em;
+			color: $white;
 			font-size: 1.3em;
 			font-weight: 200;
 		}
@@ -43,32 +49,42 @@ main {
 	#languages {
 		font-size: 1.2em;
 		font-weight: bold;
+		background-color: $black;
 		position: absolute;
 		top: 0;
 		// right: -1000px;
 		right: 0;
 		z-index: 1;
+		transition: 1s;
 		p {
 			margin: 0;
 			padding: 1.2em 1.5em;
+			color: $white;
 		}
 	}
 	#nav {
 		width: 10em;
 		position: absolute;
 		bottom: 5.5em;
+		// left: -1000px;
 		a {
 			margin: 0.5em 0;
 			padding: 1em;
+			color: $white;
 			font-size: 1.1em;
+			background-color: $black;
 			box-sizing: border-box;
 			cursor: pointer;
+			transition: 1s;
 		}
 	}
 	#contacts {
 		padding: 1em 1.6em;
+		background-color: $black;
 		position: absolute;
 		bottom: 0;
+		// left: -1000px;
+		transition: 1s;
 		a {
 			width: 30px;
 			height: 30px;
@@ -93,7 +109,7 @@ main {
 			min-height: 100%;
 			overflow-y: scroll;
 			background-color: rgba(255, 255, 255, 0.8);
-			border-left: 5px solid #000;
+			border-left: 5px solid $black;
 			position: absolute;
 			top: 0;
 			right: 0;
@@ -103,7 +119,7 @@ main {
 				width: 52px;
 				height: 52px;
 				padding: 0;
-				color: #000;
+				color: $black;
 				font-size: 3em;
 				background-color: rgba(244, 238, 75, 1);
 				border: none;
@@ -118,7 +134,7 @@ main {
 				.photo {
 					width: 30%;
 					margin: 2em auto;
-					box-shadow: 1.5em 1.5em #F4EE4B;
+					box-shadow: 1.5em 1.5em $bright-yellow;
 				}
 				.text {
 					width: 70%;
@@ -128,7 +144,7 @@ main {
 					hr {
 						height: 0.1em;
 						margin: 1.5em 0;
-						background-color: #000;
+						background-color: $black;
 					}
 				}
 			}
@@ -157,26 +173,11 @@ main {
 							opacity: 0;
 							p {
 								padding: 0 0.7em;
-								color: #fff;
+								color: $white;
 								font-size: 1.1em;
 								text-align: left;
 								position: absolute;
 								bottom: 0;
-							}
-							.project__title-active {
-								animation-name: projectTitle;
-								animation-duration: 0.7s;
-								animation-fill-mode: forwards;
-							}
-
-							@keyframes projectTitle {
-								from {
-									opacity: 0;
-								}
-
-								to {
-									opacity: 1;
-								}
 							}
 						}
 					}
@@ -203,7 +204,7 @@ main {
 							max-width: 100%;
 							max-height: 100%;
 							margin: 0;
-							border: 1px solid #000;
+							border: 1px solid $black;
 							position: absolute;
 							top: 0;
 							left: 0;
@@ -221,20 +222,20 @@ main {
 							width: 0.6em;
 							height: 0.55em;
 							margin: 0 0.1em;
-							background-color: #fff;
-							border: 1px solid #000;
+							background-color: $white;
+							border: 1px solid $black;
 							border-radius: 50%;
 							display: inline-block;
 							vertical-align: middle;
 							&:first-child {
-								background-color: #000;
+								background-color: $black;
 							}
 						}
 					}
 					.project__text {
 						width: 80%;
-						background-color: #F4EE4B;
-						border: 1px solid #000;
+						background-color: $bright-yellow;
+						border: 1px solid $black;
 						position: absolute;
 						bottom: 2.5em;
 						h4, p {
@@ -265,40 +266,27 @@ main {
 	.styling-element {
 		width: 7%;
 		height: 1em;
-		background-color: #000;
+		background-color: $black;
 		position: absolute;
 		bottom: 2.7em;
 		right: 56.5%;
 		z-index: 20;
-		opacity: 0;
+		// opacity: 0;
 	}
 	.photo-copyright {
 		width: auto;
 		height: 1em;
 		padding: 1em;
-		color: #38373B;
+		color: $dark-gray;
 		font-size: 0.8em;
 		text-align: right;
 		position: absolute;
 		bottom: 0;
 		right: 0;
 		&:hover {
-			color: #000;
+			color: $black;
 		}
 	}
-}
-
-#name, #languages, #nav a, #contacts {
-	background-color: #000;
-	transition: 1s;
-}
-
-#name, #nav, #contacts {
-	// left: -1000px;
-}
-
-#name h1, #name h2, #languages p, #nav a {
-	color: #fff;
 }
 
 #about, #portfolio, #projects-info {
@@ -319,5 +307,21 @@ main {
 	top: 9em;
 	display: block;
 	cursor: pointer;
+}
+
+.project__title-active {
+	animation-name: projectTitle;
+	animation-duration: 0.7s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes projectTitle {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
 }
 
