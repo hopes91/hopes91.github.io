@@ -100,7 +100,9 @@ function goToPortfolio() {
 // close the div in which you can look at the "about me" and "portfolio" sections, and also all of my projects
 function hideInfo() {
 	aboutSection.style.display = 'none';
+	navbar[0].style.borderLeft = 'none';
 	portfolioSection.style.display = 'none';
+	navbar[1].style.borderLeft = 'none';
 	front.style.display = 'none';
 	back.style.zIndex = '0';
 }
