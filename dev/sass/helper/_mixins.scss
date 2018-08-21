@@ -26,3 +26,7 @@
 	top: $top;
 	cursor: $cursor;
 }
+
+@mixin back-photo($file) {
+  background: url(#{$file}.jpg) bottom left/cover no-repeat;
+}

@@ -84,7 +84,7 @@ main {
 	}
 	#back {
 		@include dimensions(60%, 100%);
-		background: $white url(images/georgie-cobbs-459520-unsplash.jpg) bottom left/cover no-repeat;
+		@include back-photo("images/georgie-cobbs-459520-unsplash");
 		position: absolute;
 		top: 0;
 		right: 0;
