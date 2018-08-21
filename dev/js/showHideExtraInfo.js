@@ -1,4 +1,4 @@
-const navbar = document.querySelectorAll('#nav');
+const navbar = document.querySelectorAll('#nav a');
 const back = document.getElementById('back');
 const front = document.getElementById('front');
 const aboutSection = document.getElementById('about');
@@ -14,16 +14,21 @@ function showInfo(event) {
 	back.style.zIndex = '10';
 	front.style.display = 'block';
 
-	if (this.id === 'nav' && projectsInfo.style.display === 'block') { // if any project is opened
+	if ((event.target.className === 'about' || event.target.className === 'portfolio') 
+	&& projectsInfo.style.display === 'block') { // if any project is opened
 		// do not show the about or portfolio sections
 		aboutSection.style.display = 'none';
 		portfolioSection.style.display = 'none';
 	} else if (event.target.className === 'about') {
 		portfolioSection.style.display = 'none';
+		navbar[1].style.borderLeft = 'none';
 		aboutSection.style.display = 'block';
+		event.target.style.borderLeft = '3px solid #F4EE4B';
 	} else {
 		aboutSection.style.display = 'none';
+		navbar[0].style.borderLeft = 'none';
 		portfolioSection.style.display = 'flex';
+		event.target.style.borderLeft = '3px solid #F4EE4B';
 	}
 }
 
