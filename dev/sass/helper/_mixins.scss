@@ -7,3 +7,22 @@
 	margin: $margin;
 	padding: $padding;
 }
+
+@mixin front-sections($width, $height, $text-align, $position, $top, $left, $display, $z-index) {
+	width: $width;
+	height: $height;
+	text-align: $text-align;
+	position: $position;
+	top: $top;
+	left: $left;
+	display: $display;
+	z-index: $z-index;
+}
+
+@mixin slider-arrow($width, $height, $position, $top, $cursor) {
+	width: $width;
+	height: $height;
+	position: $position;
+	top: $top;
+	cursor: $cursor;
+}
