@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic,cyrillic-ext');
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic,cyrillic-ext);
+@import "helper/variables";
+@import "helper/mixins";
+@import "helper/placeholders";
 
 html, body, main {
 	width: 100%;
@@ -11,11 +14,6 @@ body {
 	font-family: 'PT Sans', sans-serif;
 }
 
-main {
-	position: relative;
-	overflow: hidden;
-}
-
 a {
 	width: 100%;
 	height: 100%;
@@ -26,119 +24,281 @@ a {
 	display: inline-block;
 }
 
-/* index page */
+main {
+	position: relative;
+	overflow: hidden;
+	#name {
+		position: absolute;
+		top: 1em;
+		h1 {
+			margin: 0.7em 2em 0.2em 1em;
+			font-size: 2.5em;
+		}
+		h2 {
+			margin: 0 2em 1.3em 2em;
+			font-size: 1.3em;
+			font-weight: 200;
+		}
+	}
+	#languages {
+		font-size: 1.2em;
+		font-weight: bold;
+		position: absolute;
+		top: 0;
+		// right: -1000px;
+		right: 0;
+		z-index: 1;
+		p {
+			margin: 0;
+			padding: 1.2em 1.5em;
+		}
+	}
+	#nav {
+		width: 10em;
+		position: absolute;
+		bottom: 5.5em;
+		a {
+			margin: 0.5em 0;
+			padding: 1em;
+			font-size: 1.1em;
+			box-sizing: border-box;
+			cursor: pointer;
+		}
+	}
+	#contacts {
+		padding: 1em 1.6em;
+		position: absolute;
+		bottom: 0;
+		a {
+			width: 30px;
+			height: 30px;
+			margin: 0 0.1em;
+			vertical-align: middle;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	#back {
+		width: 60%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0) url(images/georgie-cobbs-459520-unsplash.jpg) bottom left/cover no-repeat;
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 0;
+		#front {
+			width: 100%;
+			min-height: 100%;
+			overflow-y: scroll;
+			background-color: rgba(255, 255, 255, 0.8);
+			border-left: 5px solid #000;
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: 10;
+			display: none;
+			#close {
+				width: 52px;
+				height: 52px;
+				padding: 0;
+				color: #000;
+				font-size: 3em;
+				background-color: rgba(244, 238, 75, 1);
+				border: none;
+				position: absolute;
+				top: 0.3em;
+				right: 0.3em;
+				outline: none;
+				z-index: 20;
+				cursor: pointer;
+			}
+			#about {
+				.photo {
+					width: 30%;
+					margin: 2em auto;
+					box-shadow: 1.5em 1.5em #F4EE4B;
+				}
+				.text {
+					width: 70%;
+					margin: 0 auto;
+					padding: 0.5em 1em 1em 1em;
+					font-size: 1em;
+					hr {
+						height: 0.1em;
+						margin: 1.5em 0;
+						background-color: #000;
+					}
+				}
+			}
+			#portfolio {
+				align-content: flex-start;
+				.portfolio__apps, .portfolio__websites {
+					width: 50%;
+					display: flex;
+					flex-flow: column nowrap;
+					.project {
+						width: 100%;
+						margin-bottom: -4px;
+						display: inline-block;
+						position: relative;
+						cursor: pointer;
+						img {
+							width: 100%;
+						}
+						.project__title {
+							width: 100%;
+							height: 100%;
+							background-color: rgba(0, 0, 0, 0.9);
+							position: absolute;
+							top: 0;
+							left: 0;
+							opacity: 0;
+							p {
+								padding: 0 0.7em;
+								color: #fff;
+								font-size: 1.1em;
+								text-align: left;
+								position: absolute;
+								bottom: 0;
+							}
+							.project__title-active {
+								animation-name: projectTitle;
+								animation-duration: 0.7s;
+								animation-fill-mode: forwards;
+							}
+
+							@keyframes projectTitle {
+								from {
+									opacity: 0;
+								}
+
+								to {
+									opacity: 1;
+								}
+							}
+						}
+					}
+				}
+			}
+			#projects-info {
+				.project__content {
+					width: 100%;
+					padding: 2em 10% 0 10%;
+					box-sizing: border-box;
+					display: none;
+					.arrow-left {
+						left: 0.5em;
+					}
+					.arrow-right {
+						right: 0.5em;
+					}
+					.project__img {
+						width: 100%;
+						height: 20em;
+						margin-bottom: 1em;
+						position: relative;
+						img {
+							max-width: 100%;
+							max-height: 100%;
+							margin: 0;
+							border: 1px solid #000;
+							position: absolute;
+							top: 0;
+							left: 0;
+							display: none;
+							&:first-child {
+								display: block;
+							}
+						}
+					}
+					.dots {
+						width: 80%;
+						height: 1.2em;
+						margin: 0 auto;
+						.dot {
+							width: 0.6em;
+							height: 0.55em;
+							margin: 0 0.1em;
+							background-color: #fff;
+							border: 1px solid #000;
+							border-radius: 50%;
+							display: inline-block;
+							vertical-align: middle;
+							&:first-child {
+								background-color: #000;
+							}
+						}
+					}
+					.project__text {
+						width: 80%;
+						background-color: #F4EE4B;
+						border: 1px solid #000;
+						position: absolute;
+						bottom: 2.5em;
+						h4, p {
+							margin: 0.7em 0;
+							padding: 0 1em;
+							text-align: left;
+						}
+						span {
+							padding: 0.7em 1em;
+							font-weight: bold;
+							float: right;
+						}
+					}
+					.go-back {
+						width: 7em;
+						height: auto;
+						padding: 0;
+						font-weight: bold;
+						position: absolute;
+						bottom: 0;
+						left: 1em;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+	.styling-element {
+		width: 7%;
+		height: 1em;
+		background-color: #000;
+		position: absolute;
+		bottom: 2.7em;
+		right: 56.5%;
+		z-index: 20;
+		opacity: 0;
+	}
+	.photo-copyright {
+		width: auto;
+		height: 1em;
+		padding: 1em;
+		color: #38373B;
+		font-size: 0.8em;
+		text-align: right;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		&:hover {
+			color: #000;
+		}
+	}
+}
+
 #name, #languages, #nav a, #contacts {
 	background-color: #000;
 	transition: 1s;
 }
 
 #name, #nav, #contacts {
-	left: -1000px;
-}
-
-#name {
-	position: absolute;
-	top: 1em;
+	// left: -1000px;
 }
 
 #name h1, #name h2, #languages p, #nav a {
 	color: #fff;
-}
-
-#name h1 {
-	margin: 0.7em 2em 0.2em 1em;
-	font-size: 2.5em;
-}
-
-#name h2 {
-	margin: 0 2em 1.3em 2em;
-	font-size: 1.3em;
-	font-weight: 200;
-}
-
-#languages {
-	font-size: 1.2em;
-	font-weight: bold;
-	position: absolute;
-	top: 0;
-	right: -1000px;
-	z-index: 1;
-}
-
-#languages p {
-	margin: 0;
-	padding: 1.2em 1.5em;
-}
-
-#nav {
-	width: 10em;
-	position: absolute;
-	bottom: 5.5em;
-}
-
-#nav a {
-	margin: 0.5em 0;
-	padding: 1em;
-	font-size: 1.1em;
-	box-sizing: border-box;
-	cursor: pointer;
-}
-
-#contacts {
-	padding: 1em 1.6em;
-	position: absolute;
-	bottom: 0;
-}
-
-#contacts a {
-	width: 30px;
-	height: 30px;
-	margin: 0 0.1em;
-	vertical-align: middle;
-}
-
-#contacts img {
-	width: 100%;
-	height: 100%;
-}
-
-#back {
-	width: 60%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0) url(images/georgie-cobbs-459520-unsplash.jpg) bottom left/cover no-repeat;
-	position: absolute;
-	top: 0;
-	right: 0;
-	z-index: 0;
-}
-
-#front {
-	width: 100%;
-	min-height: 100%;
-	overflow-y: scroll;
-	background-color: rgba(255, 255, 255, 0.8);
-	border-left: 5px solid #000;
-	position: absolute;
-	top: 0;
-	right: 0;
-	z-index: 10;
-	display: none;
-}
-
-#close {
-	width: 52px;
-	height: 52px;
-	padding: 0;
-	color: #000;
-	font-size: 3em;
-	background-color: rgba(244, 238, 75, 1);
-	border: none;
-	position: absolute;
-	top: 0.3em;
-	right: 0.3em;
-	outline: none;
-	z-index: 20;
-	cursor: pointer;
 }
 
 #about, #portfolio, #projects-info {
@@ -152,91 +312,6 @@ a {
 	z-index: 15;
 }
 
-.photo {
-	width: 30%;
-	margin: 2em auto;
-	box-shadow: 1.5em 1.5em #F4EE4B;
-}
-
-.text {
-	width: 70%;
-	margin: 0 auto;
-	padding: 0.5em 1em 1em 1em;
-	font-size: 1em;
-}
-
-.text hr {
-	height: 0.1em;
-	margin: 1.5em 0;
-	background-color: #000;
-}
-
-/* portfolio */
-#portfolio {
-	align-content: flex-start;
-}
-
-.portfolio__apps, .portfolio__websites {
-	width: 50%;
-	display: flex;
-	flex-flow: column nowrap;
-}
-
-.project {
-	width: 100%;
-	margin-bottom: -4px;
-	display: inline-block;
-	position: relative;
-	cursor: pointer;
-}
-
-.project img {
-	width: 100%;
-}
-
-.project__title {
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.9);
-	position: absolute;
-	top: 0;
-	left: 0;
-	opacity: 0;
-}
-
-.project__title-active {
-	animation-name: projectTitle;
-	animation-duration: 0.7s;
-	animation-fill-mode: forwards;
-}
-
-@keyframes projectTitle {
-	from {
-		opacity: 0;
-	}
-
-	to {
-		opacity: 1;
-	}
-}
-
-.project__title p {
-	padding: 0 0.7em;
-	color: #fff;
-	font-size: 1.1em;
-	text-align: left;
-	position: absolute;
-	bottom: 0;
-}
-
-/* projects */
-.project__content {
-	width: 100%;
-	padding: 2em 10% 0 10%;
-	box-sizing: border-box;
-	display: none;
-}
-
 .arrow-left, .arrow-right {
 	width: 50px;
 	height: 50px;
@@ -244,114 +319,5 @@ a {
 	top: 9em;
 	display: block;
 	cursor: pointer;
-}
-
-.arrow-left {
-	left: 0.5em;
-}
-
-.arrow-right {
-	right: 0.5em;
-}
-
-.project__img {
-	width: 100%;
-	height: 20em;
-	margin-bottom: 1em;
-	position: relative;
-}
-
-.project__img img {
-	max-width: 100%;
-	max-height: 100%;
-	margin: 0;
-	border: 1px solid #000;
-	position: absolute;
-	top: 0;
-	left: 0;
-	display: none;
-}
-
-.project__img img:first-child {
-	display: block;
-}
-
-.dots {
-	width: 80%;
-	height: 1.2em;
-	margin: 0 auto;
-}
-
-.dot {
-	width: 0.6em;
-	height: 0.55em;
-	margin: 0 0.1em;
-	background-color: #fff;
-	border: 1px solid #000;
-	border-radius: 50%;
-	display: inline-block;
-	vertical-align: middle;
-}
-
-.dots .dot:first-child {
-	background-color: #000;
-}
-
-.project__text {
-	width: 80%;
-	background-color: #F4EE4B;
-	border: 1px solid #000;
-	position: absolute;
-	bottom: 2.5em;
-}
-
-.project__text h4, p {
-	margin: 0.7em 0;
-	padding: 0 1em;
-	text-align: left;
-}
-
-.project__text span {
-	padding: 0.7em 1em;
-	font-weight: bold;
-	float: right;
-}
-
-.go-back {
-	width: 7em;
-	height: auto;
-	padding: 0;
-	font-weight: bold;
-	position: absolute;
-	bottom: 0;
-	left: 1em;
-	cursor: pointer;
-}
-
-.styling-element {
-	width: 7%;
-	height: 1em;
-	background-color: #000;
-	position: absolute;
-	bottom: 2.7em;
-	right: 56.5%;
-	z-index: 20;
-	opacity: 0;
-}
-
-.photo-copyright {
-	width: auto;
-	height: 1em;
-	padding: 1em;
-	color: #38373B;
-	font-size: 0.8em;
-	text-align: right;
-	position: absolute;
-	bottom: 0;
-	right: 0;
-}
-
-.photo-copyright:hover {
-	color: #000;
 }
 
