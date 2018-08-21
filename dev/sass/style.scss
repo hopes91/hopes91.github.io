@@ -1,4 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic,cyrillic-ext);
 @import "helper/variables";
 @import "helper/mixins";
 @import "helper/placeholders";
@@ -64,7 +63,7 @@ main {
 		width: 10em;
 		bottom: 5.5em;
 		a {
-			@include indentation(0.5em 0, 1em);
+			@include indentation(0, 1.1em 1em);
 			font-size: 1.1em;
 			box-sizing: border-box;
 			cursor: pointer;
