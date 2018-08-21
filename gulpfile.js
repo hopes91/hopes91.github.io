@@ -23,8 +23,8 @@ gulp.task('css', function() {
 	return gulp.src('./dev/sass/**/*.scss')
 		.pipe(cached('css'))
 		.pipe(sass().on('error', sass.logError))
-		.pipe(remember('css'))
 		.pipe(postcss(plugins))
+		.pipe(remember('css'))
 		.pipe(uglifycss({"uglyComments": true}))
 		.pipe(gulp.dest('./public'));
 });
