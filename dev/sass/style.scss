@@ -30,7 +30,7 @@ main {
 		transition: 1s;
 	}
 	#name, #nav, #contacts {
-		// left: -1000px;
+		left: -1000px;
 	}
 	#name {
 		top: 1em;
@@ -49,8 +49,7 @@ main {
 	}
 	#languages {
 		top: 0;
-		// right: -1000px;
-		right: 0;
+		right: -1000px;
 		z-index: 1;
 		p {
 			@include indentation(0, 1.2em 1.5em);
@@ -254,7 +253,7 @@ main {
 		bottom: 2.7em;
 		right: 56.5%;
 		z-index: 20;
-		// opacity: 0;
+		opacity: 0;
 	}
 	.photo-copyright {
 		@include dimensions(auto, 1em);
@@ -288,4 +287,3 @@ main {
 		opacity: 1;
 	}
 }
-
