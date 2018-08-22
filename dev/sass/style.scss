@@ -25,11 +25,11 @@ a {
 main {
 	position: relative;
 	overflow: hidden;
-	#name, #languages, #nav, #contacts, .styling-element {
+	#name, #languages, #nav, #contacts, .styling-element, .photo-copyright {
 		position: absolute;
 		transition: 1.5s;
 	}
-	#name, #nav, #contacts {
+	#name, #nav {
 		left: -1000px;
 	}
 	#name {
@@ -48,7 +48,6 @@ main {
 		}
 	}
 	#languages {
-		background-color: $dark-gray;
 		top: 0;
 		right: -1000px;
 		z-index: 1;
@@ -74,10 +73,9 @@ main {
 	}
 	#contacts {
 		padding: 1.01em 1.61em;
-		background-color: $dark-gray;
-		bottom: 0;
+		bottom: -1000px;
 		a {
-			@include dimensions(30px, 30px);
+			@include dimensions(32px, 32px);
 			margin: 0 0.1em;
 			vertical-align: middle;
 		}
@@ -123,7 +121,7 @@ main {
 			#about {
 				.photo {
 					width: 30%;
-					margin: 2em auto;
+					margin: 2em auto 1em auto;
 					box-shadow: 1em 1em #787B9F;
 				}
 				.text {
@@ -220,6 +218,7 @@ main {
 							border-radius: 50%;
 							display: inline-block;
 							vertical-align: middle;
+							transition: .9s;
 							&:first-child {
 								background-color: $bright-blue;
 							}
@@ -271,16 +270,16 @@ main {
 		color: $dark-gray;
 		font-size: 0.8em;
 		text-align: right;
-		position: absolute;
 		bottom: 0;
 		right: 0;
+		opacity: 0;
 	}
 }
 
 .project__title-active {
 	animation: {
 		name: projectTitle;
-		duration: .9s;
+		duration: 1s;
 		fill-mode: forwards;
 	}
 }
