@@ -8,7 +8,6 @@ const projectsInfo = document.getElementById('projects-info');
 const projectContent = document.querySelectorAll('.project__content');
 const goBack = document.querySelectorAll('.go-back');
 const closeIcon = document.getElementById('close');
-const stylingElement = document.querySelector('.styling-element');
 
 // open the div in which you can look at the "about me" and "portfolio" sections, and also all of my projects
 function showInfo(event) {
@@ -22,16 +21,14 @@ function showInfo(event) {
 		portfolioSection.style.display = 'none';
 	} else if (event.target.className === 'about') {
 		portfolioSection.style.display = 'none';
-		navbar[1].style.borderLeft = 'none';
+		navbar[1].style.backgroundColor = 'transparent';
 		aboutSection.style.display = 'block';
-		event.target.style.borderLeft = '3px solid #F4EE4B';
-		stylingElement.style.border = '2px solid #F4EE4B';
+		event.target.style.backgroundColor = '#00A1C0';
 	} else {
 		aboutSection.style.display = 'none';
-		navbar[0].style.borderLeft = 'none';
+		navbar[0].style.backgroundColor = 'transparent';
 		portfolioSection.style.display = 'flex';
-		event.target.style.borderLeft = '3px solid #F4EE4B';
-		stylingElement.style.border = '2px solid #F4EE4B';
+		event.target.style.backgroundColor = '#00A1C0';
 	}
 }
 
@@ -77,8 +74,8 @@ function showSlides(n) {
 	}
 
 	for (let i = 0; i < dots.length; i++) {
-		dots[i].style.backgroundColor = '#fff';
-		dots[index - 1].style.backgroundColor = '#000';
+		dots[i].style.backgroundColor = '#000';
+		dots[index - 1].style.backgroundColor = '#00A1C0';
 	}
 }
 
@@ -103,10 +100,9 @@ function goToPortfolio() {
 // close the div in which you can look at the "about me" and "portfolio" sections, and also all of my projects
 function hideInfo() {
 	aboutSection.style.display = 'none';
-	navbar[0].style.borderLeft = 'none';
+	navbar[0].style.backgroundColor = 'transparent';
 	portfolioSection.style.display = 'none';
-	navbar[1].style.borderLeft = 'none';
-	stylingElement.style.border = 'none';
+	navbar[1].style.backgroundColor = 'transparent';
 	front.style.display = 'none';
 	back.style.zIndex = '0';
 }
