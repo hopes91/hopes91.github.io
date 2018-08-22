@@ -84,7 +84,7 @@ main {
 	}
 	#back {
 		@include dimensions(60%, 100%);
-		@include back-photo("images/georgie-cobbs-459520-unsplash");
+		@include back-photo("images/nikita-kachanovsky-445394-unsplash");
 		border-left: 5px solid $black;
 		position: absolute;
 		top: 0;
