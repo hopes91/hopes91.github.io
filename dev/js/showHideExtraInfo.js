@@ -8,6 +8,7 @@ const projectsInfo = document.getElementById('projects-info');
 const projectContent = document.querySelectorAll('.project__content');
 const goBack = document.querySelectorAll('.go-back');
 const closeIcon = document.getElementById('close');
+const stylingElement = document.querySelector('.styling-element');
 
 // open the div in which you can look at the "about me" and "portfolio" sections, and also all of my projects
 function showInfo(event) {
@@ -24,11 +25,13 @@ function showInfo(event) {
 		navbar[1].style.borderLeft = 'none';
 		aboutSection.style.display = 'block';
 		event.target.style.borderLeft = '3px solid #F4EE4B';
+		stylingElement.style.border = '2px solid #F4EE4B';
 	} else {
 		aboutSection.style.display = 'none';
 		navbar[0].style.borderLeft = 'none';
 		portfolioSection.style.display = 'flex';
 		event.target.style.borderLeft = '3px solid #F4EE4B';
+		stylingElement.style.border = '2px solid #F4EE4B';
 	}
 }
 
@@ -103,6 +106,7 @@ function hideInfo() {
 	navbar[0].style.borderLeft = 'none';
 	portfolioSection.style.display = 'none';
 	navbar[1].style.borderLeft = 'none';
+	stylingElement.style.border = 'none';
 	front.style.display = 'none';
 	back.style.zIndex = '0';
 }
