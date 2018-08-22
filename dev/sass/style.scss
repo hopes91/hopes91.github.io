@@ -10,7 +10,7 @@ html, body, main {
 
 body {
 	font-family: 'PT Sans', sans-serif;
-	background-color: $white;
+	background-color: $black;
 }
 
 a {
@@ -85,6 +85,7 @@ main {
 	#back {
 		@include dimensions(60%, 100%);
 		@include back-photo("images/georgie-cobbs-459520-unsplash");
+		border-left: 5px solid $black;
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -94,7 +95,6 @@ main {
 			min-height: 100%;
 			overflow-y: scroll;
 			background-color: fade-out(#fff, $amount * 2);
-			border-left: 5px solid $black;
 			position: absolute;
 			top: 0;
 			right: 0;
@@ -134,9 +134,10 @@ main {
 				}
 			}
 			#portfolio {
+				justify-content: space-between;
 				align-content: flex-start;
 				.portfolio__apps, .portfolio__websites {
-					width: 50%;
+					width: 49.49%;
 					display: flex;
 					flex-flow: column nowrap;
 					.project {
@@ -149,12 +150,13 @@ main {
 							width: 100%;
 						}
 						.project__title {
-							@include dimensions(100%, 100%);
-							background-color: fade-out(#000, $amount);
+							@include dimensions(100%, 96.5%);
+							background-color: $black;
+							border-bottom: 3px solid #F4EE4B;
 							position: absolute;
 							top: 0;
 							left: 0;
-							opacity: 0;
+							opacity: 1;
 							p {
 								padding: 0 0.7em;
 								color: $white;
@@ -273,17 +275,17 @@ main {
 .project__title-active {
 	animation: {
 		name: projectTitle;
-		duration: 0.7s;
+		duration: .9s;
 		fill-mode: forwards;
 	}
 }
 
 @keyframes projectTitle {
 	from {
-		opacity: 0;
+		opacity: 1;
 	}
 
 	to {
-		opacity: 1;
+		opacity: 0;
 	}
 }
