@@ -25,22 +25,20 @@ a {
 main {
 	position: relative;
 	overflow: hidden;
-	#name, #languages, #nav, #contacts, .styling-element, .photo-copyright {
+	#name, #languages, #nav, #contacts, .simple, .styling-element, .photo-copyright {
 		position: absolute;
 		transition: 1.5s;
 	}
-	#name, #nav {
-		left: -1000px;
-	}
 	#name {
 		top: 1em;
+		left: -1000px;
 		z-index: 20;
 		h1 {
-			margin: 0.7em 2em 0.2em 0.8em;
+			margin: 0.7em 2em 0.2em 0.7em;
 			font-size: 2.5em;
 		}
 		h2 {
-			margin: 0 2em 1.3em 1.7em;
+			margin: 0 2em 1.3em 1.5em;
 			font: {
 				size: 1.3em;
 				weight: 200;
@@ -64,6 +62,7 @@ main {
 		width: 10em;
 		border-left: $violet-border;
 		bottom: 5.5em;
+		left: -1000px;
 		a {
 			@include indentation(0, 1em);
 			font-size: 1.1em;
@@ -73,7 +72,7 @@ main {
 		}
 	}
 	#contacts {
-		padding: 1em 2em;
+		padding: 1em;
 		bottom: -1000px;
 		a {
 			@include dimensions(30px, 30px);
@@ -269,10 +268,17 @@ main {
 			}
 		}
 	}
+	.simple {
+		padding: 0.7em;
+		color: $white;
+		bottom: -0.9em;
+		right: 60%;
+		opacity: 0;
+	}
 	.styling-element {
 		@include dimensions(7%, 1em);
 		background-color: $bright-blue;
-		bottom: 2.7em;
+		bottom: 3em;
 		right: 56.5%;
 		z-index: 20;
 		opacity: 0;
