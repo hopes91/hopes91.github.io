@@ -48,6 +48,7 @@ main {
 		}
 	}
 	#languages {
+		background-color: $bright-blue;
 		top: 0;
 		right: -1000px;
 		z-index: 1;
@@ -75,8 +76,7 @@ main {
 		padding: 1.01em 1.61em;
 		bottom: -1000px;
 		a {
-			@include dimensions(32px, 32px);
-			margin: 0 0.1em;
+			@include dimensions(30px, 30px);
 			vertical-align: middle;
 		}
 		img {
@@ -122,7 +122,7 @@ main {
 				.photo {
 					width: 30%;
 					margin: 2em auto 1em auto;
-					box-shadow: 1em 1em #787B9F;
+					box-shadow: 1em 1em #004060;
 				}
 				.text {
 					width: 70%;
@@ -154,7 +154,6 @@ main {
 						.project__title {
 							@include dimensions(100%, 98%);
 							background-color: $black;
-							// border: $blue-border;
 							border-left: $blue-border;
 							border-right: $blue-border;
 							position: absolute;
@@ -162,13 +161,29 @@ main {
 							left: 0;
 							opacity: 1;
 							box-sizing: border-box;
+							> * {
+								position: absolute;
+							}
 							p {
 								padding: 0 0.7em;
 								color: $white;
 								font-size: 1.1em;
 								text-align: left;
-								position: absolute;
+								bottom: 0.3em;
+							}
+							span {
+								height: 0.3em;
+								background-color: #004060;
+							}
+							span:nth-child(2) {
+								width: 85%;
 								bottom: 0;
+								left: 0;
+							}
+							span:nth-child(3) {
+								width: 25%;
+								bottom: 0.7em;
+								right: 0;
 							}
 						}
 					}
