@@ -73,7 +73,7 @@ main {
 		}
 	}
 	#contacts {
-		padding: 1.01em 1.61em;
+		padding: 1em 2em;
 		bottom: -1000px;
 		a {
 			@include dimensions(30px, 30px);
@@ -136,6 +136,9 @@ main {
 				}
 			}
 			#portfolio {
+				@include dimensions(100%, auto);
+				padding-bottom: 0.3em;
+				background-color: $black;
 				justify-content: space-between;
 				align-content: flex-start;
 				.portfolio__apps, .portfolio__websites {
@@ -149,13 +152,12 @@ main {
 						position: relative;
 						cursor: pointer;
 						img {
-							width: 100%;
+							width: 98%;
 						}
 						.project__title {
 							@include dimensions(100%, 98%);
 							background-color: $black;
-							border-left: $blue-border;
-							border-right: $blue-border;
+							border: $blue-border;
 							position: absolute;
 							top: 0;
 							left: 0;
