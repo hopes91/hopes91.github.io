@@ -128,6 +128,9 @@ main {
 					width: 30%;
 					margin: 2em auto 1em auto;
 					box-shadow: 1em 1em #004060;
+					@include respond-to(wide-screens) {
+						width: 40%;
+					}
 				}
 				.text {
 					width: 70%;
@@ -145,19 +148,19 @@ main {
 			}
 			#portfolio {
 				@include dimensions(100%, auto);
-				padding-bottom: 0.3em;
-				background-color: $black;
+				// padding-bottom: 0.3em;
+				// background-color: $black;
 				justify-content: space-between;
 				align-content: flex-start;
 				@include respond-to(wide-screens) {
-					// flex-flow: column nowrap;
+					flex-flow: column nowrap;
 				}
 				.portfolio__apps, .portfolio__websites {
 					width: 50%;
 					display: flex;
 					flex-flow: column nowrap;
 					@include respond-to(wide-screens) {
-						// width: 100%;
+						width: 100%;
 					}
 					.project {
 						width: 100%;
@@ -178,7 +181,7 @@ main {
 							opacity: 1;
 							box-sizing: border-box;
 							@include respond-to(wide-screens) {
-								// height: 99%;
+								height: 99%;
 							}
 							> * {
 								position: absolute;
