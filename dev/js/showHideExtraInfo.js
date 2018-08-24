@@ -45,7 +45,7 @@ function showProject() {
 		let comparedProject = project.classList[1];
 
 		if (clickedThumb === comparedProject) {
-			project.style.display = 'block';
+			project.style.display = 'flex';
 		}
 	});
 }
@@ -59,9 +59,9 @@ function showSlides(n) {
 	let dots;
 
 	projectContent.forEach(project => {
-		if (project.style.display === 'block') {
-			images = project.children[2].children; // the images of the active (opened) project
-			dots = project.children[3].children; // the dots of the active (opened) project
+		if (project.style.display === 'flex') {
+			images = project.children[0].children; // the images of the active (opened) project
+			dots = project.children[1].children[2].children; // the dots of the active (opened) project
 		}
 	});
 
