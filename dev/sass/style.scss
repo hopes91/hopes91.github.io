@@ -27,12 +27,12 @@ main {
 	overflow: hidden;
 	#name, #languages, #nav, #contacts, .simple, .styling-element, .photo-copyright {
 		position: absolute;
+		z-index: 1;
 		transition: 1.5s;
 	}
 	#name {
 		top: 1em;
 		left: -1000px;
-		z-index: 20;
 		h1 {
 			margin: 0.7em 2em 0.2em 0.7em;
 			font-size: 2.5em;
@@ -53,8 +53,8 @@ main {
 	}
 	#languages {
 		background-color: $bright-blue;
-		top: 0;
-		right: -1000px;
+		top: -1000px;
+		right: 0;
 		z-index: 1;
 		p {
 			@include indentation(0, 1.2em 1.5em);
@@ -77,6 +77,9 @@ main {
 			transition: .7s;
 		}
 	}
+	.dropdown {
+		display: none;
+	}
 	#contacts {
 		padding: 1em;
 		bottom: -1000px;
@@ -95,6 +98,9 @@ main {
 		top: 0;
 		right: 0;
 		z-index: 0;
+		@include respond-to(medium-screens) {
+			width: 100%;
+		}
 		#front {
 			width: 100%;
 			min-height: 100%;
@@ -131,10 +137,19 @@ main {
 					@include respond-to(wide-screens) {
 						width: 40%;
 					}
+					@include respond-to(medium-screens) {
+						width: 35%;
+					}
+					@include respond-to(small-screens) {
+						width: 60%;
+					}
 				}
 				.text {
 					width: 70%;
 					@include indentation(0 auto, 0.5em 1em);
+					@include respond-to(small-screens) {
+						width: 80%;
+					}
 					hr {
 						height: 0.1em;
 						margin: 1.5em 0;
@@ -221,6 +236,9 @@ main {
 					.project__img {
 						@include dimensions(80%, auto);
 						margin: 1.5em auto;
+						@include respond-to(medium-screens) {
+							width: 90%;
+						}
 						img {
 							max-width: 100%;
 							max-height: 100%;
@@ -247,12 +265,12 @@ main {
 							float: right;
 						}
 						.dots {
-							@include dimensions(60%, 1.2em);
+							@include dimensions(60%, 20px);
 							margin: 0 auto;
 							position: relative;
 							top: 15px;
 							.dot {
-								@include dimensions(0.6em, 0.55em);
+								@include dimensions(10px, 10px);
 								margin: 0 0.1em;
 								background-color: $black;
 								border: $simple-border;
@@ -272,6 +290,9 @@ main {
 						background-color: $bright-blue;
 						border: $simple-border;
 						text-align: left;
+						@include respond-to(medium-screens) {
+							width: 90%;
+						}
 						a {
 							color: $black;
 						}
