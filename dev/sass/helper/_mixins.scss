@@ -19,11 +19,9 @@
 	z-index: $z-index;
 }
 
-@mixin slider-arrow($width, $height, $position, $top, $cursor) {
+@mixin slider-arrow($width, $height, $cursor) {
 	width: $width;
 	height: $height;
-	position: $position;
-	top: $top;
 	cursor: $cursor;
 }
 
