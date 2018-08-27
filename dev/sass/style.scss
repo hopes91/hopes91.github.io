@@ -173,8 +173,6 @@ main {
 			}
 			#portfolio {
 				@include dimensions(100%, auto);
-				// padding-bottom: 0.3em;
-				// background-color: $black;
 				justify-content: space-between;
 				align-content: flex-start;
 				@include respond-to(wide-screens) {
@@ -214,23 +212,22 @@ main {
 							p {
 								padding: 0 0.7em;
 								color: $white;
-								font-size: 1.1em;
 								text-align: left;
 								bottom: 0.3em;
 							}
 							span {
 								height: 0.3em;
 								background-color: #004060;
-							}
-							span:nth-child(2) {
-								width: 85%;
-								bottom: 0;
-								left: 0;
-							}
-							span:nth-child(3) {
-								width: 25%;
-								bottom: 0.7em;
-								right: 0;
+								&:nth-child(2) {
+									width: 85%;
+									bottom: 0;
+									left: 0;
+								}
+								&:nth-child(3) {
+									width: 25%;
+									bottom: 0.7em;
+									right: 0;
+								}
 							}
 						}
 					}
