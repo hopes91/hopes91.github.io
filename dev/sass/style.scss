@@ -156,7 +156,7 @@ main {
 				}
 				.text {
 					width: 70%;
-					@include indentation(0 auto, 0.5em 1em);
+					@include indentation(0 auto, 0.5em);
 					@include respond-to(medium-screens) {
 						width: 80%;
 					}
@@ -339,24 +339,25 @@ main {
 		opacity: 0;
 		@include respond-to(medium-screens) {
 			bottom: 4em;
-			right: 30%;
-		}
-		@include respond-to(small-screens) {
-			right: 0;
+			right: 1em;
 		}
 		p {
 			margin: 0;
+			font-style: italic;
 		}
 	}
 	.photo-copyright {
 		@include dimensions(auto, 1em);
-		padding: 1.9em 1.5em;
+		padding: 1em;
 		color: $dark-gray;
 		font-size: 0.8em;
 		text-align: right;
 		bottom: 0;
 		right: 0;
 		opacity: 0;
+		@include respond-to(medium-screens) {
+			padding: 1.9em 1.5em;
+		}
 	}
 }
 
