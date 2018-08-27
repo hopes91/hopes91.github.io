@@ -2,8 +2,7 @@ const siteName = document.getElementById('name');
 const languages = document.getElementById('languages');
 const nav = document.getElementById('nav');
 const contacts = document.getElementById('contacts');
-// const simple = document.querySelector('.simple');
-// const stylingElement = document.querySelector('.styling-element');
+const stylingElement = document.querySelector('.styling-element');
 const photoCopyright = document.querySelector('.photo-copyright');
 
 function moveElements() {
@@ -21,13 +20,9 @@ function moveElements() {
 	}, 2000);
 
 	setTimeout(function() {
-		// stylingElement.style.opacity = '1';
+		stylingElement.style.opacity = '1';
 		photoCopyright.style.opacity = '1';
 	}, 4000);
-
-	// setTimeout(function() {
-	// 	simple.style.opacity = '1';
-	// }, 5000);
 }
 
 window.addEventListener('load', moveElements);

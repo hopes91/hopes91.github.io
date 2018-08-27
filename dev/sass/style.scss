@@ -25,7 +25,7 @@ a {
 main {
 	position: relative;
 	overflow: hidden;
-	#name, #languages, #nav, #contacts, .simple, .styling-element, .photo-copyright {
+	#name, #languages, #nav, #contacts, .styling-element, .photo-copyright {
 		position: absolute;
 		z-index: 1;
 		transition: 1.5s;
@@ -33,11 +33,21 @@ main {
 	#name {
 		top: 1em;
 		left: -1000px;
+		@include respond-to(small-screens) {
+			top: 4em;
+		}
+		@include respond-to(small-screens-landscape) {
+			top: 1em;
+		}
 		h1 {
 			margin: 0.7em 2em 0.2em 0.7em;
 			font-size: 2.5em;
 			@include respond-to(wide-screens) {
 				font-size: 2em;
+			}
+			@include respond-to(small-screens) {
+				font-size: 1.9em;
+				margin: 0.7em 0.7em 0.2em 0.7em;
 			}
 		}
 		h2 {
@@ -69,6 +79,12 @@ main {
 		border-left: $violet-border;
 		bottom: 5.5em;
 		left: -1000px;
+		@include respond-to(small-screens) {
+			bottom: 6.5em;
+		}
+		@include respond-to(small-screens-landscape) {
+			bottom: 4em;
+		}
 		a {
 			@include indentation(0, 1em);
 			font-size: 1.1em;
@@ -259,7 +275,7 @@ main {
 							float: right;
 						}
 						.dots {
-							@include dimensions(60%, 20px);
+							@include dimensions(50%, 20px);
 							margin: 0 auto;
 							position: relative;
 							top: 15px;
@@ -312,24 +328,29 @@ main {
 			}
 		}
 	}
-	.simple {
-		padding: 0.7em 1em;
-		color: $white;
-		bottom: -0.9em;
-		right: 60%;
-		opacity: 0;
-	}
 	.styling-element {
-		@include dimensions(7%, 1em);
+		@include dimensions(150px, auto);
+		padding: 0.3em;
+		text-align: center;
 		background-color: $bright-blue;
-		bottom: 3em;
-		right: 56.5%;
+		bottom: 2em;
+		right: 57%;
 		z-index: 20;
 		opacity: 0;
+		@include respond-to(medium-screens) {
+			bottom: 4em;
+			right: 30%;
+		}
+		@include respond-to(small-screens) {
+			right: 0;
+		}
+		p {
+			margin: 0;
+		}
 	}
 	.photo-copyright {
 		@include dimensions(auto, 1em);
-		padding: 1em;
+		padding: 1.9em 1.5em;
 		color: $dark-gray;
 		font-size: 0.8em;
 		text-align: right;
