@@ -131,23 +131,17 @@ main {
 			}
 			#about {
 				.photo {
-					width: 30%;
+					width: 35%;
 					margin: 2em auto 1em auto;
 					box-shadow: 1em 1em #004060;
-					@include respond-to(wide-screens) {
-						width: 40%;
-					}
-					@include respond-to(medium-screens) {
-						width: 35%;
-					}
 					@include respond-to(small-screens) {
-						width: 60%;
+						width: 50%;
 					}
 				}
 				.text {
 					width: 70%;
 					@include indentation(0 auto, 0.5em 1em);
-					@include respond-to(small-screens) {
+					@include respond-to(medium-screens) {
 						width: 80%;
 					}
 					hr {
