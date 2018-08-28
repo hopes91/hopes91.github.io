@@ -129,10 +129,10 @@ main {
 			z-index: 10;
 			display: none;
 			#close {
-				@include dimensions(52px, 52px);
+				@include dimensions(45px, 43px);
 				padding: 0;
 				color: $black;
-				font-size: 3em;
+				font-size: 2.5em;
 				background-color: $bright-blue;
 				border: none;
 				position: absolute;
