@@ -39,8 +39,8 @@ gulp.task('js', function() {
 		.pipe(gulp.dest('./public'));
 });
 
-gulp.task('other', function() {
-	return gulp.src('./dev/other/**/*.*', {since: gulp.lastRun('other')})
+gulp.task('assets', function() {
+	return gulp.src('./dev/assets/**/*.*', {since: gulp.lastRun('assets')})
 		.pipe(gulp.dest('./public'));
 });
 
@@ -50,7 +50,7 @@ gulp.task('clean', function() {
 
 gulp.task('build', gulp.series(
 	'clean', 
-	gulp.parallel('css', 'js', 'other'))
+	gulp.parallel('css', 'js', 'assets'))
 );
 
 gulp.task('watch', function() {
@@ -64,7 +64,7 @@ gulp.task('watch', function() {
 		delete cached.caches.js[path.resolve(filepath)];
 	});
 
-	gulp.watch('./dev/other/**/*.*', gulp.series('other'));
+	gulp.watch('./dev/assets/**/*.*', gulp.series('assets'));
 });
 
 gulp.task('server', function() {
