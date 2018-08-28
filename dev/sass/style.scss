@@ -187,15 +187,15 @@ main {
 					}
 					.project {
 						width: 100%;
-						margin-bottom: -4px;
 						display: inline-block;
 						position: relative;
 						cursor: pointer;
 						img {
 							width: 98%;
+							margin-top: 0.3em;
 						}
 						.project__title {
-							@include dimensions(100%, 98%);
+							@include dimensions(100%, 100%);
 							background-color: $black;
 							border: $blue-border;
 							position: absolute;
@@ -203,9 +203,6 @@ main {
 							left: 0;
 							opacity: 1;
 							box-sizing: border-box;
-							@include respond-to(wide-screens) {
-								height: 99%;
-							}
 							> * {
 								position: absolute;
 							}
