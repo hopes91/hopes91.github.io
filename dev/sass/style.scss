@@ -43,7 +43,7 @@ main {
 			}
 			@include respond-to(small-screens) {
 				font-size: 1.5em;
-				margin-right: 0.7em;
+				margin: 0.4em 0.7em 0.2em 0.7em;
 			}
 		}
 		h2 {
