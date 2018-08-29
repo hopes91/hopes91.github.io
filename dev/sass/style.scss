@@ -31,7 +31,7 @@ main {
 	}
 	#name {
 		top: 1em;
-		left: -1000px;
+		left: 0;
 		@include respond-to(small-screens-landscape) {
 			top: 0;
 		}
@@ -63,7 +63,7 @@ main {
 	}
 	#languages {
 		background-color: $bright-blue;
-		top: -1000px;
+		top: 0;
 		right: 0;
 		p {
 			@include indentation(0, 1.2em 1.5em);
@@ -80,7 +80,7 @@ main {
 		width: 10em;
 		border-left: $violet-border;
 		bottom: 5.5em;
-		left: -1000px;
+		left: 0;
 		@include respond-to(small-screens) {
 			bottom: 6.5em;
 		}
@@ -103,7 +103,7 @@ main {
 	}
 	#contacts {
 		padding: 1em;
-		bottom: -1000px;
+		bottom: 0;
 		a {
 			@include dimensions(30px, 30px);
 			vertical-align: middle;
@@ -325,7 +325,7 @@ main {
 		bottom: 2em;
 		right: 57%;
 		z-index: 20;
-		opacity: 0;
+		// opacity: 0;
 		@include respond-to(medium-screens) {
 			bottom: 4em;
 			right: 1em;
@@ -343,7 +343,7 @@ main {
 		text-align: right;
 		bottom: 0;
 		right: 0;
-		opacity: 0;
+		// opacity: 0;
 		@include respond-to(medium-screens) {
 			padding: 1.9em 1.5em;
 		}
@@ -364,6 +364,6 @@ main {
 	}
 
 	to {
-		opacity: 0;
+		// opacity: 0;
 	}
 }
