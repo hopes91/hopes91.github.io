@@ -32,7 +32,7 @@ main {
 	#name {
 		top: 1em;
 		left: -1000px;
-		@include respond-to(small-screens-landscape) {
+		@include respond-to(small-screens) {
 			top: 0;
 		}
 		h1 {
@@ -42,8 +42,8 @@ main {
 				font-size: 2em;
 			}
 			@include respond-to(small-screens) {
-				font-size: 1.5em;
-				margin: 0.4em 0.7em 0.2em 0.7em;
+				font-size: 1.45em;
+				margin: 0.5em 0.7em 0.2em 0.7em;
 			}
 		}
 		h2 {
@@ -56,7 +56,7 @@ main {
 				margin-left: 1.15em;
 			}
 			@include respond-to(small-screens) {
-				margin-left: 0.95em;
+				margin-left: 0.9em;
 				font-size: 1.2em;
 			}
 		}
@@ -70,9 +70,6 @@ main {
 			font: {
 				size: 1.2em;
 				weight: bold;
-			}
-			@include respond-to(small-screens) {
-				padding: 1em 1.2em;
 			}
 		}
 	}
@@ -98,6 +95,7 @@ main {
 			}
 			@include respond-to(small-screens-landscape) {
 				padding: 0.5em 1em;
+				font-size: 1.05em;
 			}
 		}
 	}
@@ -325,6 +323,7 @@ main {
 		bottom: 2em;
 		right: 57%;
 		z-index: 20;
+		transition: 1s;
 		opacity: 0;
 		@include respond-to(medium-screens) {
 			bottom: 4em;
@@ -343,6 +342,7 @@ main {
 		text-align: right;
 		bottom: 0;
 		right: 0;
+		transition: 1s;
 		opacity: 0;
 		@include respond-to(medium-screens) {
 			padding: 1.9em 1.5em;
