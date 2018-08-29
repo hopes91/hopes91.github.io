@@ -24,7 +24,7 @@ a {
 main {
 	position: relative;
 	overflow: hidden;
-	#name, #languages, #nav, #contacts, .styling-element, .photo-copyright {
+	#name, #languages, #nav, #contacts, .photo-copyright {
 		position: absolute;
 		z-index: 1;
 		transition: 1.5s;
@@ -315,25 +315,6 @@ main {
 			}
 		}
 	}
-	.styling-element {
-		@include dimensions(150px, auto);
-		padding: 0.3em;
-		text-align: center;
-		background-color: $bright-blue;
-		bottom: 2em;
-		right: 57%;
-		z-index: 20;
-		transition: 1s;
-		opacity: 0;
-		@include respond-to(medium-screens) {
-			bottom: 4em;
-			right: 1em;
-		}
-		p {
-			margin: 0;
-			font-style: italic;
-		}
-	}
 	.photo-copyright {
 		@include dimensions(auto, 1em);
 		padding: 1em;
@@ -342,7 +323,6 @@ main {
 		text-align: right;
 		bottom: 0;
 		right: 0;
-		transition: 1s;
 		opacity: 0;
 		@include respond-to(medium-screens) {
 			padding: 1.9em 1.5em;
