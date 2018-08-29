@@ -32,6 +32,9 @@ main {
 	#name {
 		top: 1em;
 		left: -1000px;
+		@include respond-to(small-screens-landscape) {
+			top: 0.5em;
+		}
 		h1 {
 			margin: 0.7em 2em 0.2em 0.7em;
 			font-size: 2.5em;
@@ -54,7 +57,7 @@ main {
 			}
 			@include respond-to(small-screens) {
 				margin-left: 0.95em;
-				font-size: 1.1em;
+				font-size: 1.2em;
 			}
 		}
 	}
@@ -93,6 +96,9 @@ main {
 			@include respond-to(small-screens) {
 				padding: 0.8em 1em;
 			}
+			@include respond-to(small-screens-landscape) {
+				padding: 0.5em 1em;
+			}
 		}
 	}
 	#contacts {
@@ -115,6 +121,9 @@ main {
 		z-index: 0;
 		@include respond-to(medium-screens) {
 			width: 100%;
+		}
+		@include respond-to(small-screens) {
+			max-width: 100%;
 		}
 		#front {
 			width: 100%;
