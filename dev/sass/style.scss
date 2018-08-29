@@ -32,12 +32,6 @@ main {
 	#name {
 		top: 1em;
 		left: -1000px;
-		@include respond-to(small-screens) {
-			top: 4em;
-		}
-		@include respond-to(small-screens-landscape) {
-			top: 1em;
-		}
 		h1 {
 			margin: 0.7em 2em 0.2em 0.7em;
 			font-size: 2.5em;
@@ -45,7 +39,7 @@ main {
 				font-size: 2em;
 			}
 			@include respond-to(small-screens) {
-				font-size: 1.9em;
+				font-size: 1.5em;
 				margin-right: 0.7em;
 			}
 		}
@@ -56,7 +50,11 @@ main {
 				weight: 200;
 			}
 			@include respond-to(wide-screens) {
-				margin: 0 2em 1.3em 1.15em;
+				margin-left: 1.15em;
+			}
+			@include respond-to(small-screens) {
+				margin-left: 0.95em;
+				font-size: 1.1em;
 			}
 		}
 	}
@@ -69,6 +67,9 @@ main {
 			font: {
 				size: 1.2em;
 				weight: bold;
+			}
+			@include respond-to(small-screens) {
+				padding: 1em 1.2em;
 			}
 		}
 	}
@@ -89,6 +90,9 @@ main {
 			box-sizing: border-box;
 			cursor: pointer;
 			transition: .7s;
+			@include respond-to(small-screens) {
+				padding: 0.8em 1em;
+			}
 		}
 	}
 	#contacts {
