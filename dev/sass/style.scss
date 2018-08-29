@@ -122,9 +122,10 @@ main {
 		@include respond-to(medium-screens) {
 			width: 100%;
 		}
-		// @include respond-to(small-screens) {
-		// 	width: 100%;
-		// }
+		@include respond-to(small-screens) {
+			width: auto;
+			left: 0;
+		}
 		#front {
 			width: 100%;
 			min-height: 100%;
