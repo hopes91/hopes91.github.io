@@ -23,8 +23,7 @@ a {
 
 main {
 	position: relative;
-	overflow: hidden;
-	#name, #languages, #nav, #contacts, .photo-copyright {
+	#name, #languages, #contacts, .photo-copyright {
 		position: absolute;
 		z-index: 1;
 		transition: 1.5s;
@@ -33,17 +32,16 @@ main {
 		top: 1em;
 		left: -1000px;
 		@include respond-to(small-screens) {
-			top: 0;
+			top: 4.5em;
+		}
+		@include respond-to(small-screens-landscape) {
+			top: 1em;
 		}
 		h1 {
 			margin: 0.7em 2em 0.2em 0.7em;
 			font-size: 2.5em;
-			@include respond-to(wide-screens) {
-				font-size: 2em;
-			}
 			@include respond-to(small-screens) {
-				font-size: 1.45em;
-				margin: 0.5em 0.7em 0.2em 0.7em;
+				font-size: 1.7em;
 			}
 		}
 		h2 {
@@ -52,11 +50,8 @@ main {
 				size: 1.3em;
 				weight: 200;
 			}
-			@include respond-to(wide-screens) {
-				margin-left: 1.15em;
-			}
 			@include respond-to(small-screens) {
-				margin-left: 0.9em;
+				margin-left: 1.1em;
 				font-size: 1.2em;
 			}
 		}
@@ -73,32 +68,6 @@ main {
 			}
 		}
 	}
-	#nav {
-		width: 10em;
-		border-left: $violet-border;
-		bottom: 5.5em;
-		left: -1000px;
-		@include respond-to(small-screens) {
-			bottom: 6.5em;
-		}
-		@include respond-to(small-screens-landscape) {
-			bottom: 4em;
-		}
-		a {
-			@include indentation(0, 1em);
-			font-size: 1.1em;
-			box-sizing: border-box;
-			cursor: pointer;
-			transition: .7s;
-			@include respond-to(small-screens) {
-				padding: 0.8em 1em;
-			}
-			@include respond-to(small-screens-landscape) {
-				padding: 0.5em 1em;
-				font-size: 1.05em;
-			}
-		}
-	}
 	#contacts {
 		padding: 1em;
 		bottom: -1000px;
@@ -110,240 +79,35 @@ main {
 			@include dimensions(100%, 100%);
 		}
 	}
-	#back {
-		@include dimensions(60%, 100%);
-		@include back-photo("images/nikita-kachanovsky-445394-unsplash");
+	h6 {
+		@include indentation(1em, 0.2em);
+		color: $white;
+		font-size: 1em;
+		text-transform: uppercase;
 		position: absolute;
-		top: 0;
-		right: 0;
-		z-index: 0;
-		@include respond-to(medium-screens) {
-			width: 100%;
+		bottom: 0;
+		left: 45%;
+		@include respond-to(small-screens) {
+			bottom: 3em;
+			left: 35%;
 		}
-		#front {
-			width: 100%;
-			min-height: 100%;
-			overflow-y: scroll;
-			background-color: fade-out(#fff, $amount * 2);
-			border-left: $violet-border;
-			position: absolute;
-			top: 0;
-			right: 0;
-			z-index: 10;
-			display: none;
-			#close {
-				padding: 0 0.45em;
-				color: $black;
-				font-size: 2em;
-				background-color: $bright-blue;
-				position: absolute;
-				top: 0.3em;
-				right: 0.3em;
-				outline: none;
-				z-index: 20;
-				cursor: pointer;
-			}
-			#about, #portfolio, #projects-info {
-				@include front-sections(100%, 100%, center, absolute, 0, 0, none, 15);
-			}
-			#about {
-				.photo {
-					width: 35%;
-					margin: 2em auto 1em auto;
-					box-shadow: 1em 1em #004060;
-					@include respond-to(small-screens) {
-						width: 50%;
-					}
-				}
-				.text {
-					width: 70%;
-					@include indentation(0 auto, 0.5em);
-					@include respond-to(medium-screens) {
-						width: 80%;
-					}
-					hr {
-						height: 0.1em;
-						margin: 1.5em 0;
-						background-color: $black;
-						border: none;
-					}
-					.skills {
-						p {
-							margin: 0.5em 0;
-						}
-					}
-				}
-			}
-			#portfolio {
-				@include dimensions(100%, auto);
-				justify-content: space-between;
-				align-content: flex-start;
-				@include respond-to(small-screens) {
-					flex-flow: column nowrap;
-				}
-				.project {
-					width: 100%;
-					position: relative;
-					cursor: pointer;
-					img {
-						width: 98%;
-						margin-top: 0.3em;
-					}
-					.project__title {
-						@include dimensions(100%, 100%);
-						background-color: $black;
-						border: $blue-border;
-						position: absolute;
-						top: 0;
-						left: 0;
-						opacity: 1;
-						box-sizing: border-box;
-						> * {
-							position: absolute;
-						}
-						p {
-							padding: 0 0.7em;
-							color: $white;
-							text-align: left;
-							bottom: 0.3em;
-						}
-						span {
-							height: 0.3em;
-							background-color: #004060;
-							&:nth-child(2) {
-								width: 85%;
-								bottom: 0;
-								left: 0;
-							}
-							&:nth-child(3) {
-								width: 25%;
-								bottom: 0.7em;
-								right: 0;
-							}
-						}
-					}
-				}
-			}
-			#projects-info {
-				.project__content {
-					width: 100%;
-					min-height: 100%;
-					display: none;
-					flex-flow: column nowrap;
-					justify-content: space-between;
-					.project__img {
-						@include dimensions(80%, auto);
-						margin: 1.5em auto;
-						@include respond-to(medium-screens) {
-							width: 90%;
-						}
-						img {
-							max-width: 100%;
-							max-height: 100%;
-							margin: auto;
-							border: $simple-border;
-							display: none;
-							&:first-child {
-								display: block;
-							}
-						}
-					}
-					.arrows {
-						@include dimensions(100%, 50px);
-						.arrow-left, .arrow-right {
-							@include slider-arrow(50px, 50px, pointer);
-						}
-						.arrow-left {
-							margin-left: 10%;
-							float: left;
-						}
-						.arrow-right {
-							margin-right: 10%;
-							float: right;
-						}
-						.dots {
-							@include dimensions(50%, 20px);
-							margin: 0 auto;
-							position: relative;
-							top: 15px;
-							.dot {
-								@include dimensions(10px, 10px);
-								margin: 0 0.1em;
-								background-color: $black;
-								border: $simple-border;
-								border-radius: 50%;
-								display: inline-block;
-								vertical-align: middle;
-								transition: .9s;
-								&:first-child {
-									background-color: $bright-blue;
-								}
-							}
-						}
-					}
-					.project__text {
-						width: 80%;
-						margin: 1.5em auto 0 auto;
-						text-align: left;
-						background-color: $bright-blue;
-						border: $simple-border;
-						@include respond-to(medium-screens) {
-							width: 90%;
-						}
-						a {
-							color: $black;
-						}
-						h4 {
-							@include indentation(0.7em 0, 0 1em);
-						}
-						p {
-							@include indentation(0.5em 0, 0 1em);
-						}
-						span {
-							padding: 0.7em 1em;
-							font-weight: bold;
-							float: right;
-						}
-					}
-					.go-back {
-						@include dimensions(7em, auto);
-						@include indentation(0.5em, 0.5em);
-						font-weight: bold;
-						cursor: pointer;
-					}
-				}
-			}
+		@include respond-to(small-screens-landscape) {
+			bottom: 0;
 		}
 	}
 	.photo-copyright {
 		@include dimensions(auto, 1em);
-		padding: 1em;
+		padding: 1.9em 1.5em;
 		color: $dark-gray;
 		font-size: 0.8em;
 		text-align: right;
 		bottom: 0;
 		right: 0;
 		opacity: 0;
-		@include respond-to(medium-screens) {
-			padding: 1.9em 1.5em;
-		}
 	}
 }
 
-.project__title-active {
-	animation: {
-		name: projectTitle;
-		duration: 1s;
-		fill-mode: forwards;
-	}
-}
-
-@keyframes projectTitle {
-	from {
-		opacity: 1;
-	}
-
-	to {
-		opacity: 0;
-	}
+#index {
+	overflow: hidden;
+	@include back-photo("images/nikita-kachanovsky-445394-unsplash");
 }

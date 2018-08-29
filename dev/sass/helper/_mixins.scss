@@ -8,23 +8,6 @@
 	padding: $padding;
 }
 
-@mixin front-sections($width, $height, $text-align, $position, $top, $left, $display, $z-index) {
-	width: $width;
-	height: $height;
-	text-align: $text-align;
-	position: $position;
-	top: $top;
-	left: $left;
-	display: $display;
-	z-index: $z-index;
-}
-
-@mixin slider-arrow($width, $height, $cursor) {
-	width: $width;
-	height: $height;
-	cursor: $cursor;
-}
-
 @mixin back-photo($file) {
   background: url(#{$file}.jpg) center/cover no-repeat;
 }

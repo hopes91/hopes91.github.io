@@ -1,6 +1,5 @@
 const siteName = document.getElementById('name');
 const languages = document.getElementById('languages');
-const nav = document.getElementById('nav');
 const contacts = document.getElementById('contacts');
 const photoCopyright = document.querySelector('.photo-copyright');
 
@@ -10,17 +9,13 @@ function moveElements() {
 	}, 0);
 
 	setTimeout(function() {
-		nav.style.left = '0';
+		contacts.style.bottom = '0';
+		languages.style.top = '0';
 	}, 500);
 
 	setTimeout(function() {
-		contacts.style.bottom = '0';
-		languages.style.top = '0';
-	}, 1000);
-
-	setTimeout(function() {
 		photoCopyright.style.opacity = '1';
-	}, 3000);
+	}, 1000);
 }
 
 window.addEventListener('load', moveElements);
