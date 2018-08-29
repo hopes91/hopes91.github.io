@@ -168,57 +168,50 @@ main {
 			}
 			#portfolio {
 				@include dimensions(100%, auto);
-				justify-content: space-between;
-				align-content: flex-start;
+				// flex-flow: row wrap;
+				// justify-content: space-between;
+				// align-content: flex-start;
 				@include respond-to(medium-screens) {
-					flex-flow: column nowrap;
+					// flex-flow: column nowrap;
 				}
-				.portfolio__apps, .portfolio__websites {
-					width: 50%;
-					display: flex;
-					flex-flow: column nowrap;
-					@include respond-to(medium-screens) {
-						width: 100%;
+				.project {
+					width: 100%;
+					position: relative;
+					cursor: pointer;
+					img {
+						width: 98%;
+						margin-top: 0.3em;
 					}
-					.project {
-						width: 100%;
-						position: relative;
-						cursor: pointer;
-						img {
-							width: 98%;
-							margin-top: 0.3em;
-						}
-						.project__title {
-							@include dimensions(100%, 100%);
-							background-color: $black;
-							border: $blue-border;
+					.project__title {
+						@include dimensions(100%, 100%);
+						background-color: $black;
+						border: $blue-border;
+						position: absolute;
+						top: 0;
+						left: 0;
+						opacity: 1;
+						box-sizing: border-box;
+						> * {
 							position: absolute;
-							top: 0;
-							left: 0;
-							opacity: 1;
-							box-sizing: border-box;
-							> * {
-								position: absolute;
+						}
+						p {
+							padding: 0 0.7em;
+							color: $white;
+							text-align: left;
+							bottom: 0.3em;
+						}
+						span {
+							height: 0.3em;
+							background-color: #004060;
+							&:nth-child(2) {
+								width: 85%;
+								bottom: 0;
+								left: 0;
 							}
-							p {
-								padding: 0 0.7em;
-								color: $white;
-								text-align: left;
-								bottom: 0.3em;
-							}
-							span {
-								height: 0.3em;
-								background-color: #004060;
-								&:nth-child(2) {
-									width: 85%;
-									bottom: 0;
-									left: 0;
-								}
-								&:nth-child(3) {
-									width: 25%;
-									bottom: 0.7em;
-									right: 0;
-								}
+							&:nth-child(3) {
+								width: 25%;
+								bottom: 0.7em;
+								right: 0;
 							}
 						}
 					}
