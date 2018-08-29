@@ -9,7 +9,7 @@ const closeIcon = document.getElementById('close');
 
 // open the div in which you can look at the "about me" and "portfolio" sections, and also all of my projects
 function showInfo(event) {
-	// stylingElement.style.opacity = '0';
+	stylingElement.style.opacity = '0';
 	back.style.zIndex = '10';
 	front.style.display = 'block';
 
@@ -39,7 +39,7 @@ function hideInfo() {
 	navbar[1].style.backgroundColor = 'transparent';
 	front.style.display = 'none';
 	back.style.zIndex = '0';
-	// stylingElement.style.opacity = '1';
+	stylingElement.style.opacity = '1';
 }
 
 navbar.forEach(link => link.addEventListener('click', showInfo));
