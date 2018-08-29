@@ -123,8 +123,7 @@ main {
 			width: 100%;
 		}
 		@include respond-to(small-screens) {
-			width: auto;
-			left: 0;
+			background-position: center;
 		}
 		#front {
 			width: 100%;
