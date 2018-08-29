@@ -26,7 +26,7 @@
 }
 
 @mixin back-photo($file) {
-  background: url(#{$file}.jpg) bottom left/auto 100% no-repeat;
+  background: url(#{$file}.jpg) bottom left/cover no-repeat;
 }
 
 @mixin respond-to($media) {
