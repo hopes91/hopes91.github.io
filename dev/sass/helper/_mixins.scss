@@ -13,13 +13,15 @@
 }
 
 @mixin respond-to($media) {
-	@if $media == small-screens {
+	@if $media == tiny-screens {
+		@media only screen and (max-width: 480px) { @content; }
+	} @else if $media == tiny-screens-landscape {
+		@media only screen and (max-width: 480px) and (orientation: landscape) { @content; }
+	} @else if $media == small-screens {
 		@media only screen and (max-width: 640px) { @content; }
-	} @else if $media == small-screens-landscape {
-		@media only screen and (max-width: 640px) and (orientation: landscape) { @content; }
 	} @else if $media == medium-screens {
-		@media only screen and (max-width: 840px) { @content; }
+		@media only screen and (max-width: 800px) { @content; }
 	} @else if $media == wide-screens {
-		@media only screen and (max-width: 1050px) { @content; }
+		@media only screen and (max-width: 1024px) { @content; }
 	}
 }

@@ -40,19 +40,19 @@ header {
 		top: 1em;
 		left: 0;
 		// left: -1000px;
-		// @include respond-to(small-screens) {
-		// 	top: 0;
-		// }
+		@include respond-to(tiny-screens) {
+			top: 0;
+		}
 		h1 {
 			margin: 0.7em 2em 0.2em 0.7em;
 			font-size: 2.5em;
-			// @include respond-to(wide-screens) {
-			// 	font-size: 2em;
-			// }
-			// @include respond-to(small-screens) {
-			// 	font-size: 1.45em;
-			// 	margin: 0.5em 0.7em 0.2em 0.7em;
-			// }
+			@include respond-to(medium-screens) {
+				font-size: 2em;
+			}
+			@include respond-to(tiny-screens) {
+				font-size: 1.5em;
+				margin-right: 0.7em;
+			}
 		}
 		h2 {
 			margin: 0 2em 1.3em 1.5em;
@@ -60,13 +60,13 @@ header {
 				size: 1.3em;
 				weight: 200;
 			}
-			// @include respond-to(wide-screens) {
-			// 	margin-left: 1.15em;
-			// }
-			// @include respond-to(small-screens) {
-			// 	margin-left: 0.9em;
-			// 	font-size: 1.2em;
-			// }
+			@include respond-to(medium-screens) {
+				margin-left: 1.15em;
+			}
+			@include respond-to(tiny-screens) {
+				margin-left: 0.9em;
+				font-size: 1.2em;
+			}
 		}
 	}
 	#languages {
@@ -80,6 +80,9 @@ header {
 				size: 1.2em;
 				weight: bold;
 			}
+			@include respond-to(tiny-screens) {
+				padding: 1em 1.3em;
+			}
 		}
 	}
 	#nav {
@@ -88,24 +91,17 @@ header {
 		bottom: 5.5em;
 		left: 0;
 		// left: -1000px;
-		// @include respond-to(small-screens) {
-		// 	bottom: 6.5em;
-		// }
-		// @include respond-to(small-screens-landscape) {
-		// 	bottom: 4em;
-		// }
+		@include respond-to(tiny-screens-landscape) {
+			bottom: 3.5em;
+		}
 		a {
 			@include indentation(0, 1em);
 			font-size: 1.1em;
 			box-sizing: border-box;
 			transition: .7s;
-			// @include respond-to(small-screens) {
-			// 	padding: 0.8em 1em;
-			// }
-			// @include respond-to(small-screens-landscape) {
-			// 	padding: 0.5em 1em;
-			// 	font-size: 1.05em;
-			// }
+			@include respond-to(tiny-screens) {
+				padding: 0.8em 1em;
+			}
 		}
 	}
 	#contacts {
@@ -133,12 +129,23 @@ main {
 		text-align: center;
 		display: flex;
 		justify-content: space-around;
-		// @include respond-to(small-screens) {
-		// 	flex-flow: column nowrap;
-		// }
+		@include respond-to(medium-screens) {
+			flex-flow: column nowrap;
+			align-items: center;
+		}
 		.project {
 			width: 40%;
+			margin: 1em;
 			position: relative;
+			@include respond-to(wide-screens) {
+				width: 45%;
+			}
+			@include respond-to(medium-screens) {
+				width: 80%;
+			}
+			@include respond-to(tiny-screens) {
+				width: 90%;
+			}
 			img {
 				width: 98%;
 			}
@@ -251,19 +258,39 @@ footer {
 		flex-flow: row nowrap;
 		justify-content: space-around;
 		align-items: center;
+		@include respond-to(wide-screens) {
+			width: 100%;
+		}
+		@include respond-to(medium-screens) {
+			flex-flow: column nowrap;
+		}
 		.photo {
 			width: 25%;
 			margin: 1em;
 			box-shadow: 1em 1em $bright-blue;
-			// @include respond-to(small-screens) {
-			// 	width: 50%;
-			// }
+			@include respond-to(wide-screens) {
+				width: 30%;
+			}
+			@include respond-to(medium-screens) {
+				width: 40%;
+				margin-bottom: 2em;
+			}
+			@include respond-to(small-screens) {
+				width: 50%;
+			}
+			@include respond-to(tiny-screens) {
+				width: 60%;
+			}
 		}
 		.text {
 			width: 60%;
-			// @include respond-to(medium-screens) {
-			// 	width: 80%;
-			// }
+			@include respond-to(medium-screens) {
+				width: 80%;
+				text-align: center;
+			}
+			@include respond-to(small-screens) {
+				width: 90%;
+			}
 			hr {
 				height: 0.1em;
 				margin: 1.5em 0;
