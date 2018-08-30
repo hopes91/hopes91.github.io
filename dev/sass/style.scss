@@ -10,7 +10,8 @@ html, body, header, main {
 body {
 	color: $white;
 	font-family: 'PT Sans', sans-serif;
-	background-color: #1a1f21;
+	background-color: $dark-gray;
+	position: relative;
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: space-between;
@@ -187,19 +188,18 @@ main {
 	flex-flow: column nowrap;
 	align-items: center;
 	.arrow-left, .arrow-right {
-		border: 1px solid yellow;
 		@include dimensions(55px, 55px);
 		position: absolute;
-		top: 0;
+		top: 0.5em;
 		img {
 			@include dimensions(100%, 100%);
 		}
 	}
 	.arrow-left {
-		right: 3em;
+		right: 3.5em;
 	}
 	.arrow-right {
-		right: 0;
+		right: 0.5em;
 	}
 	.project__img {
 		@include dimensions(70%, auto);
@@ -208,7 +208,7 @@ main {
 	}
 	.project__text {
 		width: 50%;
-		margin: 1.5em 2em;
+		margin: 1.5em 5em;
 		text-align: left;
 		background-color: $bright-blue;
 		border: $simple-border;
@@ -279,13 +279,25 @@ footer {
 	}
 	.photo-copyright {
 		@include dimensions(auto, 1em);
-		color: $dark-gray;
+		color: $gray;
 		font-size: 0.8em;
 		text-align: right;
 		float: right;
 		// @include respond-to(medium-screens) {
 		// 	padding: 1.9em 1.5em;
 		// }
+	}
+}
+
+#arrow-up {
+	@include dimensions(55px, 55px);
+	position: fixed;
+	bottom: 1.2em;
+	right: 1em;
+	opacity: 0;
+	transition: .7s;
+	img {
+		@include dimensions(100%, 100%);
 	}
 }
 
