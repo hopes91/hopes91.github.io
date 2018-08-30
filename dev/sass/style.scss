@@ -194,24 +194,45 @@ main {
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: center;
+	@include respond-to(medium-screens) {
+		padding-top: 60px;
+	}
 	.arrow-left, .arrow-right {
 		@include dimensions(55px, 55px);
 		position: absolute;
 		top: 0.5em;
+		@include respond-to(medium-screens) {
+			top: 0.7em;
+		}
 		img {
 			@include dimensions(100%, 100%);
 		}
 	}
 	.arrow-left {
 		right: 3.5em;
+		@include respond-to(wide-screens) {
+			right: 3.2em;
+		}
+		@include respond-to(medium-screens) {
+			left: 0.3em;
+		}
 	}
 	.arrow-right {
 		right: 0.5em;
+		@include respond-to(wide-screens) {
+			right: 0.3em;
+		}
 	}
 	.project__img {
-		@include dimensions(70%, auto);
+		width: 70%;
 		margin: 1.2em 0;
 		border: $simple-border;
+		@include respond-to(medium-screens) {
+			width: 80%;
+		}
+		@include respond-to(small-screens) {
+			width: 90%;
+		}
 	}
 	.project__text {
 		width: 50%;
@@ -220,9 +241,16 @@ main {
 		background-color: $bright-blue;
 		border: $simple-border;
 		align-self: flex-end;
-		// @include respond-to(medium-screens) {
-		// 	width: 90%;
-		// }
+		@include respond-to(wide-screens) {
+			width: 65%;
+		}
+		@include respond-to(medium-screens) {
+			width: 80%;
+			align-self: center;
+		}
+		@include respond-to(small-screens) {
+			width: 90%;
+		}
 		a {
 			color: $black;
 		}
