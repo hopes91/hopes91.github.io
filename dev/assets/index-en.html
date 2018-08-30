@@ -21,9 +21,6 @@
 	</head>
 	<body>
 		<header id="index">
-			
-		</header>
-		<main>
 			<!-- my name -->
 			<div id="name">
 				<a href="https://nadyafa.com/index-en">
@@ -32,15 +29,15 @@
 				</a>
 			</div>
 
-			<!-- link to the English version of the site -->
+			<!-- link to the Russian version of the site -->
 			<div id="languages">
 				<a href="index"><p>ru</p></a>
 			</div>
 
-			<!-- navbar (opens a fullscreen div) -->
+			<!-- navbar -->
 			<nav id="nav">
-				<a class="about">About me</a>
-				<a class="portfolio">Portfolio</a>
+				<a href="#portfolio">Portfolio</a>
+				<a href="#about">About me</a>
 			</nav>
 
 			<!-- social media icons -->
@@ -49,53 +46,32 @@
 				<a href="https://instagram.com/hopefully.dev/" target="_blank" title="Instagram"><img src="images/instagram-64.png" alt="Instagram"></a>
 				<a href="https://github.com/hopes91" target="_blank" title="Github"><img src="images/github-64.png" alt="Github"></a>
 			</div>
+		</header>
 
-			<!-- fullscreen div that contains about me and portfolio sections -->
-			<div id="back">
-				<div id="front">
-					<span id="close" title="Закрыть">&times;</span>
-
-					<!-- about me -->
-					<div id="about">
-						<img class="photo" src="images/nadezhdafalaleeva.jpg" alt="Photo of me">
-
-						<div class="text">
-							<div class="me">
-								<p>Two years ago, I thought my future would be related to writing texts, but suddenly, I dove into such a difficult yet exciting world of web-development. And now I just cannot imagine my life without coding. My goal is to create modern, fast and beautiful websites.</p>
-							<p>I live in Kirov Region (Russia), love football, constantly study, learn three foreign languages, read, and drink tea (lots of tea).</p>
-							</div>
-							<hr>
-							<div class="skills">
-								<p><strong>Skills</strong></p>
-								<p><strong>Languages:</strong> HTML, CSS, Sass (SCSS), JavaScript</p>
-								<p><strong>Libraries:</strong> jQuery</p>
-							</div>
-						</div>
+		<main>
+			<!-- portfolio -->
+			<div id="portfolio">
+				<div class="project cch2">
+					<img src="images/cch2-small.png" alt="Website For a UX Developer">
+					<div class="project__title">
+						<p>Website For a UX Developer</p>
+						<span></span>
+						<span></span>
 					</div>
+				</div>
 
-					<!-- portfolio -->
-					<div id="portfolio">
-						<div class="project cch2">
-							<img src="images/cch2-small.png" alt="Website For a UX Developer">
-							<div class="project__title">
-								<p>Website For a UX Developer</p>
-								<span></span>
-								<span></span>
-							</div>
-						</div>
-
-						<div class="project ditp">
-							<img src="images/ditp-small.png" alt="Website Dreams In the Palms">
-							<div class="project__title">
-								<p>Website "Dreams In the Palms"</p>
-								<span></span>
-								<span></span>
-							</div>
-						</div>
+				<div class="project ditp">
+					<img src="images/ditp-small.png" alt="Website Dreams In the Palms">
+					<div class="project__title">
+						<p>Website "Dreams In the Palms"</p>
+						<span></span>
+						<span></span>
 					</div>
+				</div>
+			</div>
 
 					<!-- projects -->
-					<div id="projects-info">
+					<!-- <div id="projects-info">
 						<div class="project__content cch2">
 							<div class="project__img">
 								<img src="images/coding_challenge-2-1.png" alt="Website for a UX Developer">
@@ -147,13 +123,31 @@
 							</div>
 							<p class="go-back">&#8592; portfolio</p>
 						</div>
+					</div> -->
+		</main>
+
+		<footer>
+			<!-- about me -->
+			<div id="about">
+				<img class="photo" src="images/nadezhdafalaleeva.jpg" alt="Photo of me">
+
+				<div class="text">
+					<div class="me">
+						<p>Two years ago, I thought my future would be related to writing texts, but suddenly, I dove into such a difficult yet exciting world of web-development. And now I just cannot imagine my life without coding. My goal is to create modern, fast and beautiful websites.</p>
+						<p>I live in Kirov Region (Russia), love football, constantly study, learn three foreign languages, read, and drink tea (lots of tea).</p>
+					</div>
+					<hr>
+					<div class="skills">
+						<p><strong>Skills</strong></p>
+						<p><strong>Languages:</strong> HTML, CSS, Sass (SCSS), JavaScript</p>
+						<p><strong>Libraries:</strong> jQuery</p>
 					</div>
 				</div>
 			</div>
 
 			<!-- copyright link to the background photo's author -->
 			<a href="https://unsplash.com/@nkachanovskyyy" class="photo-copyright" target="_blank">Photo: Nikita Kachanovsky</a>
-		</main>
+		</footer>
 		<script src="script.js"></script>
 	</body>
 </html>

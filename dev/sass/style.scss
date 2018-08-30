@@ -10,7 +10,7 @@ html, body, header, main {
 body {
 	color: $white;
 	font-family: 'PT Sans', sans-serif;
-	background-color: $black;
+	background-color: #1a1f21;
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: space-between;
@@ -96,7 +96,6 @@ header {
 			@include indentation(0, 1em);
 			font-size: 1.1em;
 			box-sizing: border-box;
-			cursor: pointer;
 			transition: .7s;
 			// @include respond-to(small-screens) {
 			// 	padding: 0.8em 1em;
@@ -127,8 +126,6 @@ header {
 
 main {
 	height: auto;
-	// position: relative;
-	// overflow: hidden;
 	#portfolio {
 		@include dimensions(100%, auto);
 		padding: 2em 0;
@@ -180,10 +177,6 @@ main {
 			}
 		}
 	}
-
-
-
-
 
 	#back {
 		@include dimensions(60%, 100%);
