@@ -140,9 +140,11 @@ main {
 			}
 			@include respond-to(medium-screens) {
 				width: 80%;
+				margin: 0.7em;
 			}
-			@include respond-to(tiny-screens) {
+			@include respond-to(small-screens) {
 				width: 90%;
+				margin: 0.5em;
 			}
 			img {
 				width: 98%;
@@ -202,6 +204,9 @@ main {
 		@include respond-to(medium-screens) {
 			top: 0.7em;
 		}
+		@include respond-to(small-screens) {
+			top: 0.5em;
+		}
 		img {
 			@include dimensions(100%, 100%);
 		}
@@ -227,9 +232,11 @@ main {
 		border: $simple-border;
 		@include respond-to(medium-screens) {
 			width: 80%;
+			margin: 1em;
 		}
 		@include respond-to(small-screens) {
 			width: 90%;
+			margin: 0.7em;
 		}
 	}
 	.project__text {
