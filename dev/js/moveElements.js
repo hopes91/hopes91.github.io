@@ -12,7 +12,7 @@ function moveElements() {
 	}, 500);
 
 	setTimeout(function() {
-		contacts.style.left = '0';
+		contacts.style.right = '0';
 		languages.style.top = '0';
 	}, 1000);
 }

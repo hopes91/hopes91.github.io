@@ -39,43 +39,36 @@ header {
 	#name {
 		top: 1em;
 		left: -1000px;
-		@include respond-to(tiny-screens) {
-			top: 0;
-		}
-		@include respond-to(tiny-screens-landscape) {
+		@include respond-to(medium-screens) {
 			top: 0;
 		}
 		h1 {
-			margin: 0.7em 2em 0.2em 0.7em;
-			font-size: 2.5em;
+			margin: 0.5em 2em 0.2em 0.7em;
+			font-size: 2em;
 			@include respond-to(medium-screens) {
-				font-size: 2em;
+				font-size: 1.8em;
+			}
+			@include respond-to(small-screens) {
+				font-size: 1.7em;
 			}
 			@include respond-to(tiny-screens) {
 				font-size: 1.5em;
-				margin-right: 0.7em;
-			}
-			@include respond-to(tiny-screens-landscape) {
-				font-size: 1.5em;
-				margin-right: 0.7em;
 			}
 		}
 		h2 {
-			margin: 0 2em 1.3em 1.5em;
+			margin: 0 2em 1.3em 1.2em;
 			font: {
 				size: 1.3em;
 				weight: 200;
 			}
 			@include respond-to(medium-screens) {
-				margin-left: 1.15em;
+				margin-left: 1em;
+			}
+			@include respond-to(small-screens) {
+				font-size: 1.2em;
 			}
 			@include respond-to(tiny-screens) {
 				margin-left: 0.9em;
-				font-size: 1.2em;
-			}
-			@include respond-to(tiny-screens-landscape) {
-				margin-left: 0.9em;
-				font-size: 1.2em;
 			}
 		}
 	}
@@ -89,10 +82,7 @@ header {
 				size: 1.2em;
 				weight: bold;
 			}
-			@include respond-to(tiny-screens) {
-				padding: 1em 1.3em;
-			}
-			@include respond-to(tiny-screens-landscape) {
+			@include respond-to(small-screens) {
 				padding: 1em 1.3em;
 			}
 		}
@@ -100,25 +90,22 @@ header {
 	#nav {
 		width: 10em;
 		border-left: $violet-border;
-		bottom: 5.5em;
+		bottom: 1.5em;
 		left: -1000px;
-		@include respond-to(tiny-screens-landscape) {
-			bottom: 3.5em;
+		@include respond-to(medium-screens) {
+			bottom: 0;
 		}
 		a {
 			@include indentation(0, 1em);
 			font-size: 1.1em;
 			box-sizing: border-box;
 			transition: .7s;
-			@include respond-to(tiny-screens) {
-				padding: 0.8em 1em;
-			}
 		}
 	}
 	#contacts {
 		padding: 1em;
 		bottom: 0;
-		left: -1000px;
+		right: -1000px;
 		a {
 			@include dimensions(30px, 30px);
 			vertical-align: middle;
