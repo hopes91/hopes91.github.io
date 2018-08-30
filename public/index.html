@@ -19,8 +19,8 @@
 		<meta name="theme-color" content="#ffffff">
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
-	<body>
-		<main id="index">
+	<body id="top">
+		<header id="index">
 			<!-- my name -->
 			<div id="name">
 				<a href="https://nadyafa.com/index">
@@ -34,19 +34,71 @@
 				<a href="index-en"><p>en</p></a>
 			</div>
 
+			<!-- navbar -->
+			<nav id="nav">
+				<a href="#portfolio">Портфолио</a>
+				<a href="#about">Обо мне</a>
+			</nav>
+
 			<!-- social media icons -->
 			<div id="contacts">
 				<a href="mailto:iam@nadyafa.com" target="_blank" title="Написать мне письмо"><img src="images/email-64.png" alt="email"></a>
 				<a href="https://instagram.com/hopefully.dev/" target="_blank" title="Инстаграм"><img src="images/instagram-64.png" alt="Инстаграм"></a>
 				<a href="https://github.com/hopes91" target="_blank" title="Гитхаб"><img src="images/github-64.png" alt="Гитхаб"></a>
 			</div>
+		</header>
 
-			<!-- coming soon -->
-			<h6>Скоро...</h6>
+		<main id="main">
+			<!-- portfolio -->
+			<div id="portfolio">
+				<div class="project cch2">
+					<img src="images/cch2-small.png" alt="Веб-сайт для UX разработчика">
+					<a href="project1-ru" target="_blank">
+						<div class="project__title">
+							<p>Веб-сайт для UX разработчика</p>
+							<span></span>
+							<span></span>
+						</div>
+					</a>
+				</div>
+
+				<div class="project ditp">
+					<img src="images/ditp-small.png" alt="Веб-сайт Сны в ладошках">
+					<a href="project2-ru" target="_blank">
+						<div class="project__title">
+							<p>Веб-сайт "Сны в ладошках"</p>
+							<span></span>
+							<span></span>
+						</div>
+					</a>
+				</div>
+			</div>
+		</main>
+
+		<footer>
+			<!-- about me -->
+			<div id="about">
+				<img class="photo" src="images/nadezhdafalaleeva.jpg" alt="Я на фото">
+
+				<div class="text">
+					<div class="me">
+						<p>Ещё два года назад я думала, что моё будущее будет связано с написанием текстов, но неожиданно для себя я погрузилась в такой непростой, но захватывающий мир веб-разработки. И теперь я просто не представляю свою жизнь без кода. Моя цель -- создание современных, быстрых, а главное, красивых сайтов.</p>
+						<p>Я живу в Кировской области (Россия), люблю футбол, постоянно учусь, изучаю три иностранных языка, читаю, пью чай (много чая).</p>
+					</div>
+					<hr>
+					<div class="skills">
+						<p><strong>Навыки</strong></p>
+						<p><strong>Языки:</strong> HTML, CSS, Sass (SCSS), JavaScript</p>
+						<p><strong>Библиотеки:</strong> jQuery</p>
+					</div>
+				</div>
+			</div>
 
 			<!-- copyright link to the background photo's author -->
 			<a href="https://unsplash.com/@nkachanovskyyy" class="photo-copyright" target="_blank">Фото: Nikita Kachanovsky</a>
-		</main>
+		</footer>
+
+		<a id="arrow-up" href="#top"><img src="images/up-128.png" alt="up"></a>
 		<script src="script.js"></script>
 	</body>
 </html>
