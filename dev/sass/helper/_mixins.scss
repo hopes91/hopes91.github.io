@@ -8,12 +8,6 @@
 	padding: $padding;
 }
 
-@mixin slider-arrow($width, $height, $cursor) {
-	width: $width;
-	height: $height;
-	cursor: $cursor;
-}
-
 @mixin back-photo($file) {
   background: url(#{$file}.jpg) center/cover no-repeat;
 }

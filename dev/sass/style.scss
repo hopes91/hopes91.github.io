@@ -27,6 +27,7 @@ a {
 
 header {
 	min-height: 100%;
+	@include back-photo("images/nikita-kachanovsky-445394-unsplash");
 	position: relative;
 	overflow: hidden;
 	> * {
@@ -120,12 +121,11 @@ header {
 	}
 }
 
-#index {
-	@include back-photo("images/nikita-kachanovsky-445394-unsplash");
-}
-
 main {
 	height: auto;
+}
+
+#main {
 	#portfolio {
 		@include dimensions(100%, auto);
 		padding: 2em 0;
@@ -138,168 +138,104 @@ main {
 		.project {
 			width: 40%;
 			position: relative;
-			cursor: pointer;
 			img {
 				width: 98%;
 			}
-			.project__title {
+			a {
 				@include dimensions(100%, 100%);
-				background-color: $black;
-				border: $blue-border;
 				position: absolute;
 				top: 0;
 				left: 0;
-				opacity: 1;
-				box-sizing: border-box;
-				> * {
+				.project__title {
+					@include dimensions(100%, 100%);
+					background-color: $black;
+					border: $blue-border;
 					position: absolute;
-				}
-				p {
-					padding: 0 0.7em;
-					color: $white;
-					text-align: left;
-					bottom: 0.3em;
-				}
-				span {
-					height: 0.3em;
-					background-color: $dark-blue;
-					&:nth-child(2) {
-						width: 85%;
-						bottom: 0;
-						left: 0;
+					opacity: 1;
+					box-sizing: border-box;
+					* {
+						position: absolute;
 					}
-					&:nth-child(3) {
-						width: 25%;
-						bottom: 0.7em;
-						right: 0;
+					p {
+						padding: 0 0.7em;
+						color: $white;
+						text-align: left;
+						bottom: 0.3em;
+					}
+					span {
+						height: 0.3em;
+						background-color: $dark-blue;
+						&:nth-child(2) {
+							width: 85%;
+							bottom: 0;
+							left: 0;
+						}
+						&:nth-child(3) {
+							width: 25%;
+							bottom: 0.7em;
+							right: 0;
+						}
 					}
 				}
 			}
 		}
 	}
+}
 
-	#back {
-		@include dimensions(60%, 100%);
+#project {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	.arrow-left, .arrow-right {
+		border: 1px solid yellow;
+		@include dimensions(55px, 55px);
 		position: absolute;
 		top: 0;
+		img {
+			@include dimensions(100%, 100%);
+		}
+	}
+	.arrow-left {
+		right: 3em;
+	}
+	.arrow-right {
 		right: 0;
-		z-index: 0;
-		@include respond-to(medium-screens) {
-			width: 100%;
+	}
+	.project__img {
+		@include dimensions(70%, auto);
+		margin: 1.2em 0;
+		border: $simple-border;
+	}
+	.project__text {
+		width: 50%;
+		margin: 1.5em 2em;
+		text-align: left;
+		background-color: $bright-blue;
+		border: $simple-border;
+		align-self: flex-end;
+		// @include respond-to(medium-screens) {
+		// 	width: 90%;
+		// }
+		a {
+			color: $black;
 		}
-		#front {
-			width: 100%;
-			min-height: 100%;
-			overflow-y: scroll;
-			background-color: fade-out(#fff, $amount * 2);
-			border-left: $violet-border;
-			position: absolute;
-			top: 0;
-			right: 0;
-			z-index: 10;
-			display: none;
-			#close {
-				padding: 0 0.45em;
-				color: $black;
-				font-size: 2em;
-				background-color: $bright-blue;
-				position: absolute;
-				top: 0.3em;
-				right: 0.3em;
-				outline: none;
-				z-index: 20;
-				cursor: pointer;
-			}
-			#projects-info {
-				.project__content {
-					width: 100%;
-					min-height: 100%;
-					display: none;
-					flex-flow: column nowrap;
-					justify-content: space-between;
-					.project__img {
-						@include dimensions(80%, auto);
-						margin: 1.5em auto;
-						@include respond-to(medium-screens) {
-							width: 90%;
-						}
-						img {
-							max-width: 100%;
-							max-height: 100%;
-							margin: auto;
-							border: $simple-border;
-							display: none;
-							&:first-child {
-								display: block;
-							}
-						}
-					}
-					.arrows {
-						@include dimensions(100%, 50px);
-						.arrow-left, .arrow-right {
-							@include slider-arrow(50px, 50px, pointer);
-						}
-						.arrow-left {
-							margin-left: 10%;
-							float: left;
-						}
-						.arrow-right {
-							margin-right: 10%;
-							float: right;
-						}
-						.dots {
-							@include dimensions(50%, 20px);
-							margin: 0 auto;
-							position: relative;
-							top: 15px;
-							.dot {
-								@include dimensions(10px, 10px);
-								margin: 0 0.1em;
-								background-color: $black;
-								border: $simple-border;
-								border-radius: 50%;
-								display: inline-block;
-								vertical-align: middle;
-								transition: .9s;
-								&:first-child {
-									background-color: $bright-blue;
-								}
-							}
-						}
-					}
-					.project__text {
-						width: 80%;
-						margin: 1.5em auto 0 auto;
-						text-align: left;
-						background-color: $bright-blue;
-						border: $simple-border;
-						@include respond-to(medium-screens) {
-							width: 90%;
-						}
-						a {
-							color: $black;
-						}
-						h4 {
-							@include indentation(0.7em 0, 0 1em);
-						}
-						p {
-							@include indentation(0.5em 0, 0 1em);
-						}
-						span {
-							padding: 0.7em 1em;
-							font-weight: bold;
-							float: right;
-						}
-					}
-					.go-back {
-						@include dimensions(7em, auto);
-						@include indentation(0.5em, 0.5em);
-						font-weight: bold;
-						cursor: pointer;
-					}
-				}
-			}
+		h4 {
+			@include indentation(0.7em 0, 0 1em);
 		}
+		p {
+			@include indentation(0.5em 0, 0 1em);
+		}
+		span {
+			padding: 0.7em 1em;
+			font-weight: bold;
+			float: right;
+		}
+	}
+	.go-back {
+		@include dimensions(7em, auto);
+		@include indentation(0.5em, 0.5em 0.7em);
+		font-weight: bold;
+		align-self: flex-start;
 	}
 }
 
