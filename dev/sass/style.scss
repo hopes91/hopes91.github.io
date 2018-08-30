@@ -357,3 +357,21 @@ footer {
 		@include dimensions(100%, 100%);
 	}
 }
+
+.project__title-active {
+	animation: {
+		name: projectTitle;
+		duration: 1s;
+		fill-mode: forwards;
+	}
+}
+ 
+@keyframes projectTitle {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
