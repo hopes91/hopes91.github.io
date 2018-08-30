@@ -42,6 +42,9 @@ header {
 		@include respond-to(tiny-screens) {
 			top: 0;
 		}
+		@include respond-to(tiny-screens-landscape) {
+			top: 0;
+		}
 		h1 {
 			margin: 0.7em 2em 0.2em 0.7em;
 			font-size: 2.5em;
@@ -49,6 +52,10 @@ header {
 				font-size: 2em;
 			}
 			@include respond-to(tiny-screens) {
+				font-size: 1.5em;
+				margin-right: 0.7em;
+			}
+			@include respond-to(tiny-screens-landscape) {
 				font-size: 1.5em;
 				margin-right: 0.7em;
 			}
@@ -66,6 +73,10 @@ header {
 				margin-left: 0.9em;
 				font-size: 1.2em;
 			}
+			@include respond-to(tiny-screens-landscape) {
+				margin-left: 0.9em;
+				font-size: 1.2em;
+			}
 		}
 	}
 	#languages {
@@ -79,6 +90,9 @@ header {
 				weight: bold;
 			}
 			@include respond-to(tiny-screens) {
+				padding: 1em 1.3em;
+			}
+			@include respond-to(tiny-screens-landscape) {
 				padding: 1em 1.3em;
 			}
 		}
