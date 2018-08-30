@@ -38,8 +38,7 @@ header {
 	}
 	#name {
 		top: 1em;
-		left: 0;
-		// left: -1000px;
+		left: -1000px;
 		@include respond-to(tiny-screens) {
 			top: 0;
 		}
@@ -71,8 +70,7 @@ header {
 	}
 	#languages {
 		background-color: $bright-blue;
-		top: 0;
-		// top: -1000px;
+		top: -1000px;
 		right: 0;
 		p {
 			@include indentation(0, 1.2em 1.5em);
@@ -89,8 +87,7 @@ header {
 		width: 10em;
 		border-left: $violet-border;
 		bottom: 5.5em;
-		left: 0;
-		// left: -1000px;
+		left: -1000px;
 		@include respond-to(tiny-screens-landscape) {
 			bottom: 3.5em;
 		}
@@ -107,7 +104,7 @@ header {
 	#contacts {
 		padding: 1em;
 		bottom: 0;
-		// bottom: -1000px;
+		left: -1000px;
 		a {
 			@include dimensions(30px, 30px);
 			vertical-align: middle;
