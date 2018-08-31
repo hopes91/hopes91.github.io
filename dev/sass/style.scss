@@ -97,6 +97,9 @@ header {
 			font-size: 1.1em;
 			box-sizing: border-box;
 			transition: .7s;
+			&:hover {
+				background-color: $bright-blue;
+			}
 			@include respond-to(small-screens) {
 				padding: 0.8em;
 			}
