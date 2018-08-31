@@ -347,11 +347,11 @@ footer {
 }
 
 #arrow-up {
+	display: none;
 	@include dimensions(55px, 55px);
 	position: fixed;
-	bottom: 1.2em;
+	bottom: 1.3em;
 	right: 1em;
-	opacity: 0;
 	transition: .7s;
 	img {
 		@include dimensions(100%, 100%);
