@@ -24,6 +24,9 @@ a {
 	border: none;
 	outline: none;
 	display: inline-block;
+	img {
+		@include dimensions(100%, 100%);
+	}
 }
 
 header {
@@ -107,9 +110,6 @@ header {
 			@include dimensions(30px, 30px);
 			vertical-align: middle;
 		}
-		img {
-			@include dimensions(100%, 100%);
-		}
 	}
 }
 
@@ -147,7 +147,6 @@ main {
 				width: 98%;
 			}
 			a {
-				@include dimensions(100%, 100%);
 				position: absolute;
 				top: 0;
 				left: 0;
@@ -203,9 +202,6 @@ main {
 		}
 		@include respond-to(small-screens) {
 			top: 0.5em;
-		}
-		img {
-			@include dimensions(100%, 100%);
 		}
 	}
 	.arrow-left {
@@ -344,15 +340,12 @@ footer {
 }
 
 #arrow-up {
-	display: none;
 	@include dimensions(55px, 55px);
 	position: fixed;
 	bottom: 1.3em;
 	right: 1em;
 	transition: .7s;
-	img {
-		@include dimensions(100%, 100%);
-	}
+	display: none;
 }
 
 .project__title-active {
