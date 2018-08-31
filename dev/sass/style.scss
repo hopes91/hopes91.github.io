@@ -49,9 +49,6 @@ header {
 				font-size: 1.8em;
 			}
 			@include respond-to(small-screens) {
-				font-size: 1.7em;
-			}
-			@include respond-to(tiny-screens) {
 				font-size: 1.5em;
 			}
 		}
@@ -65,10 +62,7 @@ header {
 				margin-left: 1em;
 			}
 			@include respond-to(small-screens) {
-				font-size: 1.2em;
-			}
-			@include respond-to(tiny-screens) {
-				margin-left: 0.9em;
+				font-size: 0.9em;
 			}
 		}
 	}
@@ -100,6 +94,9 @@ header {
 			font-size: 1.1em;
 			box-sizing: border-box;
 			transition: .7s;
+			@include respond-to(small-screens) {
+				padding: 0.8em;
+			}
 		}
 	}
 	#contacts {
