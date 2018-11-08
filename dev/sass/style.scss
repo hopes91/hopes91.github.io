@@ -89,11 +89,11 @@ body {
     #nav {
       width: 10em;
       border-left: $violet-border;
-      bottom: 1.5em;
+      bottom: 5em;
       left: -1000px;
-      @include respond-to(medium-screens) {
-        bottom: 0;
-      }
+      // @include respond-to(medium-screens) {
+      //   bottom: 0;
+      // }
       a {
         @include indentations(0, 1em);
         font-size: 1.1em;
@@ -112,7 +112,7 @@ body {
     #contacts {
       padding: 1em;
       bottom: 0;
-      right: -1000px;
+      left: -1000px;
       a {
         @include dimensions(30px, 30px);
         vertical-align: middle;
@@ -240,13 +240,16 @@ body {
       }
     }
 
-    // .photo-copyright {
-    //   @include dimensions(auto, 1em);
-    //   color: $gray;
-    //   font-size: 0.8em;
-    //   text-align: right;
-    //   float: right;
-    // }
+    .photo-copyright {
+      @include dimensions(auto, 1.5em);
+      color: $gray;
+      font-size: 0.8em;
+      text-align: right;
+      position: absolute;
+      bottom: 1em;
+      right: 1.2em;
+      opacity: 0;
+    }
   }
 
   #project {
@@ -296,7 +299,7 @@ body {
         margin: 0.7em;
       }
     }
-    
+
     .project__text {
       width: 50%;
       margin: 1.5em 5em;
