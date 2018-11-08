@@ -2,370 +2,358 @@
 @import "helper/variables";
 @import "helper/mixins";
 
-html, body, header, main {
-	@include dimensions(100%, 100%);
-	@include indentation(0, 0);
+html, body, #index {
+  @include dimensions(100%, 100%);
+  @include indentations(0, 0);
 }
 
 body {
-	color: $white;
-	font-family: 'PT Sans', sans-serif;
-	background-color: $dark-gray;
-	position: relative;
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: space-between;
-}
+  color: $white;
+  font-family: 'PT Sans', sans-serif;
+  background-color: $dark-gray;
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  a {
+    @include dimensions(100%, 100%);
+    text-decoration: none;
+    color: $white;
+    border: none;
+    outline: none;
+    display: inline-block;
+    img {
+      @include dimensions(100%, 100%);
+    }
+  }
 
-a {
-	@include dimensions(100%, 100%);
-	text-decoration: none;
-	color: $white;
-	border: none;
-	outline: none;
-	display: inline-block;
-	img {
-		@include dimensions(100%, 100%);
-	}
-}
+  #index {
+    min-height: 100%;
+    @include back-photo("images/nikita-kachanovsky-445394-unsplash");
+    position: relative;
+    overflow: hidden;
+    > * {
+      position: absolute;
+      z-index: 1;
+      transition: 1.5s;
+    }
 
-header {
-	min-height: 100%;
-	@include back-photo("images/nikita-kachanovsky-445394-unsplash");
-	position: relative;
-	overflow: hidden;
-	> * {
-		position: absolute;
-		z-index: 1;
-		transition: 1.5s;
-	}
-	#name {
-		top: 1em;
-		left: -1000px;
-		@include respond-to(medium-screens) {
-			top: 0;
-		}
-		h1 {
-			margin: 0.5em 2em 0.2em 0.7em;
-			font-size: 2em;
-			@include respond-to(medium-screens) {
-				font-size: 1.8em;
-			}
-			@include respond-to(small-screens) {
-				font-size: 1.5em;
-			}
-		}
-		h2 {
-			margin: 0 2em 1.3em 1.15em;
-			font: {
-				size: 1.3em;
-				weight: 200;
-			}
-			@include respond-to(medium-screens) {
-				margin-left: 1em;
-			}
-			@include respond-to(small-screens) {
-				margin-left: 0.9em;
-				font-size: 1.2em;
-			}
-		}
-	}
-	#languages {
-		background-color: $bright-blue;
-		top: -1000px;
-		right: 0;
-		p {
-			@include indentation(0, 1.2em 1.5em);
-			font: {
-				size: 1.2em;
-				weight: bold;
-			}
-			@include respond-to(small-screens) {
-				padding: 1em 1.3em;
-			}
-		}
-	}
-	#nav {
-		width: 10em;
-		border-left: $violet-border;
-		bottom: 1.5em;
-		left: -1000px;
-		@include respond-to(medium-screens) {
-			bottom: 0;
-		}
-		a {
-			@include indentation(0, 1em);
-			font-size: 1.1em;
-			box-sizing: border-box;
-			transition: .7s;
-			&:hover {
-				background-color: $bright-blue;
-			}
-			@include respond-to(small-screens) {
-				padding: 0.8em;
-			}
-		}
-	}
-	#contacts {
-		padding: 1em;
-		bottom: 0;
-		right: -1000px;
-		a {
-			@include dimensions(30px, 30px);
-			vertical-align: middle;
-		}
-	}
-}
+    #name {
+      top: 1em;
+      left: -1000px;
+      @include respond-to(medium-screens) {
+        top: 0;
+      }
+      h1 {
+        margin: 0.5em 2em 0.2em 0.7em;
+        font-size: 2em;
+        @include respond-to(medium-screens) {
+          font-size: 1.8em;
+        }
+        @include respond-to(small-screens) {
+          font-size: 1.5em;
+        }
+      }
+      h2 {
+        margin: 0 2em 1.3em 1.15em;
+        font: {
+          size: 1.3em;
+          weight: 200;
+        }
+        @include respond-to(medium-screens) {
+          margin-left: 1em;
+        }
+        @include respond-to(small-screens) {
+          margin-left: 0.9em;
+          font-size: 1.2em;
+        }
+      }
+    }
 
-main {
-	height: auto;
-}
+    #languages {
+      background-color: $bright-blue;
+      top: -1000px;
+      right: 0;
+      p {
+        @include indentations(0, 1.2em 1.5em);
+        font: {
+          size: 1.2em;
+          weight: bold;
+        }
+        @include respond-to(small-screens) {
+          padding: 1em 1.3em;
+        }
+      }
+    }
 
-#main {
-	#portfolio {
-		@include dimensions(100%, auto);
-		padding: 2em 0;
-		text-align: center;
-		display: flex;
-		justify-content: space-around;
-		@include respond-to(medium-screens) {
-			flex-flow: column nowrap;
-			align-items: center;
-		}
-		.project {
-			width: 40%;
-			margin: 1em;
-			position: relative;
-			@include respond-to(wide-screens) {
-				width: 45%;
-			}
-			@include respond-to(medium-screens) {
-				width: 80%;
-				margin: 0.7em;
-			}
-			@include respond-to(small-screens) {
-				width: 90%;
-				margin: 0.5em;
-			}
-			img {
-				width: 98%;
-			}
-			a {
-				position: absolute;
-				top: 0;
-				left: 0;
-				.project__title {
-					@include dimensions(100%, 100%);
-					background-color: $black;
-					border: $blue-border;
-					position: absolute;
-					opacity: 1;
-					box-sizing: border-box;
-					* {
-						position: absolute;
-					}
-					p {
-						padding: 0 0.7em;
-						color: $white;
-						text-align: left;
-						bottom: 0.3em;
-					}
-					span {
-						height: 0.3em;
-						background-color: $dark-blue;
-						&:nth-child(2) {
-							width: 85%;
-							bottom: 0;
-							left: 0;
-						}
-						&:nth-child(3) {
-							width: 25%;
-							bottom: 0.7em;
-							right: 0;
-						}
-					}
-				}
-			}
-		}
-	}
-}
+    #nav {
+      width: 10em;
+      border-left: $violet-border;
+      bottom: 1.5em;
+      left: -1000px;
+      @include respond-to(medium-screens) {
+        bottom: 0;
+      }
+      a {
+        @include indentations(0, 1em);
+        font-size: 1.1em;
+        box-sizing: border-box;
+        transition: .7s;
+        cursor: pointer;
+        &:hover {
+          background-color: $bright-blue;
+        }
+        @include respond-to(small-screens) {
+          padding: 0.8em;
+        }
+      }
+    }
 
-#project {
-	display: flex;
-	flex-flow: column nowrap;
-	align-items: center;
-	@include respond-to(medium-screens) {
-		padding-top: 60px;
-	}
-	.arrow-left, .arrow-right {
-		@include dimensions(55px, 55px);
-		position: absolute;
-		top: 0.5em;
-		@include respond-to(medium-screens) {
-			top: 0.7em;
-		}
-		@include respond-to(small-screens) {
-			top: 0.5em;
-		}
-	}
-	.arrow-left {
-		right: 3.5em;
-		@include respond-to(wide-screens) {
-			right: 3.2em;
-		}
-		@include respond-to(medium-screens) {
-			left: 0.3em;
-		}
-	}
-	.arrow-right {
-		right: 0.5em;
-		@include respond-to(wide-screens) {
-			right: 0.3em;
-		}
-	}
-	.project__img {
-		width: 70%;
-		margin: 1.2em 0;
-		border: $simple-border;
-		@include respond-to(medium-screens) {
-			width: 80%;
-			margin: 1em;
-		}
-		@include respond-to(small-screens) {
-			width: 90%;
-			margin: 0.7em;
-		}
-	}
-	.project__text {
-		width: 50%;
-		margin: 1.5em 5em;
-		text-align: left;
-		background-color: $bright-blue;
-		border: $simple-border;
-		align-self: flex-end;
-		@include respond-to(wide-screens) {
-			width: 65%;
-		}
-		@include respond-to(medium-screens) {
-			width: 80%;
-			align-self: center;
-		}
-		@include respond-to(small-screens) {
-			width: 90%;
-		}
-		a {
-			color: $black;
-		}
-		h4 {
-			@include indentation(0.7em 0, 0 1em);
-		}
-		p {
-			@include indentation(0.5em 0, 0 1em);
-		}
-		span {
-			padding: 0.7em 1em;
-			font-weight: bold;
-			float: right;
-		}
-	}
-	.go-back {
-		@include dimensions(7em, auto);
-		@include indentation(0.5em, 0.5em 0.7em);
-		font-weight: bold;
-		align-self: flex-start;
-	}
-}
+    #contacts {
+      padding: 1em;
+      bottom: 0;
+      right: -1000px;
+      a {
+        @include dimensions(30px, 30px);
+        vertical-align: middle;
+      }
+    }
 
-footer {
-	@include dimensions(100%, auto);
-	@include indentation(0, 1em);
-	background-color: $dark-blue;
-	box-sizing: border-box;
-	#about {
-		width: 90%;
-		margin: 1em auto;
-		display: flex;
-		flex-flow: row nowrap;
-		justify-content: space-around;
-		align-items: center;
-		@include respond-to(wide-screens) {
-			width: 100%;
-		}
-		@include respond-to(medium-screens) {
-			flex-flow: column nowrap;
-		}
-		.photo {
-			width: 25%;
-			margin: 1em;
-			box-shadow: 1em 1em $bright-blue;
-			@include respond-to(wide-screens) {
-				width: 30%;
-			}
-			@include respond-to(medium-screens) {
-				width: 40%;
-				margin-bottom: 2em;
-			}
-			@include respond-to(small-screens) {
-				width: 50%;
-			}
-			@include respond-to(tiny-screens) {
-				width: 60%;
-			}
-		}
-		.text {
-			width: 60%;
-			@include respond-to(medium-screens) {
-				width: 80%;
-				text-align: center;
-			}
-			@include respond-to(small-screens) {
-				width: 90%;
-			}
-			hr {
-				height: 0.1em;
-				margin: 1.5em 0;
-				background-color: $white;
-				border: none;
-			}
-			.skills {
-				p {
-					margin: 0.5em 0;
-				}
-			}
-		}
-	}
-	.photo-copyright {
-		@include dimensions(auto, 1em);
-		color: $gray;
-		font-size: 0.8em;
-		text-align: right;
-		float: right;
-	}
-}
+    #back {
+      @include dimensions(50%, 100%);
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.9);
+      position: absolute;
+      right: 0;
+      z-index: 10;
+      display: none;
+      @include respond-to(wide-screens) {
+        width: 55%;
+      }
+      @include respond-to(medium-screens) {
+        width: 100%;
+      }
 
-#arrow-up {
-	@include dimensions(55px, 55px);
-	position: fixed;
-	bottom: 1.3em;
-	right: 1em;
-	transition: .7s;
-	display: none;
-}
+      #closeBack {
+        font-size: 3em;
+        position: absolute;
+        right: 0.5em;
+        cursor: pointer;
+        z-index: 10;
+      }
 
-.project__title-active {
-	animation: {
-		name: projectTitle;
-		duration: 1s;
-		fill-mode: forwards;
-	}
+      #portfolio {
+        @include dimensions(100%, auto);
+        text-align: center;
+        display: none;
+        .project {
+          width: 100%;
+          position: relative;
+          img {
+            width: 98%;
+          }
+          a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            .project__title {
+              @include dimensions(100%, 100%);
+              background-color: $black;
+              border: $blue-border;
+              position: absolute;
+              opacity: 1;
+              box-sizing: border-box;
+              * {
+                position: absolute;
+              }
+              p {
+                padding: 0 0.7em;
+                color: $white;
+                text-align: left;
+                bottom: 0.3em;
+              }
+              span {
+                height: 0.3em;
+                background-color: $dark-blue;
+                &:nth-child(2) {
+                  width: 85%;
+                  bottom: 0;
+                  left: 0;
+                }
+                &:nth-child(3) {
+                  width: 25%;
+                  bottom: 0.7em;
+                  right: 0;
+                }
+              }
+            }
+          }
+        }
+
+        .project__title-active {
+          animation: {
+            name: projectTitle;
+            duration: 1s;
+            fill-mode: forwards;
+          }
+        }
+      }
+
+      #about {
+        @include dimensions(100%, 100%);
+        overflow: auto;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: center;
+        display: none;
+        .photo {
+          width: 35%;
+          margin: 1em;
+          box-shadow: 1em 1em $bright-blue;
+          @include respond-to(wide-screens) {
+            width: 40%;
+            justify-content: flex-start;
+          }
+          @include respond-to(tiny-screens) {
+            width: 50%;
+          }
+        }
+        .text {
+          width: 80%;
+          text-align: center;
+          @include respond-to(small-screens) {
+            width: 90%;
+          }
+          hr {
+            height: 0.1em;
+            margin: 1.5em 0;
+            background-color: $white;
+            border: none;
+          }
+          .skills {
+            p {
+              margin: 0.5em 0;
+            }
+          }
+        }
+      }
+    }
+
+    // .photo-copyright {
+    //   @include dimensions(auto, 1em);
+    //   color: $gray;
+    //   font-size: 0.8em;
+    //   text-align: right;
+    //   float: right;
+    // }
+  }
+
+  #project {
+    height: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    @include respond-to(medium-screens) {
+      padding-top: 60px;
+    }
+    // .arrow-left, .arrow-right {
+    //   @include dimensions(55px, 55px);
+    //   position: absolute;
+    //   top: 0.5em;
+    //   @include respond-to(medium-screens) {
+    //     top: 0.7em;
+    //   }
+    //   @include respond-to(small-screens) {
+    //     top: 0.5em;
+    //   }
+    // }
+    // .arrow-left {
+    //   right: 3.5em;
+    //   @include respond-to(wide-screens) {
+    //     right: 3.2em;
+    //   }
+    //   @include respond-to(medium-screens) {
+    //     left: 0.3em;
+    //   }
+    // }
+    // .arrow-right {
+    //   right: 0.5em;
+    //   @include respond-to(wide-screens) {
+    //     right: 0.3em;
+    //   }
+    // }
+    .project__img {
+      width: 70%;
+      margin: 1.2em 0;
+      border: $simple-border;
+      @include respond-to(medium-screens) {
+        width: 80%;
+        margin: 1em;
+      }
+      @include respond-to(small-screens) {
+        width: 90%;
+        margin: 0.7em;
+      }
+    }
+    
+    .project__text {
+      width: 50%;
+      margin: 1.5em 5em;
+      text-align: left;
+      background-color: $bright-blue;
+      border: $simple-border;
+      align-self: flex-end;
+      @include respond-to(wide-screens) {
+        width: 65%;
+      }
+      @include respond-to(medium-screens) {
+        width: 80%;
+        align-self: center;
+      }
+      @include respond-to(small-screens) {
+        width: 90%;
+      }
+      a {
+        color: $black;
+      }
+      h4 {
+        @include indentations(0.7em 0, 0 1em);
+      }
+      p {
+        @include indentations(0.5em 0, 0 1em);
+      }
+      span {
+        padding: 0.7em 1em;
+        font-weight: bold;
+        float: right;
+      }
+    }
+
+    .go-back {
+      @include dimensions(7em, auto);
+      @include indentations(0.5em, 0.5em 0.7em);
+      font-weight: bold;
+      align-self: flex-start;
+    }
+  }
+
+  #arrow-up {
+    @include dimensions(55px, 55px);
+    position: fixed;
+    bottom: 1.3em;
+    right: 1em;
+    transition: .7s;
+    display: none;
+  }
 }
  
 @keyframes projectTitle {
-	from {
-		opacity: 1;
-	}
+  from {
+    opacity: 1;
+  }
 
-	to {
-		opacity: 0;
-	}
+  to {
+    opacity: 0;
+  }
 }

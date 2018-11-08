@@ -20,7 +20,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body id="top">
-    <header id="index">
+    <div id="index">
       <!-- my name -->
       <div id="name">
         <a href="https://nadyafa.com/index">
@@ -36,8 +36,8 @@
 
       <!-- navbar -->
       <nav id="nav">
-        <a href="#portfolio">Портфолио</a>
-        <a href="#about">Обо мне</a>
+        <a class="portfolio">Портфолио</a>
+        <a class="about">Обо мне</a>
       </nav>
 
       <!-- social media icons -->
@@ -46,48 +46,47 @@
         <a href="https://instagram.com/hopefully.dev/" target="_blank" title="Инстаграм"><img src="images/instagram-64.png" alt="Инстаграм"></a>
         <a href="https://github.com/hopes91" target="_blank" title="Гитхаб"><img src="images/github-64.png" alt="Гитхаб"></a>
       </div>
-    </header>
 
-    <main id="main">
-      <!-- portfolio -->
-      <div id="portfolio">
-        <div class="project ditp">
-          <img src="images/ditp-small.png" alt="Веб-сайт Сны в ладошках">
-          <a href="project1-ru" target="_blank">
-            <div class="project__title">
-              <p>Веб-сайт "Сны в ладошках"</p>
-              <span></span>
-              <span></span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </main>
+      <!--  -->
+      <div id="back">
+        <span id="closeBack">&times;</span>
 
-    <footer>
-      <!-- about me -->
-      <div id="about">
-        <img class="photo" src="images/nadezhdafalaleeva.jpg" alt="Я на фото">
-
-        <div class="text">
-          <div class="me">
-            <p>Ещё два года назад я думала, что моё будущее будет связано с написанием текстов, но неожиданно для себя я погрузилась в такой непростой, но захватывающий мир веб-разработки. И теперь я просто не представляю свою жизнь без кода. Моя цель -- создание современных, быстрых, а главное, красивых сайтов.</p>
-            <p>Я живу в Кировской области (Россия), люблю футбол, постоянно учусь, изучаю три иностранных языка, читаю, пью чай (много чая).</p>
+        <!-- portfolio -->
+        <div id="portfolio">
+          <div class="project ditp">
+            <img src="images/ditp-small.png" alt="Веб-сайт Сны в ладошках">
+            <a href="project1-ru" target="_blank">
+              <div class="project__title">
+                <p>Веб-сайт "Сны в ладошках"</p>
+                <span></span>
+                <span></span>
+              </div>
+            </a>
           </div>
-          <hr>
-          <div class="skills">
-            <p><strong>Навыки</strong></p>
-            <p><strong>Языки:</strong> HTML, CSS, Sass (SCSS), JavaScript</p>
-            <p><strong>Библиотеки:</strong> jQuery, React</p>
+        </div>
+
+        <!-- about me -->
+        <div id="about">
+          <img class="photo" src="images/nadezhdafalaleeva.jpg" alt="Я на фото">
+
+          <div class="text">
+            <div class="me">
+              <p>Ещё два года назад я думала, что моё будущее будет связано с написанием текстов, но неожиданно для себя я погрузилась в такой непростой, но захватывающий мир веб-разработки. И теперь я просто не представляю свою жизнь без кода. Моя цель -- создание современных, быстрых, а главное, красивых сайтов.</p>
+              <p>Я живу в Кировской области (Россия), люблю футбол, постоянно учусь, изучаю три иностранных языка, читаю, пью чай (много чая).</p>
+            </div>
+            <hr>
+            <div class="skills">
+              <p><strong>Навыки</strong></p>
+              <p><strong>Языки:</strong> HTML, CSS, Sass (SCSS), JavaScript</p>
+              <p><strong>Библиотеки:</strong> jQuery, React</p>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- copyright link to the background photo's author -->
-      <a href="https://unsplash.com/@nkachanovskyyy" class="photo-copyright" target="_blank">Фото: Nikita Kachanovsky</a>
-    </footer>
-
-    <a id="arrow-up" href="#top"><img src="images/up-128.png" alt="up"></a>
+      <!-- <a href="https://unsplash.com/@nkachanovskyyy" class="photo-copyright" target="_blank">Фото: Nikita Kachanovsky</a> -->
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
