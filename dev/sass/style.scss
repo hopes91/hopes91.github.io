@@ -148,7 +148,7 @@ body {
         border-radius: 50%;
         background-color: rgba(255, 255, 255, 0.3);
         position: absolute;
-        top: 0.3em;
+        top: 0.5em;
         right: 0.5em;
         cursor: pointer;
         z-index: 10;
@@ -352,7 +352,7 @@ body {
   #arrow-up {
     @include dimensions(55px, 55px);
     position: fixed;
-    bottom: 1.3em;
+    bottom: 0.5em;
     right: 1em;
     transition: .7s;
     display: none;
