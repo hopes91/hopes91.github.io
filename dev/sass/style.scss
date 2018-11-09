@@ -170,6 +170,7 @@ body {
             left: 0;
             .project__title {
               @include dimensions(100%, 100%);
+              color: $white;
               background-color: $black;
               border: $blue-border;
               position: absolute;
@@ -178,11 +179,20 @@ body {
               * {
                 position: absolute;
               }
-              p {
-                padding: 0 0.7em;
-                color: $white;
+              &:nth-child(1), &:nth-child(2) {
                 text-align: left;
-                bottom: 0.3em;
+              }
+              h4 {
+                margin: 1.5em 1em;
+                bottom: 4em;
+                @include respond-to(tiny-screens) {
+                  bottom: 5em;
+                }
+              }
+              p {
+                margin: 1em;
+                line-height: 1.4;
+                bottom: 0.7em;
               }
               span {
                 height: 0.3em;
