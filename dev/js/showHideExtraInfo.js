@@ -9,7 +9,7 @@ const showInfo = (event) => {
 
   if (event.target.className === 'about') {
     portfolioSection.style.display = 'none';
-    aboutSection.style.display = 'flex';
+    aboutSection.style.display = 'block';
   } else {
     aboutSection.style.display = 'none';
     portfolioSection.style.display = 'block';
