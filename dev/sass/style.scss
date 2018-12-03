@@ -295,12 +295,15 @@ body {
     //   }
     // }
     .project__img {
-      width: 70%;
+      width: auto;
       margin: 1.2em 0;
       border: $simple-border;
+      @include respond-to(wide-screens) {
+        width: 70%;
+        margin: 1em;
+      }
       @include respond-to(medium-screens) {
         width: 80%;
-        margin: 1em;
       }
       @include respond-to(small-screens) {
         width: 90%;
