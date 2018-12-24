@@ -1,18 +1,18 @@
 'use strict';
 
 const gulp = require('gulp');
+const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const uglifycss = require('gulp-uglifycss');
-const concat = require('gulp-concat');
 const babel = require('gulp-babel');
+const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
-const del = require('del');
-const remember = require('gulp-remember');
-const path = require('path');
 const cached = require('gulp-cached');
+const remember = require('gulp-remember');
+const del = require('del');
+const path = require('path');
 const browserSync = require('browser-sync').create();
-const sass = require('gulp-sass');
 
 gulp.task('css', function() {
   const plugins = [
@@ -31,7 +31,7 @@ gulp.task('css', function() {
 gulp.task('js', function() {
   return gulp.src('./dev/js/*.js')
     .pipe(cached('js'))
-    .pipe(babel({presets: ['env']}))
+    .pipe(babel({presets: ['@babel/env']}))
     .pipe(remember('js'))
     .pipe(concat('script.js'))
     .pipe(uglify())
@@ -48,7 +48,7 @@ gulp.task('clean', function() {
 });
 
 gulp.task('build', gulp.series(
-  'clean', 
+  'clean',
   gulp.parallel('css', 'js', 'assets'))
 );
 
@@ -69,12 +69,12 @@ gulp.task('watch', function() {
 gulp.task('server', function() {
   browserSync.init({
     server: './public'
-});
+  });
 
   browserSync.watch('./public/**/*.*').on('change', browserSync.reload);
 });
 
 gulp.task('default', gulp.series(
-  'build', 
+  'build',
   gulp.parallel('watch', 'server'))
 );
