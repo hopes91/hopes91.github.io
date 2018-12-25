@@ -127,7 +127,7 @@ body {
       right: 0;
       z-index: 10;
       display: none;
-      @include respond-to(wide-screens) {
+      @include respond-to(standart-screens) {
         width: 55%;
       }
       @include respond-to(medium-screens) {
@@ -219,7 +219,7 @@ body {
           width: 35%;
           margin: 2em auto 1em auto;
           box-shadow: 1em 1em $bright-blue;
-          @include respond-to(wide-screens) {
+          @include respond-to(standart-screens) {
             width: 40%;
           }
           @include respond-to(tiny-screens) {
@@ -256,46 +256,50 @@ body {
     @include respond-to(medium-screens) {
       padding-top: 60px;
     }
-    // .arrow-left, .arrow-right {
-    //   @include dimensions(55px, 55px);
-    //   position: absolute;
-    //   top: 0.5em;
-    //   @include respond-to(medium-screens) {
-    //     top: 0.7em;
-    //   }
-    //   @include respond-to(small-screens) {
-    //     top: 0.5em;
-    //   }
-    // }
-    // .arrow-left {
-    //   right: 3.5em;
-    //   @include respond-to(wide-screens) {
-    //     right: 3.2em;
-    //   }
-    //   @include respond-to(medium-screens) {
-    //     left: 0.3em;
-    //   }
-    // }
-    // .arrow-right {
-    //   right: 0.5em;
-    //   @include respond-to(wide-screens) {
-    //     right: 0.3em;
-    //   }
-    // }
+    .arrow-left, .arrow-right {
+      @include dimensions(55px, 55px);
+      position: absolute;
+      top: 0.5em;
+      @include respond-to(medium-screens) {
+        top: 0.7em;
+      }
+      @include respond-to(small-screens) {
+        top: 0.5em;
+      }
+    }
+    .arrow-left {
+      right: 3.5em;
+      @include respond-to(standart-screens) {
+        right: 3.2em;
+      }
+      @include respond-to(medium-screens) {
+        left: 0.3em;
+      }
+    }
+    .arrow-right {
+      right: 0.5em;
+      @include respond-to(standart-screens) {
+        right: 0.3em;
+      }
+    }
     .project__img {
       width: auto;
       margin: 1em 0;
       border: $simple-border;
       @include respond-to(wide-screens) {
+        width: 75%;
+      }
+      @include respond-to(standart-screens) {
         width: 70%;
         margin: 1em;
       }
       @include respond-to(medium-screens) {
         width: 80%;
+        margin: 0.7em;
       }
       @include respond-to(small-screens) {
         width: 90%;
-        margin: 0.7em;
+        margin: 0.5em;
       }
     }
     .project__text {
@@ -305,7 +309,7 @@ body {
       background-color: $bright-blue;
       border: $simple-border;
       align-self: flex-end;
-      @include respond-to(wide-screens) {
+      @include respond-to(standart-screens) {
         width: 65%;
       }
       @include respond-to(medium-screens) {

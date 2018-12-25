@@ -10,6 +10,9 @@
 
 @mixin respond-to($media) {
   @if $media == wide-screens {
+    @media (max-width: 1250px) { @content; }
+  }
+  @else if $media == standart-screens {
     @media (max-width: 1024px) { @content; }
   }
   @else if $media == medium-screens {
