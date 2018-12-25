@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans');
-@import "helper/variables";
-@import "helper/mixins";
+@import 'helper/variables';
+@import 'helper/mixins';
 
 html, body, #index {
   @include dimensions(100%, 100%);
@@ -43,7 +43,7 @@ body {
         top: 0;
       }
       h1 {
-        @include indentations(0.5em 2em 0.2em 0.7em, 0);
+        margin: 0.5em 2em 0.2em 0.7em;
         @include respond-to(medium-screens) {
           font-size: 1.8em;
         }
@@ -52,7 +52,7 @@ body {
         }
       }
       h2 {
-        @include indentations(0 2em 1.3em 1.15em, 0);
+        margin: 0 2em 1.3em 1.15em;
         font: {
           size: 1.3em;
           weight: 200;
@@ -101,8 +101,8 @@ body {
       }
     }
     #contacts {
-      padding: 1em;
-      bottom: 1.5em;
+      padding: 0 1em;
+      bottom: 2.5em;
       right: -1000px;
       a {
         @include dimensions(30px, 30px);
@@ -116,7 +116,7 @@ body {
       text-align: right;
       position: absolute;
       bottom: 1em;
-      right: 1.3em;
+      right: 1.5em;
       opacity: 0;
     }
     #back {
@@ -153,6 +153,7 @@ body {
           position: relative;
           img {
             width: 98%;
+            margin-top: 1%;
           }
           a {
             position: absolute;
@@ -283,7 +284,7 @@ body {
     // }
     .project__img {
       width: auto;
-      margin: 1.2em 0;
+      margin: 1em 0;
       border: $simple-border;
       @include respond-to(wide-screens) {
         width: 70%;

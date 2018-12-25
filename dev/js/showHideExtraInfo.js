@@ -4,7 +4,7 @@ const aboutSection = document.getElementById('about');
 const portfolioSection = document.getElementById('portfolio');
 const closeIcon = document.getElementById('back-close');
 
-const showInfo = (event) => {
+const showInfo = event => {
   backDiv.style.display = 'block';
 
   if (event.target.className === 'about') {
