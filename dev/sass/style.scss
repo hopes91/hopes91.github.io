@@ -28,7 +28,7 @@ body {
   }
   #index {
     min-height: 100%;
-    @include back-photo("images/nikita-kachanovsky-445394-unsplash");
+    background: url('images/nikita-kachanovsky-445394-unsplash.jpg') center/cover no-repeat;
     position: relative;
     overflow: hidden;
     > * {
@@ -43,8 +43,7 @@ body {
         top: 0;
       }
       h1 {
-        margin: 0.5em 2em 0.2em 0.7em;
-        font-size: 2em;
+        @include indentations(0.5em 2em 0.2em 0.7em, 0);
         @include respond-to(medium-screens) {
           font-size: 1.8em;
         }
@@ -53,7 +52,7 @@ body {
         }
       }
       h2 {
-        margin: 0 2em 1.3em 1.15em;
+        @include indentations(0 2em 1.3em 1.15em, 0);
         font: {
           size: 1.3em;
           weight: 200;
@@ -71,7 +70,7 @@ body {
       background-color: $bright-blue;
       top: -1000px;
       right: 0;
-      p {
+      a {
         @include indentations(0, 1.2em 1.5em);
         font: {
           size: 1.2em;
@@ -87,7 +86,7 @@ body {
       border-left: $violet-border;
       bottom: 0;
       left: -1000px;
-      a {
+      p {
         @include indentations(0, 1em);
         font-size: 1.1em;
         box-sizing: border-box;
@@ -134,7 +133,7 @@ body {
       @include respond-to(medium-screens) {
         width: 100%;
       }
-      #closeBack {
+      #back-close {
         padding: 0 0.43em 0.04em 0.43em;
         font-size: 1.8em;
         border-radius: 50%;
