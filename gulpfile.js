@@ -16,7 +16,7 @@ const browserSync = require('browser-sync').create();
 
 gulp.task('css', function() {
   const plugins = [
-    autoprefixer({browsers: ['last 3 version']})
+    autoprefixer({browsers: ['last 3 versions']})
   ];
 
   return gulp.src('./dev/sass/**/*.scss')
