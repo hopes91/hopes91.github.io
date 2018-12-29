@@ -11,10 +11,10 @@ body {
   color: $white;
   font-family: 'PT Sans', sans-serif;
   background-color: $dark-gray;
-  position: relative;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
+  position: relative;
   a {
     @include dimensions(100%, 100%);
     text-decoration: none;
@@ -26,8 +26,11 @@ body {
       @include dimensions(100%, 100%);
     }
   }
+  img {
+    border: none;
+  }
   #index {
-    min-height: 100%;
+    height: 100%;
     background: url('images/nikita-kachanovsky-445394-unsplash.jpg') center/cover no-repeat;
     position: relative;
     overflow: hidden;
@@ -123,10 +126,10 @@ body {
       @include dimensions(50%, 100%);
       overflow: auto;
       background-color: rgba(0, 0, 0, 0.9);
+      display: none;
       position: absolute;
       right: 0;
       z-index: 10;
-      display: none;
       @include respond-to(standart-screens) {
         width: 55%;
       }
@@ -161,12 +164,12 @@ body {
             left: 0;
             .project__title {
               @include dimensions(100%, 100%);
+              box-sizing: border-box;
               color: $white;
               background-color: $black;
               border: $blue-border;
               position: absolute;
               opacity: 1;
-              box-sizing: border-box;
               * {
                 position: absolute;
               }
@@ -212,9 +215,9 @@ body {
       }
       #about {
         @include dimensions(100%, 100%);
-        overflow: auto;
         text-align: center;
         display: none;
+        overflow: auto;
         .photo {
           width: 35%;
           margin: 2em auto 1em auto;
@@ -343,11 +346,11 @@ body {
   }
   #arrow-up {
     @include dimensions(55px, 55px);
+    display: none;
     position: fixed;
     bottom: 0.5em;
     right: 1em;
     transition: .7s;
-    display: none;
   }
 }
 
@@ -355,7 +358,6 @@ body {
   from {
     opacity: 1;
   }
-
   to {
     opacity: 0;
   }
