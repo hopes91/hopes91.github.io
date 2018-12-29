@@ -15,14 +15,10 @@ const path = require('path');
 const browserSync = require('browser-sync').create();
 
 gulp.task('css', function() {
-  const plugins = [
-    autoprefixer({browsers: ['last 3 versions']})
-  ];
-
   return gulp.src('./dev/sass/**/*.scss')
     .pipe(cached('css'))
     .pipe(sass().on('error', sass.logError))
-    .pipe(postcss(plugins))
+    .pipe(postcss([autoprefixer()]))
     .pipe(remember('css'))
     .pipe(uglifycss({"uglyComments": true}))
     .pipe(gulp.dest('./public'));
@@ -31,7 +27,7 @@ gulp.task('css', function() {
 gulp.task('js', function() {
   return gulp.src('./dev/js/*.js')
     .pipe(cached('js'))
-    .pipe(babel({presets: ['@babel/env']}))
+    .pipe(babel({presets: ['@babel/preset-env']}))
     .pipe(remember('js'))
     .pipe(concat('script.js'))
     .pipe(uglify())

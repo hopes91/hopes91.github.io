@@ -6,10 +6,6 @@
   "repository": "git@github.com:hopes91/hopes91.github.io.git",
   "author": "Nadya F-a <iam@nadyafa.com>",
   "license": "MIT",
-  "dependencies": {
-    "global": "^4.3.2",
-    "gulp-cli": "^2.0.1"
-  },
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
@@ -26,5 +22,8 @@
     "gulp-uglify": "^3.0.1",
     "gulp-uglifycss": "^1.1.0",
     "path": "^0.12.7"
-  }
+  },
+  "browserslist": [
+    "last 3 versions"
+  ]
 }
