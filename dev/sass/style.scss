@@ -30,7 +30,6 @@ body {
     border: none;
   }
   #index {
-    height: 100%;
     background: url('images/nikita-kachanovsky-445394-unsplash.jpg') center/cover no-repeat;
     position: relative;
     overflow: hidden;
@@ -47,9 +46,6 @@ body {
       }
       h1 {
         margin: 0.5em 2em 0.2em 0.7em;
-        @include respond-to(medium-screens) {
-          font-size: 1.8em;
-        }
         @include respond-to(small-screens) {
           font-size: 1.5em;
         }
@@ -59,9 +55,6 @@ body {
         font: {
           size: 1.3em;
           weight: 200;
-        }
-        @include respond-to(medium-screens) {
-          margin-left: 1em;
         }
         @include respond-to(small-screens) {
           margin-left: 0.9em;
@@ -178,10 +171,6 @@ body {
               }
               h4 {
                 margin: 1.5em 1em;
-                bottom: 4em;
-                @include respond-to(tiny-screens) {
-                  bottom: 5em;
-                }
               }
               p {
                 margin: 1em;
