@@ -25,7 +25,10 @@ gulp.task('css', function() {
 });
 
 gulp.task('js', function() {
-  return gulp.src('./dev/js/*.js')
+  return gulp.src([
+      'node_modules/@babel/polyfill/dist/polyfill.js',
+      './dev/js/*.js'
+    ])
     .pipe(cached('js'))
     .pipe(babel({presets: ['@babel/preset-env']}))
     .pipe(remember('js'))
