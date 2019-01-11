@@ -41,12 +41,12 @@ body {
     #name {
       top: 1em;
       left: -1000px;
-      @include respond-to(medium-screens) {
+      @include respond-to('max-width: 800px') {
         top: 0;
       }
       h1 {
         margin: 0.5em 2em 0.2em 0.7em;
-        @include respond-to(small-screens) {
+        @include respond-to('max-width: 640px') {
           font-size: 1.5em;
         }
       }
@@ -56,7 +56,7 @@ body {
           size: 1.3em;
           weight: 200;
         }
-        @include respond-to(small-screens) {
+        @include respond-to('max-width: 640px') {
           margin-left: 0.9em;
           font-size: 1.2em;
         }
@@ -72,7 +72,7 @@ body {
           size: 1.2em;
           weight: bold;
         }
-        @include respond-to(small-screens) {
+        @include respond-to('max-width: 640px') {
           padding: 1em 1.3em;
         }
       }
@@ -91,7 +91,7 @@ body {
         &:hover {
           background-color: $bright-blue;
         }
-        @include respond-to(small-screens) {
+        @include respond-to('max-width: 640px') {
           padding: 0.8em;
         }
       }
@@ -123,10 +123,10 @@ body {
       position: absolute;
       right: 0;
       z-index: 10;
-      @include respond-to(standart-screens) {
+      @include respond-to('max-width: 1024px') {
         width: 55%;
       }
-      @include respond-to(medium-screens) {
+      @include respond-to('max-width: 800px') {
         width: 100%;
       }
       #back-close {
@@ -211,10 +211,10 @@ body {
           width: 35%;
           margin: 2em auto 1em auto;
           box-shadow: 1em 1em $bright-blue;
-          @include respond-to(standart-screens) {
+          @include respond-to('max-width: 1024px') {
             width: 40%;
           }
-          @include respond-to(tiny-screens) {
+          @include respond-to('max-width: 480px') {
             width: 50%;
           }
         }
@@ -222,7 +222,7 @@ body {
           width: 80%;
           margin: 0 auto 2em auto;
           text-align: center;
-          @include respond-to(small-screens) {
+          @include respond-to('max-width: 640px') {
             width: 90%;
           }
           hr {
@@ -245,51 +245,51 @@ body {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    @include respond-to(medium-screens) {
+    @include respond-to('max-width: 800px') {
       padding-top: 60px;
     }
     .arrow-left, .arrow-right {
       @include dimensions(55px, 55px);
       position: absolute;
       top: 0.5em;
-      @include respond-to(medium-screens) {
+      @include respond-to('max-width: 800px') {
         top: 0.7em;
       }
-      @include respond-to(small-screens) {
+      @include respond-to('max-width: 640px') {
         top: 0.5em;
       }
     }
     .arrow-left {
       right: 3.5em;
-      @include respond-to(standart-screens) {
+      @include respond-to('max-width: 1024px') {
         right: 3.2em;
       }
-      @include respond-to(medium-screens) {
+      @include respond-to('max-width: 800px') {
         left: 0.3em;
       }
     }
     .arrow-right {
       right: 0.5em;
-      @include respond-to(standart-screens) {
+      @include respond-to('max-width: 1024px') {
         right: 0.3em;
       }
     }
     .project__img {
       width: auto;
+      max-width: 1200px;
       margin: 1em 0;
       border: $simple-border;
-      @include respond-to(wide-screens) {
-        width: 75%;
-      }
-      @include respond-to(standart-screens) {
+      @include respond-to('max-width: 1366px') {
         width: 70%;
+      }
+      @include respond-to('max-width: 1024px') {
         margin: 1em;
       }
-      @include respond-to(medium-screens) {
+      @include respond-to('max-width: 800px') {
         width: 80%;
         margin: 0.7em;
       }
-      @include respond-to(small-screens) {
+      @include respond-to('max-width: 640px') {
         width: 90%;
         margin: 0.5em;
       }
@@ -301,14 +301,14 @@ body {
       background-color: $bright-blue;
       border: $simple-border;
       align-self: flex-end;
-      @include respond-to(standart-screens) {
+      @include respond-to('max-width: 1024px') {
         width: 65%;
       }
-      @include respond-to(medium-screens) {
+      @include respond-to('max-width: 800px') {
         width: 80%;
         align-self: center;
       }
-      @include respond-to(small-screens) {
+      @include respond-to('max-width: 640px') {
         width: 90%;
       }
       a {
