@@ -29,6 +29,7 @@ body {
   img {
     border: none;
   }
+
   #index {
     background: url('images/nikita-kachanovsky-445394-unsplash.jpg') center/cover no-repeat;
     position: relative;
@@ -240,8 +241,9 @@ body {
       }
     }
   }
+
   #project {
-    height: auto;
+    @include dimensions(100%, auto);
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -279,6 +281,7 @@ body {
       max-width: 1200px;
       margin: 1em 0;
       border: $simple-border;
+      position: relative;
       @include respond-to('max-width: 1366px') {
         width: 70%;
       }
@@ -292,6 +295,39 @@ body {
       @include respond-to('max-width: 640px') {
         width: 90%;
         margin: 0.5em;
+      }
+    }
+    .project__img-mobile {
+      @include dimensions(53em, auto);
+      @include respond-to('max-width: 1024px') {
+        width: 90%;
+      }
+      div {
+        @include dimensions(23em, 33.5em);
+        overflow-y: scroll;
+        &:first-child {
+          float: left;
+        }
+        &:last-child {
+          float: right;
+        }
+        @include respond-to('max-width: 1024px') {
+          @include dimensions(20em, 29em);
+        }
+        @include respond-to('max-width: 800px') {
+          @include dimensions(30em, 44em);
+          margin: 1em auto;
+          float: none !important;
+        }
+        @include respond-to('max-width: 640px') {
+          @include dimensions(20em, 29em);
+        }
+        @include respond-to('max-width: 480px') {
+          @include dimensions(17em, 24.3em);
+        }
+        img {
+          @include dimensions(100%, auto);
+        }
       }
     }
     .project__text {
@@ -332,14 +368,14 @@ body {
       font-weight: bold;
       align-self: flex-start;
     }
-  }
-  #arrow-up {
-    @include dimensions(55px, 55px);
-    display: none;
-    position: fixed;
-    bottom: 0.5em;
-    right: 1em;
-    transition: .7s;
+    #arrow-up {
+      @include dimensions(55px, 55px);
+      display: none;
+      position: fixed;
+      bottom: 0.5em;
+      right: 1em;
+      transition: .7s;
+    }
   }
 }
 
