@@ -1,8 +1,13 @@
-const siteName = document.getElementById('name');
-const languages = document.getElementById('languages');
-const nav = document.getElementById('nav');
-const contacts = document.getElementById('contacts');
-const copyright = document.querySelector('.photo-copyright');
+// для IE
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = Array.prototype.forEach;
+}
+
+let siteName = document.getElementById('name');
+let languages = document.getElementById('languages');
+let nav = document.getElementById('nav');
+let contacts = document.getElementById('contacts');
+let copyright = document.querySelector('.photo-copyright');
 
 const moveElements = () => {
   if (siteName) {

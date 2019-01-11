@@ -1,7 +1,7 @@
-const navBar = document.querySelectorAll('#nav');
-const backDiv = document.getElementById('back');
-const aboutSection = document.getElementById('about');
-const portfolioSection = document.getElementById('portfolio');
+let navBar = document.querySelectorAll('#nav');
+let backDiv = document.getElementById('back');
+let aboutSection = document.getElementById('about');
+let portfolioSection = document.getElementById('portfolio');
 
 const showInfo = event => {
   if (backDiv) {

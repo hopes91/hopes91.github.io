@@ -1,4 +1,4 @@
-const arrowUp = document.getElementById('arrow-up');
+let arrowUp = document.getElementById('arrow-up');
 
 const showHideArrowUp = () => {
   if (arrowUp) {

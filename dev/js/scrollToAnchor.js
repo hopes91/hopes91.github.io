@@ -1,4 +1,4 @@
-const anchorElements = document.querySelectorAll('[href^="#"]');
+let anchorElements = document.querySelectorAll('[href^="#"]');
 
 function scrollToAnchor(event) {
   event.preventDefault();
@@ -15,7 +15,7 @@ function scrollToAnchor(event) {
     if (start === null) {
       start = time;
     }
-    
+
     let progress = time - start;
     let scroll = null;
 
@@ -36,4 +36,3 @@ function scrollToAnchor(event) {
 }
 
 anchorElements.forEach(anchorElement => anchorElement.addEventListener('click', scrollToAnchor));
-
