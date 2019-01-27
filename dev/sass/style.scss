@@ -117,16 +117,13 @@ body {
       opacity: 0;
     }
     #back {
-      @include dimensions(50%, 100%);
+      @include dimensions(55%, 100%);
       overflow: auto;
       background-color: rgba(0, 0, 0, 0.9);
       display: none;
       position: absolute;
       right: 0;
       z-index: 10;
-      @include respond-to('max-width: 1024px') {
-        width: 55%;
-      }
       @include respond-to('max-width: 800px') {
         width: 100%;
       }
@@ -210,6 +207,7 @@ body {
         overflow: auto;
         .photo {
           width: 35%;
+          max-width: 600px;
           margin: 2em auto 1em auto;
           box-shadow: 1em 1em $bright-blue;
           @include respond-to('max-width: 1024px') {
@@ -220,9 +218,12 @@ body {
           }
         }
         .text {
-          width: 80%;
-          margin: 0 auto 2em auto;
+          width: 70%;
+          margin: 1.5em auto 2em auto;
           text-align: center;
+          @include respond-to('max-width: 1024px') {
+            width: 80%;
+          }
           @include respond-to('max-width: 640px') {
             width: 90%;
           }
