@@ -20,7 +20,6 @@ body {
     text-decoration: none;
     color: $white;
     border: none;
-    outline: none;
     display: inline-block;
     img {
       @include dimensions(100%, 100%);
@@ -83,17 +82,21 @@ body {
       border-left: $violet-border;
       bottom: 0;
       left: -1000px;
-      p {
-        @include indentations(0, 1em);
-        font-size: 1.1em;
-        box-sizing: border-box;
-        transition: .7s;
-        cursor: pointer;
-        &:hover {
-          background-color: $bright-blue;
-        }
-        @include respond-to('max-width: 640px') {
-          padding: 0.8em;
+      ul {
+        @include indentations(0, 0);
+        li {
+          @include indentations(0, 1em);
+          list-style-type: none;
+          font-size: 1.1em;
+          box-sizing: border-box;
+          transition: .7s;
+          cursor: pointer;
+          &:hover {
+            background-color: $bright-blue;
+          }
+          @include respond-to('max-width: 640px') {
+            padding: 0.8em;
+          }
         }
       }
     }
