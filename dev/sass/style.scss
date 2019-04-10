@@ -29,6 +29,11 @@ body {
     border: none;
   }
 
+  main *:focus {
+    outline-color: $white;
+    outline-width: 0.12em;
+  }
+
   #index {
     background: url('images/nikita-kachanovsky-445394-unsplash.jpg') center/cover no-repeat;
     position: relative;
@@ -82,21 +87,18 @@ body {
       border-left: $violet-border;
       bottom: 0;
       left: -1000px;
-      ul {
-        @include indentations(0, 0);
-        li {
-          @include indentations(0, 1em);
-          list-style-type: none;
-          font-size: 1.1em;
-          box-sizing: border-box;
-          transition: .7s;
-          cursor: pointer;
-          &:hover {
-            background-color: $bright-blue;
-          }
-          @include respond-to('max-width: 640px') {
-            padding: 0.8em;
-          }
+      li {
+        @include indentations(0, 1em);
+        list-style-type: none;
+        font-size: 1.1em;
+        box-sizing: border-box;
+        transition: .7s;
+        cursor: pointer;
+        &:hover {
+          background-color: $bright-blue;
+        }
+        @include respond-to('max-width: 640px') {
+          padding: 0.8em;
         }
       }
     }
@@ -146,7 +148,8 @@ body {
         text-align: center;
         display: none;
         .project {
-          width: 100%;
+          width: 99%;
+          margin: 0.12em auto;
           position: relative;
           img {
             width: 98%;

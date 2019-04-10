@@ -31,10 +31,8 @@
         <a href="index-en">en</a>
       </div>
       <nav id="nav">
-        <ul>
-          <li class="portfolio">Портфолио</li>
-          <li class="about">Обо мне</li>
-        </ul>
+        <li tabindex="0" class="portfolio">Портфолио</li>
+        <li tabindex="0" class="about">Обо мне</li>
       </nav>
       <div id="contacts">
         <a href="mailto:iam.nadyafa@gmail.com" target="_blank" rel="noopener noreferrer" title="Написать мне письмо"><img src="images/email-128.png" alt="Email"></a>
@@ -42,7 +40,7 @@
         <a href="https://github.com/hopes91" target="_blank" rel="noopener noreferrer" title="Гитхаб"><img src="images/github-128.png" alt="Гитхаб"></a>
       </div>
       <div id="back">
-        <span id="back-close" title="Закрыть" onclick="hideInfo()">&times;</span>
+        <span id="back-close" title="Закрыть" tabindex="-1" onclick="hideInfo()" onkeydown="hideInfoOnKeyDown(event)">&times;</span>
         <div id="portfolio">
           <div class="project ditp">
             <img src="images/ditp-small.png" alt="Веб-сайт Сны в ладошках">
