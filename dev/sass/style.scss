@@ -123,6 +123,7 @@ body {
     }
     #back {
       @include dimensions(55%, 100%);
+      // max-width: 50em;
       overflow: auto;
       background-color: rgba(0, 0, 0, 0.9);
       display: none;
@@ -225,6 +226,7 @@ body {
         }
         .text {
           width: 70%;
+          max-width: 40em;
           margin: 1.5em auto 2em auto;
           text-align: center;
           @include respond-to('max-width: 1024px') {
