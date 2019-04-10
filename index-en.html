@@ -31,16 +31,16 @@
         <a href="index">ru</a>
       </div>
       <nav id="nav">
-        <p class="portfolio">Portfolio</p>
-        <p class="about">About me</p>
+        <li tabindex="0" class="portfolio">Portfolio</li>
+        <li tabindex="0" class="about">About me</li>
       </nav>
       <div id="contacts">
         <a href="mailto:iam.nadyafa@gmail.com" target="_blank" rel="noopener noreferrer" title="Contact me"><img src="images/email-128.png" alt="Email"></a>
-        <!-- <a href="https://instagram.com/hopefully.dev/" target="_blank" rel="noopener noreferrer" title="Instagram"><img src="images/instagram-128.png" alt="Instagram"></a> -->
+        <a href="https://instagram.com/hopefully.dev/" target="_blank" rel="noopener noreferrer" title="Instagram"><img src="images/instagram-128.png" alt="Instagram"></a>
         <a href="https://github.com/hopes91" target="_blank" rel="noopener noreferrer" title="Github"><img src="images/github-128.png" alt="Github"></a>
       </div>
       <div id="back">
-        <span id="back-close" title="Close" onclick="hideInfo()">&times;</span>
+        <span id="back-close" title="Close" tabindex="-1" onclick="hideInfo()" onkeydown="hideInfoOnKeyDown(event)">&times;</span>
         <div id="portfolio">
           <div class="project ditp">
             <img src="images/ditp-small.png" alt="Website Dreams In the Palms">
@@ -76,7 +76,7 @@
             <div class="skills">
               <p><strong>Skills</strong></p>
               <p>HTML, CSS, Sass (SCSS), JavaScript</p>
-              <p>jQuery, React</p>
+              <p>React</p>
               <p>Node.js, Express</p>
               <p>PostgreSQL</p>
             </div>
