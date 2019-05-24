@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta name="description" content="My name is Nadezhda Falaleeva, I am a full stack web developer. My goal is to create modern, fast, and beautiful websites.">
-    <meta name="keywords" content="website, site, web developer, full stack developer, kirov, html, css, scss, javascript, jquery, react, node, express, postgresql">
+    <meta name="description" content="My name is Nadezhda Falaleeva, I am a front end web developer with a little knowledge of backend. My goal is to create modern, fast, and visually pleasing websites.">
+    <meta name="keywords" content="website, site, web developer, front end developer, kirov, html, css, scss, javascript, jquery, react, node, express, postgresql">
     <meta name="author" content="Nadya F-a">
     <title>Nadezhda Falaleeva | Web developer</title>
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
@@ -20,27 +20,38 @@
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <div id="index">
+    <main id="index">
       <div id="name">
         <a href="https://nadyafa.com/index-en">
           <h1>Nadezhda Falaleeva</h1>
           <h2>Web developer</h2>
         </a>
       </div>
+
       <div id="languages">
         <a href="index">ru</a>
       </div>
+
       <nav id="nav">
         <li tabindex="0" class="portfolio">Portfolio</li>
         <li tabindex="0" class="about">About me</li>
       </nav>
+
       <div id="contacts">
-        <a href="mailto:iam.nadyafa@gmail.com" target="_blank" rel="noopener noreferrer" title="Contact me"><img src="images/email-128.png" alt="Email"></a>
-        <a href="https://instagram.com/hopefully.dev/" target="_blank" rel="noopener noreferrer" title="Instagram"><img src="images/instagram-128.png" alt="Instagram"></a>
-        <a href="https://github.com/hopes91" target="_blank" rel="noopener noreferrer" title="Github"><img src="images/github-128.png" alt="Github"></a>
+        <a href="mailto:iam.nadyafa@gmail.com" target="_blank" rel="noopener noreferrer" title="Contact me">
+          <img src="images/email-128.png" alt="Email">
+        </a>
+        <a href="https://instagram.com/nadya.s.fa/" target="_blank" rel="noopener noreferrer" title="Instagram">
+          <img src="images/instagram-128.png" alt="Instagram">
+        </a>
+        <a href="https://github.com/hopes91" target="_blank" rel="noopener noreferrer" title="Github">
+          <img src="images/github-128.png" alt="Github">
+        </a>
       </div>
+
       <div id="back">
-        <span id="back-close" title="Close" tabindex="-1" onclick="hideInfo()" onkeydown="hideInfoOnKeyDown(event)">&times;</span>
+        <span title="Close" tabindex="-1" id="back-close" onclick="hideInfo()" onkeydown="hideInfoOnKeyDown(event)">&times;</span>
+
         <div id="portfolio">
           <div class="project ditp">
             <img src="images/ditp-small.png" alt="Website Dreams In the Palms">
@@ -53,23 +64,25 @@
               </div>
             </a>
           </div>
-            <div class="project kl">
-              <img src="images/kl-small.png" alt="Krasnopolie Library website">
-              <a href="project2-en" target="_blank" rel="noopener noreferrer">
-                <div class="project__title">
-                  <h4>Krasnopolie Library website</h4>
-                  <p>Oficial website for Krasnopolie Library (Russia). <br>HTML5, CSS3, JavaScript (ES6)</p>
-                  <span></span>
-                  <span></span>
-                </div>
-              </a>
-            </div>
+          <div class="project kl">
+            <img src="images/kl-small.png" alt="Krasnopolie Library website">
+            <a href="project2-en" target="_blank" rel="noopener noreferrer">
+              <div class="project__title">
+                <h4>Krasnopolie Library website</h4>
+                <p>Oficial website for Krasnopolie Library (Russia). <br>HTML5, CSS3, JavaScript (ES6)</p>
+                <span></span>
+                <span></span>
+              </div>
+            </a>
+          </div>
         </div>
+
         <div id="about">
-          <img class="photo" src="images/nadezhdafalaleeva.jpg" alt="Photo of me">
+          <img src="images/nadezhdafalaleeva.jpg" alt="Photo of me" class="photo">
+
           <div class="text">
             <div class="me">
-              <p>Two years ago, I thought my future would be related to writing texts, but suddenly, I dove into such a difficult yet exciting world of web-development. And now I just cannot imagine my life without coding. My goal is to create modern, fast and beautiful websites.</p>
+              <p>Two years ago, I thought my future would be related to writing texts, but suddenly, I dove into such a difficult yet exciting world of web-development. And now I just cannot imagine my life without coding. My goal is to create modern, fast, and visually pleasing websites.</p>
               <p>I live in Kirov Region (Russia), love football, constantly study, learn foreign languages, read, and drink tea (lots of tea).</p>
             </div>
             <hr>
@@ -83,8 +96,9 @@
           </div>
         </div>
       </div>
-      <a href="https://unsplash.com/@nkachanovskyyy" class="photo-copyright" target="_blank" rel="noopener noreferrer">Photo: Nikita Kachanovsky</a>
-    </div>
+
+      <a href="https://unsplash.com/@nkachanovskyyy" target="_blank" rel="noopener noreferrer" class="photo-copyright">Photo: Nikita Kachanovsky</a>
+    </main>
 
     <script src="script.js"></script>
   </body>
