@@ -20,24 +20,24 @@
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <main id="index">
-      <div id="name">
+    <main class="index">
+      <div class="index__my-name">
         <a href="https://nadyafa.com/index">
           <h1>Надежда Фалалеева</h1>
           <h2>Веб-разработчик</h2>
         </a>
       </div>
 
-      <div id="languages">
+      <div class="index__language">
         <a href="index-en">en</a>
       </div>
 
-      <nav id="nav">
-        <li tabindex="0" class="portfolio">Портфолио</li>
-        <li tabindex="0" class="about">Обо мне</li>
+      <nav class="index__nav">
+        <li tabindex="0" class="index__nav-portfolio">Портфолио</li>
+        <li tabindex="0" class="index__nav-about">Обо мне</li>
       </nav>
 
-      <div id="contacts">
+      <div class="index__contacts">
         <a href="mailto:iam.nadyafa@gmail.com" target="_blank" rel="noopener noreferrer" title="Написать мне письмо">
           <img src="images/email-128.png" alt="Email">
         </a>
@@ -49,44 +49,40 @@
         </a>
       </div>
 
-      <div id="back">
-        <span title="Закрыть" tabindex="-1" id="back-close" onclick="hideInfo()" onkeydown="hideInfoOnKeyDown(event)">&times;</span>
+      <div class="index__back">
+        <span title="Закрыть" tabindex="-1" class="index__back-close">&times;</span>
 
-        <div id="portfolio">
-          <div class="project ditp">
-            <img src="images/ditp-small.png" alt="Веб-сайт Сны в ладошках">
-            <a href="project1-ru" target="_blank" rel="noopener noreferrer">
-              <div class="project__title">
-                <h4>Веб-сайт "Сны в ладошках"</h4>
-                <p>Сайт-портфолио для фотографа из Иркутска (Россия). <br>HTML5, CSS3, JavaScript (ES6)</p>
-                <span></span>
-                <span></span>
-              </div>
+        <div class="index__back-portfolio">
+          <div class="index__back-portfolio-project ditp">
+            <img src="images/ditp-small.png" alt="Веб-сайт Сны в ладошках" class="index__back-portfolio-project-thumb">
+            <a href="project1-ru" target="_blank" rel="noopener noreferrer" class="index__back-portfolio-project-title">
+              <h4>Веб-сайт "Сны в ладошках"</h4>
+              <p>Сайт-портфолио для фотографа из Иркутска (Россия). <br>HTML5, CSS3, JavaScript (ES6)</p>
+              <span></span>
+              <span></span>
             </a>
           </div>
-          <div class="project kl">
-            <img src="images/kl-small.png" alt="Веб-сайт Краснопольской библиотеки">
-            <a href="project2-ru" target="_blank" rel="noopener noreferrer">
-              <div class="project__title">
-                <h4>Веб-сайт Краснопольской библиотеки</h4>
-                <p>Официальный сайт Краснопольской библиотеки МКУК Сунская МБС. <br>HTML5, CSS3, JavaScript (ES6)</p>
-                <span></span>
-                <span></span>
-              </div>
+          <div class="index__back-portfolio-project kl">
+            <img src="images/kl-small.png" alt="Веб-сайт Краснопольской библиотеки" class="index__back-portfolio-project-thumb">
+            <a href="project2-ru" target="_blank" rel="noopener noreferrer" class="index__back-portfolio-project-title">
+              <h4>Веб-сайт Краснопольской библиотеки</h4>
+              <p>Официальный сайт Краснопольской библиотеки МКУК Сунская МБС. <br>HTML5, CSS3, JavaScript (ES6)</p>
+              <span></span>
+              <span></span>
             </a>
           </div>
         </div>
 
-        <div id="about">
-          <img src="images/nadezhdafalaleeva.jpg" alt="Я на фото" class="photo">
+        <div class="index__back-about">
+          <img src="images/nadezhdafalaleeva.jpg" alt="Я на фото" class="index__back-about-photo">
 
-          <div class="text">
-            <div class="me">
+          <div class="index__back-about-text">
+            <div class="index__back-about-text-me">
               <p>Ещё два года назад я думала, что моё будущее будет связано с написанием текстов, но неожиданно для себя я погрузилась в такой непростой, но захватывающий мир веб-разработки. И теперь я просто не представляю свою жизнь без кода. Моя цель – создание современных, быстрых, а главное, приятных для глаз сайтов.</p>
               <p>Я живу в Кировской области (Россия), люблю футбол, постоянно учусь, изучаю иностранные языки, читаю, пью чай (много чая).</p>
             </div>
             <hr>
-            <div class="skills">
+            <div class="index__back-about-text-skills">
               <p><strong>Навыки</strong></p>
               <p>HTML, CSS, Sass (SCSS), JavaScript</p>
               <p>React</p>
@@ -97,7 +93,7 @@
         </div>
       </div>
 
-      <a href="https://unsplash.com/@nkachanovskyyy" target="_blank" rel="noopener noreferrer" class="photo-copyright">Фото: Nikita Kachanovsky</a>
+      <a href="https://unsplash.com/@nkachanovskyyy" target="_blank" rel="noopener noreferrer" class="index__photo-copyright">Фото: Nikita Kachanovsky</a>
     </main>
 
     <script src="script.js"></script>
