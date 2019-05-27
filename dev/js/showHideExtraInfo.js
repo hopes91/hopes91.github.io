@@ -1,8 +1,8 @@
-let navBar = document.querySelectorAll('#nav');
-let backDiv = document.getElementById('back');
-let closeBackIcon = document.getElementById('back-close');
-let aboutSection = document.getElementById('about');
-let portfolioSection = document.getElementById('portfolio');
+const navBar = document.querySelectorAll('#nav');
+const backDiv = document.getElementById('back');
+const closeBackIcon = document.getElementById('back-close');
+const aboutSection = document.getElementById('about');
+const portfolioSection = document.getElementById('portfolio');
 
 const showInfoOnKeyDown = event => {
   if (event.key === 'Enter') {

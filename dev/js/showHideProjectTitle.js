@@ -1,4 +1,4 @@
-let projects = document.querySelectorAll('.project');
+const projects = document.querySelectorAll('.project');
 
 const showProjectTitle = event => {
 	let projectTitle = event.target.children[1]; // div with a class "project__title"
