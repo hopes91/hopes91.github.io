@@ -286,7 +286,7 @@ body {
   }
 }
 
-#project {
+.project {
   @include dimensions(100%, auto);
   display: flex;
   flex-flow: column nowrap;
@@ -295,8 +295,12 @@ body {
     padding-top: 60px;
   }
 
-  .arrow-left, .arrow-right {
+  .project__arrow {
     @include dimensions(55px, 55px);
+  }
+
+  .project__arrow_left,
+  .project__arrow_right {
     position: absolute;
     top: 0.5em;
     @include respond-to('max-width: 800px') {
@@ -307,7 +311,7 @@ body {
     }
   }
 
-  .arrow-left {
+  .project__arrow_left {
     right: 3.5em;
     @include respond-to('max-width: 1024px') {
       right: 3.2em;
@@ -317,7 +321,7 @@ body {
     }
   }
 
-  .arrow-right {
+  .project__arrow_right {
     right: 0.5em;
     @include respond-to('max-width: 1024px') {
       right: 0.3em;
@@ -346,7 +350,7 @@ body {
     }
   }
 
-  .project__img-mobile {
+  .project__img-mobile-container {
     @include dimensions(53em, auto);
     @include respond-to('max-width: 1024px') {
       width: 90%;
@@ -384,13 +388,13 @@ body {
     }
   }
 
-  .project__text {
+  .project__about {
     width: 50%;
     margin: 1.5em 5em;
+    align-self: flex-end;
     text-align: left;
     background-color: $bright-blue;
     border: $simple-border;
-    align-self: flex-end;
     @include respond-to('max-width: 1024px') {
       width: 65%;
     }
@@ -421,15 +425,14 @@ body {
     }
   }
 
-  .go-back {
+  .project__go-back {
     @include dimensions(7em, auto);
     @include indentations(0.5em, 0.5em 0.7em);
-    font-weight: bold;
     align-self: flex-start;
+    font-weight: bold;
   }
 
-  #arrow-up {
-    @include dimensions(55px, 55px);
+  .project__arrow_up {
     display: none;
     position: fixed;
     bottom: 0.5em;

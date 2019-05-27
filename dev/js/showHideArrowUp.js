@@ -1,6 +1,6 @@
-const arrowUp = document.getElementById('arrow-up');
-
 const showHideArrowUp = () => {
+  const arrowUp = document.querySelector('.project__arrow_up');
+
   if (arrowUp) {
     if (window.pageYOffset > window.innerHeight / 4) {
       arrowUp.style.display = 'inline-block';
