@@ -3,7 +3,7 @@ const anchorElements = document.querySelectorAll('[href^="#"]');
 function scrollToAnchor(event) {
   event.preventDefault();
 
-  let speed = 1;
+  let speed = 0.7;
   let y = window.pageYOffset;
   let hash = this.href.replace(/[^#]*(.*)/, '$1');
   let indent = document.querySelector(hash).getBoundingClientRect().top;
