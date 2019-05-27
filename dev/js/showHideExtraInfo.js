@@ -1,42 +1,44 @@
-const navBar = document.querySelectorAll('#nav');
-const backDiv = document.getElementById('back');
-const closeBackIcon = document.getElementById('back-close');
-const aboutSection = document.getElementById('about');
-const portfolioSection = document.getElementById('portfolio');
+const navLinks = document.querySelectorAll('.index__nav li');
+const back = document.querySelector('.index__back');
+const closeBackIcon = document.querySelector('.index__back-close');
+const portfolioSection = document.querySelector('.index__back-portfolio');
+const aboutMeSection = document.querySelector('.index__back-about');
 
 const showInfoOnKeyDown = event => {
-  if (event.key === 'Enter') {
-    showInfo(event);
-  }
+  if (event.key !== 'Enter') return;
+
+  showInfo(event);
 }
 
 const showInfo = event => {
-  if (backDiv) {
-    backDiv.style.display = 'block';
-    closeBackIcon.setAttribute('tabindex', '0');
+  if (!back) return;
 
-    if (event.target.className === 'about') {
-      portfolioSection.style.display = 'none';
-      aboutSection.style.display = 'block';
-    } else {
-      aboutSection.style.display = 'none';
-      portfolioSection.style.display = 'block';
-    }
+  back.style.display = 'block';
+  closeBackIcon.setAttribute('tabindex', '0');
+
+  if (event.target.className.match('portfolio')) {
+    portfolioSection.style.display = 'block';
+    aboutMeSection.style.display = 'none';
+  } else {
+    portfolioSection.style.display = 'none';
+    aboutMeSection.style.display = 'block';
   }
 }
 
 const hideInfoOnKeyDown = event => {
-  if (event.key === 'Enter') {
-    hideInfo();
-  }
+  if (event.key !== 'Enter') return;
+
+  hideInfo();
 }
 
 const hideInfo = () => {
   closeBackIcon.setAttribute('tabindex', '-1');
-  aboutSection.style.display = 'none';
   portfolioSection.style.display = 'none';
-  backDiv.style.display = 'none';
+  aboutMeSection.style.display = 'none';
+  back.style.display = 'none';
 }
 
-navBar.forEach(link => link.addEventListener('click', showInfo));
-navBar.forEach(link => link.addEventListener('keydown', showInfoOnKeyDown));
+navLinks.forEach(link => link.addEventListener('click', showInfo));
+navLinks.forEach(link => link.addEventListener('keydown', showInfoOnKeyDown));
+closeBackIcon.addEventListener('click', hideInfo);
+closeBackIcon.addEventListener('keydown', hideInfoOnKeyDown);

@@ -34,7 +34,7 @@
 
       <nav class="nav">
         <li tabindex="0" class="index__nav-portfolio">Portfolio</li>
-        <li tabindex="0" class="index__nav-about-me">About me</li>
+        <li tabindex="0" class="index__nav-about">About me</li>
       </nav>
 
       <div class="index__contacts">
@@ -49,44 +49,40 @@
         </a>
       </div>
 
-      <div id="back">
-        <span title="Close" tabindex="-1" id="back-close" onclick="hideInfo()" onkeydown="hideInfoOnKeyDown(event)">&times;</span>
+      <div class="index__back">
+        <span title="Close" tabindex="-1" class="index__back-close">&times;</span>
 
-        <div id="portfolio">
-          <div class="project ditp">
-            <img src="images/ditp-small.png" alt="Website Dreams In the Palms">
-            <a href="project1-en" target="_blank" rel="noopener noreferrer">
-              <div class="project__title">
-                <h4>Website "Dreams In the Palms"</h4>
-                <p>Portfolio website for a photographer from Irkutsk (Russia). <br>HTML5, CSS3, JavaScript (ES6)</p>
-                <span></span>
-                <span></span>
-              </div>
+        <div class="index__back-portfolio">
+          <div class="index__back-portfolio-project ditp">
+            <img src="images/ditp-small.png" alt="Website Dreams In the Palms" class="index__back-portfolio-project-thumb">
+            <a href="project1-en" target="_blank" rel="noopener noreferrer"  class="index__back-portfolio-project-title">
+              <h4>Website "Dreams In the Palms"</h4>
+              <p>Portfolio website for a photographer from Irkutsk (Russia). <br>HTML5, CSS3, JavaScript (ES6)</p>
+              <span></span>
+              <span></span>
             </a>
           </div>
-          <div class="project kl">
-            <img src="images/kl-small.png" alt="Krasnopolie Library website">
-            <a href="project2-en" target="_blank" rel="noopener noreferrer">
-              <div class="project__title">
-                <h4>Krasnopolie Library website</h4>
-                <p>Oficial website for Krasnopolie Library (Russia). <br>HTML5, CSS3, JavaScript (ES6)</p>
-                <span></span>
-                <span></span>
-              </div>
+          <div class="index__back-portfolio-project kl">
+            <img src="images/kl-small.png" alt="Krasnopolie Library website" class="index__back-portfolio-project-thumb">
+            <a href="project2-en" target="_blank" rel="noopener noreferrer"  class="index__back-portfolio-project-title">
+              <h4>Krasnopolie Library website</h4>
+              <p>Oficial website for Krasnopolie Library (Russia). <br>HTML5, CSS3, JavaScript (ES6)</p>
+              <span></span>
+              <span></span>
             </a>
           </div>
         </div>
 
-        <div id="about">
-          <img src="images/nadezhdafalaleeva.jpg" alt="Photo of me" class="photo">
+        <div class="index__back-about">
+          <img src="images/nadezhdafalaleeva.jpg" alt="Photo of me" class="index__back-about-photo">
 
-          <div class="text">
-            <div class="me">
+          <div class="index__back-about-text">
+            <div class="index__back-about-text-me">
               <p>Two years ago, I thought my future would be related to writing texts, but suddenly, I dove into such a difficult yet exciting world of web-development. And now I just cannot imagine my life without coding. My goal is to create modern, fast, and visually pleasing websites.</p>
               <p>I live in Kirov Region (Russia), love football, constantly study, learn foreign languages, read, and drink tea (lots of tea).</p>
             </div>
             <hr>
-            <div class="skills">
+            <div class="index__back-about-text-skills">
               <p><strong>Skills</strong></p>
               <p>HTML, CSS, Sass (SCSS), JavaScript</p>
               <p>React</p>
