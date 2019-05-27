@@ -1,27 +1,27 @@
+@import 'helpers/variables';
+@import 'helpers/mixins';
 @import url('https://fonts.googleapis.com/css?family=PT+Sans');
-@import 'helper/variables';
-@import 'helper/mixins';
 
-html, body, #index {
+html, body, .index {
   @include dimensions(100%, 100%);
   @include indentations(0, 0);
 }
 
 body {
-  color: $white;
-  font-family: 'PT Sans', sans-serif;
-  background-color: $dark-gray;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
+  color: $white;
+  font-family: 'PT Sans', sans-serif;
+  background-color: $dark-gray;
   position: relative;
 
   a {
     @include dimensions(100%, 100%);
+    display: inline-block;
     text-decoration: none;
     color: $white;
     border: none;
-    display: inline-block;
 
     img {
       @include dimensions(100%, 100%);
@@ -34,405 +34,408 @@ body {
 
   main *:focus {
     outline-color: $white;
-    outline-width: 0.12em;
+  }
+}
+
+.index {
+  background: url('images/nikita-kachanovsky-445394-unsplash.jpg') center/cover no-repeat;
+  position: relative;
+  overflow: hidden;
+
+  .index__my-name,
+  .index__language,
+  .index__nav,
+  .index__contacts,
+  .index__photo-copyright {
+    position: absolute;
+    z-index: 1;
+    transition: 1.5s;
   }
 
-  #index {
-    background: url('images/nikita-kachanovsky-445394-unsplash.jpg') center/cover no-repeat;
-    position: relative;
-    overflow: hidden;
-
-    > * {
-      position: absolute;
-      z-index: 1;
-      transition: 1.5s;
-    }
-
-    #name {
-      top: 1em;
-      left: -1000px;
-      @include respond-to('max-width: 800px') {
-        top: 0;
-      }
-
-      h1 {
-        margin: 0.5em 2em 0.2em 0.7em;
-        @include respond-to('max-width: 640px') {
-          font-size: 1.5em;
-        }
-      }
-
-      h2 {
-        margin: 0 2em 1.3em 1.15em;
-        font: {
-          size: 1.3em;
-          weight: 200;
-        }
-        @include respond-to('max-width: 640px') {
-          margin-left: 0.9em;
-          font-size: 1.2em;
-        }
-      }
-    }
-
-    #languages {
-      background-color: $bright-blue;
-      top: -1000px;
-      right: 0;
-
-      a {
-        @include indentations(0, 1.2em 1.5em);
-        font: {
-          size: 1.2em;
-          weight: bold;
-        }
-        @include respond-to('max-width: 640px') {
-          padding: 1em 1.3em;
-        }
-      }
-    }
-
-    #nav {
-      width: 10em;
-      border-left: $violet-border;
-      bottom: 0;
-      left: -1000px;
-
-      li {
-        @include indentations(0, 1em);
-        list-style-type: none;
-        font-size: 1.1em;
-        box-sizing: border-box;
-        transition: .7s;
-        cursor: pointer;
-        &:hover {
-          background-color: $bright-blue;
-        }
-        @include respond-to('max-width: 640px') {
-          padding: 0.8em;
-        }
-      }
-    }
-
-    #contacts {
-      padding: 0 1em;
-      bottom: 2.5em;
-      right: -1000px;
-
-      a {
-        @include dimensions(35px, 35px);
-        vertical-align: middle;
-      }
-    }
-
-    .photo-copyright {
-      @include dimensions(auto, 1.5em);
-      color: $gray;
-      font-size: 0.7em;
-      text-align: right;
-      position: absolute;
-      bottom: 1em;
-      right: 1.5em;
-      opacity: 0;
-    }
-
-    #back {
-      @include dimensions(55%, 100%);
-      // max-width: 50em;
-      overflow: auto;
-      background-color: rgba(0, 0, 0, 0.9);
-      display: none;
-      position: absolute;
-      right: 0;
-      z-index: 10;
-      @include respond-to('max-width: 800px') {
-        width: 100%;
-      }
-
-      #back-close {
-        padding: 0 0.43em 0.04em 0.43em;
-        font-size: 1.8em;
-        border-radius: 50%;
-        background-color: rgba(255, 255, 255, 0.3);
-        position: absolute;
-        top: 0.5em;
-        right: 0.5em;
-        cursor: pointer;
-        z-index: 10;
-      }
-
-      #portfolio {
-        @include dimensions(100%, auto);
-        text-align: center;
-        display: none;
-
-        .project {
-          width: 99%;
-          margin: 0.12em auto;
-          position: relative;
-
-          img {
-            width: 98%;
-            margin-top: 1%;
-          }
-
-          a {
-            position: absolute;
-            top: 0;
-            left: 0;
-
-            .project__title {
-              @include dimensions(100%, 100%);
-              box-sizing: border-box;
-              color: $white;
-              background-color: $black;
-              border: $blue-border;
-              position: absolute;
-              opacity: 1;
-
-              * {
-                position: absolute;
-              }
-
-              &:nth-child(1), &:nth-child(2) {
-                text-align: left;
-              }
-
-              h4 {
-                margin: 1.5em 1em;
-              }
-
-              p {
-                margin: 1em;
-                line-height: 1.4;
-                bottom: 0.7em;
-              }
-
-              span {
-                height: 0.3em;
-                background-color: $dark-blue;
-                &:nth-child(2) {
-                  width: 85%;
-                  bottom: 0;
-                  left: 0;
-                }
-                &:nth-child(3) {
-                  width: 25%;
-                  bottom: 0.7em;
-                  right: 0;
-                }
-              }
-            }
-          }
-        }
-
-        .project__title-active {
-          animation: {
-            name: projectTitle;
-            duration: 1s;
-            fill-mode: forwards;
-          }
-        }
-      }
-
-      #about {
-        @include dimensions(100%, 100%);
-        text-align: center;
-        display: none;
-        overflow: auto;
-
-        .photo {
-          width: 35%;
-          max-width: 600px;
-          margin: 2em auto 1em auto;
-          box-shadow: 1em 1em $bright-blue;
-          @include respond-to('max-width: 1024px') {
-            width: 40%;
-          }
-          @include respond-to('max-width: 480px') {
-            width: 50%;
-          }
-        }
-
-        .text {
-          width: 70%;
-          max-width: 40em;
-          margin: 1.5em auto 2em auto;
-          text-align: center;
-          @include respond-to('max-width: 1024px') {
-            width: 80%;
-          }
-          @include respond-to('max-width: 640px') {
-            width: 90%;
-          }
-
-          hr {
-            height: 0.1em;
-            margin: 1.5em 0;
-            background-color: $white;
-            border: none;
-          }
-
-          .skills {
-            p {
-              margin: 0.5em 0;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  #project {
-    @include dimensions(100%, auto);
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
+  .index__my-name {
+    top: 1em;
+    left: -1000px;
     @include respond-to('max-width: 800px') {
-      padding-top: 60px;
+      top: 0;
     }
 
-    .arrow-left, .arrow-right {
-      @include dimensions(55px, 55px);
+    h1 {
+      margin: 0.5em 2em 0.2em 0.7em;
+      @include respond-to('max-width: 640px') {
+        font-size: 1.5em;
+      }
+    }
+
+    h2 {
+      margin: 0 2em 1.3em 1.15em;
+      font: {
+        size: 1.3em;
+        weight: 200;
+      }
+      @include respond-to('max-width: 640px') {
+        margin-left: 0.9em;
+        font-size: 1.2em;
+      }
+    }
+  }
+
+  .index__language {
+    background-color: $bright-blue;
+    top: -1000px;
+    right: 0;
+
+    a {
+      @include indentations(0, 1.2em 1.5em);
+      font: {
+        size: 1.2em;
+        weight: bold;
+      }
+      @include respond-to('max-width: 640px') {
+        padding: 1em 1.3em;
+      }
+    }
+  }
+
+  .index__nav {
+    width: 10em;
+    border-left: $violet-border;
+    bottom: 0;
+    left: -1000px;
+
+    li {
+      @include indentations(0, 1em);
+      list-style-type: none;
+      font-size: 1.1em;
+      box-sizing: border-box;
+      transition: .7s;
+      cursor: pointer;
+      &:hover {
+        background-color: $bright-blue;
+      }
+      @include respond-to('max-width: 640px') {
+        padding: 0.8em;
+      }
+    }
+  }
+
+  .index__contacts {
+    padding: 0 1em;
+    bottom: 2.5em;
+    right: -1000px;
+
+    a {
+      @include dimensions(35px, 35px);
+      vertical-align: middle;
+    }
+  }
+
+  .index__photo-copyright {
+    @include dimensions(auto, 1.5em);
+    color: $gray;
+    font-size: 0.7em;
+    text-align: right;
+    position: absolute;
+    bottom: 1em;
+    right: 1.5em;
+    opacity: 0;
+  }
+
+  #back {
+    @include dimensions(55%, 100%);
+    // max-width: 50em;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    position: absolute;
+    right: 0;
+    z-index: 10;
+    @include respond-to('max-width: 800px') {
+      width: 100%;
+    }
+
+    #back-close {
+      padding: 0 0.43em 0.04em 0.43em;
+      font-size: 1.8em;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.3);
       position: absolute;
       top: 0.5em;
-      @include respond-to('max-width: 800px') {
-        top: 0.7em;
-      }
-      @include respond-to('max-width: 640px') {
-        top: 0.5em;
-      }
-    }
-
-    .arrow-left {
-      right: 3.5em;
-      @include respond-to('max-width: 1024px') {
-        right: 3.2em;
-      }
-      @include respond-to('max-width: 800px') {
-        left: 0.3em;
-      }
-    }
-
-    .arrow-right {
       right: 0.5em;
-      @include respond-to('max-width: 1024px') {
-        right: 0.3em;
-      }
+      cursor: pointer;
+      z-index: 10;
     }
 
-    .project__img {
-      width: auto;
-      max-width: 1200px;
-      margin: 1em 0;
-      border: $simple-border;
-      position: relative;
-      @include respond-to('max-width: 1366px') {
-        width: 70%;
-      }
-      @include respond-to('max-width: 1024px') {
-        margin: 1em;
-      }
-      @include respond-to('max-width: 800px') {
-        width: 80%;
-        margin: 0.7em;
-      }
-      @include respond-to('max-width: 640px') {
-        width: 90%;
-        margin: 0.5em;
-      }
-    }
+    #portfolio {
+      @include dimensions(100%, auto);
+      text-align: center;
+      display: none;
 
-    .project__img-mobile {
-      @include dimensions(53em, auto);
-      @include respond-to('max-width: 1024px') {
-        width: 90%;
-      }
-
-      div {
-        @include dimensions(23em, 33.5em);
-        overflow-y: scroll;
-        @include respond-to('max-width: 1024px') {
-          @include dimensions(20em, 29em);
-        }
-        @include respond-to('max-width: 800px') {
-          @include dimensions(30em, 44em);
-          margin: 1em auto;
-          float: none !important;
-        }
-        @include respond-to('max-width: 640px') {
-          @include dimensions(20em, 29em);
-        }
-        @include respond-to('max-width: 480px') {
-          @include dimensions(17em, 24.3em);
-        }
-
-        &:first-child {
-          float: left;
-        }
-
-        &:last-child {
-          float: right;
-        }
+      .project {
+        width: 99%;
+        margin: 0.12em auto;
+        position: relative;
 
         img {
-          @include dimensions(100%, auto);
+          width: 98%;
+          margin-top: 1%;
+        }
+
+        a {
+          position: absolute;
+          top: 0;
+          left: 0;
+
+          .project__title {
+            @include dimensions(100%, 100%);
+            box-sizing: border-box;
+            color: $white;
+            background-color: $black;
+            border: $blue-border;
+            position: absolute;
+            opacity: 1;
+
+            * {
+              position: absolute;
+            }
+
+            &:nth-child(1), &:nth-child(2) {
+              text-align: left;
+            }
+
+            h4 {
+              margin: 1.5em 1em;
+            }
+
+            p {
+              margin: 1em;
+              line-height: 1.4;
+              bottom: 0.7em;
+            }
+
+            span {
+              height: 0.3em;
+              background-color: $dark-blue;
+              &:nth-child(2) {
+                width: 85%;
+                bottom: 0;
+                left: 0;
+              }
+              &:nth-child(3) {
+                width: 25%;
+                bottom: 0.7em;
+                right: 0;
+              }
+            }
+          }
+        }
+      }
+
+      .project__title-active {
+        animation: {
+          name: projectTitle;
+          duration: 1s;
+          fill-mode: forwards;
         }
       }
     }
 
-    .project__text {
-      width: 50%;
-      margin: 1.5em 5em;
-      text-align: left;
-      background-color: $bright-blue;
-      border: $simple-border;
-      align-self: flex-end;
+    #about-me {
+      @include dimensions(100%, 100%);
+      text-align: center;
+      display: none;
+      overflow: auto;
+
+      .photo {
+        width: 35%;
+        max-width: 600px;
+        margin: 2em auto 1em auto;
+        box-shadow: 1em 1em $bright-blue;
+        @include respond-to('max-width: 1024px') {
+          width: 40%;
+        }
+        @include respond-to('max-width: 480px') {
+          width: 50%;
+        }
+      }
+
+      .text {
+        width: 70%;
+        max-width: 40em;
+        margin: 1.5em auto 2em auto;
+        text-align: center;
+        @include respond-to('max-width: 1024px') {
+          width: 80%;
+        }
+        @include respond-to('max-width: 640px') {
+          width: 90%;
+        }
+
+        hr {
+          height: 0.1em;
+          margin: 1.5em 0;
+          background-color: $white;
+          border: none;
+        }
+
+        .skills {
+          p {
+            margin: 0.5em 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+#project {
+  @include dimensions(100%, auto);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  @include respond-to('max-width: 800px') {
+    padding-top: 60px;
+  }
+
+  .arrow-left, .arrow-right {
+    @include dimensions(55px, 55px);
+    position: absolute;
+    top: 0.5em;
+    @include respond-to('max-width: 800px') {
+      top: 0.7em;
+    }
+    @include respond-to('max-width: 640px') {
+      top: 0.5em;
+    }
+  }
+
+  .arrow-left {
+    right: 3.5em;
+    @include respond-to('max-width: 1024px') {
+      right: 3.2em;
+    }
+    @include respond-to('max-width: 800px') {
+      left: 0.3em;
+    }
+  }
+
+  .arrow-right {
+    right: 0.5em;
+    @include respond-to('max-width: 1024px') {
+      right: 0.3em;
+    }
+  }
+
+  .project__img {
+    width: auto;
+    max-width: 1200px;
+    margin: 1em 0;
+    border: $simple-border;
+    position: relative;
+    @include respond-to('max-width: 1366px') {
+      width: 70%;
+    }
+    @include respond-to('max-width: 1024px') {
+      margin: 1em;
+    }
+    @include respond-to('max-width: 800px') {
+      width: 80%;
+      margin: 0.7em;
+    }
+    @include respond-to('max-width: 640px') {
+      width: 90%;
+      margin: 0.5em;
+    }
+  }
+
+  .project__img-mobile {
+    @include dimensions(53em, auto);
+    @include respond-to('max-width: 1024px') {
+      width: 90%;
+    }
+
+    div {
+      @include dimensions(23em, 33.5em);
+      overflow-y: scroll;
       @include respond-to('max-width: 1024px') {
-        width: 65%;
+        @include dimensions(20em, 29em);
       }
       @include respond-to('max-width: 800px') {
-        width: 80%;
-        align-self: center;
+        @include dimensions(30em, 44em);
+        margin: 1em auto;
+        float: none !important;
       }
       @include respond-to('max-width: 640px') {
-        width: 90%;
+        @include dimensions(20em, 29em);
+      }
+      @include respond-to('max-width: 480px') {
+        @include dimensions(17em, 24.3em);
       }
 
-      a {
-        color: $black;
+      &:first-child {
+        float: left;
       }
 
-      h4 {
-        @include indentations(0.7em 0, 0 1em);
-      }
-
-      p {
-        @include indentations(0.5em 0, 0 1em);
-      }
-
-      span {
-        padding: 0.7em 1em;
-        font-weight: bold;
+      &:last-child {
         float: right;
       }
+
+      img {
+        @include dimensions(100%, auto);
+      }
+    }
+  }
+
+  .project__text {
+    width: 50%;
+    margin: 1.5em 5em;
+    text-align: left;
+    background-color: $bright-blue;
+    border: $simple-border;
+    align-self: flex-end;
+    @include respond-to('max-width: 1024px') {
+      width: 65%;
+    }
+    @include respond-to('max-width: 800px') {
+      width: 80%;
+      align-self: center;
+    }
+    @include respond-to('max-width: 640px') {
+      width: 90%;
     }
 
-    .go-back {
-      @include dimensions(7em, auto);
-      @include indentations(0.5em, 0.5em 0.7em);
+    a {
+      color: $black;
+    }
+
+    h4 {
+      @include indentations(0.7em 0, 0 1em);
+    }
+
+    p {
+      @include indentations(0.5em 0, 0 1em);
+    }
+
+    span {
+      padding: 0.7em 1em;
       font-weight: bold;
-      align-self: flex-start;
+      float: right;
     }
-    
-    #arrow-up {
-      @include dimensions(55px, 55px);
-      display: none;
-      position: fixed;
-      bottom: 0.5em;
-      right: 1em;
-      transition: .7s;
-    }
+  }
+
+  .go-back {
+    @include dimensions(7em, auto);
+    @include indentations(0.5em, 0.5em 0.7em);
+    font-weight: bold;
+    align-self: flex-start;
+  }
+
+  #arrow-up {
+    @include dimensions(55px, 55px);
+    display: none;
+    position: fixed;
+    bottom: 0.5em;
+    right: 1em;
+    transition: .7s;
   }
 }
 
