@@ -13,7 +13,7 @@ body {
   justify-content: space-between;
   color: $white;
   font-family: 'PT Sans', sans-serif;
-  background-color: $dark-gray;
+  background-color: $black;
   position: relative;
 
   a {
@@ -38,7 +38,6 @@ body {
 }
 
 .index {
-  background: url('images/nikita-kachanovsky-445394-unsplash.jpg') bottom left/cover no-repeat;
   position: relative;
   overflow: hidden;
 
