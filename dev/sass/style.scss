@@ -98,7 +98,7 @@ body {
 
   .index__nav {
     width: 10em;
-    border-left: $violet-border;
+    border-left: $blue-border;
     bottom: 0;
     left: -1000px;
 
@@ -145,6 +145,7 @@ body {
     max-width: 50em;
     display: none;
     background-color: rgba(0, 0, 0, 0.9);
+    border-left: $violet-border;
     position: absolute;
     right: 0;
     z-index: 10;
