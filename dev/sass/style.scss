@@ -327,11 +327,10 @@ body {
     }
   }
 
-  .project__img {
+  .project__img-container {
     width: auto;
     max-width: 1200px;
-    margin: 1em 0;
-    border: $simple-border;
+    margin: 1em auto;
     position: relative;
     @include respond-to('max-width: 1366px') {
       width: 70%;
@@ -346,6 +345,11 @@ body {
     @include respond-to('max-width: 640px') {
       width: 90%;
       margin: 0.5em;
+    }
+
+    .project__img {
+      width: 100%;
+      border: $simple-border;
     }
   }
 
