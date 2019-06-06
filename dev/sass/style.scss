@@ -328,10 +328,8 @@ body {
   }
 
   .project__img-container {
-    width: auto;
     max-width: 1200px;
     margin: 1em auto;
-    position: relative;
     @include respond-to('max-width: 1366px') {
       width: 70%;
     }
