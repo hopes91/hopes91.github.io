@@ -129,17 +129,6 @@ body {
     }
   }
 
-  .index__photo-copyright {
-    @include dimensions(auto, 1.5em);
-    color: $gray;
-    font-size: 0.7em;
-    text-align: right;
-    position: absolute;
-    bottom: 1em;
-    right: 1.5em;
-    opacity: 0;
-  }
-
   .index__back {
     @include dimensions(55%, 100%);
     max-width: 50em;
