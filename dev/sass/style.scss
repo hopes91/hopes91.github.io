@@ -115,9 +115,6 @@ body {
       &:hover {
         background-color: $bright-blue;
       }
-      @include respond-to('max-width: 640px') {
-        padding: 0.8em;
-      }
     }
   }
 
