@@ -11,8 +11,6 @@ const showInfoOnKeyDown = event => {
 }
 
 const showInfo = event => {
-  if (!back) return;
-
   back.style.display = 'block';
   closeBackIcon.setAttribute('tabindex', '0');
 
@@ -25,10 +23,16 @@ const showInfo = event => {
   }
 }
 
-const hideInfoOnKeyDown = event => {
-  if (event.key !== 'Enter') return;
+const hideInfoOnEnterPress = event => {
+  if (event.key === 'Enter') {
+    hideInfo();
+  }
+}
 
-  hideInfo();
+const hideInfoOnEscapePress = event => {
+  if (event.key === 'Escape') {
+    hideInfo();
+  }
 }
 
 const hideInfo = () => {
@@ -42,5 +46,6 @@ if (back) {
   navLinks.forEach(link => link.addEventListener('click', showInfo));
   navLinks.forEach(link => link.addEventListener('keydown', showInfoOnKeyDown));
   closeBackIcon.addEventListener('click', hideInfo);
-  closeBackIcon.addEventListener('keydown', hideInfoOnKeyDown);
+  closeBackIcon.addEventListener('keydown', hideInfoOnEnterPress);
+  window.addEventListener('keydown', hideInfoOnEscapePress);
 }
