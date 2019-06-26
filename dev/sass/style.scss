@@ -90,11 +90,12 @@ body {
     a {
       @include indentations(0, 1.2em 1.5em);
       font: {
-        size: 1.2em;
+        size: 1.5em;
         weight: bold;
       }
       @include respond-to('max-width: 640px') {
         padding: 1em 1.3em;
+        font-size: 1.2em;
       }
     }
   }
