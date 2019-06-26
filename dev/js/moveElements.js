@@ -3,12 +3,12 @@ if (window.NodeList && !NodeList.prototype.forEach) {
   NodeList.prototype.forEach = Array.prototype.forEach;
 }
 
-const myName = document.querySelector('.index__my-name');
-const language = document.querySelector('.index__language');
-const nav = document.querySelector('.index__nav');
-const contacts = document.querySelector('.index__contacts');
-
 const moveElements = () => {
+  const myName = document.querySelector('.index__my-name');
+  const language = document.querySelector('.index__language');
+  const nav = document.querySelector('.index__nav');
+  const contacts = document.querySelector('.index__contacts');
+  
   if (!myName) return;
 
   setTimeout(() => {
