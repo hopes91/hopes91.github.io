@@ -20,8 +20,7 @@
     "gulp-remember": "^1.0.1",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.1",
-    "gulp-uglifycss": "^1.1.0",
-    "path": "^0.12.7"
+    "gulp-uglifycss": "^1.1.0"
   },
   "dependencies": {
     "@babel/polyfill": "^7.2.5"

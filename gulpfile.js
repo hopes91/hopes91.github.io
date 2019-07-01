@@ -11,7 +11,6 @@ const uglify = require('gulp-uglify');
 const cached = require('gulp-cached');
 const remember = require('gulp-remember');
 const del = require('del');
-const path = require('path');
 const browserSync = require('browser-sync').create();
 
 gulp.task('css', function() {
@@ -52,14 +51,18 @@ gulp.task('build', gulp.series(
 );
 
 gulp.task('watch', function() {
-  gulp.watch('./dev/sass/**/*.scss', gulp.series('css')).on('unlink', function(filepath) {
-    remember.forget('css', path.resolve(filepath));
-    delete cached.caches.css[path.resolve(filepath)];
+  const cssWatcher = gulp.watch('./dev/sass/**/*.scss', gulp.series('css'));
+
+  cssWatcher.on('unlink', function(event) {
+    delete cache.caches['css'][event.path];
+    remember.forget('css', event.path);
   });
 
-  gulp.watch('./dev/js/*.js', gulp.series('js')).on('unlink', function(filepath) {
-    remember.forget('js', path.resolve(filepath));
-    delete cached.caches.js[path.resolve(filepath)];
+  const jsWatcher = gulp.watch('./dev/js/*.js', gulp.series('js'));
+
+  jsWatcher.on('unlink', function(event) {
+    delete cache.caches['js'][event.path];
+    remember.forget('js', event.path);
   });
 
   gulp.watch('./dev/assets/**/*.*', gulp.series('assets'));
