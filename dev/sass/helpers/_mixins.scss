@@ -24,7 +24,4 @@
   @else if $media == 'max-width: 480px' {
     @media (max-width: 480px) { @content; }
   }
-  @else if $media == 'max-height: 320px' {
-    @media (max-height: 320px) and (orientation: landscape) { @content; }
-  }
 }
