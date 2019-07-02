@@ -8,7 +8,7 @@ const moveElements = () => {
   const language = document.querySelector('.index__language');
   const nav = document.querySelector('.index__nav');
   const contacts = document.querySelector('.index__contacts');
-  
+
   if (!myName) return;
 
   setTimeout(() => {
