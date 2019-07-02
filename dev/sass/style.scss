@@ -92,6 +92,11 @@ body {
     top: -1000px;
     right: 0;
 
+    &:hover {
+      box-shadow: 0.5em 0.5em $dark-violet;
+      transition: 0.5s;
+    }
+
     a {
       @include indentations(0, 1.2em 1.5em);
       font: {
