@@ -252,14 +252,11 @@ body {
       overflow: auto;
 
       .index__back-about-photo {
-        width: 35%;
+        width: 40%;
         max-width: 600px;
         margin: 2em auto 1em auto;
         box-shadow: 1em 1em $bright-blue;
-        @include respond-to('max-width: 1024px') {
-          width: 40%;
-        }
-        @include respond-to('max-width: 480px') {
+        @include respond-to('max-width: 640px') {
           width: 50%;
         }
       }
