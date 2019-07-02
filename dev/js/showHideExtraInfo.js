@@ -11,8 +11,6 @@ const showInfoOnKeyDown = event => {
 }
 
 const showInfo = event => {
-  if (!back) return;
-
   back.style.display = 'block';
   closeBackIcon.setAttribute('tabindex', '0');
 
@@ -38,16 +36,16 @@ const hideInfoOnEscapePress = event => {
 }
 
 const hideInfo = () => {
-  if (!back) return;
-  
   closeBackIcon.setAttribute('tabindex', '-1');
   portfolioSection.style.display = 'none';
   aboutMeSection.style.display = 'none';
   back.style.display = 'none';
 }
 
-navLinks.forEach(link => link.addEventListener('click', showInfo));
-navLinks.forEach(link => link.addEventListener('keydown', showInfoOnKeyDown));
-closeBackIcon.addEventListener('click', hideInfo);
-closeBackIcon.addEventListener('keydown', hideInfoOnEnterPress);
-window.addEventListener('keydown', hideInfoOnEscapePress);
+if (back) {
+  navLinks.forEach(link => link.addEventListener('click', showInfo));
+  navLinks.forEach(link => link.addEventListener('keydown', showInfoOnKeyDown));
+  closeBackIcon.addEventListener('click', hideInfo);
+  closeBackIcon.addEventListener('keydown', hideInfoOnEnterPress);
+  window.addEventListener('keydown', hideInfoOnEscapePress);
+}
