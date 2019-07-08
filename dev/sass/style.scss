@@ -147,7 +147,7 @@ body {
   }
 
   .index__back {
-    @include dimensions(55%, 100%);
+    @include dimensions(50%, 100%);
     max-width: 50em;
     display: none;
     background-color: rgba(0, 0, 0, 0.95);
@@ -195,50 +195,69 @@ body {
           position: absolute;
           top: 0;
           left: 0;
-          opacity: 1;
+          opacity: 0;
 
-          h4, p, span {
+          .index__back-portfolio-project-title-links {
+            @include dimensions(13em, 4em);
+            margin: auto;
             position: absolute;
-          }
-
-          h4, p {
-            text-align: left;
-          }
-
-          h4 {
-            margin: 1.5em 1em;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            @include respond-to('max-width: 1024px') {
+              height: 3em;
+            }
             @include respond-to('max-width: 480px') {
-              margin: 1.2em 1em;
+              margin: 1em auto;
+              top: 0;
+            }
+
+            a {
+              margin: 0 1em;
+              background-color: $white;
+              border: none;
+              border-radius: 50%;
+              position: relative;
+              vertical-align: middle;
+
+              &:first-child {
+                @include dimensions(64px, 64px);
+                @include respond-to('max-width: 1024px') {
+                  @include dimensions(44px, 44px);
+                }
+              }
+
+              &:last-child {
+                @include dimensions(60px, 60px);
+                @include respond-to('max-width: 1024px') {
+                  @include dimensions(40px, 40px);
+                }
+              }
+
+              img {
+                @include dimensions(111%, 111%);
+                position: relative;
+                top: -0.2em;
+                left: -0.25em;
+                @include respond-to('max-width: 1024px') {
+                  @include dimensions(115%, 115%);
+                  left: -0.2em;
+                }
+              }
             }
           }
 
-          p {
+          .index__back-portfolio-project-title-about {
             margin: 1em;
+            font: {
+              size: 1em;
+              weight: normal;
+            }
             line-height: 1.4;
-            bottom: 1.2em;
-          }
-
-          span {
-            height: 0.2em;
-            background-color: $dark-blue;
-
-            &:nth-child(3) {
-              width: 25%;
-              bottom: 1.5em;
-              right: 0;
-              @include respond-to('max-width: 480px') {
-                bottom: 1.3em;
-              }
-            }
-
-            &:nth-child(4) {
-              width: 85%;
-              bottom: 0.7em;
-              left: 0;
-              @include respond-to('max-width: 480px') {
-                bottom: 0.5em;
-              }
-            }
+            text-align: left;
+            position: absolute;
+            bottom: 0;
           }
         }
       }
@@ -246,8 +265,17 @@ body {
       .index__back-portfolio-project-title_hidden {
         animation: {
           name: projectTitle;
-          duration: 1s;
+          duration: 0.7s;
           fill-mode: forwards;
+        }
+      }
+
+      @keyframes projectTitle {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
         }
       }
     }
@@ -304,183 +332,5 @@ body {
         }
       }
     }
-  }
-}
-
-.project {
-  @include dimensions(100%, auto);
-  position: relative;
-  @include respond-to('max-width: 800px') {
-    padding-top: 60px;
-  }
-
-  .project__arrow {
-    @include dimensions(55px, 55px);
-  }
-
-  .project__arrow_left,
-  .project__arrow_right {
-    position: absolute;
-    top: 0.5em;
-    @include respond-to('max-width: 800px') {
-      top: 0.7em;
-    }
-    @include respond-to('max-width: 640px') {
-      top: 0.5em;
-    }
-  }
-
-  .project__arrow_left {
-    right: 3.5em;
-    @include respond-to('max-width: 1024px') {
-      right: 3.2em;
-    }
-    @include respond-to('max-width: 800px') {
-      left: 0.3em;
-    }
-  }
-
-  .project__arrow_right {
-    right: 0.5em;
-    @include respond-to('max-width: 1024px') {
-      right: 0.3em;
-    }
-  }
-
-  .project__img-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    @include respond-to('max-width: 1366px') {
-      width: 70%;
-    }
-    @include respond-to('max-width: 800px') {
-      width: 80%;
-    }
-    @include respond-to('max-width: 640px') {
-      width: 90%;
-    }
-
-    .project__img {
-      width: 100%;
-      margin: 1em auto;
-      border: $simple-border;
-
-      @include respond-to('max-width: 800px') {
-        margin: 0.5em auto;
-      }
-    }
-  }
-
-  // .project__img-mobile-container {
-  //   @include dimensions(53em, auto);
-  //   @include respond-to('max-width: 1024px') {
-  //     width: 90%;
-  //   }
-  //
-  //   div {
-  //     @include dimensions(23em, 33.5em);
-  //     overflow-y: scroll;
-  //     @include respond-to('max-width: 1024px') {
-  //       @include dimensions(20em, 29em);
-  //     }
-  //     @include respond-to('max-width: 800px') {
-  //       @include dimensions(30em, 44em);
-  //       margin: 1em auto;
-  //       float: none !important;
-  //     }
-  //     @include respond-to('max-width: 640px') {
-  //       @include dimensions(20em, 29em);
-  //     }
-  //     @include respond-to('max-width: 480px') {
-  //       @include dimensions(17em, 24.3em);
-  //     }
-  //
-  //     &:first-child {
-  //       float: left;
-  //     }
-  //
-  //     &:last-child {
-  //       float: right;
-  //     }
-  //
-  //     img {
-  //       @include dimensions(100%, auto);
-  //     }
-  //   }
-  // }
-
-  .project__about {
-    width: 100%;
-    min-height: 10em;
-    margin: 1.5em 0;
-    position: relative;
-
-    a {
-      @include dimensions(50%, auto);
-      max-width: 40em;
-      margin: 0 5em;
-      display: block;
-      color: $black;
-      text-align: left;
-      background-color: $bright-blue;
-      border: $simple-border;
-      position: absolute;
-      right: 3em;
-      @include respond-to('max-width: 1024px') {
-        width: 65%;
-        right: 1em;
-      }
-      @include respond-to('max-width: 800px') {
-        width: 80%;
-        margin: 0 auto;
-        position: static;
-      }
-      @include respond-to('max-width: 640px') {
-        width: 90%;
-      }
-    }
-
-    h4 {
-      @include indentations(0.7em 0, 0 1em);
-    }
-
-    p {
-      @include indentations(0.5em 0, 0 1em);
-    }
-
-    span.empty {
-      height: 2.7em;
-      display: inline-block;
-      position: relative;
-    }
-
-    .project__about-more {
-      padding: 0.7em 1em;
-      font-weight: bold;
-      float: right;
-    }
-  }
-
-  .project__go-back {
-    @include dimensions(7em, auto);
-    @include indentations(0.5em, 0.5em 0.7em);
-    font-weight: bold;
-  }
-
-  .project__arrow_up {
-    display: none;
-    position: fixed;
-    bottom: 0.5em;
-    right: 1em;
-    transition: .7s;
-  }
-}
-
-@keyframes projectTitle {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
   }
 }
