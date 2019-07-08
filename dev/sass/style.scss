@@ -254,43 +254,53 @@ body {
 
     .index__back-about {
       @include dimensions(100%, 100%);
+      padding-right: 1em;
+      box-sizing: border-box;
       display: none;
-      text-align: center;
       overflow: auto;
+      @include respond-to('max-width: 640px') {
+        padding-right: 0.5em;
+      }
 
-      .index__back-about-photo {
-        width: 50%;
-        max-width: 600px;
-        margin: 2em auto 1em auto;
-        box-shadow: 1em 1em $bright-blue;
-        @include respond-to('max-width: 640px') {
-          width: 60%;
-        }
+      .index__back-about-text,
+      .index__back-about-skills {
+        background-color: $bright-blue;
       }
 
       .index__back-about-text {
         width: 70%;
         max-width: 40em;
-        margin: 1.5em auto 2em auto;
-        text-align: center;
+        @include indentations(5em auto, 1em);
+        box-shadow: 1em 1em $dark-pink;
         @include respond-to('max-width: 1024px') {
           width: 80%;
         }
         @include respond-to('max-width: 640px') {
-          width: 90%;
+          margin: 4em auto;
+          box-shadow: 0.7em 0.7em $dark-pink;
+        }
+      }
+
+      .index__back-about-skills {
+        width: 60%;
+        max-width: 22em;
+        @include indentations(1em 1em 2em 1em, 1em);
+        box-shadow: 1em 1em $dark-blue;
+        position: absolute;
+        right: 3em;
+        bottom: 3em;
+        @include respond-to('max-width: 1024px') {
+          width: 80%;
+          max-width: none;
+          margin: 1em auto 2em auto;
+          position: static;
+        }
+        @include respond-to('max-width: 640px') {
+          box-shadow: 0.7em 0.7em $dark-blue;
         }
 
-        hr {
-          height: 0.1em;
-          margin: 1.5em 0;
-          background-color: $white;
-          border: none;
-        }
-
-        .index__back-about-text-skills {
-          p {
-            margin: 0.5em 0;
-          }
+        p {
+          margin: 0.5em 0;
         }
       }
     }
