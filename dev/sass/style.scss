@@ -285,12 +285,16 @@ body {
       padding-right: 1em;
       box-sizing: border-box;
       display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
       overflow: auto;
       @include respond-to('max-width: 640px') {
         padding-right: 0.5em;
       }
 
       .index__back-about-text,
+      .index__back-about-empty,
       .index__back-about-skills {
         background-color: $bright-blue;
       }
@@ -298,13 +302,12 @@ body {
       .index__back-about-text {
         width: 70%;
         max-width: 40em;
-        @include indentations(5em auto, 1em);
+        @include indentations(4em 0 3em 0, 1em);
         box-shadow: 1em 1em $dark-pink;
         @include respond-to('max-width: 1024px') {
           width: 80%;
         }
         @include respond-to('max-width: 640px') {
-          margin: 4em auto;
           box-shadow: 0.7em 0.7em $dark-pink;
         }
       }
@@ -312,16 +315,14 @@ body {
       .index__back-about-skills {
         width: 60%;
         max-width: 22em;
-        @include indentations(1em 1em 2em 1em, 1em);
+        @include indentations(3em, 1em);
         box-shadow: 1em 1em $dark-blue;
-        position: absolute;
-        right: 3em;
-        bottom: 3em;
+        align-self: flex-end;
         @include respond-to('max-width: 1024px') {
           width: 80%;
           max-width: none;
-          margin: 1em auto 2em auto;
-          position: static;
+          margin: 1em 0 3em 0;
+          align-self: center;
         }
         @include respond-to('max-width: 640px') {
           box-shadow: 0.7em 0.7em $dark-blue;

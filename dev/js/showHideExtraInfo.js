@@ -19,7 +19,7 @@ const showInfo = event => {
     aboutMeSection.style.display = 'none';
   } else {
     portfolioSection.style.display = 'none';
-    aboutMeSection.style.display = 'block';
+    aboutMeSection.style.display = 'flex';
   }
 }
 
