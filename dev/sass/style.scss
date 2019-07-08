@@ -207,10 +207,10 @@ body {
             left: 0;
             @include respond-to('max-width: 1024px') {
               height: 3em;
+              margin: 2em auto;
             }
-            @include respond-to('max-width: 480px') {
+            @include respond-to('max-width: 640px') {
               margin: 1em auto;
-              top: 0;
             }
 
             a {
@@ -294,7 +294,6 @@ body {
       }
 
       .index__back-about-text,
-      .index__back-about-empty,
       .index__back-about-skills {
         background-color: $bright-blue;
       }
