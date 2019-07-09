@@ -30,7 +30,7 @@ const showInfo = event => {
     aboutMeSection.style.display = 'none';
   } else {
     portfolioSection.style.display = 'none';
-    aboutMeSection.style.display = 'flex';
+    aboutMeSection.style.display = 'block';
   }
 }
 
