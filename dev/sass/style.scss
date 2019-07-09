@@ -160,17 +160,6 @@ body {
       width: 100%;
     }
 
-    .index__back-close {
-      padding: 0 0.43em 0.04em 0.43em;
-      font-size: 2em;
-      border-radius: 50%;
-      position: absolute;
-      top: 0.3em;
-      right: 0.3em;
-      z-index: 10;
-      cursor: pointer;
-    }
-
     .index__back-portfolio {
       @include dimensions(100%, auto);
       display: none;
@@ -341,6 +330,17 @@ body {
           display: none;
         }
       }
+    }
+
+    .index__back-close {
+      padding: 0 0.43em 0.04em 0.43em;
+      font-size: 2em;
+      border-radius: 50%;
+      position: absolute;
+      top: 0.3em;
+      right: 0.5em;
+      z-index: 10;
+      cursor: pointer;
     }
   }
 }
