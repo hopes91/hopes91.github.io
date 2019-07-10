@@ -1,4 +1,4 @@
-const forEachIE = require('./forEach');
+const forEach = require('./forIE/forEach.js');
 
 const moveElements = () => {
   const myName = document.querySelector('.index__my-name');
