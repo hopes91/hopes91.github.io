@@ -1,7 +1,4 @@
-// для IE
-if (window.NodeList && !NodeList.prototype.forEach) {
-  NodeList.prototype.forEach = Array.prototype.forEach;
-}
+const forEachIE = require('./forEach');
 
 const moveElements = () => {
   const myName = document.querySelector('.index__my-name');
