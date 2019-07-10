@@ -54,10 +54,8 @@ const hideInfo = () => {
   back.style.display = 'none';
 }
 
-if (back) {
-  navLinks.forEach(link => link.addEventListener('click', showInfo));
-  navLinks.forEach(link => link.addEventListener('keydown', showInfoOnKeyDown));
-  closeBackIcon.addEventListener('click', hideInfo);
-  closeBackIcon.addEventListener('keydown', hideInfoOnEnterPress);
-  window.addEventListener('keydown', hideInfoOnEscapePress);
-}
+navLinks.forEach(link => link.addEventListener('click', showInfo));
+navLinks.forEach(link => link.addEventListener('keydown', showInfoOnKeyDown));
+closeBackIcon.addEventListener('click', hideInfo);
+closeBackIcon.addEventListener('keydown', hideInfoOnEnterPress);
+window.addEventListener('keydown', hideInfoOnEscapePress);

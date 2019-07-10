@@ -9,8 +9,6 @@ const moveElements = () => {
   const nav = document.querySelector('.index__nav');
   const contacts = document.querySelector('.index__contacts');
 
-  if (!myName) return;
-
   setTimeout(() => {
     myName.style.left = '0';
   }, 0);
