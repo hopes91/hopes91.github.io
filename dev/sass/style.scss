@@ -52,6 +52,7 @@ body {
   }
 
   .my-name {
+    width: 26em;
     top: 1em;
     left: -1000px;
     @include respond-to('max-width: 800px') {
