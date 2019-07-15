@@ -215,6 +215,10 @@ body {
                 @include respond-to('max-width: 1024px') {
                   @include dimensions(45px, 45px);
                 }
+
+                img {
+                  left: -0.23em;
+                }
               }
 
               &:last-child {
@@ -222,16 +226,18 @@ body {
                 @include respond-to('max-width: 1024px') {
                   @include dimensions(42px, 42px);
                 }
+
+                img {
+                  left: -0.2em;
+                }
               }
 
               img {
                 @include dimensions(112%, 112%);
                 position: relative;
                 top: -0.2em;
-                left: -0.22em;
                 @include respond-to('max-width: 1024px') {
                   @include dimensions(115%, 115%);
-                  left: -0.2em;
                 }
               }
             }
