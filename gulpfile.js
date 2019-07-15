@@ -29,9 +29,9 @@ gulp.task('js', function() {
       './dev/js/**/*.js'
     ])
     .pipe(cached('js'))
-    .pipe(babel({presets: ['@babel/preset-env']}))
-    .pipe(remember('js'))
+    // .pipe(remember('js'))
     .pipe(webpackStream(require('./webpack.config.js')))
+    .pipe(babel({presets: ['@babel/preset-env']}))
     .pipe(gulp.dest('./public'));
 });
 
