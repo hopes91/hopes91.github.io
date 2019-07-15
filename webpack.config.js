@@ -14,6 +14,19 @@ module.exports = {
       })
     ]
   },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      }
+    ]
+  },
   output: {
     path: path.resolve(__dirname, 'public'),
     filename: 'script.js'

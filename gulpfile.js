@@ -7,7 +7,6 @@ const autoprefixer = require('autoprefixer');
 const uglifycss = require('gulp-uglifycss');
 const webpack = require('webpack');
 const webpackStream = require('webpack-stream');
-const babel = require('gulp-babel');
 const cached = require('gulp-cached');
 const remember = require('gulp-remember');
 const del = require('del');
@@ -24,14 +23,8 @@ gulp.task('css', function() {
 });
 
 gulp.task('js', function() {
-  return gulp.src([
-      'node_modules/@babel/polyfill/dist/polyfill.js',
-      './dev/js/**/*.js'
-    ])
-    .pipe(cached('js'))
-    // .pipe(remember('js'))
+  return gulp.src('./dev/js/**/*.js')
     .pipe(webpackStream(require('./webpack.config.js')))
-    .pipe(babel({presets: ['@babel/preset-env']}))
     .pipe(gulp.dest('./public'));
 });
 
