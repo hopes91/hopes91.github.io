@@ -1,10 +1,10 @@
-const forEach = require('./forIE/forEach.js');
+// const forEach = require('./forIE/forEach.js');
 
 const moveElements = () => {
-  const myName = document.querySelector('.index__my-name');
-  const language = document.querySelector('.index__language');
-  const nav = document.querySelector('.index__nav');
-  const contacts = document.querySelector('.index__contacts');
+  const myName = document.querySelector('.my-name');
+  const language = document.querySelector('.language');
+  const nav = document.querySelector('.nav');
+  const contacts = document.querySelector('.contacts');
 
   setTimeout(() => {
     myName.style.left = '0';

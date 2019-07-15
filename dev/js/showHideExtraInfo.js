@@ -1,12 +1,11 @@
-const navLinks = document.querySelectorAll('.index__nav li');
-const back = document.querySelector('.index__back');
-const closeBackIcon = document.querySelector('.index__back-close');
-const portfolioSection = document.querySelector('.index__back-portfolio');
-const aboutMeSection = document.querySelector('.index__back-about');
+const navLinks = document.querySelectorAll('.nav li');
+const back = document.querySelector('.back');
+const closeBackIcon = document.querySelector('.back__close-icon');
+const portfolioSection = document.querySelector('.portfolio');
+const projects = document.querySelectorAll('.portfolio__project');
+const aboutSection = document.querySelector('.about');
 
 const handleProjectsTabIndexes = () => {
-  const projects = document.querySelectorAll('.index__back-portfolio-project');
-
   if (back.style.display === 'block') {
     projects.forEach(project => project.setAttribute('tabindex', '0'));
   } else {
@@ -27,10 +26,10 @@ const showInfo = event => {
 
   if (event.target.className.match('portfolio')) {
     portfolioSection.style.display = 'block';
-    aboutMeSection.style.display = 'none';
+    aboutSection.style.display = 'none';
   } else {
     portfolioSection.style.display = 'none';
-    aboutMeSection.style.display = 'block';
+    aboutSection.style.display = 'block';
   }
 }
 
@@ -47,11 +46,11 @@ const hideInfoOnEscapePress = event => {
 }
 
 const hideInfo = () => {
+  back.style.display = 'none';
+  portfolioSection.style.display = 'none';
+  aboutSection.style.display = 'none';
   closeBackIcon.setAttribute('tabindex', '-1');
   handleProjectsTabIndexes();
-  portfolioSection.style.display = 'none';
-  aboutMeSection.style.display = 'none';
-  back.style.display = 'none';
 }
 
 navLinks.forEach(link => link.addEventListener('click', showInfo));

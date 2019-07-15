@@ -1,4 +1,4 @@
-const projects = document.querySelectorAll('.index__back-portfolio-project');
+// const projects = document.querySelectorAll('.portfolio__project');
 
 const toggleProjectTitleOnKeyDown = event => {
 	if (event.key !== 'Enter') return;
@@ -10,9 +10,9 @@ const toggleProjectTitle = event => {
 	let projectTitle = event.target.children[1];
 
 	if (!projectTitle.className.match('hidden')) {
-		projectTitle.classList.add('index__back-portfolio-project-title_hidden');
+		projectTitle.classList.add('portfolio__project-title_hidden');
 	} else {
-		projectTitle.classList.remove('index__back-portfolio-project-title_hidden');
+		projectTitle.classList.remove('portfolio__project-title_hidden');
 	}
 }
 
