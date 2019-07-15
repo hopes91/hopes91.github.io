@@ -211,24 +211,24 @@ body {
               vertical-align: middle;
 
               &:first-child {
-                @include dimensions(64px, 64px);
+                @include dimensions(55px, 55px);
                 @include respond-to('max-width: 1024px') {
-                  @include dimensions(44px, 44px);
+                  @include dimensions(45px, 45px);
                 }
               }
 
               &:last-child {
-                @include dimensions(60px, 60px);
+                @include dimensions(52px, 52px);
                 @include respond-to('max-width: 1024px') {
-                  @include dimensions(40px, 40px);
+                  @include dimensions(42px, 42px);
                 }
               }
 
               img {
-                @include dimensions(111%, 111%);
+                @include dimensions(112%, 112%);
                 position: relative;
                 top: -0.2em;
-                left: -0.25em;
+                left: -0.22em;
                 @include respond-to('max-width: 1024px') {
                   @include dimensions(115%, 115%);
                   left: -0.2em;
