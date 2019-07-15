@@ -1,5 +1,3 @@
-// const projects = document.querySelectorAll('.portfolio__project');
-
 const toggleProjectTitleOnKeyDown = event => {
 	if (event.key !== 'Enter') return;
 
