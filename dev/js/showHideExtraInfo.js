@@ -2,10 +2,11 @@ const navLinks = document.querySelectorAll('.nav li');
 const back = document.querySelector('.back');
 const closeBackIcon = document.querySelector('.back__close-icon');
 const portfolioSection = document.querySelector('.portfolio');
-const projects = document.querySelectorAll('.portfolio__project');
 const aboutSection = document.querySelector('.about');
 
 const handleProjectsTabIndexes = () => {
+  const projects = document.querySelectorAll('.portfolio__project');
+
   if (back.style.display === 'block') {
     projects.forEach(project => project.setAttribute('tabindex', '0'));
   } else {

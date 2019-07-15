@@ -6,7 +6,8 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const uglifycss = require('gulp-uglifycss');
 const babel = require('gulp-babel');
-const concat = require('gulp-concat');
+const webpack = require('webpack');
+const webpackStream = require('webpack-stream');
 const uglify = require('gulp-uglify');
 const cached = require('gulp-cached');
 const remember = require('gulp-remember');
@@ -30,8 +31,8 @@ gulp.task('js', function() {
     ])
     .pipe(cached('js'))
     .pipe(babel({presets: ['@babel/preset-env']}))
+    .pipe(webpackStream(require('./webpack.config.js')))
     .pipe(remember('js'))
-    .pipe(concat('script.js'))
     .pipe(uglify())
     .pipe(gulp.dest('./public'));
 });

@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "My portfolio website.",
   "private": "true",
-  "scripts": {
-    "build": "webpack --config webpack.config.js"
-  },
   "repository": "git@github.com:hopes91/hopes91.github.io.git",
   "author": "Nadya F-a <iam.nadyafa@gmail.com>",
   "license": "MIT",
@@ -18,14 +15,13 @@
     "gulp": "^4.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-cached": "^1.1.1",
-    "gulp-concat": "^2.6.1",
     "gulp-postcss": "^8.0.0",
     "gulp-remember": "^1.0.1",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.1",
     "gulp-uglifycss": "^1.1.0",
     "webpack": "^4.35.3",
-    "webpack-cli": "^3.3.5"
+    "webpack-stream": "^5.2.1"
   },
   "dependencies": {
     "@babel/polyfill": "^7.2.5"
