@@ -133,16 +133,23 @@ body {
     padding-right: 1em;
     bottom: 1em;
     right: -1000px;
-    @include respond-to('max-width: 640px') {
-      padding-right: 0.5em;
-    }
 
     a {
       @include dimensions(40px, 40px);
-      margin: 0 0.05em;
+      margin: 0 0.05em 0.05em 0.05em;
       vertical-align: middle;
       @include respond-to('max-width: 640px') {
-        margin: 0 0.15em;
+        @include dimensions(45px, 45px);
+        margin: 0.5em 0;
+        display: block;
+      }
+
+      &:last-child {
+        @include dimensions(47px, 47px);
+        margin: 0 -0.2em;
+        @include respond-to('max-width: 640px') {
+          @include dimensions(52px, 52px);
+        }
       }
     }
   }
