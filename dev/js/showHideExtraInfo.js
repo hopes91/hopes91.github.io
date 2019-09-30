@@ -7,20 +7,17 @@ const aboutSection = document.querySelector('.about');
 const handleProjectsTabIndexes = () => {
   const projects = document.querySelectorAll('.portfolio__project');
 
-  if (back.style.display === 'block') {
-    projects.forEach(project => project.setAttribute('tabindex', '0'));
-  } else {
-    projects.forEach(project => project.setAttribute('tabindex', '-1'));
-  }
+  back.style.display === 'block' ?
+    projects.forEach((project) => project.setAttribute('tabindex', '0')) :
+    projects.forEach((project) => project.setAttribute('tabindex', '-1'));
 }
 
-const showInfoOnKeyDown = event => {
-  if (event.key !== 'Enter') return;
-
-  showInfo(event);
+const showInfoOnKeyDown = (event) => {
+  event.key === 'Enter' &&
+    showInfo(event);
 }
 
-const showInfo = event => {
+const showInfo = (event) => {
   back.style.display = 'block';
   closeBackIcon.setAttribute('tabindex', '0');
   handleProjectsTabIndexes();
@@ -34,16 +31,14 @@ const showInfo = event => {
   }
 }
 
-const hideInfoOnEnterPress = event => {
-  if (event.key === 'Enter') {
+const hideInfoOnEnterPress = (event) => {
+  event.key === 'Enter' &&
     hideInfo();
-  }
 }
 
-const hideInfoOnEscapePress = event => {
-  if (event.key === 'Escape') {
+const hideInfoOnEscapePress = (event) => {
+  event.key === 'Escape' &&
     hideInfo();
-  }
 }
 
 const hideInfo = () => {
@@ -54,8 +49,8 @@ const hideInfo = () => {
   handleProjectsTabIndexes();
 }
 
-navLinks.forEach(link => link.addEventListener('click', showInfo));
-navLinks.forEach(link => link.addEventListener('keydown', showInfoOnKeyDown));
+navLinks.forEach((link) => link.addEventListener('click', showInfo));
+navLinks.forEach((link) => link.addEventListener('keydown', showInfoOnKeyDown));
 closeBackIcon.addEventListener('click', hideInfo);
 closeBackIcon.addEventListener('keydown', hideInfoOnEnterPress);
 window.addEventListener('keydown', hideInfoOnEscapePress);
