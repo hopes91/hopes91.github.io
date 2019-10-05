@@ -19,22 +19,22 @@ gulp.task('css', function() {
     .pipe(postcss([autoprefixer()]))
     .pipe(remember('css'))
     .pipe(uglifycss({"uglyComments": true}))
-    .pipe(gulp.dest('./public'));
+    .pipe(gulp.dest('./prod'));
 });
 
 gulp.task('js', function() {
   return gulp.src('./dev/js/**/*.js')
     .pipe(webpackStream(require('./webpack.config.js')))
-    .pipe(gulp.dest('./public'));
+    .pipe(gulp.dest('./prod'));
 });
 
 gulp.task('assets', function() {
   return gulp.src('./dev/assets/**/*.*', {since: gulp.lastRun('assets')})
-    .pipe(gulp.dest('./public'));
+    .pipe(gulp.dest('./prod'));
 });
 
 gulp.task('clean', function() {
-  return del('./public');
+  return del('./prod');
 });
 
 gulp.task('build', gulp.series(
@@ -62,10 +62,10 @@ gulp.task('watch', function() {
 
 gulp.task('server', function() {
   browserSync.init({
-    server: './public'
+    server: './prod'
   });
 
-  browserSync.watch('./public/**/*.*').on('change', browserSync.reload);
+  browserSync.watch('./prod/**/*.*').on('change', browserSync.reload);
 });
 
 gulp.task('default', gulp.series(
