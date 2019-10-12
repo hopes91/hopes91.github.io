@@ -46,14 +46,14 @@ gulp.task('watch', function() {
   const cssWatcher = gulp.watch('./dev/sass/**/*.scss', gulp.series('css'));
 
   cssWatcher.on('unlink', function(event) {
-    delete cache.caches['css'][event.path];
+    delete cached.caches['css'][event.path];
     remember.forget('css', event.path);
   });
 
   const jsWatcher = gulp.watch('./dev/js/**/*.js', gulp.series('js'));
 
   jsWatcher.on('unlink', function(event) {
-    delete cache.caches['js'][event.path];
+    delete cached.caches['js'][event.path];
     remember.forget('js', event.path);
   });
 
