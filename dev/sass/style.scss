@@ -48,6 +48,9 @@ body {
     position: absolute;
     top: 0;
     z-index: -1;
+    @include respond-to('max-width: 800px') {
+      background-position: center center;
+    }
   }
 
   .my-name,
