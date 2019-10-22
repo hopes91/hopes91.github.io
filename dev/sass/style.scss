@@ -178,6 +178,10 @@ body {
       text-align: right;
       width: auto;
     }
+    @include respond-to('max-width: 640px landscape') {
+      text-align: center;
+      width: 100%;
+    }
 
     a {
       color: $gray;
