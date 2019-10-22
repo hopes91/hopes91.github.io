@@ -37,6 +37,7 @@ body {
 }
 
 .index {
+  background: url('images/nikita-kachanovsky-OVbeSXRk_9E-unsplash.jpg') bottom left/cover no-repeat;
   overflow: hidden;
   position: relative;
 
@@ -157,6 +158,20 @@ body {
           @include dimensions(52px, 52px);
         }
       }
+    }
+  }
+
+  .photo-copyright {
+    @include dimensions(100%, 1.5em);
+    bottom: 0.5em;
+    display: inline;
+    left: 0;
+    position: absolute;
+    text-align: center;
+
+    a {
+      color: $gray;
+      font-size: 0.7em;
     }
   }
 
