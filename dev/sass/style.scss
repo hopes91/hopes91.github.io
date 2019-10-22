@@ -57,6 +57,7 @@ body {
     width: 26em;
     @include respond-to('max-width: 800px') {
       top: 0;
+      width: auto;
     }
 
     &:hover {
@@ -75,11 +76,11 @@ body {
     }
 
     h2 {
-      margin: 0 2em 1.3em 1.15em;
       font: {
         size: 1.3em;
         weight: 200;
       }
+      margin: 0 2em 1.3em 1.15em;
       @include respond-to('max-width: 640px') {
         font-size: 1.2em;
         margin-left: 0.9em;
@@ -133,6 +134,9 @@ body {
     bottom: 0.7em;
     padding-right: 1em;
     right: -1000px;
+    @include respond-to('max-width: 640px') {
+      bottom: 2em;
+    }
     @include respond-to('max-width: 640px landscape') {
       bottom: 0.5em;
     }
@@ -163,11 +167,17 @@ body {
 
   .photo-copyright {
     @include dimensions(100%, 1.5em);
-    bottom: 0.5em;
+    bottom: 0.3em;
+    box-sizing: border-box;
     display: inline;
-    left: 0;
+    padding: 0 1.6em;
     position: absolute;
+    right: 0;
     text-align: center;
+    @include respond-to('max-width: 640px') {
+      text-align: right;
+      width: auto;
+    }
 
     a {
       color: $gray;
