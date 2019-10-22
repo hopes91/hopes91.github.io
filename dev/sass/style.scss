@@ -37,10 +37,18 @@ body {
 }
 
 .index {
-  background: url('images/nikita-kachanovsky-OVbeSXRk_9E-unsplash.jpg') 0 80%/cover no-repeat;
   overflow: hidden;
   position: relative;
-  width: 100vw;
+
+  &:before {
+    @include dimensions(100vw, 100vh);
+    background: url('images/nikita-kachanovsky-OVbeSXRk_9E-unsplash.jpg') 0 80%/cover no-repeat;
+    content: '';
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
 
   .my-name,
   .language,
