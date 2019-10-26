@@ -26,7 +26,8 @@
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.2.5"
+    "@babel/polyfill": "^7.2.5",
+    "gulp-htmlmin": "^5.0.1"
   },
   "presets": [
     [

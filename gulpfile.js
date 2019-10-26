@@ -2,6 +2,7 @@
 
 const gulp = require('gulp');
 const sass = require('gulp-sass');
+const htmlmin = require('gulp-htmlmin');
 const imagemin = require('gulp-imagemin');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
@@ -14,12 +15,15 @@ const del = require('del');
 const browserSync = require('browser-sync').create();
 
 gulp.task('html', function() {
-  return gulp.src('./dev/assets/*.html', {since: gulp.lastRun('html')})
+  return gulp.src('./dev/assets/*.html')
+    .pipe(cached('html'))
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(remember('html'))
     .pipe(gulp.dest('./prod'));
 });
 
 gulp.task('img', function() {
-  return gulp.src('./dev/assets/images/*.*', {since: gulp.lastRun('img')})
+  return gulp.src('./dev/assets/images/*.*', { since: gulp.lastRun('img') })
     .pipe(imagemin())
     .pipe(gulp.dest('./prod/images'));
 });
@@ -28,9 +32,9 @@ gulp.task('css', function() {
   return gulp.src('./dev/sass/**/*.scss')
     .pipe(cached('css'))
     .pipe(sass().on('error', sass.logError))
-    .pipe(postcss([autoprefixer()]))
+    .pipe(postcss([ autoprefixer() ]))
     .pipe(remember('css'))
-    .pipe(uglifycss({"uglyComments": true}))
+    .pipe(uglifycss({ "uglyComments": true }))
     .pipe(gulp.dest('./prod'));
 });
 
@@ -50,9 +54,12 @@ gulp.task('build', gulp.series(
 );
 
 gulp.task('watch', function() {
-  gulp.watch('./dev/assets/*.html', gulp.series('html'));
+  const htmlWatcher = gulp.watch('./dev/assets/*.html', gulp.series('html'));
 
-  gulp.watch('./dev/assets/images/*.*', gulp.series('img'));
+  htmlWatcher.on('unlink', function(event) {
+    delete cached.caches['html'][event.path];
+    remember.forget('html', event.path);
+  });
 
   const cssWatcher = gulp.watch('./dev/sass/**/*.scss', gulp.series('css'));
 
