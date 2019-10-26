@@ -154,7 +154,7 @@ body {
 
   .back {
     @include dimensions(50%, 100%);
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 1);
     border-left: $dark-blue-border;
     display: none;
     max-width: 50em;
