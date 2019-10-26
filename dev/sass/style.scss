@@ -309,17 +309,6 @@ body {
           margin: 0.5em 0;
         }
       }
-
-      .about_empty {
-        @include dimensions(20em, 10em);
-        box-shadow: -0.5em -0.5em $white;
-        display: block;
-        float: left;
-        margin: 3em 2em;
-        @include respond-to('max-width: 1024px') {
-          display: none;
-        }
-      }
     }
 
     .back__close-icon {
