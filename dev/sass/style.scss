@@ -295,13 +295,16 @@ body {
     .back__close-icon {
       background-color: $dark-blue;
       cursor: pointer;
-      display: inline-block;
       font-size: 2em;
       left: -0.1em;
       padding: 0 0.43em;
       position: absolute;
       top: 48%;
-      z-index: 20;
+      z-index: 10;
+      @include respond-to('max-width: 640px') {
+        position: relative;
+        top: 0;
+      }
     }
   }
 }
