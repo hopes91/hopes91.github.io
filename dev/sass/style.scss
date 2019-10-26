@@ -189,7 +189,7 @@ body {
           box-sizing: border-box;
           color: $white;
           left: 0;
-          opacity: 1;
+          opacity: 0;
           position: absolute;
           top: 0;
 
@@ -245,10 +245,10 @@ body {
 
       @keyframes projectTitle {
         from {
-          opacity: 1;
+          opacity: 0;
         }
         to {
-          opacity: 0;
+          opacity: 1;
         }
       }
     }
