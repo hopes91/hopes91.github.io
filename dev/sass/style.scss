@@ -161,16 +161,22 @@ body {
 
   .back {
     @include dimensions(50%, 100%);
-    background-color: rgba(0, 0, 0, 0.95);
-    border-left: $pink-border;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-left: $dark-blue-border;
     display: none;
     max-width: 50em;
     overflow: auto;
     position: absolute;
     right: 0;
     z-index: 10;
+    @include respond-to('max-width: 1200px') {
+      width: 60%;
+    }
+    @include respond-to('max-width: 1024px') {
+      width: 80%;
+    }
     @include respond-to('max-width: 800px') {
-      width: 100%;
+      width: 99.5%;
     }
 
     .portfolio {
@@ -191,7 +197,7 @@ body {
         .portfolio__project-title {
           @include dimensions(100%, 100%);
           background-color: $black;
-          border: $blue-border;
+          border: $dark-blue-border;
           box-sizing: border-box;
           color: $white;
           left: 0;
