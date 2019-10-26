@@ -56,23 +56,31 @@ gulp.task('build', gulp.series(
 gulp.task('watch', function() {
   const htmlWatcher = gulp.watch('./dev/assets/*.html', gulp.series('html'));
 
-  htmlWatcher.on('unlink', function(event) {
-    delete cached.caches['html'][event.path];
-    remember.forget('html', event.path);
+  htmlWatcher.on('change', function(event) {
+    if (event.type === 'deleted') {
+      delete cached.caches['html'][event.path];
+      remember.forget('html', event.path);
+    }
   });
+
+  // const imgWatcher = gulp.watch('./dev/assets/images/*.*', gulp.series('img'));
 
   const cssWatcher = gulp.watch('./dev/sass/**/*.scss', gulp.series('css'));
 
-  cssWatcher.on('unlink', function(event) {
-    delete cached.caches['css'][event.path];
-    remember.forget('css', event.path);
+  cssWatcher.on('change', function(event) {
+    if (event.type === 'deleted') {
+      delete cached.caches['css'][event.path];
+      remember.forget('css', event.path);
+    }
   });
 
   const jsWatcher = gulp.watch('./dev/js/**/*.js', gulp.series('js'));
 
-  jsWatcher.on('unlink', function(event) {
-    delete cached.caches['js'][event.path];
-    remember.forget('js', event.path);
+  jsWatcher.on('change', function(event) {
+    if (event.type === 'deleted') {
+      delete cached.caches['js'][event.path];
+      remember.forget('js', event.path);
+    }
   });
 });
 
