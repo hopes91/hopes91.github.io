@@ -1,4 +1,4 @@
-const projects = document.querySelectorAll('.portfolio__project');
+const projects = document.querySelectorAll('.project');
 
 const toggleProjectTitleOnKeyDown = event => {
 	event.key === 'Enter' &&

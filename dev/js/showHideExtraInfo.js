@@ -5,7 +5,7 @@ const portfolioSection = document.querySelector('.portfolio');
 const aboutSection = document.querySelector('.about');
 
 const handleProjectsTabIndexes = () => {
-  const projects = document.querySelectorAll('.portfolio__project');
+  const projects = document.querySelectorAll('.project');
 
   back.style.display === 'block' ?
     projects.forEach(project => project.setAttribute('tabindex', '0')) :

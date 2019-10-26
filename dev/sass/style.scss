@@ -172,17 +172,17 @@ body {
       margin-top: 0.2em;
       text-align: center;
 
-      .portfolio__project {
+      .project {
         margin: 0.12em auto;
         position: relative;
         width: 99%;
 
-        .portfolio__project-thumb {
+        .project__thumb {
           margin-top: 1%;
           width: 98%;
         }
 
-        .portfolio__project-title {
+        .project__title {
           @include dimensions(100%, 100%);
           background-color: $black;
           border: $dark-blue-border;
@@ -193,7 +193,7 @@ body {
           position: absolute;
           top: 0;
 
-          .portfolio__project-title-links {
+          .project__title-links {
             @include dimensions(40%, 1.5em);
             bottom: 0;
             left: 0;
@@ -221,7 +221,7 @@ body {
             }
           }
 
-          .portfolio__project-title-about {
+          .project__title-about {
             bottom: 0;
             font: {
               size: 1em;
@@ -235,7 +235,7 @@ body {
         }
       }
 
-      .portfolio__project-title_hidden {
+      .project__title_hidden {
         animation: {
           duration: 0.7s;
           fill-mode: forwards;
