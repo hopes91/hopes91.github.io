@@ -124,11 +124,8 @@ body {
     bottom: 0.7em;
     padding-right: 1em;
     right: -1000px;
-    @include respond-to('max-width: 640px') {
-      bottom: 2em;
-    }
     @include respond-to('max-width: 640px landscape') {
-      bottom: 0.5em;
+      bottom: 0.3em;
     }
 
     a {
