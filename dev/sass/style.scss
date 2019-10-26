@@ -169,6 +169,7 @@ body {
     .portfolio {
       @include dimensions(100%, auto);
       display: none;
+      margin-top: 0.2em;
       text-align: center;
 
       .portfolio__project {
