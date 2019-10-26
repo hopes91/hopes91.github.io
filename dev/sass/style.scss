@@ -59,11 +59,6 @@ body {
       width: auto;
     }
 
-    &:hover {
-      box-shadow: 0.8em 0.8em $bright-blue;
-      transition: 0.5s;
-    }
-
     h1 {
       margin: 0.5em 2em 0.2em 0.7em;
       @include respond-to('max-width: 640px') {
