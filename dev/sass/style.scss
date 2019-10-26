@@ -162,12 +162,6 @@ body {
     position: absolute;
     right: 0;
     z-index: 10;
-    @include respond-to('max-width: 1200px') {
-      width: 60%;
-    }
-    @include respond-to('max-width: 1024px') {
-      width: 80%;
-    }
     @include respond-to('max-width: 800px') {
       width: 99.5%;
     }
@@ -291,13 +285,9 @@ body {
       font-size: 2em;
       left: -0.1em;
       padding: 0 0.43em;
-      position: absolute;
-      top: 48%;
+      position: relative;
+      top: 0;
       z-index: 10;
-      @include respond-to('max-width: 640px') {
-        position: relative;
-        top: 0;
-      }
     }
   }
 }
