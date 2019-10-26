@@ -54,12 +54,6 @@ body {
 
   .my-name {
     left: -1000px;
-    top: 1em;
-    width: 26em;
-    @include respond-to('max-width: 800px') {
-      top: 0;
-      width: auto;
-    }
 
     h1 {
       margin: 0.5em 2em 0.2em 0.7em;
