@@ -83,13 +83,13 @@ body {
   }
 
   .language {
-    background-color: $bright-blue;
     right: 0;
     top: -1000px;
 
     &:hover {
-      box-shadow: 0.5em 0.5em $dark-pink;
-      transition: 0.5s;
+      background-color: $bright-blue;
+      box-shadow: 0.5em 0.5em $dark-blue;
+      transition: 0.7s;
     }
 
     a {
