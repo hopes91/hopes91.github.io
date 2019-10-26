@@ -2,6 +2,7 @@
 
 const gulp = require('gulp');
 const sass = require('gulp-sass');
+const imagemin = require('gulp-imagemin');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const uglifycss = require('gulp-uglifycss');
@@ -11,6 +12,17 @@ const cached = require('gulp-cached');
 const remember = require('gulp-remember');
 const del = require('del');
 const browserSync = require('browser-sync').create();
+
+gulp.task('html', function() {
+  return gulp.src('./dev/assets/*.html', {since: gulp.lastRun('html')})
+    .pipe(gulp.dest('./prod'));
+});
+
+gulp.task('img', function() {
+  return gulp.src('./dev/assets/images/*.*', {since: gulp.lastRun('img')})
+    .pipe(imagemin())
+    .pipe(gulp.dest('./prod/images'));
+});
 
 gulp.task('css', function() {
   return gulp.src('./dev/sass/**/*.scss')
@@ -28,21 +40,20 @@ gulp.task('js', function() {
     .pipe(gulp.dest('./prod'));
 });
 
-gulp.task('assets', function() {
-  return gulp.src('./dev/assets/**/*.*', {since: gulp.lastRun('assets')})
-    .pipe(gulp.dest('./prod'));
-});
-
 gulp.task('clean', function() {
   return del('./prod');
 });
 
 gulp.task('build', gulp.series(
   'clean',
-  gulp.parallel('css', 'js', 'assets'))
+  gulp.parallel('html', 'img', 'css', 'js'))
 );
 
 gulp.task('watch', function() {
+  gulp.watch('./dev/assets/*.html', gulp.series('html'));
+
+  gulp.watch('./dev/assets/images/*.*', gulp.series('img'));
+
   const cssWatcher = gulp.watch('./dev/sass/**/*.scss', gulp.series('css'));
 
   cssWatcher.on('unlink', function(event) {
@@ -56,8 +67,6 @@ gulp.task('watch', function() {
     delete cached.caches['js'][event.path];
     remember.forget('js', event.path);
   });
-
-  gulp.watch('./dev/assets/**/*.*', gulp.series('assets'));
 });
 
 gulp.task('server', function() {
