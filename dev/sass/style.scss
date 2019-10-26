@@ -312,14 +312,15 @@ body {
     }
 
     .back__close-icon {
-      border-radius: 50%;
+      background-color: $dark-blue;
       cursor: pointer;
+      display: inline-block;
       font-size: 2em;
-      padding: 0 0.43em 0.04em 0.43em;
+      left: -0.1em;
+      padding: 0 0.43em;
       position: absolute;
-      right: 0.5em;
-      top: 0.3em;
-      z-index: 10;
+      top: 48%;
+      z-index: 20;
     }
   }
 }
