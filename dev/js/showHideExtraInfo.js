@@ -4,10 +4,10 @@ const closeBackIcon = document.querySelector('.close-icon');
 const portfolioSection = document.querySelector('.portfolio');
 const aboutSection = document.querySelector('.about');
 
-const handleProjectsTabIndexes = () => {
+const handleProjectsTabIndexes = isOpen => {
   const projects = document.querySelectorAll('.project');
 
-  back.style.display === 'block' ?
+  isOpen ?
     projects.forEach(project => project.setAttribute('tabindex', '0')) :
     projects.forEach(project => project.setAttribute('tabindex', '-1'));
 }
@@ -21,10 +21,10 @@ const showInfo = event => {
   back.style.display = 'block';
   closeBackIcon.setAttribute('tabindex', '0');
 
-  handleProjectsTabIndexes();
+  handleProjectsTabIndexes(true);
 
   event.target.className.match('portfolio') ?
-    (portfolioSection.style.display = 'block', aboutSection.style.display = 'none') :
+    (aboutSection.style.display = 'none', portfolioSection.style.display = 'block') :
     (portfolioSection.style.display = 'none', aboutSection.style.display = 'block');
 }
 
@@ -44,11 +44,11 @@ const hideInfo = () => {
   aboutSection.style.display = 'none';
   closeBackIcon.setAttribute('tabindex', '-1');
 
-  handleProjectsTabIndexes();
+  handleProjectsTabIndexes(false);
 }
 
-navLinks.forEach(link => link.addEventListener('click', showInfo));
 navLinks.forEach(link => link.addEventListener('keydown', showInfoOnKeyDown));
-closeBackIcon.addEventListener('click', hideInfo);
+navLinks.forEach(link => link.addEventListener('click', showInfo));
 closeBackIcon.addEventListener('keydown', hideInfoOnEnterPress);
+closeBackIcon.addEventListener('click', hideInfo);
 window.addEventListener('keydown', hideInfoOnEscapePress);

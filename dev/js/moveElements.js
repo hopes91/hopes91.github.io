@@ -19,8 +19,8 @@ const moveElements = () => {
   }, 500);
 
   setTimeout(() => {
-    contacts.style.right = '0';
     language.style.top = '0';
+    contacts.style.right = '0';
   }, 1000);
 }
 
