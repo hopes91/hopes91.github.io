@@ -40,19 +40,6 @@ body {
   overflow: hidden;
   position: relative;
 
-  &:before {
-    @include dimensions(100vw, 100vh);
-    background: url('images/nikita-kachanovsky-OVbeSXRk_9E-unsplash.jpg') 0 40%/cover no-repeat;
-    content: '';
-    left: 0;
-    position: absolute;
-    top: 0;
-    z-index: -1;
-    @include respond-to('max-width: 800px') {
-      background-position: center;
-    }
-  }
-
   .my-name,
   .language,
   .nav,
@@ -174,30 +161,6 @@ body {
           @include dimensions(52px, 52px);
         }
       }
-    }
-  }
-
-  .photo-copyright {
-    @include dimensions(100%, 1.5em);
-    bottom: 0.3em;
-    box-sizing: border-box;
-    display: inline;
-    padding: 0 1.6em;
-    position: absolute;
-    right: 0;
-    text-align: center;
-    @include respond-to('max-width: 640px') {
-      text-align: right;
-      width: auto;
-    }
-    @include respond-to('max-width: 640px landscape') {
-      text-align: center;
-      width: 100%;
-    }
-
-    a {
-      color: $gray;
-      font-size: 0.7em;
     }
   }
 
