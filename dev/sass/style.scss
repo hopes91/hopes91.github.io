@@ -260,50 +260,25 @@ body {
     }
 
     .about {
-      @include dimensions(100%, 100%);
+      @include indentations(2em auto, 1em 1.5em);
+      background-color: $bright-blue;
+      box-shadow: 1em 1em $dark-blue;
       box-sizing: border-box;
       display: none;
+      max-width: 33em;
       overflow: auto;
-      padding-right: 1em;
+      position: relative;
+      width: 80%;
+      @include respond-to('max-width: 800px') {
+        width: 90%;
+      }
       @include respond-to('max-width: 640px') {
-        padding-right: 0.5em;
-      }
-
-      .about__text,
-      .about__skills,
-      .about_empty {
-        background-color: $bright-blue;
-        position: relative;
-      }
-
-      .about__text {
-        @include indentations(4em auto 3em auto, 1em);
-        box-shadow: 1em 1em $dark-pink;
-        max-width: 40em;
-        width: 70%;
-        @include respond-to('max-width: 1024px') {
-          width: 80%;
-        }
-        @include respond-to('max-width: 640px') {
-          box-shadow: 0.7em 0.7em $dark-pink;
-        }
+        box-shadow: 0.5em 0.5em $dark-blue;
+        padding: 0.5em 1em;
       }
 
       .about__skills {
-        @include indentations(3em, 1em);
-        box-shadow: 1em 1em $dark-blue;
-        float: right;
-        max-width: 25em;
-        width: 60%;
-        @include respond-to('max-width: 1024px') {
-          float: none;
-          margin: 1em auto 3em auto;
-          max-width: none;
-          width: 80%;
-        }
-        @include respond-to('max-width: 640px') {
-          box-shadow: 0.7em 0.7em $dark-blue;
-        }
+        margin: 3em 0 2em 0;
 
         p {
           margin: 0.5em 0;
