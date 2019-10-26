@@ -253,21 +253,16 @@ body {
     }
 
     .about {
-      @include indentations(2em auto, 1em 1.5em);
-      background-color: $bright-blue;
-      box-shadow: 1em 1em $dark-blue;
+      @include indentations(0.3em auto 2em auto, 1em);
       box-sizing: border-box;
       display: none;
-      max-width: 33em;
+      max-width: 35em;
       overflow: auto;
       position: relative;
-      width: 80%;
-      @include respond-to('max-width: 800px') {
-        width: 90%;
-      }
+      text-align: center;
+      width: 90%;
       @include respond-to('max-width: 640px') {
-        box-shadow: 0.5em 0.5em $dark-blue;
-        padding: 0.5em 1em;
+        width: 100%;
       }
 
       .about__skills {
