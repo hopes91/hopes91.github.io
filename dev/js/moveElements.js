@@ -22,6 +22,6 @@ const moveElements = () => {
     language.style.top = '0';
     contacts.style.right = '0';
   }, 1000);
-}
+};
 
 window.addEventListener('load', moveElements);

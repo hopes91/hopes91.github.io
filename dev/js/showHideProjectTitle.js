@@ -3,7 +3,7 @@ const projects = document.querySelectorAll('.project');
 const toggleProjectTitleOnKeyDown = event => {
 	event.key === 'Enter' &&
 		toggleProjectTitle(event);
-}
+};
 
 const toggleProjectTitle = event => {
 	const projectTitle = event.target.children[1];
@@ -11,7 +11,7 @@ const toggleProjectTitle = event => {
 	!projectTitle.className.match('hidden') ?
 		projectTitle.className = 'project-title hidden' :
 		projectTitle.className = 'project-title';
-}
+};
 
 projects.forEach(project => project.addEventListener('keydown', toggleProjectTitleOnKeyDown));
 projects.forEach(project => project.addEventListener('mouseenter', toggleProjectTitle));

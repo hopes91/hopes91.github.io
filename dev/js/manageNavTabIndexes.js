@@ -6,15 +6,20 @@ const isNavFocused = () => {
   return document.activeElement === nav ||
          document.activeElement === portfolioLink ||
          document.activeElement === aboutLink;
-}
+};
 
 const navigateMenu = event => {
   if (isNavFocused()) {
-    event.key === 'ArrowUp' &&
-      (aboutLink.blur(), portfolioLink.focus());
-    event.key === 'ArrowDown' &&
-      (portfolioLink.blur(), aboutLink.focus());
+    if (event.key === 'ArrowUp') {
+      aboutLink.blur();
+      portfolioLink.focus();
+    }
+
+    if (event.key === 'ArrowDown') {
+      portfolioLink.blur();
+      aboutLink.focus();
+    }
   }
-}
+};
 
 window.addEventListener('keydown', navigateMenu);
