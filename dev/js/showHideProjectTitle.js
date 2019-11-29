@@ -9,8 +9,8 @@ const toggleProjectTitle = event => {
 	const projectTitle = event.target.children[1];
 
 	!projectTitle.className.match('hidden') ?
-		projectTitle.className = 'project__title project__title_hidden' :
-		projectTitle.className = 'project__title';
+		projectTitle.className = 'project-title hidden' :
+		projectTitle.className = 'project-title';
 }
 
 projects.forEach(project => project.addEventListener('keydown', toggleProjectTitleOnKeyDown));

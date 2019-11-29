@@ -1,6 +1,6 @@
-const nav = document.querySelector('.nav');
-const portfolioLink = document.querySelector('.nav__portfolio');
-const aboutLink = document.querySelector('.nav__about');
+const nav = document.querySelector('nav');
+const portfolioLink = document.querySelector('.nav-portfolio');
+const aboutLink = document.querySelector('.nav-about');
 
 const isNavFocused = () => {
   return document.activeElement === nav ||

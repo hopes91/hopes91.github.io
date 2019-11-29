@@ -1,6 +1,6 @@
-const navLinks = document.querySelectorAll('.nav li');
+const navLinks = document.querySelectorAll('nav li');
 const back = document.querySelector('.back');
-const closeBackIcon = document.querySelector('.close-icon');
+const closeBackIcon = document.querySelector('.close-back-icon');
 const portfolioSection = document.querySelector('.portfolio');
 const aboutSection = document.querySelector('.about');
 

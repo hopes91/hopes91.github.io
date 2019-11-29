@@ -7,7 +7,7 @@ forEach();
 const moveElements = () => {
   const myName = document.querySelector('.my-name');
   const language = document.querySelector('.language');
-  const nav = document.querySelector('.nav');
+  const nav = document.querySelector('nav');
   const contacts = document.querySelector('.contacts');
 
   setTimeout(() => {
