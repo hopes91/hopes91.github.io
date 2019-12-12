@@ -4,7 +4,7 @@
   "description": "My portfolio website.",
   "private": "true",
   "repository": "git@github.com:hopes91/hopes91.github.io.git",
-  "author": "Nadya F-a <iam.nadyafa@gmail.com>",
+  "author": "Nadya F-a <nadezhdafalaleeva@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.2.2",
