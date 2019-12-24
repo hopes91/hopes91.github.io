@@ -1,17 +1,29 @@
 @import 'helpers/variables.scss';
 @import 'helpers/mixins.scss';
 
+html {
   @include dimensions(100%, 100%);
   @include indentations(0, 0);
 }
 
 body {
+  @include dimensions(auto, 100%);
+  @include indentations(0, 0);
+  font: {
+    family: 'Roboto', sans-serif;
+    size: 16px;
+  }
+  min-height: 100vh;
 
   a {
     border: none;
+    color: $black;
     display: inline-block;
     text-decoration: none;
 
+    // img {
+    //   @include dimensions(100%, 100%);
+    // }
   }
 
   img {
