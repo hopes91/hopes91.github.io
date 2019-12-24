@@ -1,23 +1,29 @@
+// start for IE
+const forEach = require('./forIE/forEach.js');
+
+forEach();
+// end for IE
+
 const nav = document.querySelector('nav');
-const portfolioLink = document.querySelector('.nav-portfolio');
-const aboutLink = document.querySelector('.nav-about');
+const portfolioLink = document.querySelector('.nav-anchor.portfolio');
+const contactsLink = document.querySelector('.nav-anchor.contacts');
 
 const isNavFocused = () => {
   return document.activeElement === nav ||
          document.activeElement === portfolioLink ||
-         document.activeElement === aboutLink;
+         document.activeElement === contactsLink;
 };
 
 const navigateMenu = event => {
   if (isNavFocused()) {
-    if (event.key === 'ArrowUp') {
-      aboutLink.blur();
+    if (event.key === 'ArrowLeft') {
+      contactsLink.blur();
       portfolioLink.focus();
     }
 
-    if (event.key === 'ArrowDown') {
+    if (event.key === 'ArrowRight') {
       portfolioLink.blur();
-      aboutLink.focus();
+      contactsLink.focus();
     }
   }
 };
