@@ -15,7 +15,7 @@ const del = require('del');
 const browserSync = require('browser-sync').create();
 
 gulp.task('html', function() {
-  return gulp.src('./dev/assets/*.html')
+  return gulp.src('./src/assets/*.html')
     .pipe(cached('html'))
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(remember('html'))
@@ -23,7 +23,7 @@ gulp.task('html', function() {
 });
 
 gulp.task('img', function() {
-  return gulp.src('./dev/assets/images/*.*')
+  return gulp.src('./src/assets/images/**/*.*')
     .pipe(cached('img'))
     .pipe(imagemin())
     .pipe(remember('img'))
@@ -31,7 +31,7 @@ gulp.task('img', function() {
 });
 
 gulp.task('css', function() {
-  return gulp.src('./dev/sass/**/*.scss')
+  return gulp.src('./src/sass/**/*.scss')
     .pipe(cached('css'))
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([ autoprefixer() ]))
@@ -41,7 +41,7 @@ gulp.task('css', function() {
 });
 
 gulp.task('js', function() {
-  return gulp.src('./dev/js/**/*.js')
+  return gulp.src('./src/js/**/*.js')
     .pipe(webpackStream(require('./webpack.config.js')))
     .pipe(gulp.dest('./public'));
 });
@@ -56,7 +56,7 @@ gulp.task('build', gulp.series(
 );
 
 gulp.task('watch', function() {
-  const htmlWatcher = gulp.watch('./dev/assets/*.html', gulp.series('html'));
+  const htmlWatcher = gulp.watch('./src/assets/*.html', gulp.series('html'));
 
   htmlWatcher.on('change', function(event) {
     if (event.type === 'deleted') {
@@ -65,7 +65,7 @@ gulp.task('watch', function() {
     }
   });
 
-  const imgWatcher = gulp.watch('./dev/assets/images/*.*', gulp.series('img'));
+  const imgWatcher = gulp.watch('./src/assets/images/*.*', gulp.series('img'));
 
   imgWatcher.on('change', function(event) {
     if (event.type === 'deleted') {
@@ -74,7 +74,7 @@ gulp.task('watch', function() {
     }
   });
 
-  const cssWatcher = gulp.watch('./dev/sass/**/*.scss', gulp.series('css'));
+  const cssWatcher = gulp.watch('./src/sass/**/*.scss', gulp.series('css'));
 
   cssWatcher.on('change', function(event) {
     if (event.type === 'deleted') {
@@ -83,7 +83,7 @@ gulp.task('watch', function() {
     }
   });
 
-  const jsWatcher = gulp.watch('./dev/js/**/*.js', gulp.series('js'));
+  const jsWatcher = gulp.watch('./src/js/**/*.js', gulp.series('js'));
 
   jsWatcher.on('change', function(event) {
     if (event.type === 'deleted') {
