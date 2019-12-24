@@ -30,6 +30,10 @@ body {
     border: none;
   }
 
+  header, footer {
+    background-color: $white;
+    color: $black;
+    width: 100%;
   }
 
   header {
@@ -69,5 +73,9 @@ body {
       }
     }
 
+  footer {
+    background-color: $black;
+    color: $white;
+    height: 12em;
   }
 }
