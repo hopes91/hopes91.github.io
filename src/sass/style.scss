@@ -30,6 +30,14 @@ body {
     border: none;
   }
 
+  .closed {
+    display: none;
+  }
+
+  .opened {
+    display: block;
+  }
+
   header, footer {
     background-color: $white;
     color: $black;
@@ -67,11 +75,57 @@ body {
     }
   }
 
+  main {
+    margin: 0 auto;
+    max-width: 1000px;
+    min-height: 100vh;
+    width: 80%;
 
+    .project {
+      display: inline-block;
+      position: relative;
+      width: 15em;
 
+      .project-thumb {
         width: 100%;
       }
+
+      .project-tile {
+        @include dimensions(100%, 100%);
+        background-color: rgba(0, 0, 0, 0.9);
+        box-sizing: border-box;
+        left: 0;
+        padding: 1em;
+        position: absolute;
+        text-align: center;
+        top: 0;
+        z-index: 1;
+
+        .project-tile-name,
+        .project-tile-button {
+          left: 0;
+          color: $white;
+          padding: 1em;
+          position: absolute;
+          width: 100%;
+        }
+
+        .project-tile-name {
+          box-sizing: border-box;
+          font-weight: bold;
+          top: 0;
+        }
+
+        .project-tile-button {
+          background-color: gray;
+          border: none;
+          bottom: 1em;
+          cursor: pointer;
+          font-size: 1em;
+        }
+      }
     }
+  }
 
   footer {
     background-color: $black;
