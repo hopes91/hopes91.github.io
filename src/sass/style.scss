@@ -32,14 +32,32 @@ body {
 
   }
 
+  header {
+    font-family: 'Roboto Condensed', sans-serif;
+    height: 10em;
+    position: relative;
 
+    .my-name-link {
+      left: 1em;
+      position: relative;
 
+      .my-name {
 
       }
     }
 
+    nav {
+      position: absolute;
+      right: 0;
+      top: 1em;
+      width: 13em;
 
+      .nav-anchor {
+        @include indentations(0 0.1em, 1em 0.5em);
+        font-size: 1.1em;
 
+        &:hover {
+          font-weight: bold;
         }
       }
     }
