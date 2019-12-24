@@ -17,9 +17,9 @@ const browserSync = require('browser-sync').create();
 gulp.task('html', function() {
   return gulp.src('./dev/assets/*.html')
     .pipe(cached('html'))
-    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(remember('html'))
-    .pipe(gulp.dest('./prod'));
+    .pipe(gulp.dest('./public'));
 });
 
 gulp.task('img', function() {
@@ -27,7 +27,7 @@ gulp.task('img', function() {
     .pipe(cached('img'))
     .pipe(imagemin())
     .pipe(remember('img'))
-    .pipe(gulp.dest('./prod/images'));
+    .pipe(gulp.dest('./public/images'));
 });
 
 gulp.task('css', function() {
@@ -36,18 +36,18 @@ gulp.task('css', function() {
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([ autoprefixer() ]))
     .pipe(remember('css'))
-    .pipe(uglifycss({ "uglyComments": true }))
-    .pipe(gulp.dest('./prod'));
+    .pipe(uglifycss({"uglyComments": true}))
+    .pipe(gulp.dest('./public'));
 });
 
 gulp.task('js', function() {
   return gulp.src('./dev/js/**/*.js')
     .pipe(webpackStream(require('./webpack.config.js')))
-    .pipe(gulp.dest('./prod'));
+    .pipe(gulp.dest('./public'));
 });
 
 gulp.task('clean', function() {
-  return del('./prod');
+  return del('./public');
 });
 
 gulp.task('build', gulp.series(
@@ -95,10 +95,10 @@ gulp.task('watch', function() {
 
 gulp.task('server', function() {
   browserSync.init({
-    server: './prod'
+    server: './public'
   });
 
-  browserSync.watch('./prod/**/*.*').on('change', browserSync.reload);
+  browserSync.watch('./public/**/*.*').on('change', browserSync.reload);
 });
 
 gulp.task('default', gulp.series(
