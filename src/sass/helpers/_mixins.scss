@@ -1,6 +1,6 @@
-@mixin dimensions($width, $height) {
-  width: $width;
+@mixin dimensions($height, $width) {
   height: $height;
+  width: $width;
 }
 
 @mixin indentations($margin, $padding) {
