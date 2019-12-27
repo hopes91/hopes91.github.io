@@ -9,22 +9,23 @@ html {
 body {
   @include dimensions(auto, 100%);
   @include indentations(0, 0);
+  background-color: $white;
+  color: $black;
   font: {
     family: 'Roboto', sans-serif;
     size: 16px;
   }
   min-height: 100vh;
-  // outline-color: RoyalBlue;
+
+  * {
+    outline-color: DarkBlue;
+  }
 
   a {
     border: none;
     color: $black;
     display: inline-block;
     text-decoration: none;
-
-    // img {
-    //   @include dimensions(100%, 100%);
-    // }
   }
 
   img {
@@ -40,8 +41,6 @@ body {
   // }
 
   header, footer {
-    background-color: $white;
-    color: $black;
     width: 100%;
   }
 
