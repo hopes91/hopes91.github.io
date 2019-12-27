@@ -14,6 +14,7 @@ body {
     size: 16px;
   }
   min-height: 100vh;
+  // outline-color: RoyalBlue;
 
   a {
     border: none;
@@ -30,13 +31,13 @@ body {
     border: none;
   }
 
-  .closed {
-    display: none;
-  }
-
-  .opened {
-    display: block;
-  }
+  // .closed {
+  //   display: none;
+  // }
+  //
+  // .opened {
+  //   display: block;
+  // }
 
   header, footer {
     background-color: $white;
@@ -88,6 +89,7 @@ body {
     }
 
     .project {
+      overflow: hidden;
       position: relative;
       width: 100%;
 
@@ -99,8 +101,6 @@ body {
         @include dimensions(100%, 100%);
         background-color: rgba(0, 0, 0, 0.9);
         box-sizing: border-box;
-        left: 0;
-        padding: 1em;
         position: absolute;
         text-align: center;
         top: 0;
@@ -108,8 +108,8 @@ body {
 
         .project-tile-name,
         .project-tile-button {
-          left: 0;
           color: $white;
+          left: 0;
           padding: 1em;
           position: absolute;
           width: 100%;
@@ -122,7 +122,7 @@ body {
         }
 
         .project-tile-button {
-          background-color: gray;
+          background-color: SteelBlue;
           border: none;
           bottom: 1em;
           cursor: pointer;
@@ -146,6 +146,28 @@ body {
     .tatiana-urda-portfolio .project-tile {
       height: 24.9em;
     }
+
+    .project-tile_shown {
+      left: 0;
+      transition: left 1s;
+    }
+
+    .project-tile_hidden {
+      left: -15em;
+      transition: left 1s;
+    }
+
+    // .project-tile_shown .project-tile-name,
+    // .project-tile_shown .project-tile-button {
+    //   left: 0;
+    //   transition: left 1s;
+    // }
+    //
+    // .project-tile_hidden .project-tile-name,
+    // .project-tile_hidden .project-tile-button {
+    //   left: -17em;
+    //   transition: left 1.5s;
+    // }
   }
 
   footer {

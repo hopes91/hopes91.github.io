@@ -8,9 +8,15 @@ const toggleProjectTileOnKeyDown = event => {
 const toggleProjectTile = event => {
 	const projectTile = event.target.children[1];
 
-	projectTile.className.match('opened') ?
-		projectTile.className = 'project-tile closed' :
-		projectTile.className = 'project-tile opened';
+	if (projectTile.className.match('hidden')) {
+		projectTile.className = 'project-tile project-tile_shown';
+		projectTile.children[1].setAttribute('tabindex', '0');
+	}
+
+	if (projectTile.className.match('shown')) {
+		projectTile.className = 'project-tile project-tile_hidden';
+		projectTile.children[1].setAttribute('tabindex', '-1');
+	}
 };
 
 projects.forEach(project => project.addEventListener('keydown', toggleProjectTileOnKeyDown));
