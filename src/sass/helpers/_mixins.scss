@@ -8,6 +8,12 @@
   padding: $padding;
 }
 
+@mixin hoverOver($backgroundColor, $color, $transition) {
+  background-color: $backgroundColor;
+  color: $color;
+  transition: $transition;
+}
+
 @mixin respond-to($media) {
   @if $media == 'max-width: 1366px' {
     @media (max-width: 1366px) { @content; }

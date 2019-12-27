@@ -53,14 +53,14 @@ body {
       left: 0.5em;
       position: relative;
       top: 0.5em;
+      transition: all 1s;
 
       &:hover {
-        background-color: steelBlue;
-        color: white;
+        @include hoverOver(steelBlue, white, all 1s);
       }
 
       .my-name {
-        margin: 0.5em;
+        margin: 0.5em 0.5em 0.6em 0.5em;
       }
     }
 
@@ -72,10 +72,10 @@ body {
       .nav-anchor {
         @include indentations(0, 1em 0.5em);
         font-size: 1.1em;
+        transition: all 1s;
 
         &:hover {
-          background-color: steelBlue;
-          color: white;
+          @include hoverOver(steelBlue, white, all 1s);
         }
       }
     }
