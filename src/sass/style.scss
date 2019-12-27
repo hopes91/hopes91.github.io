@@ -9,8 +9,8 @@ html {
 body {
   @include dimensions(auto, 100%);
   @include indentations(0, 0);
-  background-color: $white;
-  color: $black;
+  background-color: white;
+  color: black;
   font: {
     family: 'Roboto', sans-serif;
     size: 16px;
@@ -18,12 +18,12 @@ body {
   min-height: 100vh;
 
   * {
-    outline-color: DarkBlue;
+    outline-color: darkBlue;
   }
 
   a {
     border: none;
-    color: $black;
+    color: black;
     display: inline-block;
     text-decoration: none;
   }
@@ -50,26 +50,32 @@ body {
     position: relative;
 
     .my-name-link {
-      left: 1em;
+      left: 0.5em;
       position: relative;
+      top: 0.5em;
+
+      &:hover {
+        background-color: steelBlue;
+        color: white;
+      }
 
       .my-name {
-
+        margin: 0.5em;
       }
     }
 
     nav {
       position: absolute;
-      right: 0;
+      right: 1em;
       top: 1em;
-      width: 13em;
 
       .nav-anchor {
-        @include indentations(0 0.1em, 1em 0.5em);
+        @include indentations(0, 1em 0.5em);
         font-size: 1.1em;
 
         &:hover {
-          font-weight: bold;
+          background-color: steelBlue;
+          color: white;
         }
       }
     }
@@ -107,7 +113,7 @@ body {
 
         .project-tile-name,
         .project-tile-button {
-          color: $white;
+          color: white;
           left: 0;
           padding: 1em;
           position: absolute;
@@ -121,7 +127,7 @@ body {
         }
 
         .project-tile-button {
-          background-color: SteelBlue;
+          background-color: steelBlue;
           border: none;
           bottom: 1em;
           cursor: pointer;
@@ -170,8 +176,8 @@ body {
   }
 
   footer {
-    background-color: $black;
-    color: $white;
+    background-color: black;
+    color: white;
     height: 12em;
   }
 }
