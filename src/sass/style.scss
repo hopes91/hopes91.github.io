@@ -76,17 +76,20 @@ body {
   }
 
   main {
-    align-items: flex-start;
-    display: flex;
-    flex-flow: row wrap;
     margin: 0 auto 2em auto;
     min-height: 100vh;
     width: 45em;
 
-    .project {
+    .row {
       display: inline-block;
       position: relative;
+      vertical-align: top;
       width: 15em;
+    }
+
+    .project {
+      position: relative;
+      width: 100%;
 
       .project-thumb {
         width: 100%;
@@ -126,6 +129,22 @@ body {
           font-size: 1em;
         }
       }
+    }
+
+    .freecodecamp-portfolio .project-tile {
+      height: 21.75em;
+    }
+
+    .krasnopolie-library .project-tile {
+      height: 41.61em;
+    }
+
+    .tian-yuan-zhao-portfolio .project-tile {
+      height: 18.81em;
+    }
+
+    .tatiana-urda-portfolio .project-tile {
+      height: 24.9em;
     }
   }
 
