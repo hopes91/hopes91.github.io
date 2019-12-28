@@ -32,14 +32,6 @@ body {
     border: none;
   }
 
-  // .closed {
-  //   display: none;
-  // }
-  //
-  // .opened {
-  //   display: block;
-  // }
-
   header, footer {
     width: 100%;
   }
@@ -62,7 +54,45 @@ body {
 
       .my-name {
         margin: 0.5em 0.5em 0.6em 0.5em;
+
+        @include respond-to('max-width: 640px') {
+          font-size: 1.5em;
+        }
       }
+    }
+
+    .burger {
+      @include dimensions(1em, 2em);
+      background-color: steelBlue;
+      cursor: pointer;
+      display: none;
+      position: fixed;
+      right: 1em;
+      top: 2.3em;
+      transition: transform 0.7s;
+      z-index: 3;
+
+      @include respond-to('max-width: 640px') {
+        display: inline-block;
+      }
+
+      span {
+        @include dimensions(2px, 100%);
+        background-color: black;
+        position: absolute;
+      }
+
+      span:first-child {
+        top: 0;
+      }
+
+      span:last-child {
+        bottom: 0;
+      }
+    }
+
+    .burger_active {
+      transform: rotate(90deg);
     }
 
     nav {
@@ -70,10 +100,32 @@ body {
       right: 1em;
       top: 1em;
 
+      @include respond-to('max-width: 640px') {
+        @include dimensions(100vh, 50%);
+        background-color: white;
+        border-left: 0.1em solid black;
+        display: none;
+        position: fixed;
+        padding-top: 5.3em;
+        right: 0;
+        top: 0;
+        z-index: 2;
+      }
+
+      @include respond-to('max-width: 480px') {
+        width: 90%;
+      }
+
       .nav-anchor {
         @include indentations(0, 1em 0.5em);
         font-size: 1.1em;
         transition: all 1s;
+
+        @include respond-to('max-width: 640px') {
+          box-sizing: border-box;
+          padding: 1em 1.3em;
+          width: 100%;
+        }
 
         &:hover {
           @include hoverOver(steelBlue, white, all 1s);

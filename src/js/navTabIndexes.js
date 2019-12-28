@@ -1,9 +1,3 @@
-// start for IE
-const forEach = require('./forIE/forEach.js');
-
-forEach();
-// end for IE
-
 const nav = document.querySelector('nav');
 const portfolioLink = document.querySelector('.nav-anchor.portfolio');
 const contactsLink = document.querySelector('.nav-anchor.contacts');
