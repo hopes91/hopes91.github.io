@@ -47,6 +47,11 @@ body {
       top: 0.5em;
       transition: all 1s;
 
+      @include respond-to('max-width: 640px') {
+        left: 0.3em;
+        top: 1.1em;
+      }
+
       &:hover,
       &:active {
         @include hoverOver(steelBlue, white, all 1s);
