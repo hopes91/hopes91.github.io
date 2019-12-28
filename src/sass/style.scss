@@ -168,16 +168,14 @@ body {
       }
     }
 
-    @include respond-to('max-width: 800px') {
-      .column.three {
+    .column.three {
+      @include respond-to('max-width: 800px') {
         position: absolute;
         right: 0;
         top: 18.5625em;
       }
-    }
 
-    @include respond-to('max-width: 640px') {
-      .column.three {
+      @include respond-to('max-width: 640px') {
         position: static;
       }
     }
