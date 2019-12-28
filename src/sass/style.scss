@@ -55,7 +55,8 @@ body {
       top: 0.5em;
       transition: all 1s;
 
-      &:hover {
+      &:hover,
+      &:active {
         @include hoverOver(steelBlue, white, all 1s);
       }
 
