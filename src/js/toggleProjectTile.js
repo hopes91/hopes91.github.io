@@ -11,9 +11,7 @@ const toggleProjectTile = event => {
 	if (projectTile.className.match('hidden')) {
 		projectTile.className = 'project-tile project-tile_shown';
 		projectTile.children[1].setAttribute('tabindex', '0');
-	}
-
-	if (projectTile.className.match('shown')) {
+	} else {
 		projectTile.className = 'project-tile project-tile_hidden';
 		projectTile.children[1].setAttribute('tabindex', '-1');
 	}
