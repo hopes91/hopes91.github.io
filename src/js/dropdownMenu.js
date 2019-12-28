@@ -5,7 +5,7 @@ forEach();
 // end for IE
 
 const burger = document.querySelector('.burger');
-const nav = document.querySelector('nav');
+const navTop = document.querySelector('.nav-top');
 
 const toggleBurgerTabIndex = () => {
 	window.innerWidth <= 640 ?
@@ -19,7 +19,7 @@ const toggleBurgerOnKeyDown = event => {
 };
 
 const toggleBurger = () => {
-  nav.style.display !== 'block' ?
+  navTop.style.display !== 'block' ?
     burger.className = 'burger burger_active' :
     burger.className = 'burger';
 
@@ -27,9 +27,9 @@ const toggleBurger = () => {
 };
 
 const toggleDropdownMenu = () => {
-	nav.style.display !== 'block' ?
-		nav.style.display = 'block' :
-	  nav.style.display = 'none';
+	navTop.style.display !== 'block' ?
+		navTop.style.display = 'block' :
+	  navTop.style.display = 'none';
 };
 
 window.addEventListener('resize', toggleBurgerTabIndex);
