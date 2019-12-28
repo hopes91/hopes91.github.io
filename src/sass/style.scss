@@ -84,10 +84,19 @@ body {
   main {
     margin: 0 auto 2em auto;
     min-height: 100vh;
+    position: relative;
     width: 60em;
 
     @include respond-to('max-width: 1024px') {
       width: 45em;
+    }
+
+    @include respond-to('max-width: 800px') {
+      width: 30em;
+    }
+
+    @include respond-to('max-width: 640px') {
+      width: 15em;
     }
 
     .column {
@@ -101,9 +110,24 @@ body {
       }
     }
 
+    @include respond-to('max-width: 800px') {
+      .column.three {
+        position: absolute;
+        right: 0;
+        top: 18.5625em;
+      }
+    }
+
+    @include respond-to('max-width: 640px') {
+      .column.three {
+        position: static;
+      }
+    }
+
     .project {
       overflow: hidden;
       position: relative;
+      text-align: center;
       width: 100%;
 
       .project-thumb {
@@ -115,7 +139,6 @@ body {
         background-color: rgba(0, 0, 0, 0.9);
         box-sizing: border-box;
         position: absolute;
-        text-align: center;
         top: 0;
         z-index: 1;
 
@@ -144,35 +167,35 @@ body {
       }
     }
 
-    .freecodecamp-portfolio .project-tile {
-      height: 28.916em;
+    .freecodecamp-portfolio {
+      height: 28.666em;
 
       @include respond-to('max-width: 1024px') {
-        height: 21.75em;
+        height: 21.5em;
       }
     }
 
-    .krasnopolie-library .project-tile {
-      height: 55.400375em;
+    .krasnopolie-library {
+      height: 55.150375em;
 
       @include respond-to('max-width: 1024px') {
-        height: 41.6123125em;
+        height: 41.3623125em;
       }
     }
 
-    .tian-yuan-zhao-portfolio .project-tile {
-      height: 25em;
+    .tian-yuan-zhao-portfolio {
+      height: 24.75em;
 
       @include respond-to('max-width: 1024px') {
-        height: 18.8125em;
+        height: 18.5625em;
       }
     }
 
-    .tatiana-urda-portfolio .project-tile {
-      height: 33.11325em;
+    .tatiana-urda-portfolio {
+      height: 32.86325em;
 
       @include respond-to('max-width: 1024px') {
-        height: 24.8974375em;
+        height: 24.6474375em;
       }
     }
 
@@ -182,25 +205,13 @@ body {
     }
 
     .project-tile_hidden {
-      left: -20em;
+      left: -30em;
       transition: left 1s;
 
       @include respond-to('max-width: 1024px') {
-        left: -15em;
+        left: -25em;
       }
     }
-
-    // .project-tile_shown .project-tile-name,
-    // .project-tile_shown .project-tile-button {
-    //   left: 0;
-    //   transition: left 1s;
-    // }
-    //
-    // .project-tile_hidden .project-tile-name,
-    // .project-tile_hidden .project-tile-button {
-    //   left: -17em;
-    //   transition: left 1.5s;
-    // }
   }
 
   footer {
