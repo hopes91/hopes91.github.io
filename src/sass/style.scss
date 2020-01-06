@@ -33,7 +33,7 @@ body {
   }
 
   header, footer {
-    width: 100%;
+    @include dimensions(10em, 100%);
   }
 
   .my-name-link {
@@ -43,7 +43,7 @@ body {
 
     .my-name {
       font-family: 'Roboto Condensed', sans-serif;
-      margin: 0.5em 0.5em 0.6em 0.5em;
+      margin: 0;
     }
   }
 
@@ -68,10 +68,10 @@ body {
   }
 
   header {
-    height: 10em;
     position: relative;
 
     .my-name-link {
+      margin: 0.7em 0.5em;
       transition: all 1s;
 
       @include respond-to('max-width: 640px') {
@@ -282,11 +282,11 @@ body {
   footer {
     background-color: black;
     color: white;
-    height: 7em;
     position: absolute;
 
     .my-name-link {
       color: white;
+      margin: 1.4em 1em;
 
       .my-name {
         font: {
