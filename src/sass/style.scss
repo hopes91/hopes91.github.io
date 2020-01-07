@@ -38,9 +38,9 @@ body {
   }
 
   .my-name-link {
-    left: 0.5em;
+    left: 1em;
     position: relative;
-    top: 0.5em;
+    top: 1em;
 
     .my-name {
       font-family: 'Roboto Condensed', sans-serif;
@@ -51,8 +51,8 @@ body {
   .nav {
     font-family: 'Roboto Condensed', sans-serif;
     position: absolute;
-    right: 1em;
-    top: 1em;
+    right: 1.5em;
+    top: 1.1em;
 
     .nav-anchor {
       @include indentations(0, 1em 0.5em);
@@ -70,17 +70,24 @@ body {
 
   header {
     .my-name-link {
-      margin: 0.7em 0.5em;
+      margin: 0.5em;
       transition: all 1s;
 
+      @include respond-to('max-width: 800px') {
+        top: 1.5em;
+      }
+
       @include respond-to('max-width: 640px') {
-        left: 0.3em;
-        top: 1.1em;
+        margin-left: 0.2em;
       }
 
       .my-name {
-        @include respond-to('max-width: 640px') {
+        @include respond-to('max-width: 800px') {
           font-size: 1.5em;
+        }
+
+        @include respond-to('max-width: 640px') {
+          font-size: 1.3em;
         }
       }
     }
@@ -94,10 +101,6 @@ body {
       @include respond-to('max-width: 640px') {
         @include dimensions(5.3em, 100%);
         display: block;
-      }
-
-      @include respond-to('max-width: 480px') {
-        width: 90%;
       }
 
       .burger {
@@ -145,6 +148,10 @@ body {
           right: 0;
           top: 0;
           z-index: 2;
+        }
+
+        @include respond-to('max-width: 480px') {
+          width: 90%;
         }
 
         .nav-anchor {
@@ -235,7 +242,10 @@ body {
 
         .project-tile-name {
           box-sizing: border-box;
-          font-size: 1em;
+          font: {
+            size: 1.2em;
+            weight: normal;
+          }
           top: 0;
         }
 
@@ -244,7 +254,7 @@ body {
           border: none;
           bottom: 1em;
           cursor: pointer;
-          font-size: 1em;
+          font-size: 1.1em;
         }
       }
     }
@@ -307,7 +317,7 @@ body {
 
     .my-name-link {
       color: white;
-      margin: 1.4em 1em;
+      margin: 1em 0.5em;
 
       @include respond-to('max-width: 640px') {
         left: 0;
@@ -325,7 +335,7 @@ body {
       display: inline-block;
       left: 1.5em;
       position: absolute;
-      top: 4.5em;
+      top: 6em;
 
       @include respond-to('max-width: 640px') {
         left: 0;
@@ -337,7 +347,7 @@ body {
       a {
         @include dimensions(auto, 40px);
         display: inline-block;
-        margin: 1em 0.5em 1em 0;
+        margin-right: 0.5em;
         vertical-align: middle;
 
         @include respond-to('max-width: 640px') {
