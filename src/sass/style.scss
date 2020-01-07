@@ -34,6 +34,7 @@ body {
 
   header, footer {
     @include dimensions(10em, 100%);
+    position: relative;
   }
 
   .my-name-link {
@@ -68,8 +69,6 @@ body {
   }
 
   header {
-    position: relative;
-
     .my-name-link {
       margin: 0.7em 0.5em;
       transition: all 1s;
@@ -282,11 +281,19 @@ body {
   footer {
     background-color: black;
     color: white;
-    position: absolute;
+
+    @include respond-to('max-width: 640px') {
+      height: 13em;
+      text-align: center;
+    }
 
     .my-name-link {
       color: white;
       margin: 1.4em 1em;
+
+      @include respond-to('max-width: 640px') {
+        left: 0;
+      }
 
       .my-name {
         font: {
@@ -296,7 +303,42 @@ body {
       }
     }
 
+    .contact-icons {
+      display: inline-block;
+      left: 1.5em;
+      position: absolute;
+      top: 4.5em;
+
+      @include respond-to('max-width: 640px') {
+        left: 0;
+        position: relative;
+        top: 0.5em;
+        width: 100%;
+      }
+
+      a {
+        @include dimensions(auto, 40px);
+        display: inline-block;
+        margin: 1em 0.5em 1em 0;
+        vertical-align: middle;
+
+        @include respond-to('max-width: 640px') {
+          margin: 0.5em;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
     .nav-bottom {
+      @include respond-to('max-width: 640px') {
+        left: 0;
+        position: relative;
+        top: 1em;
+      }
+
       .nav-anchor {
         color: white;
       }
