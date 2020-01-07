@@ -48,7 +48,7 @@ body {
     }
   }
 
-  nav {
+  .nav {
     font-family: 'Roboto Condensed', sans-serif;
     position: absolute;
     right: 1em;
@@ -85,63 +85,81 @@ body {
       }
     }
 
-    .burger {
-      @include dimensions(1em, 2em);
-      background-color: steelBlue;
-      cursor: pointer;
+    .drop {
       display: none;
-      position: fixed;
-      right: 1em;
-      top: 2.3em;
-      transition: transform 0.7s;
-      z-index: 3;
+      left: 0;
+      position: absolute;
+      top: 0;
 
       @include respond-to('max-width: 640px') {
-        display: inline-block;
-      }
-
-      span {
-        @include dimensions(2px, 100%);
-        background-color: black;
-        position: absolute;
-      }
-
-      span:first-child {
-        top: 0;
-      }
-
-      span:last-child {
-        bottom: 0;
-      }
-    }
-
-    .burger_active {
-      transform: rotate(90deg);
-    }
-
-    .nav-top {
-      @include respond-to('max-width: 640px') {
-        @include dimensions(100vh, 50%);
-        background-color: white;
-        border-left: 0.1em solid black;
-        display: none;
-        position: fixed;
-        padding-top: 5.3em;
-        right: 0;
-        top: 0;
-        z-index: 2;
+        @include dimensions(5.3em, 100%);
+        display: block;
       }
 
       @include respond-to('max-width: 480px') {
         width: 90%;
       }
 
-      .nav-anchor {
+      .burger {
+        @include dimensions(1em, 2em);
+        background-color: steelBlue;
+        cursor: pointer;
+        display: none;
+        position: fixed;
+        right: 1em;
+        top: 2.3em;
+        transition: transform 0.7s;
+        z-index: 3;
+
         @include respond-to('max-width: 640px') {
-          box-sizing: border-box;
-          padding: 1em 1.3em;
-          width: 100%;
+          display: inline-block;
         }
+
+        span {
+          @include dimensions(2px, 100%);
+          background-color: black;
+          position: absolute;
+        }
+
+        span:first-child {
+          top: 0;
+        }
+
+        span:last-child {
+          bottom: 0;
+        }
+      }
+
+      .burger_active {
+        transform: rotate(90deg);
+      }
+
+      .drop-menu {
+        @include respond-to('max-width: 640px') {
+          @include dimensions(100vh, 50%);
+          background-color: white;
+          border-left: 0.1em solid black;
+          display: none;
+          padding-top: 5.3em;
+          position: fixed;
+          right: 0;
+          top: 0;
+          z-index: 2;
+        }
+
+        .nav-anchor {
+          @include respond-to('max-width: 640px') {
+            box-sizing: border-box;
+            padding: 1em 1.3em;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .nav-top {
+      @include respond-to('max-width: 640px') {
+        display: none;
       }
     }
   }

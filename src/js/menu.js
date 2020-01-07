@@ -5,7 +5,6 @@ forEach();
 // end for IE
 
 const burger = document.querySelector('.burger');
-const navTop = document.querySelector('.nav-top');
 
 const toggleBurgerTabIndex = () => {
 	window.innerWidth <= 640 ?
@@ -15,23 +14,26 @@ const toggleBurgerTabIndex = () => {
 
 const toggleBurgerOnKeyDown = event => {
 	event.key === 'Enter' &&
-    toggleBurger();
+    toggleBurger(event);
 };
 
-const toggleBurger = () => {
-  navTop.style.display !== 'block' ?
+const toggleBurger = event => {
+	const dropMenu = event.currentTarget.nextElementSibling;
+
+  dropMenu.style.display !== 'block' ?
     burger.className = 'burger burger_active' :
     burger.className = 'burger';
 
-  toggleDropdownMenu();
+  toggleDropMenu(dropMenu);
 };
 
-const toggleDropdownMenu = () => {
-	navTop.style.display !== 'block' ?
-		navTop.style.display = 'block' :
-	  navTop.style.display = 'none';
+const toggleDropMenu = dropMenu => {
+	dropMenu.style.display !== 'block' ?
+		dropMenu.style.display = 'block' :
+	  dropMenu.style.display = 'none';
 };
 
+window.addEventListener('load', toggleBurgerTabIndex);
 window.addEventListener('resize', toggleBurgerTabIndex);
 burger.addEventListener('keydown', toggleBurgerOnKeyDown);
 burger.addEventListener('click', toggleBurger);
