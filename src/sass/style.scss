@@ -267,7 +267,7 @@ body {
       }
     }
 
-    .freecodecamp-portfolio {
+    .project.freecodecamp-portfolio {
       height: 28.666em;
 
       @include respond-to('max-width: 1024px') {
@@ -275,7 +275,7 @@ body {
       }
     }
 
-    .krasnopolie-library {
+    .project.krasnopolie-library {
       height: 55.150375em;
 
       @include respond-to('max-width: 1024px') {
@@ -283,7 +283,7 @@ body {
       }
     }
 
-    .tian-yuan-zhao-portfolio {
+    .project.tian-yuan-zhao-portfolio {
       height: 24.75em;
 
       @include respond-to('max-width: 1024px') {
@@ -291,7 +291,7 @@ body {
       }
     }
 
-    .tatiana-urda-portfolio {
+    .project.tatiana-urda-portfolio {
       height: 32.86325em;
 
       @include respond-to('max-width: 1024px') {
@@ -310,6 +310,45 @@ body {
 
       @include respond-to('max-width: 1024px') {
         left: -25em;
+      }
+    }
+
+    .popup-window-back {
+      @include dimensions(100%, 100%);
+      background-color: rgba(0, 0, 0, 0.9);
+      display: none;
+      left: 0;
+      position: fixed;
+      top: 0;
+
+      .popup-window-front {
+        @include dimensions(30em, 50em);
+        background-color: white;
+        bottom: 0;
+        box-sizing: border-box;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        .close-icon {
+          @include dimensions(2em, 2.2em);
+          background-color: steelBlue;
+          border: none;
+          color: white;
+          font-size: 1.5em;
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+
+        .project-info {
+          @include dimensions(100%, 100%);
+          box-sizing: border-box;
+          display: none;
+          padding: 1em;
+        }
       }
     }
   }
