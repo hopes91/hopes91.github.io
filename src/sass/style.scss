@@ -175,11 +175,7 @@ body {
     margin: 0 auto 2em auto;
     min-height: 100vh;
     position: relative;
-    width: 60em;
-
-    @include respond-to('max-width: 1024px') {
-      width: 45em;
-    }
+    width: 45em;
 
     @include respond-to('max-width: 800px') {
       width: 30em;
@@ -193,11 +189,7 @@ body {
       display: inline-block;
       position: relative;
       vertical-align: top;
-      width: 20em;
-
-      @include respond-to('max-width: 1024px') {
-        width: 15em;
-      }
+      width: 15em;
     }
 
     .column.three {
@@ -255,7 +247,7 @@ body {
           border: none;
           bottom: 1em;
           cursor: pointer;
-          font-size: 1em;
+          font-size: 0.9em;
           padding-top: 1.2em;
           text-transform: uppercase;
           transition: all 0.7s ease-out;
@@ -268,35 +260,19 @@ body {
     }
 
     .project.freecodecamp-portfolio {
-      height: 28.666em;
-
-      @include respond-to('max-width: 1024px') {
-        height: 21.5em;
-      }
+      height: 21.5em;
     }
 
     .project.krasnopolie-library {
-      height: 55.150375em;
-
-      @include respond-to('max-width: 1024px') {
-        height: 41.3623125em;
-      }
+      height: 29.7744375em;
     }
 
     .project.tian-yuan-zhao-portfolio {
-      height: 24.75em;
-
-      @include respond-to('max-width: 1024px') {
-        height: 18.5625em;
-      }
+      height: 18.5625em;
     }
 
     .project.tatiana-urda-portfolio {
-      height: 32.86325em;
-
-      @include respond-to('max-width: 1024px') {
-        height: 24.6474375em;
-      }
+      height: 24.6474375em;
     }
 
     .project-tile_shown {
@@ -305,12 +281,8 @@ body {
     }
 
     .project-tile_hidden {
-      left: -30em;
+      left: -25em;
       transition: left 1s;
-
-      @include respond-to('max-width: 1024px') {
-        left: -25em;
-      }
     }
 
     .popup-window-back {
