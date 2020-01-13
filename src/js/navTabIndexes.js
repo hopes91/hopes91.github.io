@@ -22,4 +22,6 @@ const navigateMenu = event => {
   }
 };
 
-window.addEventListener('keydown', navigateMenu);
+if (nav) {
+  window.addEventListener('keydown', navigateMenu);
+}

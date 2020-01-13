@@ -33,7 +33,9 @@ const toggleDropMenu = dropMenu => {
 	  dropMenu.style.display = 'none';
 };
 
-window.addEventListener('load', toggleBurgerTabIndex);
-window.addEventListener('resize', toggleBurgerTabIndex);
-burger.addEventListener('keydown', toggleBurgerOnKeyDown);
-burger.addEventListener('click', toggleBurger);
+if (burger) {
+	window.addEventListener('load', toggleBurgerTabIndex);
+	window.addEventListener('resize', toggleBurgerTabIndex);
+	burger.addEventListener('keydown', toggleBurgerOnKeyDown);
+	burger.addEventListener('click', toggleBurger);
+}
