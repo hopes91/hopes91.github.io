@@ -322,6 +322,30 @@ body {
         width: 95%;
       }
 
+      .project-info-images {
+        width: 100%;
+
+        .project-info-image {
+          border: 1px solid black;
+          margin: 0 0 1em 0;
+          width: 100%;
+        }
+
+        .mobile-view {
+          border: 1px solid black;
+          height: 43em;
+          max-width: 30em;
+          margin: 0 auto 1em auto;
+          overflow-y: scroll;
+
+          .project-info-image {
+            border: none;
+            margin: 0;
+            width: 100%;
+          }
+        }
+      }
+
       .project-info-name {
         @include dimensions(9em, 30em);
         background-color: steelBlue;
@@ -351,28 +375,21 @@ body {
           }
           margin: 0;
         }
-      }
 
-      .project-info-images {
-        width: 100%;
-
-        .project-info-image {
-          border: 1px solid black;
-          margin: 0 0 1em 0;
+        .links {
+          bottom: 1em;
+          box-sizing: border-box;
+          left: 0;
+          padding: 0 1em;
+          position: absolute;
           width: 100%;
-        }
 
-        .mobile-view {
-          border: 1px solid black;
-          height: 43em;
-          max-width: 30em;
-          margin: 0 auto 1em auto;
-          overflow-y: scroll;
+          a {
+            text-transform: uppercase;
 
-          .project-info-image {
-            border: none;
-            margin: 0;
-            width: 100%;
+            &:last-child {
+              float: right;
+            }
           }
         }
       }
