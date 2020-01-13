@@ -222,13 +222,12 @@ body {
         .project-tile {
           @include dimensions(100%, 100%);
           background-color: rgba(0, 0, 0, 0.9);
-          box-sizing: border-box;
           position: absolute;
           top: 0;
           z-index: 1;
 
           .project-tile-name,
-          .project-tile-button {
+          .project-tile-link {
             color: white;
             left: 0;
             padding: 1em;
@@ -245,13 +244,12 @@ body {
             top: 0;
           }
 
-          .project-tile-button {
+          .project-tile-link {
             background: linear-gradient(to right, rgb(70, 130, 180), rgb(0, 0, 139));
             background-size: 300% 300%;
             border: none;
             bottom: 1em;
-            cursor: pointer;
-            font-size: 0.9em;
+            box-sizing: border-box;
             padding-top: 1.2em;
             text-transform: uppercase;
             transition: all 0.7s ease-out;
