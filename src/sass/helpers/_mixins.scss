@@ -9,16 +9,13 @@
 }
 
 @mixin respond-to($media) {
-  // @if $media == 'max-width: 1366px' {
-  //   @media (max-width: 1366px) { @content; }
+  // @if $media == 'max-width: 1300px' {
+  //   @media (max-width: 1300px) { @content; }
   // }
-  // @else if $media == 'max-width: 1200px' {
-  //   @media (max-width: 1200px) { @content; }
+  // @if $media == 'max-width: 1024px' {
+  //   @media (max-width: 1024px) { @content; }
   // }
-  @if $media == 'max-width: 1024px' {
-    @media (max-width: 1024px) { @content; }
-  }
-  @else if $media == 'max-width: 800px' {
+  @if $media == 'max-width: 800px' {
     @media (max-width: 800px) { @content; }
   }
   @else if $media == 'max-width: 640px' {

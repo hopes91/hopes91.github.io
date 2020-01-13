@@ -32,9 +32,8 @@ body {
     border: none;
   }
 
-  header, footer {
+  header, footer.index-page {
     @include dimensions(10em, 100%);
-    position: relative;
   }
 
   .my-name-link {
@@ -69,6 +68,8 @@ body {
   }
 
   header {
+    position: relative;
+
     .my-name-link {
       margin: 0.5em;
       transition: all 1s;
@@ -172,162 +173,209 @@ body {
   }
 
   main {
-    margin: 0 auto 2em auto;
     min-height: 100vh;
     position: relative;
-    width: 45em;
 
-    @include respond-to('max-width: 800px') {
-      width: 30em;
-    }
-
-    @include respond-to('max-width: 640px') {
-      width: 15em;
-    }
-
-    .column {
-      display: inline-block;
+    #portfolio {
+      margin: 0 auto 2em auto;
+      max-width: 45em;
       position: relative;
-      vertical-align: top;
-      width: 15em;
-    }
 
-    .column.three {
       @include respond-to('max-width: 800px') {
-        position: absolute;
-        right: 0;
-        top: 18.5625em;
+        width: 30em;
       }
 
       @include respond-to('max-width: 640px') {
-        position: static;
-      }
-    }
-
-    .project {
-      overflow: hidden;
-      position: relative;
-      text-align: center;
-      width: 100%;
-
-      .project-thumb {
-        cursor: pointer;
-        width: 100%;
+        width: 15em;
       }
 
-      .project-tile {
-        @include dimensions(100%, 100%);
-        background-color: rgba(0, 0, 0, 0.9);
-        box-sizing: border-box;
-        position: absolute;
-        top: 0;
-        z-index: 1;
+      .column {
+        display: inline-block;
+        position: relative;
+        vertical-align: top;
+        width: 15em;
+      }
 
-        .project-tile-name,
-        .project-tile-button {
-          color: white;
-          left: 0;
-          padding: 1em;
+      .column.three {
+        @include respond-to('max-width: 800px') {
           position: absolute;
+          right: 0;
+          top: 18.5625em;
+        }
+
+        @include respond-to('max-width: 640px') {
+          position: static;
+        }
+      }
+
+      .project {
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        width: 100%;
+
+        .project-thumb {
+          cursor: pointer;
           width: 100%;
         }
 
-        .project-tile-name {
+        .project-tile {
+          @include dimensions(100%, 100%);
+          background-color: rgba(0, 0, 0, 0.9);
           box-sizing: border-box;
-          font: {
-            size: 1.1em;
-            weight: normal;
-          }
+          position: absolute;
           top: 0;
-        }
+          z-index: 1;
 
-        .project-tile-button {
-          background: linear-gradient(to right, rgb(70, 130, 180), rgb(0, 0, 139));
-          background-size: 300% 300%;
-          border: none;
-          bottom: 1em;
-          cursor: pointer;
-          font-size: 0.9em;
-          padding-top: 1.2em;
-          text-transform: uppercase;
-          transition: all 0.7s ease-out;
+          .project-tile-name,
+          .project-tile-button {
+            color: white;
+            left: 0;
+            padding: 1em;
+            position: absolute;
+            width: 100%;
+          }
 
-          &:hover {
-          	background-position: 100% 50%;
+          .project-tile-name {
+            box-sizing: border-box;
+            font: {
+              size: 1.1em;
+              weight: normal;
+            }
+            top: 0;
+          }
+
+          .project-tile-button {
+            background: linear-gradient(to right, rgb(70, 130, 180), rgb(0, 0, 139));
+            background-size: 300% 300%;
+            border: none;
+            bottom: 1em;
+            cursor: pointer;
+            font-size: 0.9em;
+            padding-top: 1.2em;
+            text-transform: uppercase;
+            transition: all 0.7s ease-out;
+
+            &:hover {
+            	background-position: 100% 50%;
+            }
           }
         }
       }
-    }
 
-    .project.freecodecamp-portfolio {
-      height: 21.5em;
-    }
+      .project.freecodecamp-portfolio {
+        height: 21.5em;
+      }
 
-    .project.krasnopolie-library {
-      height: 29.7744375em;
-    }
+      .project.krasnopolie-library {
+        height: 29.7744375em;
+      }
 
-    .project.tian-yuan-zhao-portfolio {
-      height: 18.5625em;
-    }
+      .project.tian-yuan-zhao-portfolio {
+        height: 18.5625em;
+      }
 
-    .project.tatiana-urda-portfolio {
-      height: 24.6474375em;
-    }
+      .project.tatiana-urda-portfolio {
+        height: 24.6474375em;
+      }
 
-    .project-tile_shown {
-      left: 0;
-      transition: left 1s;
-    }
-
-    .project-tile_hidden {
-      left: -25em;
-      transition: left 1s;
-    }
-
-    .popup-window-back {
-      @include dimensions(100%, 100%);
-      background-color: rgba(0, 0, 0, 0.9);
-      display: none;
-      left: 0;
-      position: fixed;
-      top: 0;
-      z-index: 5;
-
-      .popup-window-front {
-        @include dimensions(30em, 50em);
-        background-color: white;
-        bottom: 0;
-        box-sizing: border-box;
+      .project-tile_shown {
         left: 0;
-        margin: auto;
+        transition: left 1s;
+      }
+
+      .project-tile_hidden {
+        left: -25em;
+        transition: left 1s;
+      }
+    }
+
+    // .close-icon {
+    //   @include dimensions(2em, 2.2em);
+    //   background: linear-gradient(to right, rgb(70, 130, 180), rgb(0, 0, 139));
+    //   background-size: 300% 300%;
+    //   border: none;
+    //   color: white;
+    //   cursor: pointer;
+    //   font-size: 1.5em;
+    //   position: absolute;
+    //   right: 0;
+    //   top: 0;
+    //   transition: all 0.7s ease-out;
+    //
+    //   &:hover {
+    //   	background-position: 100% 50%;
+    //   }
+    // }
+
+    .project-info {
+      box-sizing: border-box;
+      max-width: 70em;
+      margin: 0 auto;
+      padding: 0 1em 11em 1em;
+      position: relative;
+      width: 80%;
+
+      @include respond-to('max-width: 800px') {
+        padding-bottom: 2em;
+      }
+
+      @include respond-to('max-width: 640px') {
+        width: 95%;
+      }
+
+      .project-info-name {
+        @include dimensions(9em, 30em);
+        background-color: steelBlue;
+        border: 1px solid black;
+        bottom: 2em;
+        box-sizing: border-box;
+        display: inline-block;
+        padding: 1em;
         position: absolute;
         right: 0;
-        top: 0;
 
-        .close-icon {
-          @include dimensions(2em, 2.2em);
-          background: linear-gradient(to right, rgb(70, 130, 180), rgb(0, 0, 139));
-          background-size: 300% 300%;
-          border: none;
-          color: white;
-          cursor: pointer;
-          font-size: 1.5em;
-          position: absolute;
-          right: 0;
+        @include respond-to('max-width: 800px') {
+          position: relative;
           top: 0;
-          transition: all 0.7s ease-out;
-
-          &:hover {
-          	background-position: 100% 50%;
-          }
+          width: 100%;
         }
 
-        .project-info {
-          @include dimensions(100%, 100%);
-          box-sizing: border-box;
-          display: none;
-          padding: 1em 1.5em;
+        h2 {
+          font-size: 1.1em;
+          margin: 0 0 0.5em 0;
+        }
+
+        h3 {
+          font: {
+            size: 1em;
+            weight: normal;
+          }
+          margin: 0;
+        }
+      }
+
+      .project-info-images {
+        width: 100%;
+
+        .project-info-image {
+          border: 1px solid black;
+          margin: 0 0 1em 0;
+          width: 100%;
+        }
+
+        .mobile-view {
+          border: 1px solid black;
+          height: 43em;
+          max-width: 30em;
+          margin: 0 auto 1em auto;
+          overflow-y: scroll;
+
+          .project-info-image {
+            border: none;
+            margin: 0;
+            width: 100%;
+          }
         }
       }
     }
@@ -336,10 +384,12 @@ body {
   footer {
     background-color: black;
     color: white;
+    height: 5.5em;
+    position: relative;
 
     @include respond-to('max-width: 640px') {
-      height: 13em;
       text-align: center;
+      height: 9.5em;
     }
 
     .my-name-link {
@@ -360,9 +410,9 @@ body {
 
     .contact-icons {
       display: inline-block;
-      left: 1.5em;
       position: absolute;
-      top: 6em;
+      right: 1.2em;
+      top: 1.5em;
 
       @include respond-to('max-width: 640px') {
         left: 0;
@@ -396,6 +446,22 @@ body {
 
       .nav-anchor {
         color: white;
+      }
+    }
+  }
+
+  footer.index-page {
+    .contact-icons {
+      left: 1.5em;
+      top: 6em;
+    }
+
+    @include respond-to('max-width: 640px') {
+      height: 13em;
+
+      .contact-icons {
+        left: 0;
+        top: 0.5em;
       }
     }
   }
