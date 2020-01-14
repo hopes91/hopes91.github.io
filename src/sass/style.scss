@@ -340,7 +340,6 @@ body {
 
         .mobile-view {
           border: 1px solid black;
-          height: 43em;
           max-width: 30em;
           margin: 0 auto 1em auto;
           overflow-y: scroll;
@@ -399,6 +398,30 @@ body {
             }
           }
         }
+      }
+    }
+
+    .freecodecamp-portfolio {
+      .mobile-view {
+        height: 43em;
+      }
+    }
+
+    .tian-yuan-zhao-portfolio {
+      .mobile-view {
+        height: 43em;
+      }
+    }
+
+    .tatiana-urda-portfolio {
+      .mobile-view {
+        height: 41.8em;
+      }
+    }
+
+    .krasnopolie-library {
+      .mobile-view {
+        height: 40em;
       }
     }
 
