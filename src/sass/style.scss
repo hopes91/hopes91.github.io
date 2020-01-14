@@ -54,7 +54,7 @@ body {
     right: 1.5em;
 
     .nav-anchor {
-      @include indentations(0, 1em 0.7em);
+      @include indentations(0 0.1em, 1em 0.7em);
       font-size: 1.1em;
       transition: all 1s;
 
