@@ -1,7 +1,7 @@
 const showHideArrowUp = () => {
 	const arrowUp = document.querySelector('.arrow-up');
 
-	if (window.pageYOffset > window.innerHeight / 3) {
+	if (window.pageYOffset > window.innerHeight / 4) {
 		arrowUp.style.display = 'inline-block';
     arrowUp.setAttribute('tabindex', '0');
 	}
