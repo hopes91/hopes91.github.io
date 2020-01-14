@@ -344,6 +344,10 @@ body {
           margin: 0 auto 1em auto;
           overflow-y: scroll;
 
+          @include respond-to('max-width: 640px') {
+            height: 37em;
+          }
+
           .project-info-image {
             border: none;
             margin: 0;
