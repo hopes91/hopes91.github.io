@@ -66,6 +66,10 @@ body {
   }
 
   header {
+    @include respond-to('max-width: 640px') {
+      height: 8em;
+    }
+
     .my-name-link {
       top: 1em;
       z-index: 2;
@@ -181,7 +185,7 @@ body {
       top: 1.4em;
 
       @include respond-to('max-width: 640px') {
-        top: 4.5em;
+        top: 4.2em;
         width: 100%;
       }
 
