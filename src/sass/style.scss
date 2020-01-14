@@ -32,8 +32,9 @@ body {
     border: none;
   }
 
-  header, footer.index-page {
+  header, footer {
     @include dimensions(10em, 100%);
+    position: relative;
   }
 
   .my-name-link {
@@ -67,9 +68,19 @@ body {
     }
   }
 
-  header {
-    position: relative;
+  .arrow {
+    @include dimensions(4em, 4em);
 
+    @include respond-to('max-width: 800px') {
+      @include dimensions(3.5em, 3.5em);
+    }
+
+    img {
+      @include dimensions(100%, 100%);
+    }
+  }
+
+  header {
     .my-name-link {
       margin: 0.5em;
       transition: all 1s;
@@ -175,11 +186,11 @@ body {
       @include dimensions(5em, 8.5em);
       position: absolute;
       right: 0;
-      top: 0.3em;
+      top: 0.8em;
 
       @include respond-to('max-width: 800px') {
         @include dimensions(4em, 7.5em);
-        top: 0.6em;
+        top: 1.1em;
       }
 
       @include respond-to('max-width: 640px') {
@@ -188,17 +199,7 @@ body {
       }
 
       .arrow {
-        @include dimensions(4em, 4em);
         position: absolute;
-        top: 0.5em;
-
-        @include respond-to('max-width: 800px') {
-          @include dimensions(3.5em, 3.5em);
-        }
-
-        img {
-          @include dimensions(100%, 100%);
-        }
       }
 
       .arrow-right {
@@ -411,17 +412,24 @@ body {
         }
       }
     }
+
+    .arrow-up {
+      background-color: rgba(255, 255, 255, 0.7);
+      bottom: 1em;
+      display: none;
+      position: fixed;
+      right: 1em;
+      z-index: 1;
+    }
   }
 
   footer {
     background-color: black;
     color: white;
-    height: 5.5em;
-    position: relative;
 
     @include respond-to('max-width: 640px') {
+      height: 13em;
       text-align: center;
-      height: 9.5em;
     }
 
     .my-name-link {
@@ -442,9 +450,9 @@ body {
 
     .contact-icons {
       display: inline-block;
+      left: 1.5em;
       position: absolute;
-      right: 1.2em;
-      top: 1.5em;
+      top: 6em;
 
       @include respond-to('max-width: 640px') {
         left: 0;
@@ -478,22 +486,6 @@ body {
 
       .nav-anchor {
         color: white;
-      }
-    }
-  }
-
-  footer.index-page {
-    .contact-icons {
-      left: 1.5em;
-      top: 6em;
-    }
-
-    @include respond-to('max-width: 640px') {
-      height: 13em;
-
-      .contact-icons {
-        left: 0;
-        top: 0.5em;
       }
     }
   }
