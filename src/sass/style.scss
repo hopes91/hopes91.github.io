@@ -75,6 +75,10 @@ body {
         @include onLinkHover(darkBlue, 0.3em 0.3em steelBlue, white, all 1s);
       }
 
+      @include respond-to('max-width: 640px') {
+        left: 0.8em;
+      }
+
       .my-name {
         @include respond-to('max-width: 800px') {
           font-size: 1.5em;
