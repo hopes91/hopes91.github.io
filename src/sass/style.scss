@@ -326,7 +326,7 @@ body {
       }
 
       @include respond-to('max-width: 640px') {
-        width: 95%;
+        width: 100%;
       }
 
       .project-info-images {
