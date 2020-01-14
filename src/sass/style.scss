@@ -68,18 +68,6 @@ body {
     }
   }
 
-  .arrow {
-    @include dimensions(4em, 4em);
-
-    @include respond-to('max-width: 800px') {
-      @include dimensions(3.5em, 3.5em);
-    }
-
-    img {
-      @include dimensions(100%, 100%);
-    }
-  }
-
   header {
     .my-name-link {
       margin: 0.5em;
@@ -182,24 +170,25 @@ body {
       }
     }
 
-    .arrows {
-      @include dimensions(5em, 8.5em);
+    .switch-arrows {
+      @include dimensions(3.5em, 8em);
       position: absolute;
       right: 0;
-      top: 0.8em;
-
-      @include respond-to('max-width: 800px') {
-        @include dimensions(4em, 7.5em);
-        top: 1.1em;
-      }
+      top: 1em;
 
       @include respond-to('max-width: 640px') {
-        top: 5em;
+        top: 4.5em;
         width: 100%;
       }
 
-      .arrow {
+      .arrow-left,
+      .arrow-right {
+        @include dimensions(3.5em, 3.5em);
         position: absolute;
+
+        img {
+          @include dimensions(100%, 100%);
+        }
       }
 
       .arrow-right {
@@ -414,12 +403,17 @@ body {
     }
 
     .arrow-up {
+      @include dimensions(3.5em, 3.5em);
       background-color: rgba(255, 255, 255, 0.7);
       bottom: 1em;
       display: none;
       position: fixed;
       right: 1em;
       z-index: 1;
+
+      img {
+        @include dimensions(100%, 100%);
+      }
     }
   }
 
