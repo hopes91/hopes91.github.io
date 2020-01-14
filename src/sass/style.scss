@@ -141,26 +141,29 @@ body {
 
       .drop-menu {
         @include respond-to('max-width: 640px') {
-          @include dimensions(100vh, 50%);
           background-color: white;
-          border-left: 0.1em solid black;
+          border-bottom: 0.1em solid black;
           display: none;
           padding-top: 5em;
           position: fixed;
           right: 0;
           top: 0;
+          width: 100%;
           z-index: 2;
         }
 
-        @include respond-to('max-width: 480px') {
-          width: 90%;
-        }
-
         .nav-anchor {
-          @include respond-to('max-width: 640px') {
-            box-sizing: border-box;
-            padding: 1em 1.3em;
-            width: 100%;
+          border-top: $blackThinBorder;
+          box-sizing: border-box;
+          padding: 1em 1.3em;
+          text-align: center;
+          width: 100%;
+
+          &:hover,
+          &:active {
+            background-color: darkBlue;
+            color: white;
+            transition: all 1s;
           }
         }
       }
@@ -341,13 +344,13 @@ body {
         width: 100%;
 
         .project-info-image {
-          border: 1px solid black;
+          border: $blackThinBorder;
           margin: 0 0 1em 0;
           width: 100%;
         }
 
         .mobile-view {
-          border: 1px solid black;
+          border: $blackThinBorder;
           max-width: 30em;
           margin: 0 auto 1em auto;
           overflow-y: scroll;
