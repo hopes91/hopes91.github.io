@@ -499,7 +499,7 @@ body {
       @include respond-to('max-width: 640px') {
         left: 0;
         position: relative;
-        top: 0.5em;
+        top: 0.7em;
         width: 100%;
       }
 
@@ -525,6 +525,7 @@ body {
       @include respond-to('max-width: 640px') {
         left: 0;
         position: relative;
+        top: 0.9em;
       }
     }
   }
