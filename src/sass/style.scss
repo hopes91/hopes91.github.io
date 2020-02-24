@@ -38,7 +38,6 @@ body {
 
   .my-name-link {
     left: 1.3em;
-    position: relative;
     transition: all 0.7s;
 
     &:hover,
@@ -53,7 +52,6 @@ body {
 
   .nav {
     position: absolute;
-    right: 1.5em;
 
     .nav-anchor {
       @include indentations(0 0.1em, 1em 0.7em);
@@ -68,6 +66,8 @@ body {
   }
 
   header {
+    position: relative;
+
     a {
       color: black;
     }
@@ -77,6 +77,7 @@ body {
     }
 
     .my-name-link {
+      position: absolute;
       top: 1em;
       z-index: 2;
 
@@ -171,6 +172,7 @@ body {
     }
 
     .nav-top {
+      right: 6em;
       top: 1.6em;
 
       @include respond-to('max-width: 800px') {
@@ -205,6 +207,46 @@ body {
 
       .arrow-right {
         right: 0;
+      }
+    }
+
+    .language {
+      span {
+        display: inline-block;
+        padding: 1em 1.2em;
+        transition: all 1s;
+
+        &:hover,
+        &:active {
+          @include onLinkHover(darkBlue, 0.2em 0.2em steelBlue, white, all 0.7s);
+        }
+      }
+    }
+
+    .language-main {
+      display: inline-block;
+      position: absolute;
+      right: 1.25em;
+      top: 1.75em;
+
+      @include respond-to('max-width: 800px') {
+        top: 1.15em;
+      }
+
+      @include respond-to('max-width: 640px') {
+        display: none;
+      }
+    }
+
+    .language-drop {
+      display: none;
+      z-index: 3;
+
+      @include respond-to('max-width: 640px') {
+        @include dimensions(3.2em, 3.35em);
+        left: 1.25em;
+        position: fixed;
+        top: 0.95em;
       }
     }
   }
@@ -477,6 +519,7 @@ body {
 
     .my-name-link {
       margin: 0.5em 0;
+      position: relative;
       top: 0.7em;
 
       @include respond-to('max-width: 640px') {
@@ -521,6 +564,7 @@ body {
     }
 
     .nav-bottom {
+      right: 1.5em;
       top: 0.7em;
 
       @include respond-to('max-width: 640px') {

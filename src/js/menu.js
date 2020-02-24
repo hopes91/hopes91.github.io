@@ -31,6 +31,12 @@ const toggleDropMenu = dropMenu => {
 	dropMenu.style.display !== 'block' ?
 		dropMenu.style.display = 'block' :
 	  dropMenu.style.display = 'none';
+
+	const languageLink = document.querySelector('.language');
+
+	dropMenu.style.display === 'block' ?
+		languageLink.style.display = 'inline-block' :
+	  languageLink.style.display = 'none';
 };
 
 if (burger) {
