@@ -28,7 +28,7 @@ module.exports = {
     ]
   },
   output: {
-    path: path.resolve(__dirname, 'prod'),
+    path: path.resolve(__dirname, 'public'),
     filename: 'script.js'
   }
 };
