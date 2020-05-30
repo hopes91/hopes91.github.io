@@ -492,6 +492,12 @@ body {
       }
     }
 
+    .lvm-consulting {
+      .mobile-view {
+        height: 42.9em;
+      }
+    }
+
     .arrow-up {
       @include dimensions(3em, 3em);
       bottom: 0.7em;
