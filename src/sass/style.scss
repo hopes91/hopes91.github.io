@@ -50,21 +50,6 @@ body {
     }
   }
 
-  .nav {
-    position: absolute;
-
-    .nav-anchor {
-      @include indentations(0 0.1em, 1em 0.7em);
-      font-size: 1.1em;
-      transition: all 0.7s;
-
-      &:hover,
-      &:active {
-        @include onLinkHover(darkBlue, 0.2em 0.2em steelBlue, white, all 0.7s);
-      }
-    }
-  }
-
   header {
     position: relative;
 
@@ -96,94 +81,6 @@ body {
       }
     }
 
-    .drop {
-      display: none;
-      left: 0;
-      position: absolute;
-      top: 0;
-
-      @include respond-to('max-width: 640px') {
-        @include dimensions(5em, 100%);
-        display: block;
-      }
-
-      .burger {
-        @include dimensions(1em, 2em);
-        background-color: steelBlue;
-        cursor: pointer;
-        display: none;
-        position: fixed;
-        right: 1em;
-        top: 2em;
-        transition: transform 0.7s;
-        z-index: 3;
-
-        @include respond-to('max-width: 640px') {
-          display: inline-block;
-        }
-
-        span {
-          @include dimensions(2px, 100%);
-          background-color: black;
-          position: absolute;
-        }
-
-        span:first-child {
-          top: 0;
-        }
-
-        span:last-child {
-          bottom: 0;
-        }
-      }
-
-      .burger_active {
-        transform: rotate(90deg);
-      }
-
-      .drop-menu {
-        @include respond-to('max-width: 640px') {
-          background-color: white;
-          border-bottom: 0.1em solid black;
-          display: none;
-          padding-top: 5em;
-          position: fixed;
-          right: 0;
-          top: 0;
-          width: 100%;
-          z-index: 2;
-        }
-
-        .nav-anchor {
-          border-top: $blackThinBorder;
-          box-sizing: border-box;
-          padding: 1em 1.3em;
-          text-align: center;
-          width: 100%;
-
-          &:hover,
-          &:active {
-            background-color: darkBlue;
-            color: white;
-            transition: all 1s;
-          }
-        }
-      }
-    }
-
-    .nav-top {
-      right: 6em;
-      top: 1.6em;
-
-      @include respond-to('max-width: 800px') {
-        top: 1em;
-      }
-
-      @include respond-to('max-width: 640px') {
-        display: none;
-      }
-    }
-
     .switch-arrows {
       @include dimensions(3.5em, 8em);
       position: absolute;
@@ -211,19 +108,6 @@ body {
     }
 
     .language {
-      span {
-        display: inline-block;
-        padding: 1em 1.2em;
-        transition: all 1s;
-
-        &:hover,
-        &:active {
-          @include onLinkHover(darkBlue, 0.2em 0.2em steelBlue, white, all 0.7s);
-        }
-      }
-    }
-
-    .language-main {
       display: inline-block;
       position: absolute;
       right: 1.25em;
@@ -236,17 +120,16 @@ body {
       @include respond-to('max-width: 640px') {
         display: none;
       }
-    }
 
-    .language-drop {
-      display: none;
-      z-index: 3;
+      span {
+        display: inline-block;
+        padding: 1em 1.2em;
+        transition: all 1s;
 
-      @include respond-to('max-width: 640px') {
-        @include dimensions(3.2em, 3.35em);
-        left: 1.25em;
-        position: fixed;
-        top: 0.95em;
+        &:hover,
+        &:active {
+          @include onLinkHover(darkBlue, 0.2em 0.2em steelBlue, white, all 0.7s);
+        }
       }
     }
   }
@@ -571,17 +454,6 @@ body {
         img {
           width: 100%;
         }
-      }
-    }
-
-    .nav-bottom {
-      right: 1.5em;
-      top: 0.7em;
-
-      @include respond-to('max-width: 640px') {
-        left: 0;
-        position: relative;
-        top: 0.9em;
       }
     }
   }

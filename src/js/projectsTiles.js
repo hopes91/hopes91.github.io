@@ -1,3 +1,9 @@
+// start for IE
+const forEach = require('./forIE/forEach.js');
+
+forEach();
+// end for IE
+
 const projects = document.querySelectorAll('.project');
 
 const toggleProjectTileOnKeyDown = event => {
