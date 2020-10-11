@@ -93,28 +93,13 @@ body {
       	stroke-dashoffset: 900;
       	stroke-width: 5;
       }
-    }
-  }
 
-  main {
-    min-height: 100vh;
-    position: relative;
-
-    #portfolio {
-      margin: 0 auto 2em auto;
-      max-width: 45em;
-      position: relative;
-
-      @include respond-to('max-width: 800px') {
-        width: 30em;
       .circle1 {
         @include dimensions(14em, 14em);
       	bottom: 0;
       	left: 2em;
       }
 
-      @include respond-to('max-width: 640px') {
-        width: 15em;
       #circle1 {
       	fill: none;
       	animation: draw 5.5s forwards linear;
@@ -124,11 +109,6 @@ body {
       	stroke-width: 6;
       }
 
-      .column {
-        display: inline-block;
-        position: relative;
-        vertical-align: top;
-        width: 15em;
       .rectangle {
         @include dimensions(24em, 17.2em);
       	bottom: 0;
@@ -138,16 +118,6 @@ body {
       	top: 0;
       }
 
-      .column.three {
-        @include respond-to('max-width: 800px') {
-          position: absolute;
-          right: 0;
-          top: 18.5625em;
-        }
-
-        @include respond-to('max-width: 640px') {
-          position: static;
-        }
       #rectangle {
       	animation: draw 5s forwards linear;
       	fill: none;
@@ -157,67 +127,12 @@ body {
       	stroke-width: 5;
       }
 
-      .project {
-        overflow: hidden;
-        position: relative;
-        text-align: center;
-        width: 100%;
-
-        .project-thumb {
-          cursor: pointer;
-          width: 100%;
-        }
-
-        .project-tile {
-          @include dimensions(100%, 100%);
-          background-color: rgba(0, 0, 0, 0.9);
-          position: absolute;
-          top: 0;
-          z-index: 1;
-
-          .project-tile-name,
-          .project-tile-link {
-            color: white;
-            left: 0;
-            padding: 1em;
-            position: absolute;
-            width: 100%;
-          }
-
-          .project-tile-name {
-            box-sizing: border-box;
-            font: {
-              size: 1.1em;
-              weight: normal;
-            }
-            line-height: 1.3;
-            top: 0;
-          }
-
-          .project-tile-link {
-            background: linear-gradient(to right, rgb(70, 130, 180), rgb(0, 0, 139));
-            background-size: 300% 300%;
-            border: none;
-            bottom: 1em;
-            box-sizing: border-box;
-            font-size: 0.9em;
-            padding-top: 1.2em;
-            text-transform: uppercase;
-            transition: all 0.7s ease-out;
-
-            &:hover {
-            	background-position: 100% 50%;
-            }
-          }
-        }
       .circle2 {
         @include dimensions(10em, 10em);
       	right: 1em;
       	top: 1.5em;
       }
 
-      .project.krasnopolie-library {
-        height: 19.3115em;
       #circle2 {
       	animation: draw 7s forwards linear;
       	fill: none;
@@ -227,25 +142,18 @@ body {
       	stroke-width: 6;
       }
 
-      .project.lvm-consulting {
-        height: 40.359375em;
       .line1 {
         @include dimensions(16em, 16em);
       	bottom: 2em;
       	right: 2em;
       }
 
-      .project.tatiana-urda-portfolio {
-        height: 24.6474375em;
       .line2 {
         @include dimensions(13.5em, 13.5em);
       	bottom: 0;
       	right: 7em;
       }
 
-      .project-tile_shown {
-        left: 0;
-        transition: left 1s;
       #line1, #line2 {
       	animation: draw 8s forwards linear;
       	stroke: DeepSkyBlue;
@@ -254,9 +162,6 @@ body {
       	stroke-width: 6;
       }
 
-      .project-tile_hidden {
-        left: -25em;
-        transition: left 1s;
       @keyframes draw {
       	100% {
       		stroke-dashoffset: 0;
@@ -265,120 +170,114 @@ body {
     }
   }
 
-    .project-info {
-      box-sizing: border-box;
-      max-width: 70em;
-      margin: 0 auto;
-      padding: 0 1em 11em 1em;
+  main {
+  	margin: 0 auto;
+  	max-width: 80em;
+
+    .nav-wrapper {
+    	position: relative;
+      top: 2em;
+    	width: 100%;
+
+      nav {
+      	margin: 0 auto;
+      	width: 42em;
+      	z-index: 2;
+
+        a {
+        	background-color: rgba(255, 255, 255, 0.8);
+        	color: black;
+        	display: inline-block;
+        	font-weight: bold;
+        	letter-spacing: 1px;
+        	padding: 0.5em 0;
+        	text-transform: uppercase;
+        	transition: letter-spacing 1.3s;
+        }
+
+        a:last-child {
+        	float: right;
+        }
+
+        a:hover {
+        	color: SteelBlue;
+        	letter-spacing: 2px;
+        }
+      }
+
+    .projects {
+    	display: flex;
+    	flex-flow: row wrap;
+    	justify-content: space-around;
       position: relative;
-      width: 80%;
+      top: 4em;
 
-      @include respond-to('max-width: 800px') {
-        padding-bottom: 2em;
-      }
+      .project {
+      	margin-bottom: 2em;
+      	position: relative;
+      	width: 30%;
 
-      @include respond-to('max-width: 640px') {
-        width: 100%;
-      }
-
-      .project-info-images {
-        width: 100%;
-
-        .project-info-image {
-          border: $blackThinBorder;
-          margin: 0 0 1em 0;
-          width: 100%;
+        .project-image {
+          @include indentations(0 auto, 0.5em 0);
+        	display: block;
+        	width: 18em;
         }
 
-        .mobile-view {
-          border: $blackThinBorder;
-          max-width: 30em;
-          margin: 0 auto 1em auto;
-          overflow-y: scroll;
+        .tile {
+          @include dimensions(100%, 100%);
+        	background-color: rgba(0, 0, 0, 0.85);
+        	border: 0.2em solid SteelBlue;
+        	bottom: 0;
+        	box-shadow: 0 0 0 0.3em rgba(0, 0, 0, 0.85);
+        	box-sizing: border-box;
+        	display: none;
+        	left: 0;
+        	position: absolute;
+        	text-align: center;
 
-          @include respond-to('max-width: 640px') {
-            height: 37em;
+          &:before {
+          	content: '';
+          	display: inline-block;
+          	height: 100%;
+          	vertical-align: middle;
           }
 
-          .project-info-image {
-            border: none;
-            margin: 0;
-            width: 100%;
-          }
-        }
-      }
+          .tile-name {
+            @include dimensions(100%, 100%);
+            box-sizing: border-box;
+          	color: white;
+          	display: inline-block;
+          	font: {
+              size: 1em;
+              weight: 400;
+            }
+            position: relative;
+            padding: 2em 1em;
+          	vertical-align: middle;
 
-      .project-info-name {
-        @include dimensions(9em, 30em);
-        background-color: darkBlue;
-        bottom: 2em;
-        box-shadow: 0.3em 0.3em steelBlue;
-        box-sizing: border-box;
-        color: white;
-        display: inline-block;
-        padding: 1em;
-        position: absolute;
-        right: 0;
-
-        @include respond-to('max-width: 800px') {
-          position: relative;
-          top: 0;
-          width: 100%;
-        }
-
-        h2 {
-          font-size: 1em;
-          line-height: 1.3;
-          margin: 0 0 0.5em 0;
-        }
-
-        h3 {
-          font: {
-            size: 1em;
-            weight: normal;
-          }
-          margin: 0;
-        }
-
-        .links {
-          bottom: 1em;
-          box-sizing: border-box;
-          left: 0;
-          padding: 0 1em;
-          position: absolute;
-          width: 100%;
-
-          a {
-            color: white;
-            text-transform: uppercase;
-
-            &:hover {
-              font-weight: bold;
+            h3 {
+              margin: 0 0 1em 0;
             }
 
-            &:last-child {
-              float: right;
+            .tile-link-wrapper {
+              bottom: 2em;
+              left: 0;
+              position: absolute;
+              width: 100%;
+
+              .tile-link {
+                border-top: 1px solid white;
+                color: white;
+              	font-weight: normal;
+                padding-top: 0.6em;
+              }
             }
           }
         }
-      }
-    }
 
-    .tatiana-urda-portfolio {
-      .mobile-view {
-        height: 41.8em;
-      }
-    }
-
-    .krasnopolie-library {
-      .mobile-view {
-        height: 40em;
-      }
-    }
-
-    .lvm-consulting {
-      .mobile-view {
-        height: 42.9em;
+        &:hover .tile {
+        	display: block;
+        }
       }
     }
 
@@ -451,6 +350,7 @@ body {
         img {
           width: 100%;
         }
+      	@include dimensions(2.4em, 2.8em);
       }
     }
   }
