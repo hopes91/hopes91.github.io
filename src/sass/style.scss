@@ -31,18 +31,6 @@ body {
   	line-height: 1.4;
   }
 
-  .my-name-link {
-    left: 1.3em;
-    transition: all 0.7s;
-
-    &:hover,
-    &:active {
-      @include onLinkHover(darkBlue, 0.3em 0.3em steelBlue, white, all 0.7s);
-    }
-
-    .my-name {
-      margin: 0.5em;
-    }
   .container,
   header,
   main,
@@ -51,85 +39,59 @@ body {
   }
 
   header {
-    position: relative;
+  	height: 100vh;
 
-    a {
-      color: black;
-    }
+    .my-name {
+      @include indentations(0 auto, 0 1em);
+    	box-sizing: border-box;
+    	position: relative;
+    	text-align: center;
+    	top: 2em;
+    	width: 23em;
+    	z-index: 2;
 
-    @include respond-to('max-width: 640px') {
-      height: 8em;
-    }
+      a {
+      	background-color: rgba(255, 255, 255, 0.8);
+      	color: black;
+      	display: block;
 
-    .my-name-link {
-      position: absolute;
-      top: 1em;
-      z-index: 2;
-
-      @include respond-to('max-width: 640px') {
-        left: 0.8em;
-      }
-
-      .my-name {
-        @include respond-to('max-width: 800px') {
-          font-size: 1.5em;
-        }
-
-        @include respond-to('max-width: 640px') {
-          font-size: 1.3em;
-        }
-      }
-    }
-
-    .switch-arrows {
-      @include dimensions(3.5em, 8em);
-      position: absolute;
-      right: 0;
-      top: 1.4em;
-
-      @include respond-to('max-width: 640px') {
-        top: 4.2em;
-        width: 100%;
-      }
-
-      .arrow-left,
-      .arrow-right {
-        @include dimensions(3.5em, 3.5em);
-        position: absolute;
-
-        img {
-          @include dimensions(100%, 100%);
+        h1 {
+          @include indentations(0, 0.1em 0 0 0);
         }
       }
 
-      .arrow-right {
-        right: 0;
+      h2 {
+        font-weight: normal;
+        margin: 0.5em auto;
       }
     }
 
-    .language {
-      display: inline-block;
-      position: absolute;
-      right: 1.25em;
-      top: 1.75em;
+    .parallax-effect {
+      @include dimensions(30em, 50em);
+    	background-color: rgba(7, 32, 39, 0.1);
+    	bottom: 0;
+    	left: 0;
+    	margin: auto;
+    	// max-width: 50em;
+    	position: absolute;
+    	right: 0;
+    	top: 0;
 
-      @include respond-to('max-width: 800px') {
-        top: 1.15em;
+      .layer {
+      	position: absolute;
       }
 
-      @include respond-to('max-width: 640px') {
-        display: none;
+      .triangle {
+      	@include dimensions(11em, 11em);
       }
 
-      span {
-        display: inline-block;
-        padding: 1em 1.2em;
-        transition: all 1s;
-
-        &:hover,
-        &:active {
-          @include onLinkHover(darkBlue, 0.2em 0.2em steelBlue, white, all 0.7s);
-        }
+      #triangle {
+      	animation: draw 7s forwards linear;
+      	fill: none;
+      	stroke: RoyalBlue;
+      	stroke-dasharray: 900;
+      	stroke-dashoffset: 900;
+      	stroke-width: 5;
       }
     }
   }
@@ -145,10 +107,21 @@ body {
 
       @include respond-to('max-width: 800px') {
         width: 30em;
+      .circle1 {
+        @include dimensions(14em, 14em);
+      	bottom: 0;
+      	left: 2em;
       }
 
       @include respond-to('max-width: 640px') {
         width: 15em;
+      #circle1 {
+      	fill: none;
+      	animation: draw 5.5s forwards linear;
+      	stroke: SteelBlue;
+      	stroke-dasharray: 700;
+      	stroke-dashoffset: 700;
+      	stroke-width: 6;
       }
 
       .column {
@@ -156,6 +129,13 @@ body {
         position: relative;
         vertical-align: top;
         width: 15em;
+      .rectangle {
+        @include dimensions(24em, 17.2em);
+      	bottom: 0;
+      	left: 0;
+      	margin: auto;
+      	right: 0;
+      	top: 0;
       }
 
       .column.three {
@@ -168,6 +148,13 @@ body {
         @include respond-to('max-width: 640px') {
           position: static;
         }
+      #rectangle {
+      	animation: draw 5s forwards linear;
+      	fill: none;
+      	stroke: MidnightBlue;
+      	stroke-dasharray: 1300;
+      	stroke-dashoffset: 1300;
+      	stroke-width: 5;
       }
 
       .project {
@@ -223,30 +210,60 @@ body {
             }
           }
         }
+      .circle2 {
+        @include dimensions(10em, 10em);
+      	right: 1em;
+      	top: 1.5em;
       }
 
       .project.krasnopolie-library {
         height: 19.3115em;
+      #circle2 {
+      	animation: draw 7s forwards linear;
+      	fill: none;
+      	stroke: CornFlowerBlue;
+      	stroke-dasharray: 700;
+      	stroke-dashoffset: 700;
+      	stroke-width: 6;
       }
 
       .project.lvm-consulting {
         height: 40.359375em;
+      .line1 {
+        @include dimensions(16em, 16em);
+      	bottom: 2em;
+      	right: 2em;
       }
 
       .project.tatiana-urda-portfolio {
         height: 24.6474375em;
+      .line2 {
+        @include dimensions(13.5em, 13.5em);
+      	bottom: 0;
+      	right: 7em;
       }
 
       .project-tile_shown {
         left: 0;
         transition: left 1s;
+      #line1, #line2 {
+      	animation: draw 8s forwards linear;
+      	stroke: DeepSkyBlue;
+      	stroke-dasharray: 700;
+      	stroke-dashoffset: 700;
+      	stroke-width: 6;
       }
 
       .project-tile_hidden {
         left: -25em;
         transition: left 1s;
+      @keyframes draw {
+      	100% {
+      		stroke-dashoffset: 0;
+      	}
       }
     }
+  }
 
     .project-info {
       box-sizing: border-box;
