@@ -8,13 +8,6 @@
   padding: $padding;
 }
 
-@mixin onLinkHover($backgroundColor, $boxShaddow, $color, $transition) {
-  background-color: $backgroundColor;
-  box-shadow: $boxShaddow;
-  color: $color;
-  transition: $transition;
-}
-
 @mixin respond-to($media) {
   // @if $media == 'max-width: 1300px' {
   //   @media (max-width: 1300px) { @content; }
