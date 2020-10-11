@@ -12,7 +12,7 @@ body {
 	display: flex;
 	flex-flow: column nowrap;
 	font: {
-    // family: 'Josefin Sans', sans-serif;
+    family: 'Jost', sans-serif;
     size: 16px;
   }
 	justify-content: space-between;
@@ -38,8 +38,8 @@ body {
   	position: relative;
   }
 
-  header {
-  	height: 100vh;
+  .container {
+    height: auto;
 
     .my-name {
       @include indentations(0 auto, 0 1em);
