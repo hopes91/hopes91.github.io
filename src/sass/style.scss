@@ -1,39 +1,34 @@
 @import 'helpers/variables.scss';
 @import 'helpers/mixins.scss';
 
-html {
+html,
+body {
   @include dimensions(100%, 100%);
   @include indentations(0, 0);
 }
 
 body {
-  @include dimensions(auto, 100%);
-  @include indentations(0, 0);
   background-color: white;
-  font: {
-    family: 'Roboto', sans-serif;
+	display: flex;
+	flex-flow: column nowrap;
+	font: {
+    // family: 'Josefin Sans', sans-serif;
     size: 16px;
   }
-  min-height: 100vh;
-
-  * {
-    outline-color: darkBlue;
-  }
+	justify-content: space-between;
+	overflow-x: hidden;
 
   a {
     border: none;
-    display: inline-block;
-    text-decoration: none;
+  	text-decoration: none;
   }
 
   img {
-    border: none;
+  	border: none;
   }
 
-  header, footer {
-    @include dimensions(10em, 100%);
-    font-family: 'Roboto Condensed', sans-serif;
-    position: relative;
+  p {
+  	line-height: 1.4;
   }
 
   .my-name-link {
@@ -48,6 +43,11 @@ body {
     .my-name {
       margin: 0.5em;
     }
+  .container,
+  header,
+  main,
+  footer {
+  	position: relative;
   }
 
   header {
