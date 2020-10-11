@@ -75,7 +75,6 @@ body {
       	bottom: 0;
       	left: 0;
       	margin: auto;
-      	// max-width: 50em;
       	position: absolute;
       	right: 0;
       	top: 0;
@@ -310,7 +309,28 @@ body {
     	background-color: #072027;
     	box-sizing: border-box;
     	color: white;
-    	padding: 2em 1em;
+    	padding: 2.2em 1em 2em 1em;
+      text-align: center;
+
+      .copyright {
+        color: white;
+        font-size: 1.1em;
+      }
+
+      .contact-icons {
+        margin-top: 1em;
+
+        a {
+          display: inline-block;
+          margin: 0 0.5em;
+          vertical-align: middle;
+          width: 40px;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
     }
   }
 }
