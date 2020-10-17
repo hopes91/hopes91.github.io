@@ -48,7 +48,7 @@ body {
 
       .my-name {
         @include indentations(0 auto, 0 1em);
-        background-color: rgba(255, 255, 255, 0.7);
+        background-color: rgba(255, 255, 255, 0.75);
       	box-sizing: border-box;
       	position: relative;
       	text-align: center;
@@ -105,11 +105,6 @@ body {
           @include dimensions(100%, 100%);
         }
 
-        @include respond-to('max-width: 320px') {
-          top: 25%;
-          height: 75%;
-        }
-
         .layer {
         	position: absolute;
         }
@@ -120,10 +115,6 @@ body {
           @include respond-to('max-width: 480px') {
             left: 0.7em;
             top: 10vh;
-          }
-
-          @include respond-to('max-width: 320px') {
-            top: -5vh;
           }
         }
 
@@ -148,10 +139,6 @@ body {
           @include respond-to('max-width: 480px') {
             bottom: 2vh;
             left: 1em;
-          }
-
-          @include respond-to('max-width: 320px') {
-            bottom: -1vh;
           }
         }
 
@@ -194,10 +181,6 @@ body {
           @include respond-to('max-width: 380px') {
             top: 20vh;
           }
-
-          @include respond-to('max-width: 320px') {
-            top: 1vh;
-          }
         }
 
         #circle2 {
@@ -221,10 +204,6 @@ body {
           @include respond-to('max-width: 380px') {
             right: 0.8em;
           }
-
-          @include respond-to('max-width: 320px') {
-            bottom: 17vh;
-          }
         }
 
         .line2 {
@@ -240,10 +219,6 @@ body {
           @include respond-to('max-width: 380px') {
             bottom: 17vh;
             right: 3em;
-          }
-
-          @include respond-to('max-width: 320px') {
-            bottom: 12vh;
           }
         }
 
