@@ -1,3 +1,5 @@
+// log:
+
 @import 'helpers/variables.scss';
 @import 'helpers/mixins.scss';
 
@@ -173,8 +175,36 @@ body {
     }
 
     main {
-    	margin: 0 auto;
-    	max-width: 80em;
+      @include indentations(0 auto, 0 1em);
+    	width: 75em;
+
+      @include respond-to('max-width: 1366px') {
+        width: 70em;
+      }
+
+      @include respond-to('max-width: 1200px') {
+        width: 60em;
+      }
+
+      @include respond-to('max-width: 1024px') {
+        width: 45em;
+      }
+
+      @include respond-to('max-width: 800px') {
+        width: 35em;
+      }
+
+      @include respond-to('max-width: 640px') {
+        width: 27em;
+      }
+
+      @include respond-to('max-width: 480px') {
+        width: 20em;
+      }
+
+      @include respond-to('max-width: 380px') {
+        width: 17em;
+      }
 
       .nav-wrapper {
       	position: relative;
@@ -185,6 +215,10 @@ body {
         	margin: 0 auto;
         	width: 42em;
         	z-index: 2;
+
+          @include respond-to('max-width: 800px') {
+            width: 100%;
+          }
 
           a {
           	background-color: rgba(255, 255, 255, 0.8);
@@ -216,10 +250,50 @@ body {
         margin: 4em 0 2em 0;
         position: relative;
 
+        @include respond-to('max-width: 1024px') {
+          height: 27.1em;
+        }
+
+        @include respond-to('max-width: 800px') {
+          height: 21.1em;
+        }
+
+        @include respond-to('max-width: 640px') {
+          height: auto;
+        }
+
         .project {
-          @include dimensions(14em, 30%);
-        	margin-bottom: 2em;
+          @include dimensions(14em, 33%);
         	position: relative;
+
+          @include respond-to('max-width: 1366px') {
+            height: 13em;
+          }
+
+          @include respond-to('max-width: 1200px') {
+            height: 11.2em;
+          }
+
+          @include respond-to('max-width: 1024px') {
+            @include dimensions(13em, 49%);
+          }
+
+          @include respond-to('max-width: 800px') {
+            height: 10em;
+          }
+
+          @include respond-to('max-width: 640px') {
+            @include dimensions(14em, 100%);
+            margin-bottom: 0.5em;
+          }
+
+          @include respond-to('max-width: 480px') {
+            height: 11em;
+          }
+
+          @include respond-to('max-width: 380px') {
+            height: 9.5em;
+          }
 
           .project-image {
             bottom: 0;
@@ -230,6 +304,10 @@ body {
             right: 0;
             top: 0;
           	width: 90%;
+
+            @include respond-to('max-width: 640px') {
+              width: 95%;
+            }
           }
 
           .tile {
@@ -256,16 +334,24 @@ body {
               box-sizing: border-box;
             	color: white;
             	display: inline-block;
-            	font: {
-                size: 1em;
-                weight: 400;
-              }
               position: relative;
               padding: 2em 1em;
             	vertical-align: middle;
 
+              @include respond-to('max-width: 800px') {
+                padding: 1.5em 1em;
+              }
+
+              @include respond-to('max-width: 380px') {
+                padding: 1.2em 1em;
+              }
+
               h3 {
                 margin: 0 0 1em 0;
+
+                @include respond-to('max-width: 800px') {
+                  font-size: 1.1em
+                }
               }
 
               .tile-link-wrapper {
@@ -274,10 +360,18 @@ body {
                 position: absolute;
                 width: 100%;
 
+                @include respond-to('max-width: 800px') {
+                  bottom: 1.5em;
+                }
+
+                @include respond-to('max-width: 380px') {
+                  bottom: 1em;
+                }
+
                 .tile-link {
                   border-top: 1px solid white;
                   color: white;
-                	font-weight: normal;
+                  font-size: 1em;
                   padding-top: 0.6em;
                 }
               }
