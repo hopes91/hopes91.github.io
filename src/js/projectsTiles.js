@@ -4,36 +4,30 @@ const forEach = require('./forIE/forEach.js');
 forEach();
 // end for IE
 
-const projects = document.querySelectorAll('.project');
+const projects = document.querySelectorAll('.projects .project');
 
 const toggleProjectTileOnKeyDown = event => {
 	const projectTile = event.target.children[1];
 
 	if (event.key === 'Enter') {
-		projectTile.className.match('hidden') ?
-			showProjectTile(event):
-			hideProjectTile(event);
+		projectTile.style.display === 'block' ?
+			hideProjectTile(projectTile):
+			showProjectTile(projectTile);
 	}
 };
 
-const showProjectTile = event => {
-	const projectTile = event.target.children[1];
-
-	if (projectTile.className.match('hidden')) {
-		projectTile.className = 'project-tile project-tile_shown';
-		projectTile.children[1].setAttribute('tabindex', '0');
+const showProjectTile = projectTile => {
+	if (projectTile.style.display !== 'block') {
+		projectTile.style.display = 'block';
+		projectTile.querySelector('a').setAttribute('tabindex', '0');
 	}
 };
 
-const hideProjectTile = event => {
-	const projectTile = event.target.children[1];
-
-	if (projectTile.className.match('shown')) {
-		projectTile.className = 'project-tile project-tile_hidden';
-		projectTile.children[1].setAttribute('tabindex', '-1');
+const hideProjectTile = projectTile => {
+	if (projectTile.style.display === 'block') {
+		projectTile.style.display = 'none';
+		projectTile.querySelector('a').setAttribute('tabindex', '-1');
 	}
 };
 
 projects.forEach(project => project.addEventListener('keydown', toggleProjectTileOnKeyDown));
-projects.forEach(project => project.addEventListener('mouseenter', showProjectTile));
-projects.forEach(project => project.addEventListener('mouseleave', hideProjectTile));
