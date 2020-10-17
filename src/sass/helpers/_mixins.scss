@@ -33,4 +33,7 @@
   @else if $media == 'max-width: 380px' {
     @media (max-width: 380px) { @content; }
   }
+  @else if $media == 'max-width: 320px' {
+    @media (max-width: 320px) { @content; }
+  }
 }

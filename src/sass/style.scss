@@ -41,7 +41,7 @@ body {
   }
 
   .container {
-    height: auto;
+    @include dimensions(auto, 100%);
 
     header {
     	height: 100vh;
@@ -89,12 +89,42 @@ body {
       	right: 0;
       	top: 0;
 
+        @include respond-to('max-width: 1024px') {
+          @include dimensions(29em, 45em);
+        }
+
+        @include respond-to('max-width: 800px') {
+          width: 95%;
+        }
+
+        @include respond-to('max-width: 640px') {
+          height: 27em;
+        }
+
+        @include respond-to('max-width: 480px') {
+          @include dimensions(100%, 100%);
+        }
+
+        @include respond-to('max-width: 320px') {
+          top: 25%;
+          height: 75%;
+        }
+
         .layer {
         	position: absolute;
         }
 
         .triangle {
         	@include dimensions(11em, 11em);
+
+          @include respond-to('max-width: 480px') {
+            left: 0.7em;
+            top: 10vh;
+          }
+
+          @include respond-to('max-width: 320px') {
+            top: -5vh;
+          }
         }
 
         #triangle {
@@ -110,6 +140,19 @@ body {
           @include dimensions(14em, 14em);
         	bottom: 0;
         	left: 2em;
+
+          @include respond-to('max-width: 800px') {
+            bottom: -0.5em;
+          }
+
+          @include respond-to('max-width: 480px') {
+            bottom: 2vh;
+            left: 1em;
+          }
+
+          @include respond-to('max-width: 320px') {
+            bottom: -1vh;
+          }
         }
 
         #circle1 {
@@ -143,6 +186,18 @@ body {
           @include dimensions(10em, 10em);
         	right: 1em;
         	top: 1.5em;
+
+          @include respond-to('max-width: 480px') {
+            top: 17vh;
+          }
+
+          @include respond-to('max-width: 380px') {
+            top: 20vh;
+          }
+
+          @include respond-to('max-width: 320px') {
+            top: 1vh;
+          }
         }
 
         #circle2 {
@@ -158,15 +213,42 @@ body {
           @include dimensions(16em, 16em);
         	bottom: 2em;
         	right: 2em;
+
+          @include respond-to('max-width: 480px') {
+            bottom: 20vh;
+          }
+
+          @include respond-to('max-width: 380px') {
+            right: 0.8em;
+          }
+
+          @include respond-to('max-width: 320px') {
+            bottom: 17vh;
+          }
         }
 
         .line2 {
           @include dimensions(13.5em, 13.5em);
         	bottom: 0;
         	right: 7em;
+
+          @include respond-to('max-width: 480px') {
+            bottom: 18vh;
+            right: 6em;
+          }
+
+          @include respond-to('max-width: 380px') {
+            bottom: 17vh;
+            right: 3em;
+          }
+
+          @include respond-to('max-width: 320px') {
+            bottom: 12vh;
+          }
         }
 
-        #line1, #line2 {
+        #line1,
+        #line2 {
         	animation: draw 8s forwards linear;
         	stroke: DeepSkyBlue;
         	stroke-dasharray: 700;
