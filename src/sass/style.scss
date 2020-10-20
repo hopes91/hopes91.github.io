@@ -475,6 +475,10 @@ body {
                       position: absolute;
                       top: -0.6em;
                     }
+
+                    &:hover {
+                      font-weight: bold;
+                    }
                   }
                 }
               }
