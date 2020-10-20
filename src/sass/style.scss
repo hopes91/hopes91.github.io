@@ -50,7 +50,7 @@ body {
     header {
     	height: 100vh;
 
-      @include respond-to('max-width: 980px landscape') {
+      @include respond-to('max-width: 960px max-height: 640px landscape') {
         height: 190vh;
       }
 
@@ -287,12 +287,12 @@ body {
         width: 17em;
       }
 
-      .nav-wrapper {
+      .projects-handler-wrapper {
       	position: relative;
         top: 2em;
       	width: 100%;
 
-        nav {
+        .projects-handler {
         	margin: 0 auto;
         	width: 42em;
         	z-index: 2;
@@ -301,13 +301,12 @@ body {
             width: 100%;
           }
 
-          a {
-          	background-color: rgba(255, 255, 255, 0.8);
+          h3 {
+            @include indentations(0, 0.5em);
           	color: black;
           	display: inline-block;
           	font-weight: bold;
           	letter-spacing: 1px;
-          	padding: 0.5em;
           	text-transform: uppercase;
           	transition: letter-spacing 1.3s;
 
@@ -317,7 +316,7 @@ body {
             }
           }
 
-          a:last-child {
+          h3:last-child {
           	float: right;
 
             @include respond-to('max-width: 480px') {
@@ -325,161 +324,170 @@ body {
             }
           }
 
-          a:hover {
+          h3:hover {
           	color: SteelBlue;
+            cursor: pointer;
           	letter-spacing: 2px;
           }
         }
       }
 
       .projects {
-      	display: flex;
-      	flex-flow: row wrap;
-        height: 40em;
-      	justify-content: space-around;
-        margin: 4em 0 2em 0;
-        position: relative;
-
-        @include respond-to('max-width: 1024px') {
-          height: 27.1em;
-        }
-
-        @include respond-to('max-width: 800px') {
-          height: 21.1em;
-        }
-
-        @include respond-to('max-width: 640px') {
-          height: auto;
-        }
-
-        .project {
-          @include dimensions(14em, 33%);
-        	position: relative;
-
-          @include respond-to('max-width: 1366px') {
-            height: 13em;
-          }
-
-          @include respond-to('max-width: 1200px') {
-            height: 11.2em;
-          }
+        #projects-with-code,
+        #projects-with-Tilda {
+          display: flex;
+        	flex-flow: row wrap;
+          height: 40em;
+        	justify-content: space-around;
+          margin: 4em 0 2em 0;
+          position: relative;
 
           @include respond-to('max-width: 1024px') {
-            @include dimensions(13em, 49%);
+            height: 27.1em;
           }
 
           @include respond-to('max-width: 800px') {
-            height: 10em;
+            height: 21.1em;
           }
 
           @include respond-to('max-width: 640px') {
-            @include dimensions(14em, 100%);
-            margin-bottom: 0.5em;
+            height: auto;
           }
 
-          @include respond-to('max-width: 480px') {
-            height: 11em;
-          }
+          .project {
+            @include dimensions(14em, 33%);
+          	position: relative;
 
-          @include respond-to('max-width: 380px') {
-            height: 9.5em;
-          }
+            @include respond-to('max-width: 1366px') {
+              height: 13em;
+            }
 
-          .project-image {
-            bottom: 0;
-          	display: block;
-            left: 0;
-            margin: auto;
-            position: absolute;
-            right: 0;
-            top: 0;
-          	width: 90%;
+            @include respond-to('max-width: 1200px') {
+              height: 11.2em;
+            }
+
+            @include respond-to('max-width: 1024px') {
+              @include dimensions(13em, 49%);
+            }
+
+            @include respond-to('max-width: 800px') {
+              height: 10em;
+            }
 
             @include respond-to('max-width: 640px') {
-              width: 95%;
-            }
-          }
-
-          .tile {
-            @include dimensions(100%, 100%);
-          	background-color: rgba(0, 0, 0, 0.85);
-          	border: 0.2em solid SteelBlue;
-          	bottom: 0;
-          	box-shadow: 0 0 0 0.3em rgba(0, 0, 0, 0.85);
-          	box-sizing: border-box;
-          	display: none;
-          	left: 0;
-          	position: absolute;
-          	text-align: center;
-
-            &:before {
-            	content: '';
-            	display: inline-block;
-            	height: 100%;
-            	vertical-align: middle;
+              @include dimensions(14em, 100%);
+              margin-bottom: 0.5em;
             }
 
-            .tile-name {
+            @include respond-to('max-width: 480px') {
+              height: 11em;
+            }
+
+            @include respond-to('max-width: 380px') {
+              height: 9.5em;
+            }
+
+            .project-image {
+              bottom: 0;
+            	display: block;
+              left: 0;
+              margin: auto;
+              position: absolute;
+              right: 0;
+              top: 0;
+            	width: 90%;
+
+              @include respond-to('max-width: 640px') {
+                width: 95%;
+              }
+            }
+
+            .tile {
               @include dimensions(100%, 100%);
-              box-sizing: border-box;
-            	color: white;
-            	display: inline-block;
-              position: relative;
-              padding: 2em 1em;
-            	vertical-align: middle;
+            	background-color: rgba(0, 0, 0, 0.85);
+            	border: 0.2em solid SteelBlue;
+            	bottom: 0;
+            	box-shadow: 0 0 0 0.3em rgba(0, 0, 0, 0.85);
+            	box-sizing: border-box;
+            	display: none;
+            	left: 0;
+            	position: absolute;
+            	text-align: center;
 
-              @include respond-to('max-width: 800px') {
-                padding: 1.5em 1em;
+              &:before {
+              	content: '';
+              	display: inline-block;
+              	height: 100%;
+              	vertical-align: middle;
               }
 
-              @include respond-to('max-width: 380px') {
-                padding: 1.2em 1em;
-              }
-
-              h3 {
-                margin: 0 0 1em 0;
+              .tile-name {
+                @include dimensions(100%, 100%);
+                box-sizing: border-box;
+              	color: white;
+              	display: inline-block;
+                position: relative;
+                padding: 2em 1em;
+              	vertical-align: middle;
 
                 @include respond-to('max-width: 800px') {
-                  font-size: 1.1em
-                }
-              }
-
-              .tile-link-wrapper {
-                bottom: 2em;
-                left: 0;
-                position: absolute;
-                width: 100%;
-
-                @include respond-to('max-width: 800px') {
-                  bottom: 1.5em;
+                  padding: 1.5em 1em;
                 }
 
                 @include respond-to('max-width: 380px') {
-                  bottom: 1em;
+                  padding: 1.2em 1em;
                 }
 
-                .tile-link {
-                  color: white;
-                  font-size: 1em;
-                  padding: 0 0.2em;
-                  position: relative;
+                h4 {
+                  font-size: 1.15em;
+                  margin: 0 0 1em 0;
 
-                  &:before {
-                    @include dimensions(0.05em, 100%);
-                    background-color: white;
-                    content: '';
-                    left: 0;
-                    position: absolute;
-                    top: -0.6em;
+                  @include respond-to('max-width: 800px') {
+                    font-size: 1.1em
+                  }
+                }
+
+                .tile-link-wrapper {
+                  bottom: 2em;
+                  left: 0;
+                  position: absolute;
+                  width: 100%;
+
+                  @include respond-to('max-width: 800px') {
+                    bottom: 1.5em;
+                  }
+
+                  @include respond-to('max-width: 380px') {
+                    bottom: 1em;
+                  }
+
+                  .tile-link {
+                    color: white;
+                    font-size: 1em;
+                    padding: 0 0.2em;
+                    position: relative;
+
+                    &:before {
+                      @include dimensions(0.05em, 100%);
+                      background-color: white;
+                      content: '';
+                      left: 0;
+                      position: absolute;
+                      top: -0.6em;
+                    }
                   }
                 }
               }
             }
-          }
 
-          &:hover .tile {
-          	display: block;
+            &:hover .tile {
+            	display: block;
+            }
           }
+        }
+
+        #projects-with-Tilda {
+          display: none;
         }
       }
 
