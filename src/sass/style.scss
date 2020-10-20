@@ -351,44 +351,40 @@ body {
           }
 
           @include respond-to('max-width: 800px') {
-            height: 21.1em;
-          }
-
-          @include respond-to('max-width: 640px') {
             height: auto;
           }
 
           .project {
-            @include dimensions(14em, 33%);
+            @include dimensions(14em, 24.5em);
           	position: relative;
 
             @include respond-to('max-width: 1366px') {
-              height: 13em;
+              @include dimensions(13em, 22.8em);
             }
 
             @include respond-to('max-width: 1200px') {
-              height: 11.2em;
+              @include dimensions(11.2em, 19.4em);
             }
 
             @include respond-to('max-width: 1024px') {
-              @include dimensions(13em, 49%);
+              @include dimensions(13em, 22em);
             }
 
             @include respond-to('max-width: 800px') {
-              height: 10em;
-            }
-
-            @include respond-to('max-width: 640px') {
-              @include dimensions(14em, 100%);
+              @include dimensions(20em, 35em);
               margin-bottom: 0.5em;
             }
 
+            @include respond-to('max-width: 640px') {
+              @include dimensions(15em, 27em);
+            }
+
             @include respond-to('max-width: 480px') {
-              height: 11em;
+              @include dimensions(11em, 20em);
             }
 
             @include respond-to('max-width: 380px') {
-              height: 9.5em;
+              @include dimensions(9.5em, 17em);
             }
 
             .project-image {
