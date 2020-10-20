@@ -522,10 +522,20 @@ body {
 
       .copyright {
         color: white;
-        font-size: 1.1em;
+        font-size: 1.15em;
+        line-height: 2;
+        position: relative;
 
         span {
-          font-size: 0.9em;
+          font-size: 0.85em;
+
+          &:before {
+            @include dimensions(0.05em, 100%);
+            background-color: white;
+            content: '';
+            left: 0.7em;
+            position: absolute;
+          }
         }
       }
 
