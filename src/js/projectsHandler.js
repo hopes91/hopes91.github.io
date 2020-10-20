@@ -20,10 +20,14 @@ const toggleProjectsOrigin = event => {
   const withTildaProjects = withTildaOrigin.querySelectorAll('.project');
   const withTildaLinks = withTildaOrigin.querySelectorAll('a');
 
+	projectsHandlers.forEach(handler => handler.style.color = 'black');
+	event.target.style.color = 'SteelBlue';
+
 	if (event.target.className === 'with-code') {
-    withTildaOrigin.style.display = 'none';
+		withTildaOrigin.style.display = 'none';
     withTildaProjects.forEach(project => project.setAttribute('tabindex', '-1'));
     withTildaLinks.forEach(link => link.setAttribute('tabindex', '-1'));
+
 		withCodeOrigin.style.display = 'flex';
     withCodeProjects.forEach(project => project.setAttribute('tabindex', '0'));
     withCodeLinks.forEach(link => link.setAttribute('tabindex', '0'));
@@ -31,6 +35,7 @@ const toggleProjectsOrigin = event => {
     withCodeOrigin.style.display = 'none';
     withCodeProjects.forEach(project => project.setAttribute('tabindex', '-1'));
     withCodeLinks.forEach(link => link.setAttribute('tabindex', '-1'));
+
     withTildaOrigin.style.display = 'flex';
     withTildaProjects.forEach(project => project.setAttribute('tabindex', '0'));
     withTildaLinks.forEach(link => link.setAttribute('tabindex', '0'));

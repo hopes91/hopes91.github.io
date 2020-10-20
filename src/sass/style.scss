@@ -319,6 +319,10 @@ body {
             }
           }
 
+          h3:first-child {
+          	color: SteelBlue;
+          }
+
           h3:last-child {
           	float: right;
 
@@ -328,7 +332,6 @@ body {
           }
 
           h3:hover {
-          	color: SteelBlue;
             cursor: pointer;
           	letter-spacing: 2px;
           }
