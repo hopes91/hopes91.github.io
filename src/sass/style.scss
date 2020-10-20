@@ -131,7 +131,7 @@ body {
 
           @include respond-to('max-width: 480px') {
             left: 0.7em;
-            top: 10vh;
+            top: 9vh;
           }
         }
 
@@ -154,7 +154,7 @@ body {
           }
 
           @include respond-to('max-width: 480px') {
-            bottom: 2vh;
+            bottom: 3vh;
             left: 1em;
           }
         }
