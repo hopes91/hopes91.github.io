@@ -20,6 +20,10 @@ body {
 	justify-content: space-between;
 	overflow-x: hidden;
 
+  * {
+    outline-color: SteelBlue;
+  }
+
   a {
     border: none;
   	text-decoration: none;
@@ -45,6 +49,18 @@ body {
 
     header {
     	height: 100vh;
+
+      @include respond-to('max-width: 980px landscape') {
+        height: 190vh;
+      }
+
+      @include respond-to('max-width: 800px max-height: 300px landscape') {
+        height: 255vh;
+      }
+
+      @include respond-to('max-width: 640px landscape') {
+        height: 215vh;
+      }
 
       .my-name {
         @include indentations(0 auto, 0 1em);
@@ -291,7 +307,7 @@ body {
           	display: inline-block;
           	font-weight: bold;
           	letter-spacing: 1px;
-          	padding: 0.5em 0;
+          	padding: 0.5em;
           	text-transform: uppercase;
           	transition: letter-spacing 1.3s;
 
@@ -443,10 +459,19 @@ body {
                 }
 
                 .tile-link {
-                  border-top: 1px solid white;
                   color: white;
                   font-size: 1em;
-                  padding-top: 0.6em;
+                  padding: 0 0.2em;
+                  position: relative;
+
+                  &:before {
+                    @include dimensions(0.05em, 100%);
+                    background-color: white;
+                    content: '';
+                    left: 0;
+                    position: absolute;
+                    top: -0.6em;
+                  }
                 }
               }
             }
