@@ -337,6 +337,38 @@ body {
       }
 
       .projects {
+        margin: 0 auto;
+        position: relative;
+      	width: 75em;
+
+        @include respond-to('max-width: 1366px') {
+          width: 70em;
+        }
+
+        @include respond-to('max-width: 1200px') {
+          width: 60em;
+        }
+
+        @include respond-to('max-width: 1024px') {
+          width: 45em;
+        }
+
+        @include respond-to('max-width: 800px') {
+          width: 35em;
+        }
+
+        @include respond-to('max-width: 640px') {
+          width: 27em;
+        }
+
+        @include respond-to('max-width: 480px') {
+          width: 20em;
+        }
+
+        @include respond-to('max-width: 380px') {
+          width: 17em;
+        }
+
         #projects-with-code,
         #projects-with-Tilda {
           display: flex;
