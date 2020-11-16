@@ -441,7 +441,7 @@ body {
             	bottom: 0;
             	box-shadow: 0 0 0 0.3em rgba(0, 0, 0, 0.85);
             	box-sizing: border-box;
-            	display: none;
+            	// display: none;
             	left: 0;
             	position: absolute;
             	text-align: center;
@@ -462,7 +462,7 @@ body {
                 padding: 2em 1em;
               	vertical-align: middle;
 
-                @include respond-to('max-width: 800px') {
+                @include respond-to('max-width: 1200px') {
                   padding: 1.5em 1em;
                 }
 
@@ -472,6 +472,7 @@ body {
 
                 h4 {
                   font-size: 1.15em;
+                  line-height: 1.4;
                   margin: 0 0 1em 0;
 
                   @include respond-to('max-width: 800px') {
@@ -489,7 +490,7 @@ body {
                   position: absolute;
                   width: 100%;
 
-                  @include respond-to('max-width: 800px') {
+                  @include respond-to('max-width: 1200px') {
                     bottom: 1.5em;
                   }
 
