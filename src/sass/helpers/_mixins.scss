@@ -18,6 +18,9 @@
   @else if $media == 'max-width: 1024px' {
     @media (max-width: 1024px) { @content; }
   }
+  @else if $media == 'max-width: 960px' {
+    @media (max-width: 960px) { @content; }
+  }
   @else if $media == 'max-width: 960px max-height: 640px landscape' {
     @media (max-width: 960px) and (max-height: 640px) and (orientation: landscape) { @content; }
   }
