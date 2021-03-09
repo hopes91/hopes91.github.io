@@ -62,7 +62,6 @@ body {
 
       .my-name {
         @include indentations(0 auto, 0);
-        background-color: rgba(255, 255, 255, 0.75);
       	box-sizing: border-box;
       	position: relative;
       	text-align: center;
@@ -71,8 +70,9 @@ body {
       	z-index: 2;
 
         @include respond-to('max-width: 480px') {
+          background-color: rgba(255, 255, 255, 0.75);
           padding: 1.3em 1em 1em 1em;
-          top: 0;
+          top: 0.5em;
           width: 100%;
         }
 
