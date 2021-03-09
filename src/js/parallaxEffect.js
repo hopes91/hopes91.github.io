@@ -1,6 +1,7 @@
 const header = document.querySelector('header');
 
 const handleParallaxEffect = event => {
+  const wrapperBig = document.querySelector('.wrapper-rectangle-big');
   const wrapperSmall = document.querySelector('.wrapper-rectangle-small');
   const triangle = document.querySelector('.triangle');
   const circle1 = document.querySelector('.circle1');
@@ -13,6 +14,9 @@ const handleParallaxEffect = event => {
 	let left = change * 20;
 	let cursorXPosition = event.clientX * 2;
 	let cursorYPosition = event.clientY * 2;
+
+  wrapperBig.style.top = `${(0 + (cursorYPosition / 70))}px`;
+  wrapperBig.style.left = `${(0 + (cursorXPosition / 70))}px`;
 
   wrapperSmall.style.bottom = `${(0 + (cursorYPosition / 50))}px`;
   wrapperSmall.style.right = `${(0 + (cursorXPosition / 50))}px`;
@@ -36,30 +40,4 @@ const handleParallaxEffect = event => {
   line2.style.right = `${(32 + (cursorXPosition / 50))}px`;
 };
 
-const replaceParallaxEffectWithImage = () => {
-  const replacerImage = document.querySelector('.replacer-image');
-  const wrapperSmall = document.querySelector('.wrapper-rectangle-small');
-
-  wrapperSmall.style.display = 'none';
-  replacerImage.style.display = 'block';
-
-  changeWrapperBig();
-};
-
-const changeWrapperBig = () => {
-  const wrapperBig = document.querySelector('.wrapper-rectangle-big');
-
-  if (window.innerWidth <= 960) {
-    wrapperBig.style.height = '29em';
-  } else if (window.innerWidth <= 800) {
-    wrapperBig.style.height = '23em';
-  } else if (window.innerWidth <= 640) {
-    wrapperBig.style.height = '17em';
-  }
-};
-
-if (typeof SVGRect !== 'undefined') {
-  header.addEventListener('mousemove', handleParallaxEffect);
-} else {
-  replaceParallaxEffectWithImage();
-}
+header.addEventListener('mousemove', handleParallaxEffect);

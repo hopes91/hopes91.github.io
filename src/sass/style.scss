@@ -97,7 +97,7 @@ body {
       }
 
       .wrapper-rectangle-big {
-        @include dimensions(40em, 60em);
+        @include dimensions(95%, 95%);
         background-color: #e8e8e8;
         bottom: 0;
         border: 1px solid rgba(0, 0, 0, 0.03);
@@ -106,55 +106,6 @@ body {
         position: absolute;
         right: 0;
         top: 0;
-
-        @include respond-to('max-width: 1024px') {
-          @include dimensions(35em, 55em);
-        }
-
-        @include respond-to('max-width: 960px') {
-          width: 45em;
-        }
-
-        @include respond-to('max-width: 800px') {
-          @include dimensions(30em, 37em);
-        }
-
-        @include respond-to('max-width: 640px') {
-          @include dimensions(30em, 27em);
-        }
-
-        @include respond-to('max-width: 480px') {
-          @include dimensions(95%, 95%);
-        }
-
-        .replacer-image {
-          @include dimensions(30em, 50em);
-        	background-color: #e0e0e0;
-        	bottom: 0;
-          border: 1px solid rgba(0, 0, 0, 0.05);
-          display: none;
-        	left: 0;
-        	margin: auto;
-        	position: absolute;
-        	right: 0;
-        	top: 0;
-
-          @include respond-to('max-width: 960px') {
-            @include dimensions(auto, 40em);
-          }
-
-          @include respond-to('max-width: 800px') {
-            width: 35em;
-          }
-
-          @include respond-to('max-width: 640px') {
-            width: 25em;
-          }
-
-          @include respond-to('max-width: 480px') {
-            width: 95%;
-          }
-        }
 
         .wrapper-rectangle-small {
           @include dimensions(30em, 50em);
@@ -168,15 +119,7 @@ body {
         	top: 0;
 
           @include respond-to('max-width: 960px') {
-            width: 40em;
-          }
-
-          @include respond-to('max-width: 800px') {
-            @include dimensions(28em, 35em);
-          }
-
-          @include respond-to('max-width: 640px') {
-            @include dimensions(28em, 25em);
+            width: 90%;
           }
 
           @include respond-to('max-width: 480px') {
