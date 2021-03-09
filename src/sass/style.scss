@@ -96,18 +96,18 @@ body {
         }
       }
 
-      .parallax-effect {
-        @include dimensions(30em, 50em);
-      	background-color: rgba(7, 32, 39, 0.13);
-      	bottom: 0;
-      	left: 0;
-      	margin: auto;
-      	position: absolute;
-      	right: 0;
-      	top: 0;
+      .wrapper-rectangle-big {
+        @include dimensions(40em, 60em);
+        background-color: rgba(7, 32, 39, 0.1);
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
 
         @include respond-to('max-width: 1024px') {
-          @include dimensions(29em, 45em);
+          @include dimensions(33em, 48em);
         }
 
         @include respond-to('max-width: 800px') {
@@ -115,143 +115,170 @@ body {
         }
 
         @include respond-to('max-width: 640px') {
-          height: 27em;
+          height: 30em;
         }
 
         @include respond-to('max-width: 480px') {
           @include dimensions(100%, 100%);
         }
 
-        .layer {
-        	position: absolute;
-        }
-
-        .triangle {
-        	@include dimensions(11em, 11em);
-
-          @include respond-to('max-width: 480px') {
-            left: 0.7em;
-            top: 9vh;
-          }
-        }
-
-        #triangle {
-        	animation: draw 7s forwards linear;
-        	fill: none;
-        	stroke: RoyalBlue;
-        	stroke-dasharray: 900;
-        	stroke-dashoffset: 900;
-        	stroke-width: 5;
-        }
-
-        .circle1 {
-          @include dimensions(14em, 14em);
-        	bottom: 0;
-        	left: 2em;
-
-          @include respond-to('max-width: 800px') {
-            bottom: -0.5em;
-          }
-
-          @include respond-to('max-width: 480px') {
-            bottom: 3vh;
-            left: 1em;
-          }
-        }
-
-        #circle1 {
-        	fill: none;
-        	animation: draw 5.5s forwards linear;
-        	stroke: SteelBlue;
-        	stroke-dasharray: 700;
-        	stroke-dashoffset: 700;
-        	stroke-width: 6;
-        }
-
-        .rectangle {
-          @include dimensions(24em, 17.2em);
+        .wrapper-rectangle-small {
+          @include dimensions(30em, 50em);
+        	background-color: rgba(7, 32, 39, 0.05);
         	bottom: 0;
         	left: 0;
         	margin: auto;
+        	position: absolute;
         	right: 0;
         	top: 0;
-        }
 
-        #rectangle {
-        	animation: draw 5s forwards linear;
-        	fill: none;
-        	stroke: MidnightBlue;
-        	stroke-dasharray: 1300;
-        	stroke-dashoffset: 1300;
-        	stroke-width: 5;
-        }
+          @include respond-to('max-width: 1024px') {
+            width: 45em;
+          }
 
-        .circle2 {
-          @include dimensions(10em, 10em);
-        	right: 1em;
-        	top: 1.5em;
+          @include respond-to('max-width: 800px') {
+            width: 93%;
+          }
+
+          @include respond-to('max-width: 640px') {
+            height: 27em;
+          }
 
           @include respond-to('max-width: 480px') {
-            top: 17vh;
+            @include dimensions(95%, 95%);
           }
 
-          @include respond-to('max-width: 380px') {
-            top: 20vh;
-          }
-        }
-
-        #circle2 {
-        	animation: draw 7s forwards linear;
-        	fill: none;
-        	stroke: CornFlowerBlue;
-        	stroke-dasharray: 700;
-        	stroke-dashoffset: 700;
-        	stroke-width: 6;
-        }
-
-        .line1 {
-          @include dimensions(16em, 16em);
-        	bottom: 2em;
-        	right: 2em;
-
-          @include respond-to('max-width: 480px') {
-            bottom: 20vh;
+          .layer {
+          	position: absolute;
           }
 
-          @include respond-to('max-width: 380px') {
-            right: 0.8em;
-          }
-        }
+          .triangle {
+          	@include dimensions(11em, 11em);
 
-        .line2 {
-          @include dimensions(13.5em, 13.5em);
-        	bottom: 0;
-        	right: 7em;
-
-          @include respond-to('max-width: 480px') {
-            bottom: 18vh;
-            right: 6em;
+            @include respond-to('max-width: 480px') {
+              left: 0.7em;
+              top: 9vh;
+            }
           }
 
-          @include respond-to('max-width: 380px') {
-            bottom: 17vh;
-            right: 3em;
+          #triangle {
+          	animation: draw 7s forwards linear;
+          	fill: none;
+          	stroke: RoyalBlue;
+          	stroke-dasharray: 900;
+          	stroke-dashoffset: 900;
+          	stroke-width: 5;
           }
-        }
 
-        #line1,
-        #line2 {
-        	animation: draw 8s forwards linear;
-        	stroke: DeepSkyBlue;
-        	stroke-dasharray: 700;
-        	stroke-dashoffset: 700;
-        	stroke-width: 6;
-        }
+          .circle1 {
+            @include dimensions(14em, 14em);
+          	bottom: 0;
+          	left: 2em;
 
-        @keyframes draw {
-        	100% {
-        		stroke-dashoffset: 0;
-        	}
+            @include respond-to('max-width: 800px') {
+              bottom: -0.5em;
+            }
+
+            @include respond-to('max-width: 480px') {
+              bottom: 3vh;
+              left: 1em;
+            }
+          }
+
+          #circle1 {
+          	fill: none;
+          	animation: draw 5.5s forwards linear;
+          	stroke: SteelBlue;
+          	stroke-dasharray: 700;
+          	stroke-dashoffset: 700;
+          	stroke-width: 6;
+          }
+
+          .rectangle {
+            @include dimensions(24em, 17.2em);
+          	bottom: 0;
+          	left: 0;
+          	margin: auto;
+          	right: 0;
+          	top: 0;
+          }
+
+          #rectangle {
+          	animation: draw 5s forwards linear;
+          	fill: none;
+          	stroke: MidnightBlue;
+          	stroke-dasharray: 1300;
+          	stroke-dashoffset: 1300;
+          	stroke-width: 5;
+          }
+
+          .circle2 {
+            @include dimensions(10em, 10em);
+          	right: 1em;
+          	top: 1.5em;
+
+            @include respond-to('max-width: 480px') {
+              top: 17vh;
+            }
+
+            @include respond-to('max-width: 380px') {
+              top: 20vh;
+            }
+          }
+
+          #circle2 {
+          	animation: draw 7s forwards linear;
+          	fill: none;
+          	stroke: CornFlowerBlue;
+          	stroke-dasharray: 700;
+          	stroke-dashoffset: 700;
+          	stroke-width: 6;
+          }
+
+          .line1 {
+            @include dimensions(16em, 16em);
+          	bottom: 2em;
+          	right: 2em;
+
+            @include respond-to('max-width: 480px') {
+              bottom: 20vh;
+            }
+
+            @include respond-to('max-width: 380px') {
+              right: 0.8em;
+            }
+          }
+
+          .line2 {
+            @include dimensions(13.5em, 13.5em);
+          	bottom: 0;
+          	right: 7em;
+
+            @include respond-to('max-width: 480px') {
+              bottom: 18vh;
+              right: 6em;
+            }
+
+            @include respond-to('max-width: 380px') {
+              bottom: 17vh;
+              right: 3em;
+            }
+          }
+
+          #line1,
+          #line2 {
+          	animation: draw 8s forwards linear;
+          	stroke: DeepSkyBlue;
+          	stroke-dasharray: 700;
+          	stroke-dashoffset: 700;
+          	stroke-width: 6;
+          }
+
+          @keyframes draw {
+          	100% {
+          		stroke-dashoffset: 0;
+          	}
+          }
         }
       }
     }
