@@ -2,7 +2,7 @@ const header = document.querySelector('header');
 
 const handleParallaxEffect = event => {
   const wrapperSmall = document.querySelector('.wrapper-rectangle-small');
-  const triangle = document.querySelector('.triangle'); const handleParallaxEffect = event => {
+  const triangle = document.querySelector('.triangle');
   const circle1 = document.querySelector('.circle1');
   const rectangle = document.querySelector('.rectangle');
   const circle2 = document.querySelector('.circle2');
